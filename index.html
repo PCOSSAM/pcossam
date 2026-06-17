@@ -200,6 +200,31 @@
     display: inline-block;
   }
   .btn-outline:hover { border-color: rgba(255,255,255,0.7); }
+  .hero-video-card {
+    margin-top: 32px; max-width: 420px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px; overflow: hidden;
+    background: rgba(255,255,255,0.03);
+  }
+  .hero-video-thumb {
+    position: relative; width: 100%; aspect-ratio: 16/9;
+    cursor: pointer; background: #000;
+  }
+  .hero-video-thumb img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .hero-video-thumb .play-btn {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px; height: 60px; border-radius: 50%;
+    background: var(--gold); display: flex; align-items: center; justify-content: center;
+    transition: transform 0.2s;
+  }
+  .hero-video-thumb:hover .play-btn { transform: translate(-50%, -50%) scale(1.08); }
+  .hero-video-thumb .play-btn svg { width: 22px; height: 22px; fill: var(--black); }
+  .hero-video-caption {
+    padding: 12px 16px; font-size: 13px; color: rgba(250,250,248,0.7);
+  }
   .hero-stats {
     display: grid; grid-template-columns: repeat(3, auto); gap: 28px 40px; margin-top: 60px;
     border-top: 1px solid rgba(255,255,255,0.1);
@@ -905,6 +930,15 @@
       <a href="#contact" class="btn-primary">강의·컨설팅 문의하기</a>
       <a href="#services" class="btn-outline">서비스 살펴보기</a>
     </div>
+
+    <div class="hero-video-card">
+      <div class="hero-video-thumb" onclick="this.innerHTML='<iframe src=&quot;https://www.youtube.com/embed/71YQmidVYHE?autoplay=1&quot; title=&quot;피코쌤 강의 영상 샘플&quot; style=&quot;width:100%;height:100%;border:0;&quot; allow=&quot;accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen></iframe>';">
+        <img src="https://img.youtube.com/vi/71YQmidVYHE/hqdefault.jpg" alt="피코쌤 강의 영상 샘플 썸네일" loading="lazy">
+        <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="hero-video-caption">▶ 60초로 보는 피코쌤 강의 샘플 — 2026 AI 인더스트리 혁신 톡</div>
+    </div>
+
     <div class="hero-stats">
       <div class="stat-item">
         <div class="stat-num">200<span style="font-size:20px;color:var(--gold)">+</span></div>
