@@ -165,6 +165,29 @@
     margin-bottom: 32px; width: fit-content;
   }
   .hero-badge::before { content: "●"; font-size: 8px; }
+  .hero-new-service {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: linear-gradient(135deg, rgba(200,151,58,0.18), rgba(200,151,58,0.06));
+    border: 1px solid rgba(200,151,58,0.35);
+    border-radius: 10px;
+    padding: 10px 16px;
+    margin-top: 18px;
+    margin-bottom: 28px;
+    width: fit-content;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .hero-new-service:hover { border-color: rgba(200,151,58,0.6); transform: translateY(-1px); }
+  .hero-new-service .tag {
+    background: var(--gold); color: var(--black);
+    font-size: 10px; font-weight: 800; letter-spacing: 0.5px;
+    padding: 3px 8px; border-radius: 100px; flex-shrink: 0;
+  }
+  .hero-new-service .desc {
+    font-size: 13px; color: rgba(250,250,248,0.85); line-height: 1.4;
+  }
+  .hero-new-service .desc strong { color: var(--gold); font-weight: 700; }
+  .hero-new-service .arrow { color: var(--gold); font-size: 13px; flex-shrink: 0; }
   h1.hero-title {
     font-size: clamp(36px, 4.5vw, 58px);
     font-weight: 900;
@@ -335,6 +358,87 @@
   .flow-sub { font-size: 13px; color: var(--gray-600); }
 
   .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+  /* GLOBAL PITCH LAB — FEATURED BANNER */
+  .gpl-banner {
+    position: relative;
+    background: var(--black);
+    border: 1px solid rgba(200,151,58,0.35);
+    border-radius: 16px;
+    padding: 48px 44px;
+    margin-bottom: 32px;
+    overflow: hidden;
+  }
+  .gpl-banner::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 15% 20%, rgba(200,151,58,0.16), transparent 55%);
+    pointer-events: none;
+  }
+  .gpl-top {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    gap: 32px; margin-bottom: 36px; position: relative; z-index: 1;
+    flex-wrap: wrap;
+  }
+  .gpl-label-row { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .gpl-eyebrow {
+    font-size: 11px; font-weight: 800; letter-spacing: 2px;
+    color: var(--gold); text-transform: uppercase;
+  }
+  .gpl-new-tag {
+    background: var(--gold); color: var(--black);
+    font-size: 10px; font-weight: 800; letter-spacing: 0.5px;
+    padding: 3px 10px; border-radius: 100px;
+  }
+  .gpl-title {
+    font-size: clamp(26px, 3vw, 34px); font-weight: 900; color: var(--white);
+    line-height: 1.25; letter-spacing: -0.5px; margin-bottom: 14px;
+    max-width: 640px;
+  }
+  .gpl-title em { font-style: normal; color: var(--gold); }
+  .gpl-desc {
+    font-size: 15px; color: rgba(250,250,248,0.65); line-height: 1.8;
+    max-width: 560px;
+  }
+  .gpl-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+  .gpl-tag {
+    font-size: 12px; padding: 5px 14px; border-radius: 100px;
+    background: rgba(200,151,58,0.12); border: 1px solid rgba(200,151,58,0.3);
+    color: var(--gold); font-weight: 500;
+  }
+  .gpl-cta-col { flex-shrink: 0; text-align: right; }
+  .gpl-cta-col .btn-primary { white-space: nowrap; }
+  .gpl-cta-note { font-size: 12px; color: rgba(250,250,248,0.5); margin-top: 10px; }
+
+  .gpl-packages {
+    position: relative; z-index: 1;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  }
+  .gpl-pkg {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px; padding: 26px 22px; transition: all 0.2s;
+  }
+  .gpl-pkg:hover { border-color: rgba(200,151,58,0.5); transform: translateY(-2px); }
+  .gpl-pkg.popular { border-color: rgba(200,151,58,0.55); background: rgba(200,151,58,0.07); }
+  .gpl-pkg-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+  .gpl-pkg-name { font-size: 15px; font-weight: 800; color: var(--white); letter-spacing: 0.5px; }
+  .gpl-pkg-badge {
+    font-size: 10px; font-weight: 700; color: var(--gold);
+    border: 1px solid rgba(200,151,58,0.4); padding: 2px 8px; border-radius: 100px;
+  }
+  .gpl-pkg-price { font-size: 22px; font-weight: 900; color: var(--gold); margin-bottom: 14px; }
+  .gpl-pkg-price span { font-size: 12px; color: rgba(250,250,248,0.5); font-weight: 500; margin-left: 4px; }
+  .gpl-pkg-list { list-style: none; padding: 0; margin: 0; }
+  .gpl-pkg-list li {
+    font-size: 13px; color: rgba(250,250,248,0.7); line-height: 1.7;
+    padding-left: 18px; position: relative; margin-bottom: 6px;
+  }
+  .gpl-pkg-list li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+  .gpl-foot-note {
+    position: relative; z-index: 1; margin-top: 24px;
+    font-size: 12px; color: rgba(250,250,248,0.45); line-height: 1.6;
+  }
+
   .service-card {
     background: var(--white); border: 1px solid var(--gray-200);
     border-radius: 12px; padding: 36px 28px;
@@ -644,6 +748,9 @@
     .hero-right { display: none; }
     #about { grid-template-columns: 1fr; gap: 40px; }
     .services-grid { grid-template-columns: 1fr 1fr; }
+    .gpl-packages { grid-template-columns: 1fr; }
+    .gpl-top { flex-direction: column; }
+    .gpl-cta-col { text-align: left; }
     #stats { grid-template-columns: repeat(2, 1fr); gap: 32px; }
     .evidence-grid { grid-template-columns: 1fr; }
     .books-layout { grid-template-columns: 1fr; gap: 40px; }
@@ -669,6 +776,8 @@
     .hero-left { padding: 48px 5% 56px; }
     h1.hero-title { font-size: 36px; letter-spacing: -1px; margin-bottom: 16px; }
     .hero-badge { font-size: 11px; padding: 5px 12px; margin-bottom: 20px; }
+    .hero-new-service { padding: 9px 13px; margin-top: 14px; margin-bottom: 24px; }
+    .hero-new-service .desc { font-size: 12px; }
     .hero-subtitle { font-size: 15px; margin-bottom: 32px; }
     .hero-actions { gap: 10px; }
     .btn-primary, .btn-outline { padding: 12px 20px; font-size: 14px; }
@@ -695,6 +804,9 @@
     /* 서비스 */
     .services-grid { grid-template-columns: 1fr; }
     .service-card { padding: 28px 20px; }
+    .gpl-banner { padding: 32px 24px; }
+    .gpl-title { font-size: 24px; }
+    .gpl-cta-col .btn-primary { width: 100%; text-align: center; }
 
     /* 통계 */
     #stats { grid-template-columns: repeat(2, 1fr); gap: 24px; padding: 48px 5%; }
@@ -901,6 +1013,12 @@
       <a href="#services" class="btn-outline">Explore Services</a>
     </div>
 
+    <a href="#global-pitch-lab" class="hero-new-service">
+      <span class="tag">NEW</span>
+      <span class="desc"><strong>Global Pitch Lab</strong> — AI Presentation Rehearsal Clinic. Borderless presentation consulting, starting with one video</span>
+      <span class="arrow">→</span>
+    </a>
+
     <div class="hero-video-card">
       <div class="hero-video-thumb" onclick="this.innerHTML='<iframe src=&quot;https://www.youtube.com/embed/71YQmidVYHE?autoplay=1&quot; title=&quot;PCOSSAM lecture sample video&quot; style=&quot;width:100%;height:100%;border:0;&quot; allow=&quot;accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen></iframe>';">
         <img src="https://img.youtube.com/vi/71YQmidVYHE/hqdefault.jpg" alt="PCOSSAM lecture sample video thumbnail" loading="lazy">
@@ -1015,10 +1133,73 @@
     </div>
   </div>
 
+  <div class="gpl-banner" id="global-pitch-lab">
+    <div class="gpl-top">
+      <div>
+        <div class="gpl-label-row">
+          <span class="gpl-eyebrow">SERVICE 01</span>
+          <span class="gpl-new-tag">NEW</span>
+        </div>
+        <h3 class="gpl-title">Global Pitch Lab<br><em>AI Presentation Rehearsal Clinic</em></h3>
+        <p class="gpl-desc">
+          Send your rehearsal video and slides, and we'll review them regardless of language or time zone. (Upload your rehearsal video to YouTube as unlisted, then send us the link.) For English presentations, we check your script with AI translation and deliver a consulting report on structure and delivery, plus slide edits — all in one non-face-to-face service.
+        </p>
+        <div class="gpl-tags">
+          <span class="gpl-tag">Overseas Investor Pitch</span>
+          <span class="gpl-tag">English Presentation</span>
+          <span class="gpl-tag">Remote Coaching</span>
+          <span class="gpl-tag">AI Translation</span>
+        </div>
+      </div>
+      <div class="gpl-cta-col">
+        <a href="#contact" class="btn-primary" onclick="document.querySelector('select[name=문의_유형]').value='Global Pitch Lab (Overseas / English Presentation Consulting)';">Apply / Inquire →</a>
+        <div class="gpl-cta-note">Quote within 1-2 business days after reviewing your materials</div>
+      </div>
+    </div>
+
+    <div class="gpl-packages">
+      <div class="gpl-pkg">
+        <div class="gpl-pkg-head">
+          <span class="gpl-pkg-name">BASIC</span>
+        </div>
+        <div class="gpl-pkg-price">$220–$370<span>/ project</span></div>
+        <ul class="gpl-pkg-list">
+          <li>Rehearsal video review</li>
+          <li>English script translation check</li>
+          <li>Structure & delivery consulting report</li>
+        </ul>
+      </div>
+      <div class="gpl-pkg popular">
+        <div class="gpl-pkg-head">
+          <span class="gpl-pkg-name">STANDARD</span>
+          <span class="gpl-pkg-badge">Popular</span>
+        </div>
+        <div class="gpl-pkg-price">$440–$660<span>/ project</span></div>
+        <ul class="gpl-pkg-list">
+          <li>Everything in Basic</li>
+          <li>Slide structure & design edits</li>
+          <li>Key message repositioning</li>
+        </ul>
+      </div>
+      <div class="gpl-pkg">
+        <div class="gpl-pkg-head">
+          <span class="gpl-pkg-name">PREMIUM</span>
+        </div>
+        <div class="gpl-pkg-price">$660–$960<span>/ project</span></div>
+        <ul class="gpl-pkg-list">
+          <li>Everything in Standard</li>
+          <li>1 live Google Meet session (~60 min)</li>
+          <li>Live rehearsal feedback</li>
+        </ul>
+      </div>
+    </div>
+    <p class="gpl-foot-note">* Pricing varies by presentation length, number of slides, language, and urgency; an exact quote is provided after reviewing your materials. Monthly subscription packages are available on request for frequent presenters.</p>
+  </div>
+
   <div class="services-grid">
     <div class="service-card">
       <div class="service-icon">🎯</div>
-      <div class="service-label">SERVICE 01</div>
+      <div class="service-label">SERVICE 02</div>
       <h3 class="service-title">AI Presentation Strategy</h3>
       <p class="service-desc">Solves unclear goals, audiences, key messages, storylines, and slide flow. Simple analogies for understanding, comparison strategies for persuasion.</p>
       <div class="service-tags">
@@ -1031,7 +1212,7 @@
 
     <div class="service-card featured">
       <div class="service-icon">📊</div>
-      <div class="service-label">SERVICE 02 · CORE</div>
+      <div class="service-label">SERVICE 03</div>
       <h3 class="service-title">AI Pitch Deck & Proposal Consulting</h3>
       <p class="service-desc">Fixes weak messages, bloated slides, and decks that fail to persuade. We design "why this presentation convinces" before anything else.</p>
       <div class="service-tags">
@@ -1044,7 +1225,7 @@
 
     <div class="service-card">
       <div class="service-icon">🎤</div>
-      <div class="service-label">SERVICE 03</div>
+      <div class="service-label">SERVICE 04</div>
       <h3 class="service-title">AI Speech Coaching</h3>
       <p class="service-desc">For when you have the slides but not the words. Coaching covers flow, pacing, emphasis, and Q&A handling — audience questions are logged after each talk as a reusable asset.</p>
       <div class="service-tags">
@@ -1057,7 +1238,7 @@
 
     <div class="service-card">
       <div class="service-icon">🏢</div>
-      <div class="service-label">SERVICE 04</div>
+      <div class="service-label">SERVICE 05</div>
       <h3 class="service-title">Corporate AI Presentation Training</h3>
       <p class="service-desc">Practical ChatGPT, generative AI report & proposal writing, and AI-era productivity. Delivered in-person, online, VOD, or as workshops.</p>
       <div class="service-tags">
@@ -1070,7 +1251,7 @@
 
     <div class="service-card">
       <div class="service-icon">🚀</div>
-      <div class="service-label">SERVICE 05</div>
+      <div class="service-label">SERVICE 06</div>
       <h3 class="service-title">Integrated Presentation Package</h3>
       <p class="service-desc">Strategy → pitch deck improvement → rehearsal coaching in one full package. For founders and executives facing high-stakes presentations. Avg. 6 sessions, from KRW 5M.</p>
       <div class="service-tags">
@@ -1083,7 +1264,7 @@
 
     <div class="service-card">
       <div class="service-icon">🎓</div>
-      <div class="service-label">SERVICE 06</div>
+      <div class="service-label">SERVICE 07</div>
       <h3 class="service-title">AI & PPT Classes for Students</h3>
       <p class="service-desc">Live online classes for elementary and middle school students on creating presentations with AI and PPT. Hands-on, output-focused sessions on the Gguge platform.</p>
       <div class="service-tags">
@@ -2344,6 +2525,7 @@
         <label class="form-label">Inquiry Type *</label>
         <select class="form-select" name="문의_유형" required style="width:100%; padding:12px 16px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.15); border-radius:8px; color:rgba(255,255,255,0.8); font-size:14px; font-family:'Noto Sans KR',sans-serif;">
           <option value="">Please select</option>
+          <option>Global Pitch Lab (Overseas / English Presentation Consulting)</option>
           <option>Corporate AI Presentation Training</option>
           <option>AI Presentation Strategy Consulting</option>
           <option>Pitch Deck & Proposal Consulting</option>
