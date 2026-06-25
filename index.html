@@ -999,6 +999,143 @@
     .package-grid { grid-template-columns: 1fr; max-width: 440px; }
   }
 
+
+  /* ── 무료 특강 배너 ── */
+  .free-seminar-banner {
+    margin: 20px 0 16px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(26,58,92,0.13);
+  }
+  .fsb-header {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-mid) 100%);
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .fsb-badge {
+    background: var(--gold);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 3px 9px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  .fsb-title-head {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+  }
+  .fsb-cards {
+    background: var(--accent-light);
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .fsb-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 13px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .fsb-card-info {
+    flex: 1;
+    min-width: 0;
+  }
+  .fsb-date {
+    font-size: 12px;
+    color: var(--accent-mid);
+    font-weight: 700;
+    margin-bottom: 3px;
+  }
+  .fsb-topic {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-800);
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .fsb-btn {
+    background: var(--accent);
+    color: #fff !important;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none !important;
+    white-space: nowrap;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .fsb-btn:hover {
+    background: var(--accent-mid);
+    transform: translateY(-1px);
+  }
+  @media (max-width: 600px) {
+    .fsb-card { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .fsb-btn { width: 100%; text-align: center; }
+    .fsb-topic { white-space: normal; }
+  }
+
+
+  /* ── 무료 특강 배너 이메일 구독 ── */
+  .fsb-email-section {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-mid) 100%);
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .fsb-email-text {
+    color: rgba(255,255,255,0.9);
+    font-size: 12.5px;
+    line-height: 1.5;
+    flex: 1;
+    min-width: 180px;
+  }
+  .fsb-email-text strong {
+    color: var(--gold);
+    font-weight: 700;
+  }
+  .fsb-email-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--gold);
+    color: #fff !important;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 9px 16px;
+    border-radius: 8px;
+    text-decoration: none !important;
+    white-space: nowrap;
+    transition: opacity 0.2s, transform 0.15s;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .fsb-email-btn:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+  }
+  @media (max-width: 600px) {
+    .fsb-email-section { flex-direction: column; align-items: flex-start; }
+    .fsb-email-btn { width: 100%; justify-content: center; }
+  }
+
 </style>
 </head>
 <body>
@@ -1057,9 +1194,40 @@
       <a href="#services" class="btn-outline">서비스 살펴보기</a>
     </div>
 
+    <div class="free-seminar-banner">
+      <div class="fsb-header">
+        <span class="fsb-badge">무료 특강</span>
+        <span class="fsb-title-head">이달의 줌(Zoom) 무료 특강 일정</span>
+      </div>
+      <div class="fsb-cards">
+        <div class="fsb-card">
+          <div class="fsb-card-info">
+            <div class="fsb-date">📅 2026년 7월 21일(화) 14:00~15:30</div>
+            <div class="fsb-topic">AI 시대, 결국 다시 프레젠테이션</div>
+          </div>
+          <a href="https://forms.gle/axuuJNw7za2q8HCr5" target="_blank" rel="noopener" class="fsb-btn">신청하기 →</a>
+        </div>
+        <div class="fsb-card">
+          <div class="fsb-card-info">
+            <div class="fsb-date">📅 2026년 7월 23일(목) 14:00~15:30</div>
+            <div class="fsb-topic">피코쌤만의 실전 PPT 스킬</div>
+          </div>
+          <a href="https://forms.gle/drp6wrB3HeYeoMfK6" target="_blank" rel="noopener" class="fsb-btn">신청하기 →</a>
+        </div>
+      </div>
+      <div class="fsb-email-section">
+        <div class="fsb-email-text">
+          ✉️ <strong>다음 특강 알림 받기</strong> — 매달 1~2회 무료 특강을 진행합니다.<br>이메일을 남겨주시면 주제·일정·줌 링크를 미리 보내드립니다.
+        </div>
+        <a href="https://forms.gle/LUyWfHNkCtCYNTg2A" target="_blank" rel="noopener" class="fsb-email-btn">
+          📬 이메일 주소 남기기
+        </a>
+      </div>
+    </div>
+
     <a href="#global-pitch-lab" class="hero-new-service">
       <span class="tag">NEW</span>
-      <span class="desc"><strong>Global Pitch Lab</strong> — AI 발표 리허설 클리닉. 영상 한 편으로 시작하는 국경 없는 발표 컨설팅</span>
+      <span class="desc"><strong>Global Pitch Lab</strong> — 유튜브에 발표 리허설 영상을 올리고, 링크를 보내주시면 PT코칭이 시작됩니다.</span>
       <span class="arrow">→</span>
     </a>
 
@@ -1143,17 +1311,7 @@
 </section>
 
 <!-- SERVICES -->
-<div style="text-align:center; padding:48px 24px; background:var(--gray-50);">
-  <a href="https://forms.gle/LUyWfHNkCtCYNTg2A" target="_blank" style="display:inline-flex; align-items:center; gap:10px; padding:16px 32px; background:var(--accent); color:white; border-radius:10px; text-decoration:none; font-size:16px; font-weight:700; box-shadow:0 4px 16px rgba(0,0,0,0.12); transition:all 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
-    ✉️ 이메일 주소 남기기
-  </a>
-  <p style="margin-top:12px; color:var(--accent); font-size:14px; font-weight:700;">
-    무료 특강 일정 : 26년 06월 26일 금요일 14:00~15:30
-  </p>
-  <p style="margin-top:16px; color:var(--gray-600); font-size:14px; line-height:1.7;">
-    매달 1~2회 다양한 주제로 무료 특강을 진행합니다. 이메일을 남겨주시면, 관련 주제와 일정/시간, 줌링크를 발송합니다.
-  </p>
-</div>
+
 
 <section id="services">
   <div class="section-label">SERVICES</div>
