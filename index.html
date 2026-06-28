@@ -71,7 +71,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif+KR:wght@400;700&family=DM+Serif+Display&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif+KR:wght@400;700&family=DM+Serif+Display&family=Nanum+Pen+Script&family=Nanum+Brush+Script&family=Black+Han+Sans&display=swap" rel="stylesheet">
 
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -384,16 +384,31 @@
   .hero-new-service .desc strong { color: var(--gold); font-weight: 700; }
   .hero-new-service .arrow { color: var(--gold); font-size: 13px; flex-shrink: 0; }
   h1.hero-title {
-    font-size: clamp(36px, 4.5vw, 58px);
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: clamp(48px, 6vw, 80px);
     font-weight: 900;
+    letter-spacing: -1px;
     line-height: 1.15;
     color: var(--white);
-    letter-spacing: -1.5px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  h1.hero-title .hero-title-top,
+  h1.hero-title .hero-title-bottom {
+    display: block;
   }
   h1.hero-title em {
     font-style: normal;
+    font-family: 'Noto Sans KR', sans-serif;
     color: var(--gold);
+    font-size: clamp(48px, 6vw, 80px);
+    font-weight: 900;
+    letter-spacing: -1px;
+    display: block;
+    line-height: 1.15;
+    text-shadow: 0 0 40px rgba(201,162,39,0.35);
   }
   .hero-subtitle {
     font-size: 17px;
@@ -1149,7 +1164,7 @@
     /* 히어로 */
     #hero { min-height: auto; padding-top: 56px; }
     .hero-left { padding: 48px 5% 56px; }
-    h1.hero-title { font-size: 36px; letter-spacing: -1px; margin-bottom: 16px; }
+    h1.hero-title { font-size: 38px; letter-spacing: -2px; margin-bottom: 16px; }
     .hero-badge { font-size: 11px; padding: 5px 12px; margin-bottom: 20px; }
     .hero-new-service { padding: 9px 13px; margin-top: 14px; margin-bottom: 24px; }
     .hero-new-service .desc { font-size: 12px; }
@@ -1600,9 +1615,9 @@
   <div class="hero-left">
     <div class="hero-badge">AI 프레젠테이션 컨설턴트 & 발표 코치</div>
     <h1 class="hero-title">
-      좋은 프레젠테이션은<br>
-      <em>전략</em>에서<br>
-      시작됩니다
+      <span class="hero-title-top">AI시대</span>
+      <em>결국 다시</em>
+      <span class="hero-title-bottom">프레젠테이션</span>
     </h1>
     <p class="hero-subtitle">
       프레젠테이션 전략과 발표 코칭에<br>
@@ -1877,28 +1892,28 @@
     <div class="svc-partner-icons">
       <div class="svc-icon-item">
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="48" height="48" rx="14" fill="rgba(30,40,80,0.10)"/>
-          <path d="M13 33L20 19l5 8 4-5 6 11H13z" stroke="#1a2a4a" stroke-width="2" stroke-linejoin="round" fill="none"/>
-          <circle cx="17" cy="17" r="2.5" fill="#1a2a4a"/>
+          <rect width="48" height="48" rx="14" fill="rgba(201,162,39,0.12)"/>
+          <path d="M13 33L20 19l5 8 4-5 6 11H13z" stroke="rgba(201,162,39,0.9)" stroke-width="2" stroke-linejoin="round" fill="none"/>
+          <circle cx="17" cy="17" r="2.5" fill="rgba(201,162,39,0.9)"/>
         </svg>
         <span>전략 수립</span>
       </div>
       <div class="svc-icon-arrow">→</div>
       <div class="svc-icon-item">
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="48" height="48" rx="14" fill="rgba(30,40,80,0.10)"/>
-          <rect x="13" y="15" width="22" height="2.5" rx="1.2" fill="#1a2a4a"/>
-          <rect x="13" y="22" width="15" height="2.5" rx="1.2" fill="#1a2a4a"/>
-          <rect x="13" y="29" width="18" height="2.5" rx="1.2" fill="#1a2a4a"/>
+          <rect width="48" height="48" rx="14" fill="rgba(201,162,39,0.12)"/>
+          <rect x="13" y="15" width="22" height="2.5" rx="1.2" fill="rgba(201,162,39,0.9)"/>
+          <rect x="13" y="22" width="15" height="2.5" rx="1.2" fill="rgba(201,162,39,0.9)"/>
+          <rect x="13" y="29" width="18" height="2.5" rx="1.2" fill="rgba(201,162,39,0.9)"/>
         </svg>
         <span>피치덱 개선</span>
       </div>
       <div class="svc-icon-arrow">→</div>
       <div class="svc-icon-item">
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="48" height="48" rx="14" fill="rgba(30,40,80,0.10)"/>
-          <circle cx="24" cy="19" r="5" stroke="#1a2a4a" stroke-width="2" fill="none"/>
-          <path d="M14 36c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#1a2a4a" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <rect width="48" height="48" rx="14" fill="rgba(201,162,39,0.12)"/>
+          <circle cx="24" cy="19" r="5" stroke="rgba(201,162,39,0.9)" stroke-width="2" fill="none"/>
+          <path d="M14 36c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="rgba(201,162,39,0.9)" stroke-width="2" stroke-linecap="round" fill="none"/>
         </svg>
         <span>리허설 코칭</span>
       </div>
@@ -1933,17 +1948,38 @@
 <style>
 /* 파트너십 블록 강화 */
 .svc-partner {
+  position: relative;
   max-width: 940px;
   margin: 48px auto 0;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2512 100%);
-  border-radius: 24px;
-  padding: 64px 72px;
+  background: #0a0a0a;
+  border-radius: 4px;
+  padding: 80px 100px;
   text-align: center;
-  border: 1px solid rgba(212,170,88,0.25);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+  border-top: 1px solid rgba(201,162,39,0.6);
+  border-bottom: 1px solid rgba(201,162,39,0.15);
+  border-left: none;
+  border-right: none;
+  overflow: hidden;
+}
+.svc-partner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,162,39,0.8) 30%, rgba(232,197,90,1) 50%, rgba(201,162,39,0.8) 70%, transparent);
+}
+.svc-partner::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 480px;
+  height: 280px;
+  background: radial-gradient(ellipse at top, rgba(201,162,39,0.07) 0%, transparent 65%);
+  pointer-events: none;
 }
 @media (max-width: 700px) {
-  .svc-partner { padding: 44px 28px; }
+  .svc-partner { padding: 56px 28px; }
 }
 
 /* 아이콘 행 */
@@ -1951,57 +1987,75 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-  margin-bottom: 40px;
+  gap: 24px;
+  margin-bottom: 56px;
   flex-wrap: wrap;
 }
 .svc-icon-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 }
 .svc-icon-item span {
-  font-size: 12px;
-  font-weight: 600;
-  color: #1a2a4a;
-  letter-spacing: 0.04em;
+  font-size: 10px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 .svc-icon-arrow {
-  font-size: 18px;
-  color: #1a2a4a;
+  font-size: 14px;
+  color: rgba(201,162,39,0.35);
   font-weight: 300;
   margin-bottom: 20px;
 }
 
 /* 라벨 */
 .svc-partner-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 18px;
+  color: rgba(201,162,39,0.7);
+  margin-bottom: 20px;
+}
+
+/* 구분선 */
+.svc-partner-label::after {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: rgba(201,162,39,0.4);
+  margin: 14px auto 0;
 }
 
 /* 타이틀 */
 .svc-partner-title {
   font-size: 28px;
-  font-weight: 800;
+  font-weight: 300;
   color: #ffffff;
-  line-height: 1.45;
-  margin-bottom: 16px;
+  line-height: 1.65;
+  margin-bottom: 20px;
+  letter-spacing: -0.3px;
+}
+.svc-partner-title strong {
+  font-weight: 700;
+  color: #ffffff;
 }
 @media (max-width: 700px) {
-  .svc-partner-title { font-size: 22px; }
+  .svc-partner-title { font-size: 20px; }
 }
 
 /* 설명 */
 .svc-partner-desc {
-  font-size: 15px;
-  color: rgba(255,255,255,0.65);
-  line-height: 1.75;
+  font-size: 14px;
+  color: rgba(255,255,255,0.38);
+  line-height: 1.9;
   margin-bottom: 0;
+  letter-spacing: 0.01em;
 }
 
 /* 수치 */
@@ -2010,7 +2064,7 @@
   justify-content: center;
   align-items: center;
   gap: 0;
-  margin: 40px auto;
+  margin: 56px auto;
   max-width: 480px;
 }
 .svc-stat {
@@ -2018,21 +2072,24 @@
   text-align: center;
 }
 .svc-stat-num {
-  font-size: 26px;
-  font-weight: 800;
-  color: var(--accent);
-  line-height: 1.1;
-  margin-bottom: 6px;
+  font-size: 30px;
+  font-weight: 200;
+  color: rgba(201,162,39,0.9);
+  line-height: 1.0;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
 }
 .svc-stat-desc {
-  font-size: 12px;
-  color: rgba(255,255,255,0.5);
-  line-height: 1.5;
+  font-size: 10px;
+  color: rgba(255,255,255,0.3);
+  line-height: 1.7;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 .svc-stat-divider {
   width: 1px;
-  height: 48px;
-  background: rgba(255,255,255,0.15);
+  height: 40px;
+  background: rgba(255,255,255,0.08);
   flex-shrink: 0;
 }
 
@@ -2040,26 +2097,30 @@
 .svc-partner-cta {
   display: inline-block;
   margin-top: 8px;
-  padding: 16px 40px;
-  background: var(--accent);
-  color: #ffffff;
-  border-radius: 12px;
-  font-size: 15px;
-  font-weight: 700;
+  padding: 16px 52px;
+  background: transparent;
+  color: rgba(201,162,39,0.9);
+  border: 1px solid rgba(201,162,39,0.5);
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 600;
   text-decoration: none;
-  letter-spacing: 0.02em;
-  transition: opacity 0.2s, transform 0.2s;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all 0.3s;
 }
 .svc-partner-cta:hover {
-  opacity: 0.88;
-  transform: translateY(-2px);
+  background: rgba(201,162,39,0.08);
+  border-color: rgba(201,162,39,0.9);
+  color: #e8c55a;
 }
 
 /* 노트 */
 .svc-partner-note {
-  margin-top: 18px;
-  font-size: 12px;
-  color: rgba(255,255,255,0.35);
+  margin-top: 22px;
+  font-size: 10px;
+  color: rgba(255,255,255,0.18);
+  letter-spacing: 0.04em;
 }
 </style>
 
