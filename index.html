@@ -1471,6 +1471,90 @@
     .fsb-email-btn { width: 100%; justify-content: center; }
   }
 
+
+/* ── 리허설 상세 블록 ── */
+.rehearsal-detail-block {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2512 100%);
+  border-radius: 24px;
+  padding: 56px 64px;
+  text-align: center;
+  border: 1px solid rgba(212,170,88,0.25);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+  margin-bottom: 24px;
+}
+@media (max-width:700px) { .rehearsal-detail-block { padding: 40px 24px; } }
+
+.rd-icons {
+  display: flex; align-items: center; justify-content: center;
+  gap: 16px; margin-bottom: 36px; flex-wrap: wrap;
+}
+.rd-icon-item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.rd-icon-item span { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.9); letter-spacing: 0.04em; }
+.rd-icon-arrow { font-size: 18px; color: var(--accent); margin-bottom: 20px; }
+
+.rd-label { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+.rd-title { font-size: 28px; font-weight: 800; color: #fff; line-height: 1.45; margin-bottom: 14px; }
+.rd-desc { font-size: 15px; color: rgba(255,255,255,0.65); line-height: 1.75; margin-bottom: 36px; }
+
+/* 패키지 3단 */
+.rd-packages {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 16px;
+  max-width: 700px; margin: 0 auto 36px;
+}
+@media (max-width:680px) { .rd-packages { grid-template-columns: 1fr; } }
+.rd-pkg {
+  position: relative;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px; padding: 24px 20px; text-align: left;
+}
+.rd-pkg-featured {
+  border-color: var(--accent);
+  background: rgba(212,170,88,0.1);
+}
+.rd-pkg-badge {
+  position: absolute; top: -11px; left: 16px;
+  background: var(--accent); color: #fff;
+  font-size: 10px; font-weight: 700; padding: 3px 10px; border-radius: 20px;
+}
+.rd-pkg-name { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 8px; }
+.rd-pkg-price { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 14px; }
+.rd-pkg-price span { font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.5); margin-left: 3px; }
+.rd-pkg-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.rd-pkg-list li { font-size: 13px; color: rgba(255,255,255,0.75); padding-left: 14px; position: relative; line-height: 1.5; }
+.rd-pkg-list li::before { content: "·"; position: absolute; left: 2px; color: var(--accent); font-weight: 900; }
+
+.rd-cta {
+  display: inline-block; padding: 16px 40px;
+  background: var(--accent); color: #fff;
+  border-radius: 12px; font-size: 15px; font-weight: 700;
+  text-decoration: none; transition: opacity 0.2s, transform 0.2s;
+}
+.rd-cta:hover { opacity: 0.88; transform: translateY(-2px); }
+.rd-note { margin-top: 16px; font-size: 12px; color: rgba(255,255,255,0.35); }
+
+/* ── 파트너십 블록 소형화 ── */
+.svc-partner-small {
+  background: var(--gray-100) !important;
+  border: 1.5px solid var(--gray-200) !important;
+  box-shadow: none !important;
+  padding: 40px 48px !important;
+}
+.svc-partner-small .svc-partner-icons svg rect { fill: rgba(30,40,80,0.08) !important; }
+.svc-partner-small .svc-partner-icons svg path,
+.svc-partner-small .svc-partner-icons svg rect:not(:first-child),
+.svc-partner-small .svc-partner-icons svg circle { stroke: var(--gray-800) !important; fill: var(--gray-800) !important; }
+.svc-partner-small .svc-icon-item span { color: var(--gray-600) !important; }
+.svc-partner-small .svc-icon-arrow { color: var(--gray-600) !important; }
+.svc-partner-small .svc-partner-label { color: var(--gray-400) !important; }
+.svc-partner-small .svc-partner-title { color: var(--black) !important; font-size: 22px !important; }
+.svc-partner-small .svc-partner-desc { color: var(--gray-600) !important; }
+.svc-partner-small .svc-stat-num { color: var(--accent) !important; }
+.svc-partner-small .svc-stat-desc { color: var(--gray-400) !important; }
+.svc-partner-small .svc-stat-divider { background: var(--gray-200) !important; }
+.svc-partner-small .svc-partner-cta { background: var(--black) !important; }
+.svc-partner-small .svc-partner-note { color: var(--gray-400) !important; }
+
 </style>
 </head>
 <body>
@@ -1514,7 +1598,7 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-left">
-    <div class="hero-badge">프레젠테이션 전략 컨설턴트 & 발표 코치</div>
+    <div class="hero-badge">AI 프레젠테이션 컨설턴트 & 발표 코치</div>
     <h1 class="hero-title">
       좋은 프레젠테이션은<br>
       <em>전략</em>에서<br>
@@ -1561,9 +1645,9 @@
       </div>
     </div>
 
-    <a href="#global-pitch-lab" class="hero-new-service">
+    <a href="#rehearsal-detail" class="hero-new-service" onclick="document.getElementById('rehearsal-detail').style.display='block'; return false;">
       <span class="tag">NEW</span>
-      <span class="desc"><strong>Global Pitch Lab</strong> — 유튜브에 발표 리허설 영상을 올리고, 링크를 보내주시면 PT코칭이 시작됩니다.</span>
+      <span class="desc"><strong>리허설 영상 분석</strong> — 유튜브에 발표 리허설 영상을 올리고, 링크를 보내주시면 PT코칭이 시작됩니다.</span>
       <span class="arrow">→</span>
     </a>
 
@@ -1665,7 +1749,7 @@
         <li>Q&A 대응 전략</li>
         <li>Claude 활용 스크립트 사전 검토</li>
       </ul>
-      <a href="#contact" class="svc-btn">문의하기 →</a>
+
     </div>
 
     <!-- 카드 2: 프레젠테이션 전략 + 피치덱 -->
@@ -1680,11 +1764,11 @@
         <li>피치덱 · IR Deck · 제안서 개선</li>
         <li>ChatGPT · Claude 활용 초안 작업</li>
       </ul>
-      <a href="#contact" class="svc-btn">문의하기 →</a>
+
     </div>
 
     <!-- 카드 3: 리허설 영상 분석 -->
-    <div class="svc-card">
+    <div class="svc-card" style="cursor:pointer;" onclick="toggleRehearsal()">
       <div class="svc-eyebrow">리허설 영상 분석</div>
       <div class="svc-price">30만원<span>부터 / 1건</span></div>
       <p class="svc-desc">리허설 영상을 유튜브(비공개)로 보내주시면 전략 · 전달력 · 슬라이드를 분석해 피드백 리포트를 드립니다.</p>
@@ -1694,7 +1778,7 @@
         <li>시간대 · 언어 관계없이 비대면 진행</li>
         <li>자료 확인 후 1~2일 내 회신</li>
       </ul>
-      <a href="#contact" class="svc-btn">문의하기 →</a>
+      <div style="margin-top:auto; padding-top:16px; font-size:13px; color:var(--accent); font-weight:600;">자세히 보기 ↓</div>
     </div>
 
     <!-- 카드 4: 기업 교육 -->
@@ -1708,19 +1792,276 @@
         <li>오프라인 · 온라인 모두 가능</li>
         <li>기업 맞춤 커리큘럼 설계</li>
       </ul>
-      <a href="#contact" class="svc-btn">문의하기 →</a>
+
     </div>
 
   </div>
 
   <!-- 장기 파트너십 블록 -->
-  <div class="svc-partner">
+  <!-- 리허설 영상 분석 상세 블록 -->
+  <div id="rehearsal-detail" style="display:none; max-width:940px; margin:24px auto 0;">
+    <div class="rehearsal-detail-block">
+      <!-- 아이콘 행 -->
+      <div class="rd-icons">
+        <div class="rd-icon-item">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="14" fill="rgba(255,255,255,0.12)"/>
+            <circle cx="24" cy="20" r="6" stroke="rgba(255,255,255,0.95)" stroke-width="2" fill="none"/>
+            <path d="M14 38c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="rgba(255,255,255,0.95)" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+          <span>리허설 영상 촬영</span>
+        </div>
+        <div class="rd-icon-arrow">→</div>
+        <div class="rd-icon-item">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="14" fill="rgba(255,255,255,0.12)"/>
+            <rect x="13" y="16" width="22" height="2.5" rx="1.2" fill="rgba(255,255,255,0.95)"/>
+            <rect x="13" y="23" width="15" height="2.5" rx="1.2" fill="rgba(255,255,255,0.95)"/>
+            <rect x="13" y="30" width="18" height="2.5" rx="1.2" fill="rgba(255,255,255,0.95)"/>
+          </svg>
+          <span>유튜브 링크 전송</span>
+        </div>
+        <div class="rd-icon-arrow">→</div>
+        <div class="rd-icon-item">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="14" fill="rgba(255,255,255,0.12)"/>
+            <path d="M13 34L20 20l5 8 4-6 6 12H13z" stroke="rgba(255,255,255,0.95)" stroke-width="2" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <span>피드백 리포트 수령</span>
+        </div>
+      </div>
+
+      <div class="rd-label">리허설 영상 분석</div>
+      <div class="rd-title">영상 하나로<br>발표의 모든 것을 분석합니다.</div>
+      <p class="rd-desc">리허설 영상을 유튜브(비공개)에 올리고 링크를 보내주세요.<br>전략 · 전달력 · 슬라이드를 분석해 피드백 리포트를 드립니다.</p>
+
+      <!-- 패키지 3단 -->
+      <div class="rd-packages">
+        <div class="rd-pkg">
+          <div class="rd-pkg-name">BASIC</div>
+          <div class="rd-pkg-price">30만원<span>~ / 1건</span></div>
+          <ul class="rd-pkg-list">
+            <li>발표 구성 · 전달력 분석 리포트</li>
+            <li>슬라이드 개선 피드백</li>
+            <li>1~2일 내 회신</li>
+          </ul>
+        </div>
+        <div class="rd-pkg rd-pkg-featured">
+          <div class="rd-pkg-badge">인기</div>
+          <div class="rd-pkg-name">STANDARD</div>
+          <div class="rd-pkg-price">60만원<span>~ / 1건</span></div>
+          <ul class="rd-pkg-list">
+            <li>BASIC 전체 포함</li>
+            <li>슬라이드 구성 · 디자인 수정</li>
+            <li>핵심 메시지 재배치</li>
+          </ul>
+        </div>
+        <div class="rd-pkg">
+          <div class="rd-pkg-name">PREMIUM</div>
+          <div class="rd-pkg-price">90만원<span>~ / 1건</span></div>
+          <ul class="rd-pkg-list">
+            <li>STANDARD 전체 포함</li>
+            <li>Google Meet 라이브 미팅 1회</li>
+            <li>실전 리허설 피드백</li>
+          </ul>
+        </div>
+      </div>
+
+      <a href="#contact" class="rd-cta">리허설 영상 분석 문의하기 →</a>
+      <p class="rd-note">* 발표 길이 · 슬라이드 분량 · 긴급도에 따라 금액이 달라질 수 있습니다</p>
+    </div>
+  </div>
+
+  <div class="svc-partner svc-partner-small">
+    <!-- 아이콘 행 -->
+    <div class="svc-partner-icons">
+      <div class="svc-icon-item">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="14" fill="rgba(30,40,80,0.10)"/>
+          <path d="M13 33L20 19l5 8 4-5 6 11H13z" stroke="#1a2a4a" stroke-width="2" stroke-linejoin="round" fill="none"/>
+          <circle cx="17" cy="17" r="2.5" fill="#1a2a4a"/>
+        </svg>
+        <span>전략 수립</span>
+      </div>
+      <div class="svc-icon-arrow">→</div>
+      <div class="svc-icon-item">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="14" fill="rgba(30,40,80,0.10)"/>
+          <rect x="13" y="15" width="22" height="2.5" rx="1.2" fill="#1a2a4a"/>
+          <rect x="13" y="22" width="15" height="2.5" rx="1.2" fill="#1a2a4a"/>
+          <rect x="13" y="29" width="18" height="2.5" rx="1.2" fill="#1a2a4a"/>
+        </svg>
+        <span>피치덱 개선</span>
+      </div>
+      <div class="svc-icon-arrow">→</div>
+      <div class="svc-icon-item">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="14" fill="rgba(30,40,80,0.10)"/>
+          <circle cx="24" cy="19" r="5" stroke="#1a2a4a" stroke-width="2" fill="none"/>
+          <path d="M14 36c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#1a2a4a" stroke-width="2" stroke-linecap="round" fill="none"/>
+        </svg>
+        <span>리허설 코칭</span>
+      </div>
+    </div>
+
     <div class="svc-partner-label">장기 파트너십</div>
     <div class="svc-partner-title">발표가 자주 필요한 조직이라면<br>월 단위 파트너십을 제안합니다.</div>
     <p class="svc-partner-desc">전략 수립 · 피치덱 개선 · 리허설 코칭을 하나의 흐름으로.<br>중요한 발표를 앞둔 창업자 · 임원 · 기업에 적합합니다.</p>
-    <a href="#contact" class="btn-primary" style="margin-top:28px; display:inline-block;">파트너십 문의하기 →</a>
-    <p class="svc-partner-note">* 자료 확인 후 1~2일 내 견적 회신 · 모든 비용 부가세 별도</p>
+
+    <!-- 수치 강조 -->
+    <div class="svc-partner-stats">
+      <div class="svc-stat">
+        <div class="svc-stat-num">3+</div>
+        <div class="svc-stat-desc">평균 서비스<br>진행 개월</div>
+      </div>
+      <div class="svc-stat-divider"></div>
+      <div class="svc-stat">
+        <div class="svc-stat-num">1~2일</div>
+        <div class="svc-stat-desc">자료 확인 후<br>견적 회신</div>
+      </div>
+      <div class="svc-stat-divider"></div>
+      <div class="svc-stat">
+        <div class="svc-stat-num">100%</div>
+        <div class="svc-stat-desc">맞춤형<br>커리큘럼</div>
+      </div>
+    </div>
+
+    <a href="#contact" class="svc-partner-cta">파트너십 문의하기 →</a>
+    <p class="svc-partner-note">* 모든 비용 부가세 별도 · 규모·기간에 따라 맞춤 견적</p>
   </div>
+
+<style>
+/* 파트너십 블록 강화 */
+.svc-partner {
+  max-width: 940px;
+  margin: 48px auto 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2512 100%);
+  border-radius: 24px;
+  padding: 64px 72px;
+  text-align: center;
+  border: 1px solid rgba(212,170,88,0.25);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+}
+@media (max-width: 700px) {
+  .svc-partner { padding: 44px 28px; }
+}
+
+/* 아이콘 행 */
+.svc-partner-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+.svc-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.svc-icon-item span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1a2a4a;
+  letter-spacing: 0.04em;
+}
+.svc-icon-arrow {
+  font-size: 18px;
+  color: #1a2a4a;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+/* 라벨 */
+.svc-partner-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+/* 타이틀 */
+.svc-partner-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.45;
+  margin-bottom: 16px;
+}
+@media (max-width: 700px) {
+  .svc-partner-title { font-size: 22px; }
+}
+
+/* 설명 */
+.svc-partner-desc {
+  font-size: 15px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+
+/* 수치 */
+.svc-partner-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  margin: 40px auto;
+  max-width: 480px;
+}
+.svc-stat {
+  flex: 1;
+  text-align: center;
+}
+.svc-stat-num {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+.svc-stat-desc {
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.5;
+}
+.svc-stat-divider {
+  width: 1px;
+  height: 48px;
+  background: rgba(255,255,255,0.15);
+  flex-shrink: 0;
+}
+
+/* CTA 버튼 */
+.svc-partner-cta {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 16px 40px;
+  background: var(--accent);
+  color: #ffffff;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.svc-partner-cta:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+
+/* 노트 */
+.svc-partner-note {
+  margin-top: 18px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+}
+</style>
 
 </section>
 
@@ -1817,6 +2158,32 @@
   font-weight: 900;
   font-size: 16px;
   line-height: 1.3;
+}
+
+/* AI 로고 배지 */
+.svc-ai-badges {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.badge-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 9px;
+  border-radius: 20px;
+  background: transparent;
+  border: none;
+}
+.badge-logo span {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gray-800);
+  letter-spacing: 0.01em;
+  line-height: 1;
 }
 .svc-btn {
   display: block;
@@ -3787,5 +4154,18 @@ document.querySelectorAll('.reveal-more-btn').forEach(btn => {
       if(e.key === 'Escape') document.getElementById('lb').classList.remove('active');
     });
   </script>
+
+<script>
+function toggleRehearsal() {
+  var el = document.getElementById('rehearsal-detail');
+  if (!el) return;
+  if (el.style.display === 'none' || el.style.display === '') {
+    el.style.display = 'block';
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } else {
+    el.style.display = 'none';
+  }
+}
+</script>
 </body>
 </html>
