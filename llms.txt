@@ -105,5 +105,11 @@ ChatGPT 활용 교육, 생성형 AI 실무 활용, AI 기반 보고서·제안�
 - [레시피 기반 실전형 창업 교육 플랫폼](https://pcossam.com/portfolio/startup-edu-platform.html): 실제 판매 경험과 매출 데이터로 학습하는 소상공인 창업 교육 표준화 모델 기획안입니다.
 - [배터리 교환 스테이션 — 생활 속 전동화 인프라](https://pcossam.com/portfolio/battery-station.html): 캠핑장과 아파트 단지에 배터리 교환 스테이션을 두고, 표준화된 배터리로 작동하는 휴대용 냉장고와 전동 웨건을 운영하는 일상 전동화 기획안입니다.
 - [공공기관 법인카드 실시간 사용내역 알림](https://pcossam.com/portfolio/public-card-alert.html): 공공기관 법인카드 사용 내역을 결제 즉시 국민에게 문자로 공개해, 예산 투명성과 부정 사용 예방을 동시에 달성하는 AI·디지털 행정 기획안입니다.
+- [서비스 목록](https://pcossam.com/#services): 6가지 AI 프레젠테이션 서비스 (기업 교육 · 발표 코칭 · 전략 컨설팅 · 영상 분석 · 파트너십)
+- [기업 AI 프레젠테이션 교육](https://pcossam.com/services/corporate-training.html): ChatGPT · Claude를 활용한 보고서 · 제안서 · 프레젠테이션 실무 교육. 기업 니즈를 진단해 맞춤 커리큘럼으로 설계합니다.
+- [발표 코칭](https://pcossam.com/services/presentation-coaching.html): Claude로 스크립트를 사전 검토하고, 전달력과 Q&A 대응까지 중요한 발표를 앞둔 개인 · 임원 · CEO를 위한 맞춤 코칭입니다.
+- [프레젠테이션 전략 · 피치덱](https://pcossam.com/services/strategy-pitchdeck.html): 청중 분석과 핵심 메시지 설계부터 스토리라인, 슬라이드 구조까지 ChatGPT · Claude로 완성합니다.
+- [리허설 영상 분석](https://pcossam.com/services/rehearsal-analysis.html): 리허설 영상을 유튜브(비공개)로 보내주시면 전략 · 전달력 · 슬라이드를 분석해 피드백 리포트를 드립니다.
+- [장기 파트너십](https://pcossam.com/services/partnership.html): 전략 수립 · 피치덱 개선 · 리허설 코칭을 하나의 흐름으로. 발표가 자주 필요한 창업자 · 임원 · 기업과 월 단위로 함께합니다.
 - [FAQ](https://pcossam.com/#faq): 자주 묻는 질문
 - [문의하기](https://pcossam.com/#contact): 견적 문의 양식

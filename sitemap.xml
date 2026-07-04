@@ -66,4 +66,39 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/portfolio/public-card-alert.html"/>
   </url>
+  <url>
+    <loc>https://pcossam.com/services/corporate-training.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/corporate-training.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/services/presentation-coaching.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/presentation-coaching.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/services/strategy-pitchdeck.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/strategy-pitchdeck.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/services/rehearsal-analysis.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/rehearsal-analysis.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/services/partnership.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/partnership.html"/>
+  </url>
 </urlset>
