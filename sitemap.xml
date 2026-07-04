@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://pcossam.com/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/"/>
@@ -23,5 +23,47 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/ai-automation.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/portfolio/carping-house.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/portfolio/carping-house.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/portfolio/ev-hotel.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/portfolio/ev-hotel.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/portfolio/kfood-standard.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/portfolio/kfood-standard.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/portfolio/startup-edu-platform.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/portfolio/startup-edu-platform.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/portfolio/battery-station.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/portfolio/battery-station.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/portfolio/public-card-alert.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/portfolio/public-card-alert.html"/>
   </url>
 </urlset>

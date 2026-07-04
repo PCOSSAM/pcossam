@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>공공기관 법인카드 실시간 사용내역 알림 — 피코쌤(김민구) 기획 사례 | AI 프레젠테이션 컨설턴트</title>
+<meta name="description" content="공공기관 법인카드 사용 내역을 결제 즉시 국민에게 문자로 공개해, 예산 투명성과 부정 사용 예방을 동시에 달성하는 AI·디지털 행정 기획안입니다.">
+<meta name="keywords" content="투명한 예산집행, 부정부패 방지, 정보비대칭 해소, 실시간 알림, 공공데이터, 참여형 행정, 피코쌤, 김민구, AI 프레젠테이션, 신사업 기획">
+<meta name="author" content="피코쌤 (김민구)">
+<link rel="canonical" href="https://pcossam.com/portfolio/public-card-alert.html">
+
+<!-- OG Tags -->
+<meta property="og:title" content="공공기관 법인카드 실시간 사용내역 알림 — 피코쌤 기획 사례">
+<meta property="og:description" content="공공기관 법인카드 사용 내역을 결제 즉시 국민에게 문자로 공개해, 예산 투명성과 부정 사용 예방을 동시에 달성하는 AI·디지털 행정 기획안입니다.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pcossam.com/portfolio/public-card-alert.html">
+<meta property="og:image" content="https://pcossam.com/portfolio/images/case06-thumb.jpg">
+<meta property="og:site_name" content="PCOSSAM — 피코쌤">
+
+<!-- Schema.org Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "공공기관 법인카드 실시간 사용내역 알림",
+  "description": "공공기관 법인카드 사용 내역을 결제 즉시 국민에게 문자로 공개해, 예산 투명성과 부정 사용 예방을 동시에 달성하는 AI·디지털 행정 기획안입니다.",
+  "image": "https://pcossam.com/portfolio/images/case06-thumb.jpg",
+  "author": { "@type": "Person", "name": "김민구", "alternateName": "피코쌤", "url": "https://pcossam.com" },
+  "publisher": { "@type": "Organization", "name": "PCOSSAM", "url": "https://pcossam.com" },
+  "mainEntityOfPage": "https://pcossam.com/portfolio/public-card-alert.html",
+  "keywords": "투명한 예산집행, 부정부패 방지, 정보비대칭 해소, 실시간 알림, 공공데이터, 참여형 행정, 피코쌤, 김민구, AI 프레젠테이션, 신사업 기획"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#0a0a0a;--white:#fafaf8;--gray-100:#f4f3f0;
+  --gray-200:#e8e7e2;--gray-400:#9e9c97;--gray-600:#5e5c57;
+  --gray-700:#44423e;--gray-800:#2c2b28;
+  --accent:#1a3a5c;--accent-light:#e8f0f8;--accent-mid:#2a5a8a;
+  --gold:#c8973a;--gold-light:#fdf3e3;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--white);color:var(--black);line-height:1.8}
+
+/* 헤더 */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(250,250,248,0.95);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--gray-200);
+  padding:16px 40px;display:flex;align-items:center;justify-content:space-between;
+}
+.header-logo{font-weight:900;font-size:18px;text-decoration:none;color:var(--black);letter-spacing:0.05em}
+.header-nav{display:flex;gap:24px;align-items:center}
+.header-nav a{text-decoration:none;color:var(--gray-600);font-size:14px;transition:color 0.2s}
+.header-nav a:hover{color:var(--black)}
+.header-cta{
+  padding:8px 20px;background:var(--black);color:var(--white);
+  border-radius:50px;font-size:13px;font-weight:700;text-decoration:none;
+  transition:background 0.2s;
+}
+.header-cta:hover{background:var(--accent)}
+
+/* 아티클 */
+.article-wrap{max-width:860px;margin:0 auto;padding:60px 24px 100px}
+.article-category{
+  font-size:12px;font-weight:700;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:16px;
+}
+.article-title-row{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
+.article-title{
+  font-family:'Noto Serif KR',serif;
+  font-size:clamp(26px,4vw,40px);font-weight:700;
+  line-height:1.35;margin-bottom:12px;color:var(--black);
+}
+.case-badge{width:72px;height:72px;border-radius:12px;flex-shrink:0;box-shadow:0 4px 16px rgba(0,0,0,0.08)}
+.article-sub{
+  font-size:17px;color:var(--gray-600);font-style:italic;
+  margin-bottom:32px;
+}
+.article-meta{
+  font-size:13px;color:var(--gray-400);
+  padding-bottom:28px;border-bottom:1px solid var(--gray-200);
+  margin-bottom:40px;
+}
+.hero-img{
+  width:100%;border-radius:16px;margin-bottom:48px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.10);
+  display:block;
+}
+
+/* CTA 박스 */
+.cta-box{
+  margin-top:64px;padding:36px 40px;
+  background:var(--accent);border-radius:20px;color:#fff;
+}
+.cta-box h3{font-size:20px;font-weight:700;margin-bottom:10px}
+.cta-box p{font-size:15px;opacity:0.85;margin-bottom:24px;line-height:1.7}
+.cta-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:14px 28px;background:var(--gold);color:#fff;
+  border-radius:50px;font-size:14px;font-weight:700;
+  text-decoration:none;transition:opacity 0.2s;
+}
+.cta-btn:hover{opacity:0.88}
+
+/* 목록으로 */
+.back-link{
+  display:inline-flex;align-items:center;gap:6px;
+  margin-bottom:40px;color:var(--gray-600);font-size:14px;
+  text-decoration:none;transition:color 0.2s;
+}
+.back-link:hover{color:var(--black)}
+
+/* 이전/다음 사례 */
+.case-nav{display:flex;justify-content:space-between;gap:16px;margin-top:48px}
+.case-nav a{
+  flex:1;padding:18px 20px;border:1px solid var(--gray-200);border-radius:14px;
+  text-decoration:none;color:var(--gray-600);font-size:13px;line-height:1.6;
+  transition:border-color 0.2s, color 0.2s;background:var(--white);
+}
+.case-nav a:hover{border-color:var(--accent);color:var(--black)}
+.case-nav .dir{font-size:11px;font-weight:700;letter-spacing:0.08em;color:var(--gold);display:block;margin-bottom:4px}
+.case-nav .next{text-align:right}
+
+/* 푸터 */
+footer{
+  background:var(--black);color:rgba(255,255,255,0.5);
+  text-align:center;padding:40px 24px;font-size:13px;
+}
+footer a{color:var(--gold);text-decoration:none}
+
+/* ── 기획 사례 본문 컴포넌트 (index.html에서 이식) ── */
+
+/* ── PORTFOLIO (기획 사례) ── */
+  
+
+
+.portfolio-gallery-wide { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 40px; }
+.portfolio-gallery-wide .full-row { grid-column: 1 / -1; }
+.portfolio-gallery-wide .portfolio-img-wrap img { aspect-ratio: 16/9; }
+.portfolio-gallery-wide .full-row.ratio-wide img { aspect-ratio: 5/2; }
+.portfolio-gallery-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 40px; }
+.portfolio-gallery-3 .portfolio-img-wrap img { aspect-ratio: 3/4; object-position: top; }
+.portfolio-spice-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 16px; }
+.portfolio-spice {
+    background: var(--white); border: 1px solid var(--gray-200); border-radius: 8px;
+    padding: 10px 8px; text-align: center; font-size: 12px; color: var(--gray-700); line-height: 1.5;
+  }
+.portfolio-spice .num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 20px; height: 20px; border-radius: 50%; background: var(--accent); color: var(--white);
+    font-size: 11px; font-weight: 700; margin-bottom: 4px;
+  }
+.portfolio-spice .en { display: block; color: var(--gray-400); font-size: 11px; }
+.portfolio-plan-layout { display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; align-items: stretch; }
+.portfolio-plan-layout .portfolio-steps { grid-template-columns: repeat(2, 1fr); }
+.portfolio-plan-layout .portfolio-img-wrap img { aspect-ratio: 2/3; }
+.portfolio-plan-layout .portfolio-img-wrap { display: flex; flex-direction: column; }
+.portfolio-quote {
+    background: var(--accent-light); border-left: 4px solid var(--accent);
+    border-radius: 0 10px 10px 0; padding: 18px 24px; margin: 24px 0;
+    font-family: 'Noto Serif KR', serif; font-size: 15px; color: var(--accent); line-height: 1.8;
+  }
+.portfolio-scale-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 24px; }
+.portfolio-scale-item { background: var(--white); border: 1px solid var(--gray-200); border-radius: 10px; padding: 18px 14px; text-align: center; }
+.portfolio-scale-num { font-size: 28px; font-weight: 900; color: var(--accent); letter-spacing: -1px; }
+.portfolio-scale-label { font-size: 12px; color: var(--gray-600); margin-top: 8px; line-height: 1.6; }
+.portfolio-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 56px; }
+.portfolio-img-wrap { border-radius: 10px; overflow: hidden; background: var(--white); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+.portfolio-img-wrap img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
+.portfolio-img-cap { padding: 10px 12px; font-size: 12px; color: var(--gray-600); line-height: 1.5; }
+.portfolio-block { margin-top: 56px; }
+.portfolio-block-head { font-size: 20px; font-weight: 900; color: var(--black); margin-bottom: 18px; letter-spacing: -0.3px; display: flex; align-items: center; gap: 10px; }
+.portfolio-block-head .tag {
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; color: var(--gold);
+    border: 1.5px solid var(--gold); border-radius: 100px; padding: 3px 11px;
+  }
+.portfolio-lead { font-size: 15px; color: var(--gray-700); line-height: 1.85; margin-bottom: 24px; max-width: 760px; }
+.portfolio-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.portfolio-tag {
+    background: rgba(200,151,58,0.12); border: 1px solid rgba(200,151,58,0.35); color: var(--gold);
+    font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 100px;
+  }
+.portfolio-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.portfolio-compare > div { background: var(--white); border-radius: 12px; padding: 28px; border: 1px solid var(--gray-200); }
+.portfolio-compare .after { border-color: var(--accent); background: var(--accent-light); }
+.portfolio-compare h4 { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 16px; text-transform: uppercase; }
+.portfolio-compare .before h4 { color: var(--gray-400); }
+.portfolio-compare .after h4 { color: var(--accent); }
+.portfolio-compare ul { list-style: none; font-size: 14px; color: var(--gray-600); line-height: 1.95; }
+.portfolio-compare ul li { padding-left: 18px; position: relative; }
+.portfolio-compare ul li::before { content: "–"; position: absolute; left: 0; color: var(--gray-400); }
+.portfolio-compare .after ul li { color: var(--gray-800); }
+.portfolio-compare .after ul li::before { content: "✓"; color: var(--accent); font-weight: 700; }
+.portfolio-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.portfolio-step { background: var(--white); border-radius: 12px; padding: 24px 20px; border: 1px solid var(--gray-200); }
+.portfolio-step-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--accent); color: var(--white); font-weight: 700; font-size: 14px;
+    margin-bottom: 14px;
+  }
+.portfolio-step-title { font-weight: 700; font-size: 14px; margin-bottom: 6px; color: var(--black); }
+.portfolio-step-desc { font-size: 13px; color: var(--gray-600); line-height: 1.6; }
+.portfolio-effects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.portfolio-effect {
+    background: var(--white); border-radius: 10px; padding: 18px 20px; border: 1px solid var(--gray-200);
+    font-size: 13px; color: var(--gray-700); line-height: 1.65; display: flex; gap: 10px; align-items: flex-start;
+  }
+.portfolio-effect .icon { font-size: 16px; flex-shrink: 0; }
+.portfolio-note { font-size: 13px; color: var(--gray-400); margin-top: 40px; text-align: center; }
+/* Portfolio accordion (collapse/expand per case) */
+  .portfolio-case { cursor: default; }
+.portfolio-case.open .case-toggle-arrow { transform: rotate(180deg); background: var(--accent); border-color: var(--accent); color: var(--white); }
+.portfolio-case.open .case-body { max-height: none; }
+@media (max-width: 900px) {
+.portfolio-gallery { grid-template-columns: repeat(2, 1fr); }
+.portfolio-compare { grid-template-columns: 1fr; }
+.portfolio-steps { grid-template-columns: repeat(2, 1fr); }
+.portfolio-effects { grid-template-columns: 1fr; }
+.portfolio-gallery-wide { grid-template-columns: 1fr; }
+.portfolio-gallery-3 { grid-template-columns: repeat(2, 1fr); }
+.portfolio-spice-grid { grid-template-columns: repeat(3, 1fr); }
+.portfolio-plan-layout { grid-template-columns: 1fr; }
+.portfolio-plan-layout .portfolio-steps { grid-template-columns: repeat(2, 1fr); }
+.portfolio-plan-layout .portfolio-img-wrap img { aspect-ratio: 16/9; }
+.portfolio-scale-grid { grid-template-columns: repeat(2, 1fr); }
+}
+/* ── 라이트박스 ── */
+  .lb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+  }
+.lb-overlay.active { display: flex; }
+.lb-overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 10px;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+    cursor: default;
+  }
+.lb-close {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    color: #fff;
+    font-size: 36px;
+    line-height: 1;
+    cursor: pointer;
+    font-weight: 300;
+    user-select: none;
+  }
+
+@media(max-width:600px){
+  .site-header{padding:14px 20px}
+  .article-wrap{padding:40px 20px 80px}
+  .cta-box{padding:28px 24px}
+  .case-nav{flex-direction:column}
+  .case-nav .next{text-align:left}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="https://pcossam.com" class="header-logo">PCOSSAM</a>
+  <nav class="header-nav">
+    <a href="https://pcossam.com/#services">서비스</a>
+    <a href="https://pcossam.com/#portfolio">기획 사례</a>
+    <a href="https://pcossam.com/blog/">블로그</a>
+    <a href="https://pcossam.com/#contact" class="header-cta">문의하기</a>
+  </nav>
+</header>
+
+<main class="article-wrap">
+  <a href="https://pcossam.com/#portfolio" class="back-link">← 기획 사례 전체 보기</a>
+
+  <div class="article-category">CASE 06 · 공공행정 × AI</div>
+  <div class="article-title-row">
+    <h1 class="article-title">공공기관 법인카드 실시간 사용내역 알림</h1>
+    <img src="images/case06-badge.jpg" alt="공공기관 법인카드 실시간 알림 배지 - 투명한 예산 집행과 국민 참여 감시를 상징하는 엠블럼" class="case-badge" onclick="lbOpen(this)" style="cursor:zoom-in;">
+  </div>
+  <p class="article-sub">공공기관 법인카드 사용 내역을 결제 즉시 국민에게 문자로 공개해, 예산 투명성과 부정 사용 예방을 동시에 달성하는 AI·디지털 행정 기획안입니다.</p>
+  <div class="article-meta">피코쌤(김민구) · AI 프레젠테이션 컨설턴트 & 발표 코치 · 신사업 기획 사례</div>
+
+  <img src="images/case06-thumb.jpg" alt="공공기관 법인카드 실시간 사용내역 알림 대표 이미지" class="hero-img" style="max-height:480px;object-fit:cover;" onclick="lbOpen(this)">
+
+  <div class="article-body">
+<div class="portfolio-block">
+  <div class="portfolio-block-head"><span class="tag">CHALLENGE</span> 해결하고자 한 과제</div>
+  <p class="portfolio-lead">
+    "방금 뭐 산 거야? 왜 샀어, 쓸데없이" — 가족 카드를 쓰면 곧바로 알림이 와서 괜히 묻게 되고 괜히 꺼려집니다.
+    공공기관 법인카드 사용 내역도 결제 즉시 국민에게 전달된다면 어떨까요?
+    공공 예산 집행은 국민이 실시간으로 들여다보기 어려운 정보 비대칭 영역입니다.
+    가족 카드 알림과 같은 방식으로 투명성과 부정 사용 예방 효과를 동시에 얻는 시스템을 제안합니다.
+  </p>
+  <div class="portfolio-tags">
+    <span class="portfolio-tag">#투명한 예산집행</span>
+    <span class="portfolio-tag">#부정부패 방지</span>
+    <span class="portfolio-tag">#정보비대칭 해소</span>
+    <span class="portfolio-tag">#실시간 알림</span>
+    <span class="portfolio-tag">#공공데이터</span>
+    <span class="portfolio-tag">#참여형 행정</span>
+  </div>
+</div>
+
+<div class="portfolio-block">
+  <div class="portfolio-block-head"><span class="tag">SOLUTION</span> 기존 예산 감시의 한계 → 실시간 알림 시스템의 해법</div>
+  <div class="portfolio-compare">
+    <div class="before">
+      <h4>기존 공공 예산 감시, 이런 점이 한계였다면</h4>
+      <ul>
+        <li>예산 집행 내역은 사후 감사보고서로만 확인 가능</li>
+        <li>일반 국민은 실시간 사용 내역에 접근하기 어려움 (정보 비대칭)</li>
+        <li>부정·사적 사용은 적발 전까지 드러나지 않음</li>
+        <li>감사·조사에 많은 행정 비용이 소요됨</li>
+      </ul>
+    </div>
+    <div class="after">
+      <h4>실시간 문자 알림 시스템이라면</h4>
+      <ul>
+        <li>공공기관·유관기관 법인카드마다 국민이 알림을 신청</li>
+        <li>결제 즉시 사용 내역이 신청자에게 실시간 문자로 전송</li>
+        <li>문자 답장으로 국민이 직접 의견·문제 제기 가능</li>
+        <li>누적된 카드 사용 데이터는 예산 분석·정책 개선에 활용</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="portfolio-block">
+  <div class="portfolio-block-head"><span class="tag">PLAN</span> 추진 방안 — 4단계</div>
+  <div class="portfolio-steps">
+    <div class="portfolio-step">
+      <div class="portfolio-step-num">1</div>
+      <div class="portfolio-step-title">알림 신청</div>
+      <div class="portfolio-step-desc">공공기관·유관기관 법인카드별로 누구나 국민 알림을 신청할 수 있는 시스템을 구축합니다.</div>
+    </div>
+    <div class="portfolio-step">
+      <div class="portfolio-step-num">2</div>
+      <div class="portfolio-step-title">실시간 알림</div>
+      <div class="portfolio-step-desc">법인카드 결제 즉시 사용 내역을 신청자에게 문자로 전송합니다.</div>
+    </div>
+    <div class="portfolio-step">
+      <div class="portfolio-step-num">3</div>
+      <div class="portfolio-step-title">의견 제기</div>
+      <div class="portfolio-step-desc">문자를 받은 신청자는 답장으로 문제를 제기하고 의견을 게시할 수 있습니다.</div>
+    </div>
+    <div class="portfolio-step">
+      <div class="portfolio-step-num">4</div>
+      <div class="portfolio-step-title">확장·연계</div>
+      <div class="portfolio-step-desc">출퇴근·출장 알림, CBDC(스테이블코인+블록체인) 연계, 해외 수출까지 확장 가능합니다.</div>
+    </div>
+  </div>
+</div>
+
+<div class="portfolio-block">
+  <div class="portfolio-block-head"><span class="tag">IMPACT</span> 기대 효과</div>
+  <div class="portfolio-effects">
+    <div class="portfolio-effect"><span class="icon">🔍</span>공공 예산 사용의 투명성 강화</div>
+    <div class="portfolio-effect"><span class="icon">🚫</span>부정·사적 사용 사전 예방</div>
+    <div class="portfolio-effect"><span class="icon">🤝</span>국민이 직접 확인 — 정부·공공기관 신뢰도 향상</div>
+    <div class="portfolio-effect"><span class="icon">⚖️</span>책임 있는 행정 문화 형성</div>
+    <div class="portfolio-effect"><span class="icon">💰</span>국민 참여 감시로 감사·조사 비용 절감</div>
+    <div class="portfolio-effect"><span class="icon">📊</span>축적 데이터 기반 예산·정책 개선</div>
+    <div class="portfolio-effect"><span class="icon">🏛️</span>참여형 민주 행정 강화</div>
+    <div class="portfolio-effect"><span class="icon">🌏</span>세계적으로 드문 실시간 공공지출 공개 모델 — 디지털정부 수출 사례</div>
+  </div>
+  <p class="portfolio-quote">
+    한국의 대중교통 티머니 시스템이 해외로 수출되었듯, 부정부패 없는 투명한 행정 시스템 역시 한국형 디지털 정부 모델로 수출할 수 있습니다.
+  </p>
+  <div class="portfolio-scale-grid">
+    <div class="portfolio-scale-item">
+      <div class="portfolio-scale-num">327개</div>
+      <div class="portfolio-scale-label">공공기관<br>(공기업·준정부기관·기타공공기관)</div>
+    </div>
+    <div class="portfolio-scale-item">
+      <div class="portfolio-scale-num">243개</div>
+      <div class="portfolio-scale-label">지방자치단체<br>(광역 17·기초 226)</div>
+    </div>
+    <div class="portfolio-scale-item">
+      <div class="portfolio-scale-num">1,300+</div>
+      <div class="portfolio-scale-label">지방공공기관<br>(지방공기업·출연기관)</div>
+    </div>
+    <div class="portfolio-scale-item">
+      <div class="portfolio-scale-num">1,000+</div>
+      <div class="portfolio-scale-label">공공재단<br>(중앙·지자체 재단)</div>
+    </div>
+  </div>
+</div>
+  </div>
+
+  <div class="case-nav">
+  <a href="battery-station.html"><span class="dir">← 이전 사례</span>배터리 교환 스테이션 — 생활 속 전동화 인프라</a>
+  <span style="flex:1"></span>
+</div>
+
+  <div class="cta-box">
+    <h3>이런 기획, 우리 조직에도 필요하신가요?</h3>
+    <p>아이디어를 설득력 있는 발표로 바꾸는 AI 프레젠테이션 컨설팅.<br>
+    신사업 기획 발표, 피치덱, 제안 발표 컨설팅 문의는 편하게 연락 주세요.</p>
+    <a href="https://pcossam.com/#contact" class="cta-btn">문의하기 →</a>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 PCOSSAM · 피코쌤(김민구) · AI 프레젠테이션 컨설턴트 & 발표 코치<br>
+  <a href="https://pcossam.com">pcossam.com</a> · pcossam@pcossam.com</p>
+</footer>
+
+<!-- 라이트박스 -->
+<div class="lb-overlay" id="lb" onclick="this.classList.remove('active')">
+  <span class="lb-close" onclick="document.getElementById('lb').classList.remove('active')">&times;</span>
+  <img id="lb-img" src="" alt="" onclick="event.stopPropagation()">
+</div>
+<script>
+function lbOpen(el) {
+  var lb = document.getElementById('lb');
+  var lbImg = document.getElementById('lb-img');
+  lbImg.src = el.src;
+  lbImg.alt = el.alt || '';
+  lb.classList.add('active');
+}
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape') document.getElementById('lb').classList.remove('active');
+});
+</script>
+
+</body>
+</html>

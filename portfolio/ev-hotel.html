@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>전기차 전용 호텔 (EV-Only Hotel) — 피코쌤(김민구) 기획 사례 | AI 프레젠테이션 컨설턴트</title>
+<meta name="description" content="전기차 충전과 숙박을 결합한 모빌리티 호텔로, 차박의 불편을 해소하고 비대면 스마트 운영을 제안한 신사업 아이디어 기획안입니다.">
+<meta name="keywords" content="전기차 충전 인프라, 숙박 인프라 부족, 복합시설 규제, 모빌리티 호텔, 비대면 스마트 운영, 규제 샌드박스, 피코쌤, 김민구, AI 프레젠테이션, 신사업 기획">
+<meta name="author" content="피코쌤 (김민구)">
+<link rel="canonical" href="https://pcossam.com/portfolio/ev-hotel.html">
+
+<!-- OG Tags -->
+<meta property="og:title" content="전기차 전용 호텔 (EV-Only Hotel) — 피코쌤 기획 사례">
+<meta property="og:description" content="전기차 충전과 숙박을 결합한 모빌리티 호텔로, 차박의 불편을 해소하고 비대면 스마트 운영을 제안한 신사업 아이디어 기획안입니다.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pcossam.com/portfolio/ev-hotel.html">
+<meta property="og:image" content="https://pcossam.com/portfolio/images/case02-thumb.jpg">
+<meta property="og:site_name" content="PCOSSAM — 피코쌤">
+
+<!-- Schema.org Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "전기차 전용 호텔 (EV-Only Hotel)",
+  "description": "전기차 충전과 숙박을 결합한 모빌리티 호텔로, 차박의 불편을 해소하고 비대면 스마트 운영을 제안한 신사업 아이디어 기획안입니다.",
+  "image": "https://pcossam.com/portfolio/images/case02-thumb.jpg",
+  "author": { "@type": "Person", "name": "김민구", "alternateName": "피코쌤", "url": "https://pcossam.com" },
+  "publisher": { "@type": "Organization", "name": "PCOSSAM", "url": "https://pcossam.com" },
+  "mainEntityOfPage": "https://pcossam.com/portfolio/ev-hotel.html",
+  "keywords": "전기차 충전 인프라, 숙박 인프라 부족, 복합시설 규제, 모빌리티 호텔, 비대면 스마트 운영, 규제 샌드박스, 피코쌤, 김민구, AI 프레젠테이션, 신사업 기획"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#0a0a0a;--white:#fafaf8;--gray-100:#f4f3f0;
+  --gray-200:#e8e7e2;--gray-400:#9e9c97;--gray-600:#5e5c57;
+  --gray-700:#44423e;--gray-800:#2c2b28;
+  --accent:#1a3a5c;--accent-light:#e8f0f8;--accent-mid:#2a5a8a;
+  --gold:#c8973a;--gold-light:#fdf3e3;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--white);color:var(--black);line-height:1.8}
+
+/* 헤더 */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(250,250,248,0.95);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--gray-200);
+  padding:16px 40px;display:flex;align-items:center;justify-content:space-between;
+}
+.header-logo{font-weight:900;font-size:18px;text-decoration:none;color:var(--black);letter-spacing:0.05em}
+.header-nav{display:flex;gap:24px;align-items:center}
+.header-nav a{text-decoration:none;color:var(--gray-600);font-size:14px;transition:color 0.2s}
+.header-nav a:hover{color:var(--black)}
+.header-cta{
+  padding:8px 20px;background:var(--black);color:var(--white);
+  border-radius:50px;font-size:13px;font-weight:700;text-decoration:none;
+  transition:background 0.2s;
+}
+.header-cta:hover{background:var(--accent)}
+
+/* 아티클 */
+.article-wrap{max-width:860px;margin:0 auto;padding:60px 24px 100px}
+.article-category{
+  font-size:12px;font-weight:700;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:16px;
+}
+.article-title-row{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
+.article-title{
+  font-family:'Noto Serif KR',serif;
+  font-size:clamp(26px,4vw,40px);font-weight:700;
+  line-height:1.35;margin-bottom:12px;color:var(--black);
+}
+.case-badge{width:72px;height:72px;border-radius:12px;flex-shrink:0;box-shadow:0 4px 16px rgba(0,0,0,0.08)}
+.article-sub{
+  font-size:17px;color:var(--gray-600);font-style:italic;
+  margin-bottom:32px;
+}
+.article-meta{
+  font-size:13px;color:var(--gray-400);
+  padding-bottom:28px;border-bottom:1px solid var(--gray-200);
+  margin-bottom:40px;
+}
+.hero-img{
+  width:100%;border-radius:16px;margin-bottom:48px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.10);
+  display:block;
+}
+
+/* CTA 박스 */
+.cta-box{
+  margin-top:64px;padding:36px 40px;
+  background:var(--accent);border-radius:20px;color:#fff;
+}
+.cta-box h3{font-size:20px;font-weight:700;margin-bottom:10px}
+.cta-box p{font-size:15px;opacity:0.85;margin-bottom:24px;line-height:1.7}
+.cta-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:14px 28px;background:var(--gold);color:#fff;
+  border-radius:50px;font-size:14px;font-weight:700;
+  text-decoration:none;transition:opacity 0.2s;
+}
+.cta-btn:hover{opacity:0.88}
+
+/* 목록으로 */
+.back-link{
+  display:inline-flex;align-items:center;gap:6px;
+  margin-bottom:40px;color:var(--gray-600);font-size:14px;
+  text-decoration:none;transition:color 0.2s;
+}
+.back-link:hover{color:var(--black)}
+
+/* 이전/다음 사례 */
+.case-nav{display:flex;justify-content:space-between;gap:16px;margin-top:48px}
+.case-nav a{
+  flex:1;padding:18px 20px;border:1px solid var(--gray-200);border-radius:14px;
+  text-decoration:none;color:var(--gray-600);font-size:13px;line-height:1.6;
+  transition:border-color 0.2s, color 0.2s;background:var(--white);
+}
+.case-nav a:hover{border-color:var(--accent);color:var(--black)}
+.case-nav .dir{font-size:11px;font-weight:700;letter-spacing:0.08em;color:var(--gold);display:block;margin-bottom:4px}
+.case-nav .next{text-align:right}
+
+/* 푸터 */
+footer{
+  background:var(--black);color:rgba(255,255,255,0.5);
+  text-align:center;padding:40px 24px;font-size:13px;
+}
+footer a{color:var(--gold);text-decoration:none}
+
+/* ── 기획 사례 본문 컴포넌트 (index.html에서 이식) ── */
+
+/* ── PORTFOLIO (기획 사례) ── */
+  
+
+
+.portfolio-gallery-wide { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 40px; }
+.portfolio-gallery-wide .full-row { grid-column: 1 / -1; }
+.portfolio-gallery-wide .portfolio-img-wrap img { aspect-ratio: 16/9; }
+.portfolio-gallery-wide .full-row.ratio-wide img { aspect-ratio: 5/2; }
+.portfolio-gallery-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 40px; }
+.portfolio-gallery-3 .portfolio-img-wrap img { aspect-ratio: 3/4; object-position: top; }
+.portfolio-spice-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 16px; }
+.portfolio-spice {
+    background: var(--white); border: 1px solid var(--gray-200); border-radius: 8px;
+    padding: 10px 8px; text-align: center; font-size: 12px; color: var(--gray-700); line-height: 1.5;
+  }
+.portfolio-spice .num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 20px; height: 20px; border-radius: 50%; background: var(--accent); color: var(--white);
+    font-size: 11px; font-weight: 700; margin-bottom: 4px;
+  }
+.portfolio-spice .en { display: block; color: var(--gray-400); font-size: 11px; }
+.portfolio-plan-layout { display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; align-items: stretch; }
+.portfolio-plan-layout .portfolio-steps { grid-template-columns: repeat(2, 1fr); }
+.portfolio-plan-layout .portfolio-img-wrap img { aspect-ratio: 2/3; }
+.portfolio-plan-layout .portfolio-img-wrap { display: flex; flex-direction: column; }
+.portfolio-quote {
+    background: var(--accent-light); border-left: 4px solid var(--accent);
+    border-radius: 0 10px 10px 0; padding: 18px 24px; margin: 24px 0;
+    font-family: 'Noto Serif KR', serif; font-size: 15px; color: var(--accent); line-height: 1.8;
+  }
+.portfolio-scale-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 24px; }
+.portfolio-scale-item { background: var(--white); border: 1px solid var(--gray-200); border-radius: 10px; padding: 18px 14px; text-align: center; }
+.portfolio-scale-num { font-size: 28px; font-weight: 900; color: var(--accent); letter-spacing: -1px; }
+.portfolio-scale-label { font-size: 12px; color: var(--gray-600); margin-top: 8px; line-height: 1.6; }
+.portfolio-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 56px; }
+.portfolio-img-wrap { border-radius: 10px; overflow: hidden; background: var(--white); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+.portfolio-img-wrap img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
+.portfolio-img-cap { padding: 10px 12px; font-size: 12px; color: var(--gray-600); line-height: 1.5; }
+.portfolio-block { margin-top: 56px; }
+.portfolio-block-head { font-size: 20px; font-weight: 900; color: var(--black); margin-bottom: 18px; letter-spacing: -0.3px; display: flex; align-items: center; gap: 10px; }
+.portfolio-block-head .tag {
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; color: var(--gold);
+    border: 1.5px solid var(--gold); border-radius: 100px; padding: 3px 11px;
+  }
+.portfolio-lead { font-size: 15px; color: var(--gray-700); line-height: 1.85; margin-bottom: 24px; max-width: 760px; }
+.portfolio-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.portfolio-tag {
+    background: rgba(200,151,58,0.12); border: 1px solid rgba(200,151,58,0.35); color: var(--gold);
+    font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 100px;
+  }
+.portfolio-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.portfolio-compare > div { background: var(--white); border-radius: 12px; padding: 28px; border: 1px solid var(--gray-200); }
+.portfolio-compare .after { border-color: var(--accent); background: var(--accent-light); }
+.portfolio-compare h4 { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 16px; text-transform: uppercase; }
+.portfolio-compare .before h4 { color: var(--gray-400); }
+.portfolio-compare .after h4 { color: var(--accent); }
+.portfolio-compare ul { list-style: none; font-size: 14px; color: var(--gray-600); line-height: 1.95; }
+.portfolio-compare ul li { padding-left: 18px; position: relative; }
+.portfolio-compare ul li::before { content: "–"; position: absolute; left: 0; color: var(--gray-400); }
+.portfolio-compare .after ul li { color: var(--gray-800); }
+.portfolio-compare .after ul li::before { content: "✓"; color: var(--accent); font-weight: 700; }
+.portfolio-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.portfolio-step { background: var(--white); border-radius: 12px; padding: 24px 20px; border: 1px solid var(--gray-200); }
+.portfolio-step-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--accent); color: var(--white); font-weight: 700; font-size: 14px;
+    margin-bottom: 14px;
+  }
+.portfolio-step-title { font-weight: 700; font-size: 14px; margin-bottom: 6px; color: var(--black); }
+.portfolio-step-desc { font-size: 13px; color: var(--gray-600); line-height: 1.6; }
+.portfolio-effects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.portfolio-effect {
+    background: var(--white); border-radius: 10px; padding: 18px 20px; border: 1px solid var(--gray-200);
+    font-size: 13px; color: var(--gray-700); line-height: 1.65; display: flex; gap: 10px; align-items: flex-start;
+  }
+.portfolio-effect .icon { font-size: 16px; flex-shrink: 0; }
+.portfolio-note { font-size: 13px; color: var(--gray-400); margin-top: 40px; text-align: center; }
+/* Portfolio accordion (collapse/expand per case) */
+  .portfolio-case { cursor: default; }
+.portfolio-case.open .case-toggle-arrow { transform: rotate(180deg); background: var(--accent); border-color: var(--accent); color: var(--white); }
+.portfolio-case.open .case-body { max-height: none; }
+@media (max-width: 900px) {
+.portfolio-gallery { grid-template-columns: repeat(2, 1fr); }
+.portfolio-compare { grid-template-columns: 1fr; }
+.portfolio-steps { grid-template-columns: repeat(2, 1fr); }
+.portfolio-effects { grid-template-columns: 1fr; }
+.portfolio-gallery-wide { grid-template-columns: 1fr; }
+.portfolio-gallery-3 { grid-template-columns: repeat(2, 1fr); }
+.portfolio-spice-grid { grid-template-columns: repeat(3, 1fr); }
+.portfolio-plan-layout { grid-template-columns: 1fr; }
+.portfolio-plan-layout .portfolio-steps { grid-template-columns: repeat(2, 1fr); }
+.portfolio-plan-layout .portfolio-img-wrap img { aspect-ratio: 16/9; }
+.portfolio-scale-grid { grid-template-columns: repeat(2, 1fr); }
+}
+/* ── 라이트박스 ── */
+  .lb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+  }
+.lb-overlay.active { display: flex; }
+.lb-overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 10px;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+    cursor: default;
+  }
+.lb-close {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    color: #fff;
+    font-size: 36px;
+    line-height: 1;
+    cursor: pointer;
+    font-weight: 300;
+    user-select: none;
+  }
+
+@media(max-width:600px){
+  .site-header{padding:14px 20px}
+  .article-wrap{padding:40px 20px 80px}
+  .cta-box{padding:28px 24px}
+  .case-nav{flex-direction:column}
+  .case-nav .next{text-align:left}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="https://pcossam.com" class="header-logo">PCOSSAM</a>
+  <nav class="header-nav">
+    <a href="https://pcossam.com/#services">서비스</a>
+    <a href="https://pcossam.com/#portfolio">기획 사례</a>
+    <a href="https://pcossam.com/blog/">블로그</a>
+    <a href="https://pcossam.com/#contact" class="header-cta">문의하기</a>
+  </nav>
+</header>
+
+<main class="article-wrap">
+  <a href="https://pcossam.com/#portfolio" class="back-link">← 기획 사례 전체 보기</a>
+
+  <div class="article-category">CASE 02 · 모빌리티 × 숙박</div>
+  <div class="article-title-row">
+    <h1 class="article-title">전기차 전용 호텔 (EV-Only Hotel)</h1>
+    <img src="images/case02-badge.jpg" alt="EV HOTEL 배지 - 충전과 숙박을 결합한 전기차 전용 호텔 컨셉 엠블럼" class="case-badge" onclick="lbOpen(this)" style="cursor:zoom-in;">
+  </div>
+  <p class="article-sub">전기차 충전과 숙박을 결합한 모빌리티 호텔로, 차박의 불편을 해소하고 비대면 스마트 운영을 제안한 신사업 아이디어 기획안입니다.</p>
+  <div class="article-meta">피코쌤(김민구) · AI 프레젠테이션 컨설턴트 & 발표 코치 · 신사업 기획 사례</div>
+
+  
+
+  <div class="article-body">
+<div class="portfolio-gallery-wide">
+    <div class="portfolio-img-wrap full-row">
+      <img onclick="lbOpen(this)" style="cursor:zoom-in;" src="images/case02-body3.jpg" alt="전기차 전용 호텔 건물 단면도 - 스위트룸, 프리미엄룸, 이코노미룸 층별 구성과 충전 공간">
+      <div class="portfolio-img-cap">🏢 층별 구성 — 스위트룸·프리미엄룸·이코노미룸 + 충전 라운지</div>
+    </div>
+    <div class="portfolio-img-wrap">
+      <img onclick="lbOpen(this)" style="cursor:zoom-in;" src="images/case02-body4.jpg" alt="3층 이코노미룸 내부 - 사생활 보호 칸막이와 차량별 충전 공간">
+      <div class="portfolio-img-cap">🔌 이코노미룸 — 사생활 보호 칸막이 + 차량별 충전 공간</div>
+    </div>
+    <div class="portfolio-img-wrap">
+      <img onclick="lbOpen(this)" style="cursor:zoom-in;" src="images/case02-body5.jpg" alt="국가별 전기차 전용 호텔 컨셉 비교 - 미국, 중국, 일본 버전">
+      <div class="portfolio-img-cap">🌏 글로벌 확장 컨셉 — 미국·중국·일본 버전 예시</div>
+    </div>
+  </div>
+
+  <div class="portfolio-block">
+    <div class="portfolio-block-head"><span class="tag">CHALLENGE</span> 해결하고자 한 과제</div>
+    <p class="portfolio-lead">
+      전기차는 빠르게 늘고 있지만, 여행 중에는 충전과 숙박을 각각 따로 해결해야 하는 비효율이 있습니다.
+      특히 주말·성수기 관광지에서는 숙소를 구하기 어려워 차박을 선택하는 경우가 많지만, 화장실·샤워시설이 없어 불편합니다.
+      전기차 충전과 숙박을 한 공간에서 해결하는 "전기차 전용 호텔(모빌리티 호텔)"을 제안합니다.
+    </p>
+    <div class="portfolio-tags">
+      <span class="portfolio-tag">#전기차 충전 인프라</span>
+      <span class="portfolio-tag">#숙박 인프라 부족</span>
+      <span class="portfolio-tag">#복합시설 규제</span>
+      <span class="portfolio-tag">#모빌리티 호텔</span>
+      <span class="portfolio-tag">#비대면 스마트 운영</span>
+      <span class="portfolio-tag">#규제 샌드박스</span>
+    </div>
+  </div>
+
+  <div class="portfolio-block">
+    <div class="portfolio-block-head"><span class="tag">SOLUTION</span> 기존 전기차 여행의 한계 → 전기차 전용 호텔의 해법</div>
+    <div class="portfolio-compare">
+      <div class="before">
+        <h4>기존 전기차 여행, 이런 점이 불편했다면</h4>
+        <ul>
+          <li>충전과 숙박을 각각 따로 예약하고 이용해야 함</li>
+          <li>주말·성수기엔 관광지 숙소 구하기 어려움</li>
+          <li>화장실·샤워시설이 없는 차박의 불편함</li>
+          <li>충전소는 머무를 수 없는 단순 기능 공간</li>
+        </ul>
+      </div>
+      <div class="after">
+        <h4>전기차 전용 호텔이라면</h4>
+        <ul>
+          <li>전기차만 입장 — 차량을 그대로 객실로 이동, 주차와 동시에 충전 시작</li>
+          <li>차 안에서 숙박 + 건물 내 공용 화장실·샤워실·휴게실 이용</li>
+          <li>차량번호 인식으로 예약·결제·입장까지 전부 비대면</li>
+          <li>층별 이코노미(3만원)·프리미엄(5만원)·스위트룸(7만원)으로 가격 다양화</li>
+          <li>휴게실에 음료·간식 자판기 등 편의시설 배치</li>
+          <li>비수기엔 일반 주차장·충전소로 전환해 운영 효율 확보</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-block">
+    <div class="portfolio-block-head"><span class="tag">PLAN</span> 추진 방안 — 4단계</div>
+    <div class="portfolio-steps">
+      <div class="portfolio-step">
+        <div class="portfolio-step-num">1</div>
+        <div class="portfolio-step-title">입지 선정</div>
+        <div class="portfolio-step-desc">관광지·고속도로변·주요 거점에 부지를 확보합니다.</div>
+      </div>
+      <div class="portfolio-step">
+        <div class="portfolio-step-num">2</div>
+        <div class="portfolio-step-title">시설 구축</div>
+        <div class="portfolio-step-desc">차량 진입형 객실 구조에 이격거리·방화벽·자동소화시스템·층별 환기 등 화재 안전 설비를 갖추고, 차량과 보행 동선을 분리합니다.</div>
+      </div>
+      <div class="portfolio-step">
+        <div class="portfolio-step-num">3</div>
+        <div class="portfolio-step-title">앱 플랫폼 구축</div>
+        <div class="portfolio-step-desc">차량번호 인식 기반으로 예약·결제·입장을 비대면으로 운영합니다.</div>
+      </div>
+      <div class="portfolio-step">
+        <div class="portfolio-step-num">4</div>
+        <div class="portfolio-step-title">제도화 추진</div>
+        <div class="portfolio-step-desc">규제 샌드박스·시범사업으로 '모빌리티 기반 체류형 시설'의 법적 기준을 마련합니다.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-block">
+    <div class="portfolio-block-head"><span class="tag">IMPACT</span> 기대 효과</div>
+    <div class="portfolio-effects">
+      <div class="portfolio-effect"><span class="icon">🅿️</span>관광지 숙박 부족 문제 해결</div>
+      <div class="portfolio-effect"><span class="icon">📈</span>관광객 증가 + 지역 경제 활성화</div>
+      <div class="portfolio-effect"><span class="icon">🔌</span>객실료 + 충전 요금의 안정적 수익 구조</div>
+      <div class="portfolio-effect"><span class="icon">🔄</span>비수기엔 주차장으로 전환해 수익 공백 최소화</div>
+      <div class="portfolio-effect"><span class="icon">🌱</span>전기차 기반 친환경 숙박 문화 확산</div>
+      <div class="portfolio-effect"><span class="icon">🌏</span>세계 최초 모델로 한국형 시스템의 해외 수출 가능성</div>
+      <div class="portfolio-effect"><span class="icon">📊</span>앱으로 수집된 데이터를 중장기 관광 계획 수립에 활용</div>
+    </div>
+  </div>
+  </div>
+
+  <div class="case-nav">
+  <a href="carping-house.html"><span class="dir">← 이전 사례</span>카핑하우스 (Carping House)</a>
+  <a href="kfood-standard.html" class="next"><span class="dir">다음 사례 →</span>K-Food Standard (글로벌 K-푸드 키트)</a>
+</div>
+
+  <div class="cta-box">
+    <h3>이런 기획, 우리 조직에도 필요하신가요?</h3>
+    <p>아이디어를 설득력 있는 발표로 바꾸는 AI 프레젠테이션 컨설팅.<br>
+    신사업 기획 발표, 피치덱, 제안 발표 컨설팅 문의는 편하게 연락 주세요.</p>
+    <a href="https://pcossam.com/#contact" class="cta-btn">문의하기 →</a>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 PCOSSAM · 피코쌤(김민구) · AI 프레젠테이션 컨설턴트 & 발표 코치<br>
+  <a href="https://pcossam.com">pcossam.com</a> · pcossam@pcossam.com</p>
+</footer>
+
+<!-- 라이트박스 -->
+<div class="lb-overlay" id="lb" onclick="this.classList.remove('active')">
+  <span class="lb-close" onclick="document.getElementById('lb').classList.remove('active')">&times;</span>
+  <img id="lb-img" src="" alt="" onclick="event.stopPropagation()">
+</div>
+<script>
+function lbOpen(el) {
+  var lb = document.getElementById('lb');
+  var lbImg = document.getElementById('lb-img');
+  lbImg.src = el.src;
+  lbImg.alt = el.alt || '';
+  lb.classList.add('active');
+}
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape') document.getElementById('lb').classList.remove('active');
+});
+</script>
+
+</body>
+</html>

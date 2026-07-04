@@ -98,5 +98,12 @@ ChatGPT 활용 교육, 생성형 AI 실무 활용, AI 기반 보고서·제안�
 - [서비스 비용](https://pcossam.com/#pricing): 전체 가격표 및 통합 패키지
 - [발표 코칭](https://pcossam.com/#coaching): 코칭 프로그램 상세
 - [AI 자동화 실전 사례교육](https://pcossam.com/ai-automation.html): 4H/7H 기업 교육 커리큘럼 상세
+- [기획 사례 목록](https://pcossam.com/#portfolio): 실제 기획·발표한 신사업 프레젠테이션 사례 6건
+- [카핑하우스 (Carping House)](https://pcossam.com/portfolio/carping-house.html): "지방 빈집 문제"를 캠핑×관광 콘텐츠로 풀어낸 신사업 아이디어 기획안입니다.
+- [전기차 전용 호텔 (EV-Only Hotel)](https://pcossam.com/portfolio/ev-hotel.html): 전기차 충전과 숙박을 결합한 모빌리티 호텔로, 차박의 불편을 해소하고 비대면 스마트 운영을 제안한 신사업 아이디어 기획안입니다.
+- [K-Food Standard (글로벌 K-푸드 키트)](https://pcossam.com/portfolio/kfood-standard.html): 숫자와 아이콘만으로 전 세계 누구나 K-푸드를 조리할 수 있도록, 양념과 조리도구를 표준화한 글로벌 K-푸드 키트 기획안입니다.
+- [레시피 기반 실전형 창업 교육 플랫폼](https://pcossam.com/portfolio/startup-edu-platform.html): 실제 판매 경험과 매출 데이터로 학습하는 소상공인 창업 교육 표준화 모델 기획안입니다.
+- [배터리 교환 스테이션 — 생활 속 전동화 인프라](https://pcossam.com/portfolio/battery-station.html): 캠핑장과 아파트 단지에 배터리 교환 스테이션을 두고, 표준화된 배터리로 작동하는 휴대용 냉장고와 전동 웨건을 운영하는 일상 전동화 기획안입니다.
+- [공공기관 법인카드 실시간 사용내역 알림](https://pcossam.com/portfolio/public-card-alert.html): 공공기관 법인카드 사용 내역을 결제 즉시 국민에게 문자로 공개해, 예산 투명성과 부정 사용 예방을 동시에 달성하는 AI·디지털 행정 기획안입니다.
 - [FAQ](https://pcossam.com/#faq): 자주 묻는 질문
 - [문의하기](https://pcossam.com/#contact): 견적 문의 양식
