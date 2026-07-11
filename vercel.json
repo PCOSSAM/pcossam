@@ -1,5 +1,6 @@
 {
   "rewrites": [
+    { "source": "/ai-literacy-test", "destination": "/ai-literacy-test.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
