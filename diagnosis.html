@@ -992,6 +992,12 @@
           _replyto: email,
         })
       });
+      // GA4(Google Analytics 4) 전환 이벤트 — AI 진단 퀴즈 이메일 수집 성공 시 'generate_lead'(리드 발생) 이벤트를 전송합니다
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', {
+          form_location: 'diagnosis_quiz'
+        });
+      }
       const msg = document.getElementById('email-msg');
       msg.style.display = 'block';
       msg.textContent = '✅ 이메일이 접수되었습니다. 피코쌤이 직접 연락드리겠습니다!';

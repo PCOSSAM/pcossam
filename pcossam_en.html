@@ -2713,6 +2713,13 @@ async function handleSubmit(e) {
     });
 
     if (res.ok) {
+      // GA4(Google Analytics 4) conversion event — fires 'generate_lead' when the inquiry form is submitted successfully
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', {
+          form_location: 'main_en',
+          inquiry_type: 유형
+        });
+      }
       btn.textContent = '✓ Your inquiry has been received!';
       btn.style.background = '#2a7a4a';
       btn.style.color = 'white';

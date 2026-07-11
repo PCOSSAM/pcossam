@@ -3196,6 +3196,13 @@ async function handleSubmit(e) {
     });
 
     if (res.ok) {
+      // GA4(Google Analytics 4) 전환 이벤트 — 문의 폼 제출 성공 시 'generate_lead'(리드 발생) 이벤트를 전송합니다
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', {
+          form_location: 'main_ko',
+          inquiry_type: 유형
+        });
+      }
       btn.textContent = '✓ 문의가 접수되었습니다!';
       btn.style.background = '#2a7a4a';
       btn.style.color = 'white';
