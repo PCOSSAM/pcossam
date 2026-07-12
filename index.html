@@ -1633,6 +1633,48 @@ section { position: relative; }
 
 .vibe-note-btn:hover { background: var(--accent); border-color: var(--accent); transform: translateY(-1px); }
 
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 28px;
+  z-index: 9000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border: 1px solid rgba(212,170,88,0.55);
+  border-radius: 999px;
+  background: rgba(10,10,10,0.82);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.28);
+  backdrop-filter: blur(12px);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.back-to-top:focus-visible {
+  outline: 3px solid rgba(200,151,58,0.45);
+  outline-offset: 3px;
+}
+
 .vibe-note-overlay {
   position: fixed;
   inset: 0;
@@ -1711,6 +1753,7 @@ section { position: relative; }
 
 @media (max-width: 700px) {
   .vibe-note-btn { top: 14px; right: 14px; padding: 8px 11px; font-size: 11px; }
+  .back-to-top { right: 16px; bottom: 18px; width: 48px; height: 48px; font-size: 11px; }
   .vibe-note-overlay { padding: 14px; }
   .vibe-note-head { padding: 22px 20px 14px; }
   .vibe-note-body { padding: 20px; }
@@ -2981,6 +3024,8 @@ section { position: relative; }
   <div class="footer-copy">© 2026 PCOSSAM. AI Presentation Consultant & Coach.<span class="footer-bizinfo">PTC(Presentation Consulting) · 대표 김민구(피코쌤) · 사업자등록번호 120-09-56951 · 경기도 고양시</span></div>
 </footer>
 
+<button class="back-to-top" type="button" aria-label="맨 위로 이동" title="맨 위로 이동">TOP</button>
+
 <script>
 // ── 블로그 포스트 데이터 ──
 const blogPosts = {
@@ -3566,6 +3611,27 @@ function scrollToSection(id) {
   document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') closeModal();
   });
+})();
+</script>
+<script>
+(function () {
+  var topButton = document.querySelector('.back-to-top');
+  if (!topButton) return;
+
+  function toggleTopButton() {
+    if (window.scrollY > 420) {
+      topButton.classList.add('visible');
+    } else {
+      topButton.classList.remove('visible');
+    }
+  }
+
+  topButton.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  window.addEventListener('scroll', toggleTopButton, { passive: true });
+  toggleTopButton();
 })();
 </script>
 </body>
