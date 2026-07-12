@@ -1607,6 +1607,116 @@
 .svc-partner-small .svc-partner-cta { background: var(--black) !important; }
 .svc-partner-small .svc-partner-note { color: var(--gray-400) !important; }
 
+/* 바이브 코딩 제작노트 */
+section { position: relative; }
+
+.vibe-note-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  z-index: 20;
+  border: 1px solid rgba(212,170,88,0.45);
+  background: rgba(10,10,10,0.78);
+  color: #fff;
+  border-radius: 999px;
+  padding: 9px 14px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.22);
+  backdrop-filter: blur(12px);
+}
+
+.vibe-note-btn:hover { background: var(--accent); border-color: var(--accent); transform: translateY(-1px); }
+
+.vibe-note-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0,0,0,0.62);
+}
+
+.vibe-note-overlay.open { display: flex; }
+
+.vibe-note-panel {
+  width: min(760px, 100%);
+  max-height: min(760px, 88vh);
+  overflow: auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 28px 90px rgba(0,0,0,0.38);
+}
+
+.vibe-note-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 28px 30px 18px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.vibe-note-kicker {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.vibe-note-title {
+  font-size: 24px;
+  line-height: 1.35;
+  letter-spacing: -0.03em;
+  color: var(--black);
+  font-weight: 900;
+}
+
+.vibe-note-close {
+  border: 0;
+  background: var(--gray-100);
+  color: var(--black);
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.vibe-note-body { padding: 26px 30px 30px; }
+.vibe-note-block + .vibe-note-block { margin-top: 22px; }
+.vibe-note-label { font-size: 13px; font-weight: 900; color: var(--black); margin-bottom: 8px; }
+.vibe-note-text { font-size: 15px; line-height: 1.8; color: var(--gray-700); }
+.vibe-note-prompt {
+  margin: 10px 0 0;
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: #171717;
+  color: rgba(255,255,255,0.9);
+  font-size: 13px;
+  line-height: 1.75;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 700px) {
+  .vibe-note-btn { top: 14px; right: 14px; padding: 8px 11px; font-size: 11px; }
+  .vibe-note-overlay { padding: 14px; }
+  .vibe-note-head { padding: 22px 20px 14px; }
+  .vibe-note-body { padding: 20px; }
+  .vibe-note-title { font-size: 20px; }
+}
+
 </style>
 </head>
 <body>
@@ -3317,6 +3427,146 @@ function scrollToSection(id) {
   if (!el) return;
   el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
+</script>
+<script>
+(function () {
+  var noteData = {
+    hero: {
+      title: '첫 화면: 3초 안에 정체성을 보여주기',
+      purpose: '방문자가 들어오자마자 피코쌤이 누구인지, 무엇을 도와주는지 알게 만드는 구간입니다.',
+      prompt: '프레젠테이션 전략가이자 AI 발표 코치의 첫 화면을 만들어줘. 한 문장으로 전문성을 보여주고, 바로 상담이나 강의 문의로 이어지게 해줘. 고급스럽지만 과장 광고처럼 보이지 않게 해줘.',
+      edit: '큰 제목, 짧은 설명, 행동 버튼을 먼저 배치했습니다. 이미지는 신뢰감을 주는 보조 장치로 쓰고, 문장을 길게 늘리지 않았습니다.',
+      caution: '초보자는 첫 화면에 너무 많은 정보를 넣기 쉽습니다. 첫 화면은 메뉴판 전체가 아니라 스타벅스 입구의 대표 메뉴 간판처럼 한눈에 보여야 합니다.'
+    },
+    about: {
+      title: '소개 섹션: 경력을 나열하지 말고 신뢰를 설계하기',
+      purpose: '피코쌤의 경력과 강점이 단순 이력서가 아니라, 이 사람에게 맡겨도 된다는 근거로 보이게 하는 구간입니다.',
+      prompt: '강사의 소개 섹션을 만들어줘. 경력을 딱딱하게 나열하지 말고, 왜 이 사람이 발표와 AI 교육을 같이 잘 다루는지 신뢰감 있게 설명해줘.',
+      edit: '사진, 인용문, 핵심 이력을 묶어서 사람의 느낌과 전문성을 동시에 보이게 했습니다.',
+      caution: '경력 숫자만 많이 넣으면 차갑게 보입니다. 숫자는 증거이고, 문장은 신뢰를 만드는 역할입니다.'
+    },
+    services: {
+      title: '서비스 섹션: 상품을 카드로 정리하기',
+      purpose: '방문자가 자신에게 맞는 서비스를 빠르게 고를 수 있게 만드는 구간입니다.',
+      prompt: '발표 코칭, AI 프레젠테이션 교육, 피치덱 컨설팅 서비스를 카드 형태로 정리해줘. 각 카드는 대상, 문제, 해결 결과가 보이게 해줘.',
+      edit: '서비스를 카드로 나누고, 라벨과 태그를 넣어 훑어보기 쉽게 만들었습니다.',
+      caution: '초보자는 카드마다 문장을 길게 씁니다. 카드는 설명서가 아니라 진열대입니다. 스타벅스 메뉴판처럼 이름과 특징이 먼저 보여야 합니다.'
+    },
+    stats: {
+      title: '숫자 섹션: 믿을 만한 근거를 짧게 보여주기',
+      purpose: '강의 횟수, 교육 인원, 협력 기관 같은 정량 정보로 신뢰를 빠르게 만드는 구간입니다.',
+      prompt: '강사의 성과 숫자를 짧고 강하게 보여주는 섹션을 만들어줘. 숫자가 먼저 보이고, 설명은 한 줄로만 붙여줘.',
+      edit: '큰 숫자와 짧은 설명으로 구성했습니다. 숫자 자체가 메시지가 되도록 디자인했습니다.',
+      caution: '숫자가 많을수록 좋은 게 아닙니다. 가장 믿음이 생기는 숫자 3~4개만 남기는 것이 좋습니다.'
+    },
+    portfolio: {
+      title: '포트폴리오 섹션: 결과물이 아니라 사고방식을 보여주기',
+      purpose: '피코쌤이 만든 기획 사례를 보여주면서, 교육생이 “AI로 이런 기획도 가능하구나”를 느끼게 하는 구간입니다.',
+      prompt: '기획 포트폴리오를 사례 카드로 정리해줘. 각 사례는 문제, 아이디어, 결과가 보이게 하고, 이미지 썸네일을 함께 배치해줘.',
+      edit: '여러 사례를 카드형 목록으로 배치했습니다. 교육 때는 각 카드를 눌러 프롬프트 사고 과정을 설명하면 좋습니다.',
+      caution: '이미지만 멋있으면 포트폴리오가 약해집니다. 반드시 “문제-해결-효과”가 같이 보여야 합니다.'
+    },
+    books: {
+      title: '저서 섹션: 전문성을 외부 증거로 보강하기',
+      purpose: '책 출간 이력을 통해 피코쌤의 전문성이 개인 주장만이 아니라 외부 결과로 남아 있음을 보여주는 구간입니다.',
+      prompt: '강사의 저서와 출간 경험을 소개하는 섹션을 만들어줘. 책 표지와 핵심 주제를 함께 보여주고, 강의 전문성과 연결해줘.',
+      edit: '책 정보를 별도 섹션으로 분리해 신뢰의 근거로 사용했습니다.',
+      caution: '저서 소개는 자랑처럼 보이기 쉽습니다. “이 책이 수강생에게 어떤 도움을 주는가”로 연결해야 합니다.'
+    },
+    testimonials: {
+      title: '후기 섹션: 내가 한 말보다 남이 한 말이 강하다',
+      purpose: '수강생과 고객의 반응을 통해 서비스의 실제 효과를 보여주는 구간입니다.',
+      prompt: '교육 후기 섹션을 만들어줘. 과장된 칭찬보다 구체적인 변화가 드러나게 구성해줘.',
+      edit: '후기를 카드로 나누어 읽기 쉽게 만들었습니다. 실제 강의에서는 후기 문장을 어떻게 신뢰 자료로 쓰는지 설명하면 좋습니다.',
+      caution: '후기는 “좋았어요”보다 “무엇이 달라졌는지”가 중요합니다. 구체성이 신뢰를 만듭니다.'
+    },
+    process: {
+      title: '진행 과정 섹션: 불안을 줄이는 순서 안내',
+      purpose: '문의 후 어떤 순서로 일이 진행되는지 보여줘서 방문자의 막연한 불안을 줄이는 구간입니다.',
+      prompt: '상담부터 결과물 완성까지의 진행 과정을 4단계로 정리해줘. 초보 고객도 다음 행동을 알 수 있게 쉽게 써줘.',
+      edit: '단계를 나누고 각 단계의 역할을 짧게 설명했습니다.',
+      caution: '과정 설명이 없으면 고객은 가격보다 먼저 불안해합니다. 순서를 보여주는 것은 설득이 아니라 안심 장치입니다.'
+    },
+    blog: {
+      title: '블로그 섹션: 전문 지식을 계속 쌓는 공간',
+      purpose: '방문자가 피코쌤의 생각과 교육 방향을 더 깊게 볼 수 있게 만드는 구간입니다.',
+      prompt: 'AI 프레젠테이션과 발표 전략 관련 글 목록을 카드 형태로 보여줘. 제목만 봐도 읽고 싶게 만들어줘.',
+      edit: '글을 카드형으로 배치해 콘텐츠 허브처럼 보이게 했습니다.',
+      caution: '블로그는 글 개수보다 주제가 중요합니다. 강의 주제와 연결되는 글을 앞에 배치해야 합니다.'
+    },
+    faq: {
+      title: 'FAQ 섹션: 반복 질문을 미리 처리하기',
+      purpose: '비용, 온라인 가능 여부, 대상 같은 반복 질문을 미리 답해 문의 전환을 쉽게 만드는 구간입니다.',
+      prompt: '발표 코칭과 AI 교육 문의 전에 자주 묻는 질문을 FAQ로 만들어줘. 질문은 짧게, 답변은 구체적으로 써줘.',
+      edit: '아코디언 형태로 접고 펼치게 만들어 화면을 복잡하지 않게 유지했습니다.',
+      caution: 'FAQ는 숨겨진 영업사원입니다. 질문을 예쁘게 쓰기보다 실제로 많이 받는 질문부터 넣어야 합니다.'
+    },
+    contact: {
+      title: '문의 섹션: 마지막 행동을 쉽게 만들기',
+      purpose: '방문자가 고민을 끝내고 바로 연락할 수 있게 만드는 마지막 구간입니다.',
+      prompt: '문의 섹션을 만들어줘. 이메일, 응답 시간, 문의 폼이 명확하게 보이고 부담 없이 연락할 수 있게 해줘.',
+      edit: '연락 정보와 입력 폼을 나눠 배치했습니다. 마지막에는 선택지가 적을수록 행동이 쉬워집니다.',
+      caution: '문의 폼이 길면 이탈합니다. 처음 연락은 필요한 정보만 받는 것이 좋습니다.'
+    }
+  };
+
+  function createModal() {
+    var overlay = document.createElement('div');
+    overlay.className = 'vibe-note-overlay';
+    overlay.id = 'vibeNoteOverlay';
+    overlay.innerHTML =
+      '<div class="vibe-note-panel" role="dialog" aria-modal="true" aria-labelledby="vibeNoteTitle">' +
+        '<div class="vibe-note-head">' +
+          '<div><div class="vibe-note-kicker">Vibe Coding Note</div><div class="vibe-note-title" id="vibeNoteTitle"></div></div>' +
+          '<button class="vibe-note-close" type="button" aria-label="제작노트 닫기">×</button>' +
+        '</div>' +
+        '<div class="vibe-note-body" id="vibeNoteBody"></div>' +
+      '</div>';
+    document.body.appendChild(overlay);
+
+    overlay.addEventListener('click', function (event) {
+      if (event.target === overlay) closeModal();
+    });
+    overlay.querySelector('.vibe-note-close').addEventListener('click', closeModal);
+    return overlay;
+  }
+
+  function closeModal() {
+    var overlay = document.getElementById('vibeNoteOverlay');
+    if (overlay) overlay.classList.remove('open');
+  }
+
+  function openModal(note) {
+    var overlay = document.getElementById('vibeNoteOverlay') || createModal();
+    document.getElementById('vibeNoteTitle').textContent = note.title;
+    document.getElementById('vibeNoteBody').innerHTML =
+      '<div class="vibe-note-block"><div class="vibe-note-label">무엇을 만든 섹션인가</div><div class="vibe-note-text">' + note.purpose + '</div></div>' +
+      '<div class="vibe-note-block"><div class="vibe-note-label">Claude에 이렇게 지시할 수 있음</div><pre class="vibe-note-prompt">' + note.prompt + '</pre></div>' +
+      '<div class="vibe-note-block"><div class="vibe-note-label">수정 포인트</div><div class="vibe-note-text">' + note.edit + '</div></div>' +
+      '<div class="vibe-note-block"><div class="vibe-note-label">초보자가 조심할 점</div><div class="vibe-note-text">' + note.caution + '</div></div>';
+    overlay.classList.add('open');
+  }
+
+  function addButtons() {
+    Object.keys(noteData).forEach(function (id) {
+      var section = document.getElementById(id);
+      if (!section || section.querySelector('.vibe-note-btn')) return;
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'vibe-note-btn';
+      btn.textContent = '제작노트';
+      btn.setAttribute('aria-label', noteData[id].title + ' 열기');
+      btn.addEventListener('click', function () { openModal(noteData[id]); });
+      section.appendChild(btn);
+    });
+  }
+
+  addButtons();
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') closeModal();
+  });
+})();
 </script>
 </body>
 </html>
