@@ -123,7 +123,7 @@
     <p class="tagline"><b>하나로 연결된 모두의 금융</b><br>하나금융그룹</p>
 
     <nav class="actions" aria-label="연락 방법">
-      <a class="btn primary" id="saveBtn" href="#" role="button">
+      <a class="btn primary" href="seowonho.vcf">
         <svg class="ic" viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5"/></svg>
         <span class="lbl">연락처 저장</span>
         <svg class="arw" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
@@ -171,35 +171,5 @@
       <a class="map" href="https://maps.google.com/?q=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%98%81%EB%93%B1%ED%8F%AC%EA%B5%AC%20%EC%9D%98%EC%82%AC%EB%8B%B9%EB%8C%80%EB%A1%9C%2082" target="_blank" rel="noopener">지도에서 위치 보기 →</a>
     </div>
   </main>
-
-<script>
-(function(){
-  var vcf = [
-    "BEGIN:VCARD","VERSION:3.0",
-    "N:서원호;;;;","FN:서원호",
-    "ORG:하나증권;연금전략실","TITLE:영업이사",
-    "TEL;TYPE=CELL:+82-10-5328-7418",
-    "TEL;TYPE=WORK,VOICE:+82-2-3771-7174",
-    "TEL;TYPE=WORK,FAX:+82-2-783-1816",
-    "EMAIL;TYPE=INTERNET:wonho.seo@hanafn.com",
-    "ADR;TYPE=WORK:;;서울특별시 영등포구 의사당대로 82(여의도동);;;07321;대한민국",
-    "URL:https://youtu.be/ClBWqFkZqCE",
-    "END:VCARD"
-  ].join("\r\n");
-  document.getElementById("saveBtn").addEventListener("click", function(e){
-    e.preventDefault();
-    try{
-      var blob=new Blob([vcf],{type:"text/vcard;charset=utf-8"});
-      var url=URL.createObjectURL(blob);
-      var a=document.createElement("a");
-      a.href=url; a.download="서원호_하나증권.vcf";
-      document.body.appendChild(a); a.click(); document.body.removeChild(a);
-      setTimeout(function(){URL.revokeObjectURL(url);},1500);
-    }catch(err){
-      location.href="data:text/vcard;charset=utf-8,"+encodeURIComponent(vcf);
-    }
-  });
-})();
-</script>
 </body>
 </html>
