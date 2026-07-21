@@ -1,6 +1,23 @@
 {
   "rewrites": [
-    { "source": "/ai-literacy-test", "destination": "/ai-literacy-test.html" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/ai-literacy-test",
+      "destination": "/ai-literacy-test.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*).vcf",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/vcard; charset=utf-8"
+        }
+      ]
+    }
   ]
 }
