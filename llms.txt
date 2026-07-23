@@ -111,6 +111,6 @@ ChatGPT 활용 교육, 생성형 AI 실무 활용, AI 기반 보고서·제안�
 - [프레젠테이션 전략 · 피치덱](https://pcossam.com/services/strategy-pitchdeck.html): 청중 분석과 핵심 메시지 설계부터 스토리라인, 슬라이드 구조까지 ChatGPT · Claude로 완성합니다.
 - [리허설 영상 분석](https://pcossam.com/services/rehearsal-analysis.html): 리허설 영상을 유튜브(비공개)로 보내주시면 전략 · 전달력 · 슬라이드를 분석해 피드백 리포트를 드립니다.
 - [장기 파트너십](https://pcossam.com/services/partnership.html): 전략 수립 · 피치덱 개선 · 리허설 코칭을 하나의 흐름으로. 발표가 자주 필요한 창업자 · 임원 · 기업과 월 단위로 함께합니다.
-- [금융 실무자 바이브 코딩 실무 과정](https://pcossam.com/services/finance-vibe-coding.html): 은행 · 증권 · 카드 · 자산운용사 실무자가 클로드와 코덱스로 웹사이트 · 디지털 명함 · 이메일 서명 · 업무 자동화까지 직접 만드는 16시간(2일) 실습형 신규 과정입니다.
+- [바이브 코딩 실무 과정](https://pcossam.com/services/vibe-coding-training.html): 바이브 코딩을 업무에 접목해 생산성을 높이려는 모든 기업 · 기관 실무자가 클로드와 코덱스로 웹사이트 · 디지털 명함 · 이메일 서명 · 업무 자동화까지 직접 만드는 16시간(2일) 실습형 신규 과정입니다.
 - [FAQ](https://pcossam.com/#faq): 자주 묻는 질문
 - [문의하기](https://pcossam.com/#contact): 견적 문의 양식
