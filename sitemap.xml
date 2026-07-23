@@ -3,34 +3,147 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://pcossam.com/</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/pcossam_en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pcossam.com/"/>
   </url>
   <url>
     <loc>https://pcossam.com/pcossam_en.html</loc>
-    <lastmod>2026-06-12</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/pcossam_en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pcossam.com/"/>
   </url>
   <url>
-    <loc>https://pcossam.com/ai-automation.html</loc>
-    <lastmod>2026-07-03</lastmod>
+    <loc>https://pcossam.com/vibe-coding-training.html</loc>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/ai-automation.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/vibe-coding-training.html"/>
   </url>
   <url>
-    <loc>https://pcossam.com/ai-literacy-test.html</loc>
-    <lastmod>2026-07-11</lastmod>
+    <loc>https://pcossam.com/prompt-templates.html</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/ai-literacy-test.html"/>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/prompt-templates.html"/>
   </url>
+
+  <url>
+    <loc>https://pcossam.com/services/generative-ai-training.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/generative-ai-training.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/generative-ai-training-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/generative-ai-training-en.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/generative-ai-training.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/generative-ai-training-en.html"/>
+  </url>
+
+  <url>
+    <loc>https://pcossam.com/services/ai-marketing-website.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/ai-marketing-website.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/ai-marketing-website-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/ai-marketing-website-en.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/ai-marketing-website.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/ai-marketing-website-en.html"/>
+  </url>
+
+  <url>
+    <loc>https://pcossam.com/services/ai-report-proposal.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/ai-report-proposal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/ai-report-proposal-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/ai-report-proposal-en.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/ai-report-proposal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/ai-report-proposal-en.html"/>
+  </url>
+
+  <url>
+    <loc>https://pcossam.com/services/presentation-coaching.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/presentation-coaching.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/presentation-coaching-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/presentation-coaching-en.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/presentation-coaching.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/presentation-coaching-en.html"/>
+  </url>
+
+  <url>
+    <loc>https://pcossam.com/services/pitchdeck-consulting.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/pitchdeck-consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/pitchdeck-consulting-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/pitchdeck-consulting-en.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/pitchdeck-consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/pitchdeck-consulting-en.html"/>
+  </url>
+
+  <url>
+    <loc>https://pcossam.com/services/ai-transformation-partnership.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/ai-transformation-partnership.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/ai-transformation-partnership-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/ai-transformation-partnership-en.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/ai-transformation-partnership.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/ai-transformation-partnership-en.html"/>
+  </url>
+
+  <url>
+    <loc>https://pcossam.com/services/aeo-geo-consulting.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/aeo-geo-consulting.html"/>
+  </url>
+
   <url>
     <loc>https://pcossam.com/portfolio/carping-house.html</loc>
     <lastmod>2026-07-04</lastmod>
@@ -72,47 +185,5 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/portfolio/public-card-alert.html"/>
-  </url>
-  <url>
-    <loc>https://pcossam.com/services/corporate-training.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/corporate-training.html"/>
-  </url>
-  <url>
-    <loc>https://pcossam.com/services/presentation-coaching.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/presentation-coaching.html"/>
-  </url>
-  <url>
-    <loc>https://pcossam.com/services/strategy-pitchdeck.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/strategy-pitchdeck.html"/>
-  </url>
-  <url>
-    <loc>https://pcossam.com/services/rehearsal-analysis.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/rehearsal-analysis.html"/>
-  </url>
-  <url>
-    <loc>https://pcossam.com/services/partnership.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/partnership.html"/>
-  </url>
-  <url>
-    <loc>https://pcossam.com/services/vibe-coding-training.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/vibe-coding-training.html"/>
   </url>
 </urlset>
