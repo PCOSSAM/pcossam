@@ -1,0 +1,196 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>피코쌤 강의 구성기</title><style>body{margin:0;padding:18px;background:#eceef1}</style></head>
+<body>
+<style>
+  .pc-wrap{--navy:#1A3A5C;--gold:#C8973A;--ink:#222;--mut:#6b7280;--line:#e5e7eb;--bg:#f7f8fa;
+    font-family:'Malgun Gothic','Noto Sans KR',system-ui,sans-serif;color:var(--ink);
+    max-width:920px;margin:0 auto;background:var(--bg);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .pc-wrap *{box-sizing:border-box}
+  .pc-head{background:var(--navy);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
+  .pc-head h1{margin:0;font-size:18px;font-weight:800;letter-spacing:-.3px}
+  .pc-head .site{font-size:11px;color:#cbd5e1}
+  .pc-cfg{padding:14px 20px;background:#fff;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:12px 18px;align-items:flex-end}
+  .pc-field{display:flex;flex-direction:column;gap:5px}
+  .pc-field label{font-size:11px;font-weight:700;color:var(--mut)}
+  .pc-field input[type=text]{border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:13px;min-width:230px}
+  .pc-chips{display:flex;gap:6px;flex-wrap:wrap}
+  .pc-chip{border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 12px;font-size:12px;cursor:pointer;user-select:none;transition:.12s}
+  .pc-chip:hover{border-color:var(--gold)}
+  .pc-chip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+  .pc-chip.htime.on{background:var(--gold);border-color:var(--gold);color:#1a1a1a;font-weight:700}
+  .pc-search{padding:10px 20px;background:#fff;border-bottom:1px solid var(--line)}
+  .pc-search input{width:100%;border:1px solid var(--line);border-radius:8px;padding:9px 12px;font-size:13px}
+  .pc-body{max-height:none;padding:6px 0 90px}
+  .pc-cat{border-bottom:1px solid var(--line)}
+  .pc-cathead{display:flex;align-items:center;gap:10px;padding:11px 20px;cursor:pointer;background:#eef1f5}
+  .pc-cathead .code{background:var(--navy);color:#fff;width:22px;height:22px;border-radius:6px;display:grid;place-items:center;font-size:11px;font-weight:800}
+  .pc-cathead .nm{font-size:13px;font-weight:800;color:var(--navy)}
+  .pc-cathead .cnt{font-size:11px;color:var(--mut)}
+  .pc-cathead .allbtn{margin-left:auto;font-size:11px;color:var(--gold);font-weight:700;border:none;background:none;cursor:pointer}
+  .pc-blocks{padding:6px 14px 12px}
+  .pc-blk{display:flex;gap:10px;padding:9px 10px;border:1px solid transparent;border-radius:9px;cursor:pointer}
+  .pc-blk:hover{background:#fff;border-color:var(--line)}
+  .pc-blk.sel{background:#fff;border-color:var(--gold);box-shadow:0 1px 4px rgba(200,151,58,.15)}
+  .pc-blk input{margin-top:3px;accent-color:var(--gold);width:16px;height:16px;flex:0 0 auto}
+  .pc-blk .meta{flex:1;min-width:0}
+  .pc-blk .top{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+  .pc-blk .id{font-size:10px;font-weight:700;color:var(--mut);font-family:monospace}
+  .pc-blk .badge{font-size:10px;padding:1px 7px;border-radius:10px;font-weight:700}
+  .b-사례{background:#e0edff;color:#1e56b8}.b-실습{background:#e0f5e6;color:#1f8a45}
+  .b-이론{background:#eef0f2;color:#5b6470}.b-코칭{background:#fbf0dc;color:#a9781f}
+  .pc-blk .nm{font-size:13px;font-weight:600}
+  .pc-blk .d{font-size:11.5px;color:var(--mut);margin-top:2px}
+  .pc-foot{position:sticky;bottom:0;background:#fff;border-top:2px solid var(--navy);padding:12px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .pc-foot .sum{font-size:13px}.pc-foot .sum b{color:var(--gold);font-size:16px}
+  .pc-foot .warn{font-size:11px;color:#c0392b}
+  .pc-go{margin-left:auto;background:var(--gold);color:#1a1a1a;border:none;border-radius:9px;padding:11px 22px;font-size:14px;font-weight:800;cursor:pointer}
+  .pc-go:disabled{opacity:.4;cursor:not-allowed}
+  .pc-go:hover:not(:disabled){filter:brightness(1.05)}
+  .pc-note{font-size:11px;color:var(--mut);padding:8px 20px;background:#fff}
+  #pc-toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);background:var(--navy);color:#fff;padding:12px 20px;border-radius:10px;font-size:13px;opacity:0;transition:.25s;pointer-events:none;z-index:9;max-width:90%}
+  #pc-toast.show{opacity:1}
+  textarea.pc-out{width:100%;height:120px;margin-top:8px;font-size:11px;font-family:monospace;border:1px solid var(--line);border-radius:8px;padding:8px;display:none}
+</style>
+
+<div class="pc-wrap">
+  <div class="pc-head">
+    <h1>피코쌤 강의 구성기 <span style="font-weight:400;font-size:12px;opacity:.7">· 콘텐츠 65블록</span></h1>
+    <span class="site">PCOSSAM.COM</span>
+  </div>
+
+  <div class="pc-cfg">
+    <div class="pc-field">
+      <label>과정명 / 주제 (자유 입력)</label>
+      <input id="pc-course" type="text" placeholder="예: 중소기업 임원 대상 AI 마케팅 특강">
+    </div>
+    <div class="pc-field">
+      <label>교육 대상 (선택 시 후보 자동 필터)</label>
+      <div class="pc-chips" id="pc-targets"></div>
+    </div>
+    <div class="pc-field">
+      <label>교육 시간</label>
+      <div class="pc-chips" id="pc-hours"></div>
+    </div>
+  </div>
+
+  <div class="pc-search"><input id="pc-q" type="text" placeholder="🔍 콘텐츠명·설명·ID 검색"></div>
+  <div class="pc-body" id="pc-body"></div>
+
+  <div class="pc-foot">
+    <div class="sum">선택 <b id="pc-n">0</b>개 · <span id="pc-hlabel">시간 미선택</span></div>
+    <span class="warn" id="pc-warn"></span>
+    <button class="pc-go" id="pc-go" disabled>선택 완료 → 코드 복사</button>
+  </div>
+  <div class="pc-note" id="pc-note">이 파일은 저장해두고 언제든 열어 쓰세요. 콘텐츠를 고르고 시간을 선택한 뒤 [선택 완료] 버튼을 누르면 '선택 코드'가 복사됩니다. 그 코드를 클로드 대화창에 붙여넣으면 커리큘럼 PDF가 만들어집니다.</div>
+  <textarea class="pc-out" id="pc-out" readonly></textarea>
+</div>
+<div id="pc-toast"></div>
+
+<script>
+(function(){
+  const BLOCKS = [{"id":"A-01","c":"A","n":"올다무 데이터 마케팅(올리브영·다이소·무신사)","t":"사례","d":"데이터를 수익으로 바꾼 국내 리테일 사례","g":"전체"},{"id":"A-02","c":"A","n":"아마존식 예측배송 '주문하실 택배 왔습니다'","t":"사례","d":"데이터 기반 예측 물류 서비스","g":"전체"},{"id":"A-03","c":"A","n":"일론 머스크식 AI 접근·미래 가치 기준","t":"사례","d":"미래 가치를 판단하는 기준","g":"경영진·전체"},{"id":"A-04","c":"A","n":"미국식 vs 중국식 로봇 산업(수익 구조 차이)","t":"사례","d":"두 산업 모델의 수익화 방식 비교","g":"전체"},{"id":"A-05","c":"A","n":"중국 로봇의 매일 학습·동기화 발전","t":"사례","d":"학습·동기화로 발전하는 원리","g":"전체"},{"id":"A-06","c":"A","n":"다크팩토리(무인 공장)","t":"사례","d":"인간 노동자 없는 공장 가동","g":"전체"},{"id":"A-07","c":"A","n":"스테이블코인과 외국인 노동자","t":"사례","d":"왜 원화 대신 코인을 요구하나","g":"전체·금융"},{"id":"A-08","c":"A","n":"구글 도서관 프로젝트(전세계 책 스캔)","t":"사례","d":"데이터 축적의 시작","g":"전체"},{"id":"A-09","c":"A","n":"챗GPT 3개월 만에 1억 사용자","t":"사례","d":"확산 속도가 주는 의미","g":"전체"},{"id":"A-10","c":"A","n":"삼성전자 미국법인장 임원 설득","t":"사례","d":"설득에 성공한 스토리","g":"발표·전체"},{"id":"A-11","c":"A","n":"브라질 룰라 '투자 vs 비용' 화법","t":"사례","d":"프레이밍(관점 설정) 화법","g":"발표·전체"},{"id":"A-12","c":"A","n":"AI 비즈니스 마인드 3가지","t":"이론","d":"경영진이 알아야 할 핵심 관점","g":"경영진·전체"},{"id":"A-13","c":"A","n":"챗GPT 대화형 커머스와 AI에이전트","t":"이론","d":"대화로 구매하는 시대","g":"전체"},{"id":"B-01","c":"B","n":"AI 에이전틱 커머스","t":"이론","d":"AI가 탐색·비교·결제까지 수행","g":"전체"},{"id":"B-02","c":"B","n":"AEO/GEO 제로클릭(답변·생성엔진 최적화)","t":"이론","d":"프롬프트로 주문하는 시대","g":"전체"},{"id":"B-03","c":"B","n":"UCP 유니버셜 커머스 프로토콜","t":"이론","d":"커머스 표준 개념","g":"전체"},{"id":"B-04","c":"B","n":"구글 500억개 상품정보 관리","t":"사례","d":"왜 상품정보를 모으는가","g":"전체"},{"id":"B-05","c":"B","n":"김캐디 사례(제안서 없이 LIV골프 파트너십)","t":"사례","d":"스타트업 파트너십 성공","g":"전체"},{"id":"B-06","c":"B","n":"AI가 읽을 수 있는 웹페이지","t":"이론","d":"AI 친화적 웹 구조","g":"전체"},{"id":"C-01","c":"C","n":"좋은 결과 유도 프롬프트 공식","t":"실습","d":"프롬프트 기본 작성 공식","g":"전체"},{"id":"C-02","c":"C","n":"보고서·제안서·PT 공통 프롬프트+맞춤지침","t":"실습","d":"3종 문서 공통 작성법","g":"전체"},{"id":"C-03","c":"C","n":"심층 리서치 기능 활용","t":"실습","d":"자료 수집·정리 자동화","g":"전체"},{"id":"C-04","c":"C","n":"심층리서치 vs AI에이전트 차이","t":"이론","d":"두 기능의 구분과 활용","g":"전체"},{"id":"C-05","c":"C","n":"프로젝트 기능(정보 보안)","t":"실습","d":"자료 보안·맥락 관리","g":"전체·금융"},{"id":"C-06","c":"C","n":"보고서·제안서 초안 자동생성·구조화","t":"실습","d":"초안 자동 생성","g":"전체"},{"id":"C-07","c":"C","n":"반복 문서 템플릿화·재사용 프롬프트","t":"실습","d":"템플릿 자산화","g":"전체"},{"id":"C-08","c":"C","n":"비유법·비교법 프롬프트(이해와 설득)","t":"실습","d":"이해=비유, 설득=비교","g":"전체·영업"},{"id":"D-01","c":"D","n":"준비는 AI, 전달은 아날로그","t":"이론","d":"발표의 핵심 철학","g":"전체"},{"id":"D-02","c":"D","n":"PPT 모핑 효과","t":"실습","d":"모핑 하나로 준비 완성","g":"전체"},{"id":"D-03","c":"D","n":"발표 후 예상 질문·답변 대비","t":"실습","d":"Q&A 시나리오 준비","g":"전체"},{"id":"D-04","c":"D","n":"실전 PPT 제작+발표력 코칭","t":"코칭","d":"슬라이드와 전달력","g":"전체"},{"id":"D-05","c":"D","n":"리허설·의상·카메라 각도 코칭","t":"코칭","d":"현장 리허설 코칭","g":"전체"},{"id":"D-06","c":"D","n":"프레젠테이션 맞춤 설정","t":"실습","d":"발표용 맞춤 지침","g":"전체"},{"id":"E-01","c":"E","n":"이미지 생성 프롬프트(인포그래픽)","t":"실습","d":"슬라이드용 이미지 제작","g":"전체"},{"id":"E-02","c":"E","n":"짧은 영상 제작","t":"실습","d":"광고·홍보용 영상","g":"전체"},{"id":"E-03","c":"E","n":"강의 이미지(인포그래픽·다이어그램)","t":"실습","d":"강의용 비주얼 제작","g":"강사"},{"id":"E-04","c":"E","n":"피규어 스타일 이미지(네이버 지도 삽입)","t":"실습","d":"영업자료용 비주얼","g":"영업"},{"id":"E-05","c":"E","n":"비주얼 스타일 통일","t":"실습","d":"콘텐츠 톤앤매너 통일","g":"전체·강사"},{"id":"F-01","c":"F","n":"바이브 코딩 개념·환경 세팅","t":"실습","d":"대화로 코딩하는 준비","g":"전체·금융"},{"id":"F-02","c":"F","n":"클로드로 웹사이트 뼈대 만들기","t":"실습","d":"소개 웹페이지 생성","g":"전체·금융"},{"id":"F-03","c":"F","n":"웹사이트 완성·배포","t":"실습","d":"디자인 조정·웹 게시","g":"전체·금융"},{"id":"F-04","c":"F","n":"코덱스로 기능 더하기","t":"실습","d":"문의폼 등 기능 추가","g":"전체·금융"},{"id":"F-05","c":"F","n":"디지털 명함 만들기(QR·링크)","t":"실습","d":"QR·링크형 명함 자산","g":"전체·영업"},{"id":"F-06","c":"F","n":"이메일 서명 만들기","t":"실습","d":"브랜드 이메일 서명","g":"전체"},{"id":"F-07","c":"F","n":"반복 업무 자동화","t":"실습","d":"반복 업무 자동화 체계","g":"전체"},{"id":"G-01","c":"G","n":"맞춤 지침(Custom Instructions)","t":"실습","d":"나만의 톤·전문분야 등록","g":"전체·강사"},{"id":"G-02","c":"G","n":"GPT 클론 만들기(자료·대화 학습)","t":"실습","d":"멘토·전문가 챗봇 제작","g":"전체·강사"},{"id":"G-03","c":"G","n":"AI 클론 vs GPT 클론(메타 저커버그)","t":"이론","d":"클론 개념·활용 사례","g":"전체"},{"id":"G-04","c":"G","n":"나만의 업무 AI로 정착","t":"실습","d":"교육 후 확장 자동화 체계","g":"전체"},{"id":"H-01","c":"H","n":"고령 고객 맞춤 인포그래픽(지점영업)","t":"실습","d":"눈높이 상품 설명 자료","g":"영업"},{"id":"H-02","c":"H","n":"지점 방문 유도 현수막·포스터","t":"실습","d":"지점 마케팅물 자체 제작","g":"영업"},{"id":"H-03","c":"H","n":"카드·보험·연금 영업자료 스토리텔링 4단계","t":"실습","d":"영업 스토리 자동 생성","g":"영업"},{"id":"H-04","c":"H","n":"지점 전용 GPT 구축","t":"실습","d":"반복 제작 자동화","g":"영업"},{"id":"H-05","c":"H","n":"기관영업 배점표 정량 전략(B2G)","t":"실습","d":"배점 기준 제안서 구성","g":"영업·금융"},{"id":"H-06","c":"H","n":"정성평가 차별화 포인트 도출","t":"실습","d":"경쟁사 대비 차별화","g":"영업·금융"},{"id":"H-07","c":"H","n":"배점형·협상형 사업 대응 전략","t":"이론","d":"사업 유형별 대응","g":"영업·금융"},{"id":"H-08","c":"H","n":"경쟁 PT 발표 코칭","t":"코칭","d":"하루 3~4건 심사 대응","g":"영업·금융"},{"id":"I-01","c":"I","n":"코인/스테이블코인/토큰증권 구조 구분","t":"이론","d":"개념을 구조적으로 구분","g":"금융"},{"id":"I-02","c":"I","n":"RWA 실물자산 토큰화","t":"이론","d":"실물 자산의 토큰화","g":"금융"},{"id":"I-03","c":"I","n":"스테이블코인 결제 인프라","t":"이론","d":"국경 없는 결제 인프라","g":"금융"},{"id":"I-04","c":"I","n":"디지털자산기본법·토큰증권 규제 일정","t":"이론","d":"규제 타임라인(변동 주의)","g":"금융"},{"id":"I-05","c":"I","n":"조각투자 플랫폼 철수 사례(기대 vs 현실)","t":"사례","d":"균형 잡힌 시각","g":"금융"},{"id":"I-06","c":"I","n":"뉴스·공시 AI 분석 루틴","t":"실습","d":"지속 활용 분석 루틴","g":"금융"},{"id":"J-01","c":"J","n":"강의안 설계 자동 구조화(목표-내용-활동-평가)","t":"실습","d":"강의안 뼈대 자동 생성","g":"강사"},{"id":"J-02","c":"J","n":"대상별 맞춤 강의안(직장인·학생·창업자)","t":"실습","d":"청중 특성 맞춤 강의안","g":"강사"}];
+  const CATS = {"A": "AI 트렌드·산업 인사이트", "B": "AI 커머스·검색 재편", "C": "AI 문서·기획(프롬프트)", "D": "AI 발표·프레젠테이션", "E": "AI 이미지·영상·콘텐츠", "F": "바이브코딩·업무 자동화", "G": "GPT 클론·맞춤화", "H": "영업 특화(지점·기관)", "I": "금융·디지털자산 특화", "J": "강의·교수학습(강사 대상)"};
+  const MODE = "file";
+  const TARGETS = ["전체","경영진","금융","영업","발표","강사"];
+  const HOURS = ["2h","4h","7h","8h","14h","16h"];
+  let curTarget="전체", curHours="", q="";
+  const selected = new Set();
+
+  const $=s=>document.querySelector(s);
+  const body=$("#pc-body");
+
+  // 대상 칩
+  const tw=$("#pc-targets");
+  TARGETS.forEach((t,i)=>{const c=document.createElement("div");c.className="pc-chip"+(i===0?" on":"");c.textContent=t;
+    c.onclick=()=>{curTarget=t;[...tw.children].forEach(x=>x.classList.remove("on"));c.classList.add("on");render();};tw.appendChild(c);});
+  // 시간 칩
+  const hw=$("#pc-hours");
+  HOURS.forEach(h=>{const c=document.createElement("div");c.className="pc-chip htime";c.textContent=h;
+    c.onclick=()=>{const was=c.classList.contains("on");[...hw.children].forEach(x=>x.classList.remove("on"));
+      if(was){curHours="";}else{c.classList.add("on");curHours=h;}updateFoot();};hw.appendChild(c);});
+
+  $("#pc-q").oninput=e=>{q=e.target.value.trim().toLowerCase();render();};
+
+  function matchTarget(b){ if(curTarget==="전체") return true; return b.g.includes(curTarget)||b.g.includes("전체"); }
+  function matchQ(b){ if(!q) return true; return (b.n+b.d+b.id).toLowerCase().includes(q); }
+
+  function render(){
+    body.innerHTML="";
+    Object.keys(CATS).forEach(code=>{
+      const items=BLOCKS.filter(b=>b.c===code && matchTarget(b) && matchQ(b));
+      if(!items.length) return;
+      const cat=document.createElement("div");cat.className="pc-cat";
+      const selCnt=items.filter(b=>selected.has(b.id)).length;
+      cat.innerHTML=`<div class="pc-cathead"><span class="code">${code}</span>
+        <span class="nm">${CATS[code]}</span><span class="cnt">${items.length}개${selCnt?` · 선택 ${selCnt}`:''}</span>
+        <button class="allbtn">전체선택/해제</button></div><div class="pc-blocks"></div>`;
+      const bl=cat.querySelector(".pc-blocks");
+      items.forEach(b=>{
+        const row=document.createElement("label");row.className="pc-blk"+(selected.has(b.id)?" sel":"");
+        row.innerHTML=`<input type="checkbox" ${selected.has(b.id)?"checked":""}>
+          <div class="meta"><div class="top"><span class="id">${b.id}</span>
+          <span class="badge b-${b.t}">${b.t}</span><span class="nm">${b.n}</span></div>
+          <div class="d">${b.d}</div></div>`;
+        row.querySelector("input").onchange=e=>{e.target.checked?selected.add(b.id):selected.delete(b.id);
+          row.classList.toggle("sel",e.target.checked);updateFoot();
+          cat.querySelector(".cnt").textContent=`${items.length}개`+ (items.filter(x=>selected.has(x.id)).length?` · 선택 ${items.filter(x=>selected.has(x.id)).length}`:'');};
+        bl.appendChild(row);
+      });
+      cat.querySelector(".allbtn").onclick=ev=>{ev.preventDefault();const all=items.every(b=>selected.has(b.id));
+        items.forEach(b=>all?selected.delete(b.id):selected.add(b.id));render();updateFoot();};
+      body.appendChild(cat);
+    });
+    updateFoot();
+  }
+
+  function updateFoot(){
+    $("#pc-n").textContent=selected.size;
+    $("#pc-hlabel").textContent=curHours?curHours+" 과정":"시간 미선택";
+    let warn="";
+    if(curHours&&selected.size){
+      const rec={"2h":[2,4],"4h":[4,7],"7h":[6,10],"8h":[7,11],"14h":[10,16],"16h":[12,18]}[curHours];
+      if(selected.size<rec[0]) warn=`※ ${curHours}치고 블록이 적을 수 있어요(권장 ${rec[0]}~${rec[1]})`;
+      else if(selected.size>rec[1]) warn=`※ ${curHours}에 비해 블록이 많아요(권장 ${rec[0]}~${rec[1]})`;
+    }
+    $("#pc-warn").textContent=warn;
+    $("#pc-go").disabled=!(selected.size&&curHours);
+  }
+
+  function buildPayload(){
+    const course=$("#pc-course").value.trim()||"(과정명 미입력)";
+    const picked=BLOCKS.filter(b=>selected.has(b.id));
+    let lines=picked.map(b=>`- ${b.id} [${b.t}] ${b.n}`).join("\n");
+    const ids=picked.map(b=>b.id);
+    const j=JSON.stringify({course,target:curTarget,hours:curHours,ids});
+    return `===PCOSSAM 강의구성===
+과정명: ${course}
+대상: ${curTarget}
+시간: ${curHours}
+선택 블록 (${picked.length}개):
+${lines}
+
+위 구성으로 피코쌤 커리큘럼 PDF(표지 로고+사진+PCOSSAM.COM 포함)를 만들어줘.
+[DATA]${j}
+===END===`;
+  }
+
+  function toast(m){const t=$("#pc-toast");t.textContent=m;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2600);}
+
+  $("#pc-go").onclick=()=>{
+    const payload=buildPayload();
+    if(MODE==="widget"){
+      if(typeof sendPrompt==="function"){sendPrompt(payload);toast("피코쌤에게 구성을 보냈어요. 잠시만요…");}
+      else{navigator.clipboard.writeText(payload);toast("복사됨 — 채팅에 붙여넣으세요");}
+    }else{
+      const out=$("#pc-out");out.style.display="block";out.value=payload;out.select();
+      try{navigator.clipboard.writeText(payload);}catch(e){}
+      toast("선택 코드 복사됨! 클로드 대화창에 붙여넣으세요");
+    }
+  };
+
+  render();
+})();
+</script>
+</body></html>
