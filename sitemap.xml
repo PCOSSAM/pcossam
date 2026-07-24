@@ -186,4 +186,18 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/portfolio/public-card-alert.html"/>
   </url>
+<url>
+    <loc>https://pcossam.com/ai-literacy-test.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/ai-literacy-test.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/diagnosis.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/diagnosis.html"/>
+  </url>
 </urlset>
