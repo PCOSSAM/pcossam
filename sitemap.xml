@@ -20,11 +20,11 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pcossam.com/"/>
   </url>
   <url>
-    <loc>https://pcossam.com/vibe-coding-training.html</loc>
+    <loc>https://pcossam.com/services/vibe-coding-training.html</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/vibe-coding-training.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/vibe-coding-training.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/prompt-templates.html</loc>
@@ -194,10 +194,145 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/ai-literacy-test.html"/>
   </url>
   <url>
-    <loc>https://pcossam.com/diagnosis.html</loc>
+    <loc>https://pcossam.com/diagnosis</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/diagnosis.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/diagnosis"/>
+  </url>
+
+  <!-- BLOG -->
+  <url>
+    <loc>https://pcossam.com/blog/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/amazon.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/amazon.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/art-trash.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/art-trash.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/book.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/book.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/chatgpt-story.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/chatgpt-story.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/crocs.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/crocs.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/frozen-water.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/frozen-water.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/gpt-diary.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/gpt-diary.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/jibbitz.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/jibbitz.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/meeting.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/meeting.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/name-tag.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/name-tag.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/nose.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/nose.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/phone-dad.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/phone-dad.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/playground.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/playground.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/scratch.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/scratch.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/smartphone.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/smartphone.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/stroller.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/stroller.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/voice.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/voice.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/wooden-doll.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/wooden-doll.html"/>
   </url>
 </urlset>

@@ -1,12 +1,14 @@
 {
+  "cleanUrls": false,
+  "trailingSlash": false,
   "rewrites": [
     {
       "source": "/ai-literacy-test",
       "destination": "/ai-literacy-test.html"
     },
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "source": "/diagnosis",
+      "destination": "/diagnosis.html"
     }
   ],
   "headers": [
