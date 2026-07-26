@@ -92,6 +92,23 @@ a { color: inherit; }
   letter-spacing: 0.12em;
 }
 
+.spoke-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 16px;
+  padding: 6px 14px;
+  background: var(--gold-soft);
+  border: 1px solid var(--gold);
+  border-radius: 100px;
+  color: var(--gold-dark);
+  font-size: 12.5px;
+  font-weight: 700;
+  text-decoration: none;
+  width: fit-content;
+}
+.spoke-link:hover { background: var(--gold); color: #fff; }
+
 h1 {
   margin: 0;
   color: var(--black);
