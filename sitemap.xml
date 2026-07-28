@@ -203,11 +203,11 @@
 
   <!-- BLOG -->
   <url>
-    <loc>https://pcossam.com/blog/</loc>
+    <loc>https://pcossam.com/blog</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog"/>
   </url>
   <url>
     <loc>https://pcossam.com/blog/amazon.html</loc>
