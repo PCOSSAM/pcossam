@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>바이브 코딩 실무 과정 수강생 결과물 | 피코쌤</title>
+<meta name="description" content="코딩 경험이 없던 실무자들이 바이브 코딩 실무 과정에서 직접 만들어 인터넷에 배포한 결과물입니다. 발표자료, 업무 소개 페이지, 개인 브랜딩 페이지까지.">
+<link rel="canonical" href="https://pcossam.com/works/vibe-coding.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="바이브 코딩 실무 과정 수강생 결과물 | 피코쌤">
+<meta property="og:description" content="코딩 경험이 없던 실무자들이 교육 시간 안에 직접 만들어 배포한 결과물입니다.">
+<meta property="og:url" content="https://pcossam.com/works/vibe-coding.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "바이브 코딩 실무 과정 수강생 결과물",
+  "description": "코딩 경험이 없던 기업·기관 실무자들이 바이브 코딩 실무 과정에서 직접 제작하고 배포한 웹페이지와 발표자료 모음입니다.",
+  "url": "https://pcossam.com/works/vibe-coding.html",
+  "isPartOf": { "@type": "WebSite", "name": "피코쌤 PCOSSAM", "url": "https://pcossam.com" },
+  "about": { "@type": "Course", "name": "바이브 코딩 실무 과정", "provider": { "@type": "Person", "name": "피코쌤 김민구" } }
+}
+</script>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0a0a0a;
+    --white: #fafaf8;
+    --gray-100: #f4f3f0;
+    --gray-200: #e8e7e2;
+    --gray-400: #9e9c97;
+    --gray-600: #5e5c57;
+    --gray-800: #2c2b28;
+    --accent: #1a3a5c;
+    --accent-light: #e8f0f8;
+    --gold: #c8973a;
+    --gold-light: #fdf3e3;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--white);
+    color: var(--black);
+    font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Pretendard', 'Noto Sans KR', sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+
+  /* ── 상단 바 ── */
+  .topbar {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(250,250,248,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .topbar-inner {
+    max-width: 1080px; margin: 0 auto;
+    padding: 16px 32px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand { font-size: 17px; font-weight: 800; letter-spacing: -0.01em; text-decoration: none; }
+  .brand span { color: var(--gold); }
+  .topbar-back { font-size: 13px; font-weight: 600; color: var(--gray-600); text-decoration: none; }
+  .topbar-back:hover { color: var(--gold); }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 32px; }
+
+  /* ── 히어로 ── */
+  .hero { padding: 76px 0 44px; }
+  .label {
+    font-size: 11px; font-weight: 800; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--gold);
+  }
+  .hero h1 {
+    font-size: 40px; font-weight: 800; line-height: 1.28;
+    letter-spacing: -0.03em; margin-top: 14px;
+  }
+  .hero p {
+    font-size: 16px; color: var(--gray-600);
+    margin-top: 18px; max-width: 660px;
+  }
+
+  /* ── 숫자 줄 ── */
+  .facts {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1px; background: var(--gray-200);
+    border: 1px solid var(--gray-200); border-radius: 14px;
+    overflow: hidden; margin-top: 36px;
+  }
+  .fact { background: var(--white); padding: 24px 22px; }
+  .fact-num { font-size: 26px; font-weight: 800; color: var(--accent); letter-spacing: -0.02em; }
+  .fact-num small { font-size: 14px; font-weight: 700; color: var(--gray-400); margin-left: 3px; }
+  .fact-label { font-size: 13px; color: var(--gray-600); margin-top: 4px; }
+
+  /* ── 결과물 ── */
+  .works { padding: 64px 0 20px; display: flex; flex-direction: column; gap: 56px; }
+  .work {
+    display: grid; grid-template-columns: 1.15fr 1fr;
+    gap: 40px; align-items: center;
+  }
+  .work:nth-child(even) .work-shot { order: 2; }
+  .work-shot {
+    border-radius: 16px; overflow: hidden;
+    border: 1px solid var(--gray-200);
+    box-shadow: 0 18px 44px rgba(0,0,0,0.09);
+    background: var(--gray-100);
+  }
+  .work-shot img { width: 100%; aspect-ratio: 16/9; object-fit: cover; object-position: top center; }
+  .work-tag {
+    display: inline-block; font-size: 11px; font-weight: 800;
+    letter-spacing: 0.08em; color: var(--gold);
+    background: var(--gold-light); padding: 5px 12px; border-radius: 100px;
+  }
+  .work h2 { font-size: 23px; font-weight: 800; letter-spacing: -0.02em; margin-top: 14px; line-height: 1.45; }
+  .work-by { font-size: 13px; color: var(--gray-400); margin-top: 6px; }
+  .work-desc { font-size: 14.5px; color: var(--gray-600); margin-top: 14px; }
+  .skills { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
+  .skill {
+    font-size: 12px; font-weight: 600; color: var(--gray-800);
+    background: var(--gray-100); border: 1px solid var(--gray-200);
+    padding: 5px 11px; border-radius: 100px;
+  }
+  .work-link {
+    display: inline-flex; align-items: center; gap: 7px;
+    margin-top: 20px; font-size: 13px; font-weight: 700;
+    color: var(--accent); text-decoration: none;
+    border-bottom: 2px solid var(--gold); padding-bottom: 2px;
+  }
+  .work-link:hover { color: var(--gold); }
+
+  /* ── 안내 ── */
+  .notice {
+    margin: 56px 0 0; padding: 22px 26px;
+    background: var(--gray-100); border-radius: 14px;
+    font-size: 12.5px; color: var(--gray-600); line-height: 1.75;
+  }
+  .notice b { color: var(--gray-800); }
+
+  /* ── CTA ── */
+  .cta {
+    margin: 56px 0 90px; padding: 48px 40px;
+    background: var(--black); color: var(--white);
+    border-radius: 20px; text-align: center;
+  }
+  .cta h3 { font-size: 25px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.45; }
+  .cta p { font-size: 14.5px; color: rgba(250,250,248,0.72); margin-top: 14px; }
+  .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+  .btn {
+    display: inline-block; padding: 14px 30px; border-radius: 100px;
+    font-size: 14px; font-weight: 700; text-decoration: none;
+  }
+  .btn-gold { background: var(--gold); color: #fff; }
+  .btn-ghost { border: 1px solid rgba(250,250,248,0.32); color: var(--white); }
+  .btn:hover { opacity: 0.88; }
+
+  /* ── 푸터 ── */
+  footer {
+    border-top: 1px solid var(--gray-200);
+    padding: 36px 0 60px; text-align: center;
+  }
+  .foot-copy { font-size: 14px; font-weight: 700; color: var(--gray-800); }
+  .foot-sub { font-size: 12.5px; color: var(--gray-400); margin-top: 7px; }
+
+  @media (max-width: 860px) {
+    .wrap, .topbar-inner { padding-left: 22px; padding-right: 22px; }
+    .hero { padding: 52px 0 32px; }
+    .hero h1 { font-size: 28px; }
+    .facts { grid-template-columns: 1fr; }
+    .work { grid-template-columns: 1fr; gap: 22px; }
+    .work:nth-child(even) .work-shot { order: 0; }
+    .works { gap: 48px; padding-top: 48px; }
+    .cta { padding: 38px 24px; }
+    .cta h3 { font-size: 21px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="/">피코쌤<span>.</span></a>
+    <a class="topbar-back" href="/services/vibe-coding-training.html">← 바이브 코딩 실무 과정 소개</a>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section class="hero">
+    <div class="label">STUDENT WORKS</div>
+    <h1>코딩을 배운 적 없는 실무자가<br>교육 시간 안에 만들어 올린 결과물</h1>
+    <p>바이브 코딩 실무 과정에서는 이론을 듣고 끝내지 않습니다. 교육이 끝날 때 각자의 페이지가 실제 인터넷 주소를 갖고, 문자로 보낼 수 있는 상태가 됩니다. 아래는 수강생이 직접 만든 결과물입니다.</p>
+
+    <div class="facts">
+      <div class="fact">
+        <div class="fact-num">0<small>명</small></div>
+        <div class="fact-label">코딩을 배운 적 있는 수강생</div>
+      </div>
+      <div class="fact">
+        <div class="fact-num">8<small>시간</small></div>
+        <div class="fact-label">기획부터 인터넷 배포까지 걸린 시간</div>
+      </div>
+      <div class="fact">
+        <div class="fact-num">100<small>%</small></div>
+        <div class="fact-label">자기 주소로 배포를 마친 비율</div>
+      </div>
+    </div>
+    <!-- ※ 위 숫자 3개는 실제 진행 기록에 맞게 반드시 수정하세요. 부풀리면 나중에 확인 요청이 들어옵니다. -->
+  </section>
+
+  <section class="works">
+
+    <!-- ────────── 결과물 1 : 발표자료 (제일 앞에 두는 카드) ────────── -->
+    <article class="work">
+      <div class="work-shot">
+        <img src="/assets/works/work-presentation.webp" alt="수강생이 코드로 직접 만든 인터랙티브 발표자료 화면" loading="lazy" width="960" height="540">
+      </div>
+      <div>
+        <span class="work-tag">발표자료</span>
+        <h2>파워포인트 없이 코드로 만든<br>인터랙티브 발표자료</h2>
+        <div class="work-by">교육 참가자 제작 · 20대 교육생 대상 강의용</div>
+        <p class="work-desc">숫자를 세면서 올라가는 카운트 효과, 방향키로 넘기는 슬라이드, 전체화면 전환까지 파일 하나로 동작합니다. 발표 흐름을 먼저 설계하고 그 흐름대로 화면을 만든 사례입니다.</p>
+        <div class="skills">
+          <span class="skill">발표 흐름 설계</span>
+          <span class="skill">화면 전환 애니메이션</span>
+          <span class="skill">데이터 시각화</span>
+          <span class="skill">단일 파일 배포</span>
+        </div>
+        <!-- TODO: 수강생 배포 주소로 교체 -->
+        <a class="work-link" href="#" target="_blank" rel="noopener noreferrer">발표자료 직접 넘겨보기 ↗</a>
+      </div>
+    </article>
+
+    <!-- ────────── 결과물 2 : 업무 소개 페이지 ────────── -->
+    <article class="work">
+      <div class="work-shot">
+        <img src="/assets/works/work-jumni.webp" alt="수강생이 만든 업무 소개 웹페이지 화면" loading="lazy" width="960" height="540">
+      </div>
+      <div>
+        <span class="work-tag">업무 소개</span>
+        <h2>담당 업무를 한 페이지로 정리한<br>직원 소개 웹페이지</h2>
+        <div class="work-by">교육 참가자 제작 · 대학 산학협력단 직원</div>
+        <p class="work-desc">맡고 있는 업무, 만든 자료, 운영 중인 블로그를 한 주소로 모았습니다. 명함 대신 링크 하나만 보내면 되는 형태로, 업무 인수인계나 대외 소개에 바로 쓸 수 있습니다.</p>
+        <div class="skills">
+          <span class="skill">정보 구조 설계</span>
+          <span class="skill">모바일 대응</span>
+          <span class="skill">외부 채널 연결</span>
+          <span class="skill">깃허브 · 버셀 배포</span>
+        </div>
+        <!-- TODO: 수강생 배포 주소로 교체 -->
+        <a class="work-link" href="#" target="_blank" rel="noopener noreferrer">페이지 보기 ↗</a>
+      </div>
+    </article>
+
+    <!-- ────────── 결과물 3 : 개인 브랜딩 페이지 ────────── -->
+    <article class="work">
+      <div class="work-shot">
+        <img src="/assets/works/work-gogaeng.webp" alt="수강생이 만든 개인 브랜딩 웹페이지 화면" loading="lazy" width="960" height="540">
+      </div>
+      <div>
+        <span class="work-tag">개인 브랜딩</span>
+        <h2>이력과 저서를 담은<br>개인 브랜딩 페이지</h2>
+        <div class="work-by">교육 참가자 제작 · 대학 산학협력단 직원</div>
+        <p class="work-desc">경력, 저서, 소개 영상을 하나의 흐름으로 배치했습니다. 이력서로는 전달되지 않는 결을 보여주는 페이지로, 강연·집필 제안을 받을 때 쓰는 창구가 됩니다.</p>
+        <div class="skills">
+          <span class="skill">스토리 구성</span>
+          <span class="skill">브랜드 색 설계</span>
+          <span class="skill">영상 삽입</span>
+          <span class="skill">깃허브 · 버셀 배포</span>
+        </div>
+        <!-- TODO: 수강생 배포 주소로 교체 -->
+        <a class="work-link" href="#" target="_blank" rel="noopener noreferrer">페이지 보기 ↗</a>
+      </div>
+    </article>
+
+  </section>
+
+  <div class="notice">
+    <b>게시 안내</b> — 이 페이지의 결과물은 제작자 본인의 동의를 받아 교육 사례로 게시하고 있습니다. 게시를 원하지 않으시면 <a href="mailto:pcossam@pcossam.com" style="color:var(--gold);font-weight:600;">pcossam@pcossam.com</a>으로 알려주시면 바로 내리겠습니다.<br>
+    각 결과물의 저작권은 제작자 본인에게 있으며, 무단 복제·재배포를 금합니다.
+  </div>
+
+  <section class="cta">
+    <h3>우리 조직에도 이런 결과물이<br>남는 교육이 필요하다면</h3>
+    <p>인원, 시간, 업무 성격에 맞춰 커리큘럼을 조정합니다. 4시간 특강부터 16시간 2일 과정까지 가능합니다.</p>
+    <div class="cta-btns">
+      <a class="btn btn-gold" href="/#contact">교육 문의하기</a>
+      <a class="btn btn-ghost" href="/services/vibe-coding-training.html">과정 커리큘럼 보기</a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="foot-copy">AI를 깊이 이해하는 프레젠테이션 전문가, 피코쌤</div>
+  <div class="foot-sub">연 200회 기업 강의 · AI 관련 저서 3권</div>
+  <div class="foot-sub" style="margin-top:14px;">PCOSSAM · pcossam@pcossam.com · <a href="/" style="color:var(--gray-400);">pcossam.com</a></div>
+</footer>
+
+</body>
+</html>
