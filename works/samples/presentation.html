@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>전 세계 AI 활용 흐름 발표자료 · Motion</title>
+<style>
+  :root{
+    --bg:#040914;--bg2:#071426;--ink:#f7fbff;--muted:#b9c9db;
+    --accent:#73dcff;--accent2:#8affd2;--hot:#ffdc65;--pink:#ff7cc8;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;width:100%;height:100%;background:#040914;color:var(--ink);font-family:Arial,'Pretendard','Noto Sans KR',sans-serif;overflow:hidden}
+  .deck{width:100vw;height:100vh;position:relative;background:radial-gradient(circle at 27% 45%,#123c66 0%,#071426 40%,#040914 100%)}
+  .slide{position:absolute;inset:0;display:none;overflow:hidden;isolation:isolate}
+  .slide.active{display:block;animation:slideIn .65s cubic-bezier(.2,.8,.2,1) both}
+  .slide.out{animation:slideOut .28s ease both}
+  @keyframes slideIn{from{opacity:0;transform:scale(1.035)}to{opacity:1;transform:scale(1)}}
+  @keyframes slideOut{to{opacity:0;transform:scale(.985)}}
+
+  .stars{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.55) 0 1px,transparent 1.4px);background-size:70px 70px;opacity:.12;animation:starDrift 28s linear infinite;z-index:0}
+  @keyframes starDrift{from{background-position:0 0}to{background-position:420px 280px}}
+  .glow{position:absolute;left:-20vw;top:-10vh;width:80vw;height:80vw;border-radius:50%;background:radial-gradient(circle,rgba(115,220,255,.22),rgba(115,220,255,.06) 42%,transparent 70%);filter:blur(6px);animation:breath 5s ease-in-out infinite;z-index:0}
+  @keyframes breath{0%,100%{transform:scale(1);opacity:.65}50%{transform:scale(1.08);opacity:1}}
+
+  .mapWrap{position:absolute;left:-4vw;top:3vh;width:70vw;height:92vh;opacity:.56;filter:drop-shadow(0 0 35px rgba(115,220,255,.28));z-index:1}
+  .map{width:100%;height:100%}.map path.land{fill:#7bd9ff;opacity:.8}.map circle.orbit{fill:none;stroke:rgba(255,255,255,.16);stroke-width:1.1}.map .grid{stroke:rgba(255,255,255,.09);stroke-width:.8;fill:none}.map .arc{fill:none;stroke:url(#arcGrad);stroke-width:3.2;stroke-linecap:round;stroke-dasharray:8 16;opacity:.85;animation:dash 2.7s linear infinite}.map .arc2{animation-duration:3.6s;opacity:.65}.map .arc3{animation-duration:4.5s;opacity:.55}
+  @keyframes dash{to{stroke-dashoffset:-240}}
+  .node{position:absolute;width:13px;height:13px;border-radius:50%;background:var(--hot);box-shadow:0 0 0 10px rgba(255,220,101,.12),0 0 26px rgba(255,220,101,.9);animation:pulse 1.9s ease-in-out infinite}
+  .n1{left:31%;top:39%}.n2{left:44%;top:31%;animation-delay:.2s}.n3{left:55%;top:46%;animation-delay:.4s}.n4{left:66%;top:35%;animation-delay:.6s}.n5{left:73%;top:58%;animation-delay:.8s}
+  @keyframes pulse{0%,100%{transform:scale(.75);opacity:.7}50%{transform:scale(1.35);opacity:1}}
+
+  .particles{position:absolute;inset:0;pointer-events:none;z-index:2}.particle{position:absolute;left:8vw;top:50vh;width:8px;height:8px;border-radius:50%;background:var(--accent2);box-shadow:0 0 18px var(--accent2);opacity:0;animation:fly 4.8s linear infinite}.p1{--x:52vw;--y:-18vh;animation-delay:.1s}.p2{--x:61vw;--y:7vh;animation-delay:1s}.p3{--x:47vw;--y:22vh;animation-delay:1.8s}.p4{--x:68vw;--y:-4vh;animation-delay:2.5s}.p5{--x:58vw;--y:-31vh;animation-delay:3.2s}
+  @keyframes fly{0%{opacity:0;transform:translate(0,0) scale(.4)}12%{opacity:1}80%{opacity:1}100%{opacity:0;transform:translate(var(--x),var(--y)) scale(1.05)}}
+
+  .right{position:absolute;left:52vw;top:50%;transform:translateY(-50%);width:43vw;z-index:5;text-shadow:0 5px 22px rgba(0,0,0,.35)}
+  .kicker{font-size:2.05vw;letter-spacing:.1em;color:var(--accent);font-weight:900;margin-bottom:2.3vh;animation:rise .75s .05s both}
+  .headline{font-size:5.05vw;line-height:1.08;font-weight:950;letter-spacing:-.055em;animation:rise .75s .14s both}
+  .big{font-size:9vw;line-height:.9;font-weight:950;letter-spacing:-.07em;animation:pop .88s .12s cubic-bezier(.16,1,.3,1) both}
+  .body{font-size:2.25vw;line-height:1.34;color:#e9f7ff;font-weight:800;margin-top:3vh;animation:rise .75s .28s both}.note{font-size:1.15vw;color:var(--muted);margin-top:2.8vh;line-height:1.45;animation:rise .75s .36s both}.highlight{color:var(--hot);text-shadow:0 0 22px rgba(255,220,101,.38)}
+  .pill{display:inline-block;border:2px solid rgba(255,255,255,.28);border-radius:999px;padding:.75vh 1.5vw;font-size:1.55vw;color:#eaf8ff;background:rgba(255,255,255,.1);margin-top:2.4vh;animation:rise .75s .38s both;backdrop-filter:blur(8px)}
+  @keyframes rise{from{opacity:0;transform:translateY(38px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes pop{0%{opacity:0;transform:translateY(24px) scale(.86);filter:blur(6px)}65%{filter:blur(0)}100%{opacity:1;transform:translateY(0) scale(1)}}
+
+  .question{font-size:6.35vw;line-height:1.05;font-weight:950;letter-spacing:-.06em;animation:pop .85s .1s both}
+  .smallCards{display:grid;grid-template-columns:1fr 1fr;gap:1.15vw;margin-top:3vh}.mini{border-left:6px solid var(--accent);padding:1.25vh 1vw;background:rgba(255,255,255,.08);font-size:1.6vw;font-weight:900;color:#eaf8ff;backdrop-filter:blur(8px);animation:cardIn .55s both}.mini:nth-child(1){animation-delay:.2s}.mini:nth-child(2){animation-delay:.35s}.mini:nth-child(3){animation-delay:.5s}.mini:nth-child(4){animation-delay:.65s}.mini b{font-size:2.35vw;color:var(--hot)}@keyframes cardIn{from{opacity:0;transform:translateY(25px) rotateX(18deg)}to{opacity:1;transform:translateY(0) rotateX(0)}}
+
+  .progress{position:absolute;left:4vw;bottom:3.8vh;width:28vw;height:7px;background:rgba(255,255,255,.14);border-radius:99px;overflow:hidden;z-index:10}.bar{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2),var(--hot));border-radius:99px;transition:width .45s ease}.footer{position:absolute;right:3.3vw;bottom:2.8vh;font-size:1vw;color:rgba(230,242,255,.72);max-width:52vw;text-align:right;line-height:1.35;z-index:10}.navhint{position:absolute;left:3.3vw;top:3vh;color:rgba(255,255,255,.58);font-size:1vw;z-index:10}.controls{position:absolute;right:3.3vw;top:3vh;display:flex;gap:.6vw;z-index:20}.btn{border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.1);color:#fff;border-radius:999px;padding:.6vh 1vw;font-size:.95vw;cursor:pointer;backdrop-filter:blur(8px)}.btn:hover{background:rgba(255,255,255,.18)}
+  .num{font-variant-numeric:tabular-nums}.lineFlash{display:inline-block;position:relative}.lineFlash:after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.16em;background:linear-gradient(90deg,transparent,var(--hot),transparent);opacity:.8;animation:sweep 1.2s .7s both}@keyframes sweep{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+  @media(max-width:900px){.right{left:49vw;width:48vw}.headline{font-size:6vw}.big{font-size:10.5vw}.body{font-size:3vw}.kicker{font-size:2.8vw}.footer{font-size:1.5vw}.mapWrap{width:82vw;opacity:.42}.question{font-size:7.2vw}.btn,.navhint{font-size:1.7vw}}
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+  <div class="stars"></div><div class="glow"></div>
+  <div class="navhint">← → 또는 Space로 이동</div>
+  <div class="controls"><button class="btn" onclick="prev()">이전</button><button class="btn" onclick="next()">다음</button><button class="btn" onclick="toggleFull()">전체화면</button></div>
+  <div class="mapWrap" aria-hidden="true">
+    <svg class="map" viewBox="0 0 1000 650">
+      <defs><linearGradient id="arcGrad" x1="0" x2="1"><stop offset="0" stop-color="#73dcff"/><stop offset=".55" stop-color="#8affd2"/><stop offset="1" stop-color="#ffdc65"/></linearGradient></defs>
+      <circle class="orbit" cx="500" cy="325" r="300"/><circle class="orbit" cx="500" cy="325" r="220"/><circle class="orbit" cx="500" cy="325" r="140"/>
+      <path class="grid" d="M200 325H800M500 25V625M300 75C420 230 420 420 300 575M700 75C580 230 580 420 700 575"/>
+      <path class="land" d="M180 190c34-34 88-52 140-44 31 5 67 19 86 45 15 21 3 45-21 51-29 8-62-10-87 7-18 12-15 38 3 49 25 16 63 3 86 23 25 21 8 58-22 66-42 12-81-17-116-36-38-21-76-32-114-9-28 17-52 51-50 85 3 44 48 72 90 78 45 6 89-10 128-31 22-12 52-17 72 0 22 19 14 52-7 70-22 19-56 25-85 16-91-28-154-87-185-169-28-76 25-151 82-197z"/>
+      <path class="land" d="M455 118c52-25 121-28 172-2 30 16 42 48 20 73-22 25-63 19-90 36-24 15-28 48-3 63 32 19 80-1 110 24 23 19 18 53-5 69-31 21-79 9-105 37-18 20-12 55 14 66 31 14 67-8 98 5 28 12 36 48 17 72-22 27-68 29-104 16-56-21-96-65-119-118-16-38-20-81-8-120 8-27 28-49 26-78-2-38-54-39-68-72-13-31 18-57 45-71z"/>
+      <path class="land" d="M720 222c47-20 101-8 138 27 25 24 37 60 21 91-15 30-50 41-78 29-22-10-41-35-65-25-22 9-23 41-7 56 25 25 72 20 91 54 16 29-6 63-39 67-44 5-82-31-109-63-36-42-61-94-54-150 5-38 36-72 102-86z"/>
+      <path class="arc" d="M240 355 C 360 190, 520 170, 680 300"/>
+      <path class="arc arc2" d="M300 480 C 430 360, 610 350, 800 445"/>
+      <path class="arc arc3" d="M210 235 C 385 90, 630 115, 820 250"/>
+    </svg>
+    <i class="node n1"></i><i class="node n2"></i><i class="node n3"></i><i class="node n4"></i><i class="node n5"></i>
+  </div>
+  <div class="particles"><i class="particle p1"></i><i class="particle p2"></i><i class="particle p3"></i><i class="particle p4"></i><i class="particle p5"></i></div>
+
+  <section class="slide active"><div class="right"><div class="kicker">OPENING</div><div class="headline">전 세계는 이미<br><span class="highlight lineFlash">AI 접속 중</span>입니다</div><div class="body">20대 교육생 150명에게 던지는 첫 질문:<br>“나는 이 흐름 안에 들어와 있는가?”</div></div></section>
+  <section class="slide"><div class="right"><div class="kicker">STEP 1 · 전 세계 인구</div><div class="big num" data-count="82">0억</div><div class="body">전 세계 사람의 수를 하나의 출발점으로 봅니다.</div><div class="pill">전체 파이</div></div></section>
+  <section class="slide"><div class="right"><div class="kicker">STEP 2 · 온라인 접속자</div><div class="big num" data-count="55">0억</div><div class="body">이 중 약 55억 명이 온라인에 접속합니다.<br>인터넷은 이미 전 세계의 기본 생활 도구입니다.</div><div class="pill">82억 중 55억</div></div></section>
+  <section class="slide"><div class="right"><div class="kicker">STEP 3 · ChatGPT 월 사용자</div><div class="big num" data-count="10">0억</div><div class="body">온라인 접속자 중 약 10억 명이 매월 ChatGPT를 사용합니다.</div><div class="pill">55억 중 10억</div></div></section>
+  <section class="slide"><div class="right"><div class="kicker">STEP 4 · 무료 ChatGPT 사용자</div><div class="big num" data-count="9.5">0억</div><div class="body">월 사용자 10억 명 중 약 9.5억 명은 무료 사용자로 볼 수 있습니다.</div><div class="note">계산식: 월 사용자 약 10억 명 - 유료 사용자 약 5천만 명 = 무료 사용자 약 9.5억 명</div></div></section>
+  <section class="slide"><div class="right"><div class="kicker">질문</div><div class="question">무료인데도<br>왜 이렇게<br><span class="highlight lineFlash">많이 쓸까요?</span></div><div class="body">번역, 과제, 코딩, 보고서, PPT, 면접 준비까지<br>“시간을 줄여주는 도구”이기 때문입니다.</div></div></section>
+  <section class="slide"><div class="right"><div class="kicker">핵심 메시지</div><div class="headline">AI를 이기는 것이 아니라<br><span class="highlight">AI를 쓰는 사람에게</span><br>뒤처지지 않는 것</div><div class="body">오늘 교육의 목표는 ‘기능 암기’가 아니라<br>바로 써먹는 업무·학습 도구로 익히는 것입니다.</div></div></section>
+  <section class="slide"><div class="right"><div class="kicker">바로 체감시키기</div><div class="headline">설명보다<br><span class="highlight lineFlash">30초 시연</span></div><div class="smallCards"><div class="mini">공문 초안<br><b>40분 → 10분</b></div><div class="mini">PPT 구성<br><b>3시간 → 30분</b></div><div class="mini">자료 요약<br><b>20분 → 3분</b></div><div class="mini">아이디어 정리<br><b>막막함 → 초안</b></div></div></div></section>
+  <section class="slide"><div class="right"><div class="kicker">마무리 연결</div><div class="headline">지금부터는<br>여러분 자료로<br><span class="highlight lineFlash">직접 해봅니다</span></div><div class="body">좋은 프롬프트는 어렵지 않습니다.<br>“역할 · 목적 · 조건 · 결과형식”만 말하면 됩니다.</div></div></section>
+
+  <div class="progress"><div class="bar" id="bar"></div></div>
+  <div class="footer">수치는 발표용 약산값입니다. ChatGPT 월 사용자 10억 명은 Reuters/Sensor Tower 보도(2026.6.2)를 참고했습니다. 온라인 접속자 수는 DataReportal·ITU 등 최신 추정치와 차이가 있을 수 있어 발표 시 “약”으로 표현하세요.</div>
+</div>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let i=0;const bar=document.getElementById('bar');let timer=null;
+function animateCount(el){const target=parseFloat(el.dataset.count);if(!target)return;const start=performance.now(),dur=900;function tick(t){const p=Math.min(1,(t-start)/dur);const ease=1-Math.pow(1-p,3);const v=target*ease;el.textContent=(target%1? v.toFixed(1): Math.round(v))+'억';if(p<1)requestAnimationFrame(tick);else el.textContent=target+'억'}requestAnimationFrame(tick)}
+function resetAnims(slide){slide.querySelectorAll('.kicker,.headline,.big,.body,.note,.pill,.question,.mini').forEach(el=>{el.style.animation='none'; void el.offsetWidth; el.style.animation=''});slide.querySelectorAll('[data-count]').forEach(animateCount)}
+function show(n){const nextIndex=Math.max(0,Math.min(slides.length-1,n));if(nextIndex===i&&slides[i].classList.contains('active')){resetAnims(slides[i]);return}slides[i].classList.remove('active');i=nextIndex;slides.forEach((s,k)=>s.classList.toggle('active',k===i));resetAnims(slides[i]);bar.style.width=((i+1)/slides.length*100)+'%'}
+function next(){show(i+1)} function prev(){show(i-1)}
+function toggleFull(){const d=document.documentElement;if(!document.fullscreenElement)d.requestFullscreen?.();else document.exitFullscreen?.()}
+document.addEventListener('keydown',e=>{if(['ArrowRight',' ','PageDown'].includes(e.key)){e.preventDefault();next()} if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();prev()} if(e.key==='Home'){show(0)} if(e.key==='End'){show(slides.length-1)} if(e.key.toLowerCase()==='f'){toggleFull()}});show(0);
+</script>
+</body>
+</html>
