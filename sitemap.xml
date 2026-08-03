@@ -324,128 +324,290 @@
   </url>
   <url>
     <loc>https://pcossam.com/blog/amazon.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/amazon.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/amazon-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/amazon-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/amazon.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/amazon-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/blog/art-trash.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/art-trash.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/art-trash-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/art-trash-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/art-trash.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/art-trash-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/blog/book.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/book.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/book-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/book-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/book.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/book-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/blog/chatgpt-story.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/chatgpt-story.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/chatgpt-story-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/chatgpt-story-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/chatgpt-story.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/chatgpt-story-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/blog/crocs.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/crocs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/crocs-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/crocs-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/crocs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/crocs-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/blog/frozen-water.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/frozen-water.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/frozen-water-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/frozen-water-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/frozen-water.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/frozen-water-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/blog/gpt-diary.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/gpt-diary.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/gpt-diary-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/gpt-diary-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/gpt-diary.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/gpt-diary-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/blog/jibbitz.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/jibbitz.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/jibbitz-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/jibbitz-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/jibbitz.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/jibbitz-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/blog/meeting.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/meeting.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/meeting-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/meeting-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/meeting.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/meeting-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/blog/name-tag.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/name-tag.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/name-tag-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/name-tag-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/name-tag.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/name-tag-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/blog/nose.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/nose.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/nose-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/nose-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/nose.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/nose-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/blog/phone-dad.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/phone-dad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/phone-dad-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/phone-dad-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/phone-dad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/phone-dad-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/blog/playground.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/playground.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/playground-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/playground-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/playground.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/playground-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/blog/scratch.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/scratch.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/scratch-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/scratch-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/scratch.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/scratch-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/blog/smartphone.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/smartphone.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/smartphone-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/smartphone-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/smartphone.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/smartphone-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/blog/stroller.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/stroller.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/stroller-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/stroller-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/stroller.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/stroller-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/blog/voice.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/voice.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/voice-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/voice-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/voice.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/voice-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/blog/wooden-doll.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/wooden-doll.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/wooden-doll-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/wooden-doll-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/wooden-doll.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/wooden-doll-en.html"/>
   </url>
 </urlset>
