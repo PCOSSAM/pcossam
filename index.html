@@ -1310,6 +1310,178 @@ section { position: relative; }
 </section>
 
 <!-- SERVICES & PRICING (통합) -->
+  <!--
+════════════════════════════════════════════════════════════════════
+  [1단계] index.html 에 붙여넣는 "강의 미리보기" 섹션
+────────────────────────────────────────────────────────────────────
+  ▶ 붙여넣을 위치 : 히어로(맨 위 큰 제목) 영역 바로 아래,
+                    서비스 섹션 <section id="services"> 시작 직전
+  ▶ 유튜브 영상 ID 3개는 이미 반영되어 있습니다. 수정할 것 없습니다.
+  ▶ 붙여넣기 전 준비 :
+     assets/clips/ 폴더에 clip-2.jpg / clip-4.jpg / clip-6.jpg 가 올라가 있어야 합니다
+  ▶ 이 주석은 빼고, 아래 <section ...> 부터 </section> 까지만 복사해도 됩니다.
+  ▶ 클래스 이름은 전부 pc- 로 시작합니다.
+     (기존 index.html 의 CSS와 절대 충돌하지 않게 하려는 장치입니다)
+════════════════════════════════════════════════════════════════════
+-->
+
+<section class="pc-clips" id="lecture-clips-preview">
+<style>
+.pc-clips{padding:72px 0;background:#F6F8FA}
+.pc-clips .pc-wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.pc-clips .pc-head{text-align:center;margin-bottom:38px}
+.pc-clips .pc-eyebrow{
+  display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.12em;
+  color:#C8973A;border:1px solid rgba(200,151,58,.4);
+  padding:5px 13px;border-radius:99px;margin-bottom:14px;
+}
+.pc-clips h2{
+  font-size:1.85rem;font-weight:900;letter-spacing:-.025em;color:#1A3A5C;
+  line-height:1.4;margin:0 0 10px;
+}
+.pc-clips .pc-sub{color:#5A6875;font-size:1rem;margin:0}
+.pc-clips .pc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.pc-clips .pc-card{
+  background:#fff;border-radius:14px;overflow:hidden;
+  box-shadow:0 6px 24px rgba(26,58,92,.10);
+  display:flex;flex-direction:column;
+}
+.pc-clips .pc-player{
+  position:relative;width:100%;aspect-ratio:9/16;background:#000;
+  border:none;padding:0;cursor:pointer;display:block;
+}
+.pc-clips .pc-player img{width:100%;height:100%;object-fit:cover;display:block}
+.pc-clips .pc-player iframe{width:100%;height:100%;border:0;display:block}
+.pc-clips .pc-play{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:rgba(18,42,68,.26);transition:background .25s;
+}
+.pc-clips .pc-player:hover .pc-play{background:rgba(18,42,68,.08)}
+.pc-clips .pc-play span{
+  width:58px;height:58px;border-radius:50%;background:#C8973A;
+  box-shadow:0 6px 18px rgba(0,0,0,.32);
+  display:flex;align-items:center;justify-content:center;
+}
+.pc-clips .pc-play span::after{
+  content:"";width:0;height:0;margin-left:5px;
+  border-left:18px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent;
+}
+.pc-clips .pc-dur{
+  position:absolute;right:9px;bottom:9px;background:rgba(0,0,0,.72);
+  color:#fff;font-size:.72rem;font-weight:700;padding:3px 7px;border-radius:4px;
+}
+.pc-clips .pc-txt{padding:20px 22px 24px;display:flex;flex-direction:column;flex:1}
+.pc-clips .pc-tag{
+  font-size:.72rem;font-weight:700;letter-spacing:.08em;color:#C8973A;margin-bottom:8px;
+}
+.pc-clips .pc-card h3{
+  font-size:1.05rem;font-weight:700;color:#1B2733;line-height:1.5;
+  margin:0 0 8px;letter-spacing:-.01em;
+}
+.pc-clips .pc-card p{font-size:.9rem;color:#5A6875;line-height:1.65;margin:0 0 16px;flex:1}
+.pc-clips .pc-more{
+  font-size:.88rem;font-weight:700;color:#1A3A5C;align-self:flex-start;
+  border-bottom:1.5px solid #C8973A;padding-bottom:2px;text-decoration:none;
+}
+.pc-clips .pc-foot{text-align:center;margin-top:36px}
+.pc-clips .pc-btn{
+  display:inline-block;background:#1A3A5C;color:#fff;font-weight:700;font-size:.98rem;
+  padding:14px 30px;border-radius:8px;text-decoration:none;transition:background .2s;
+}
+.pc-clips .pc-btn:hover{background:#122A44}
+@media (max-width:900px){
+  .pc-clips{padding:52px 0}
+  .pc-clips h2{font-size:1.4rem}
+  .pc-clips .pc-grid{
+    grid-template-columns:none;
+    grid-auto-flow:column;grid-auto-columns:76%;
+    overflow-x:auto;scroll-snap-type:x mandatory;
+    gap:16px;padding-bottom:12px;
+    -webkit-overflow-scrolling:touch;
+  }
+  .pc-clips .pc-card{scroll-snap-align:center}
+}
+</style>
+
+  <div class="pc-wrap">
+    <div class="pc-head">
+      <span class="pc-eyebrow">LECTURE PREVIEW</span>
+      <h2>강의를 1분만 보시면<br>섭외 여부를 판단하실 수 있습니다</h2>
+      <p class="pc-sub">기업 특강 &lsquo;AI 친화적 업무 혁신&rsquo; 현장에서 촬영한 실제 강의 클립입니다.</p>
+    </div>
+
+    <div class="pc-grid">
+
+      <!-- 카드 1 : 6강 -->
+      <article class="pc-card">
+        <button class="pc-player" data-yt="CzO1H4u_uHw" aria-label="AI가 읽을 수 있는 보고서를 작성해야 하는 이유 영상 재생">
+          <img src="/assets/clips/clip-6.jpg" alt="피코쌤 특강 - AI가 읽을 수 있는 보고서 작성법 강의 장면" width="540" height="960" loading="lazy">
+          <span class="pc-play"><span></span></span>
+          <span class="pc-dur">0:41</span>
+        </button>
+        <div class="pc-txt">
+          <div class="pc-tag">보고서 작성</div>
+          <h3>AI가 읽을 수 있는 보고서를 작성해야 하는 이유</h3>
+          <p>지금 쓰는 보고서의 다음 독자는 팀장 한 명이 아니라 6개월 뒤의 AI입니다.</p>
+          <a class="pc-more" href="/lecture-clips.html#clip-6">전체 내용 보기 &rarr;</a>
+        </div>
+      </article>
+
+      <!-- 카드 2 : 4강 -->
+      <article class="pc-card">
+        <button class="pc-player" data-yt="uqShfS8ZU0U" aria-label="GPT 클론을 미리 만들면 좋은 이유 영상 재생">
+          <img src="/assets/clips/clip-4.jpg" alt="피코쌤 특강 - ChatGPT 프로젝트로 전문가 클론 만드는 강의 장면" width="540" height="960" loading="lazy">
+          <span class="pc-play"><span></span></span>
+          <span class="pc-dur">1:01</span>
+        </button>
+        <div class="pc-txt">
+          <div class="pc-tag">AI 활용 전략</div>
+          <h3>GPT 클론을 미리 만들면 좋은 이유</h3>
+          <p>&ldquo;네가 일론 머스크라면 어떻게 볼 것 같아?&rdquo; 상시 대기하는 자문단을 만드는 방법.</p>
+          <a class="pc-more" href="/lecture-clips.html#clip-4">전체 내용 보기 &rarr;</a>
+        </div>
+      </article>
+
+      <!-- 카드 3 : 2강 -->
+      <article class="pc-card">
+        <button class="pc-player" data-yt="3ezC_YVL6Cw" aria-label="중국은 왜 초단위로 데이터를 활용하는가 영상 재생">
+          <img src="/assets/clips/clip-2.jpg" alt="피코쌤 특강 - 중국 C뷰티의 초단위 데이터 활용 강의 장면" width="540" height="960" loading="lazy">
+          <span class="pc-play"><span></span></span>
+          <span class="pc-dur">0:42</span>
+        </button>
+        <div class="pc-txt">
+          <div class="pc-tag">AI 전환 사례</div>
+          <h3>중국은 왜 초단위로 데이터를 활용하는가?</h3>
+          <p>분기마다 소비자 조사를 돌리는 동안, 저쪽은 초 단위로 반응을 수집합니다.</p>
+          <a class="pc-more" href="/lecture-clips.html#clip-2">전체 내용 보기 &rarr;</a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="pc-foot">
+      <a class="pc-btn" href="/lecture-clips.html">강의 클립 8개 전체 보기</a>
+    </div>
+  </div>
+
+<script>
+/* 클릭할 때만 유튜브를 불러옵니다 (첫 화면 로딩 속도 보호) */
+document.querySelectorAll('.pc-clips .pc-player').forEach(function(el){
+  el.addEventListener('click', function(){
+    var id = el.dataset.yt;
+    if(!id){ return; }
+    el.innerHTML = '<iframe src="https://www.youtube.com/embed/' + id +
+      '?autoplay=1&rel=0&modestbranding=1" title="피코쌤 강의 클립" ' +
+      'allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" ' +
+      'allowfullscreen></iframe>';
+    if(typeof gtag === 'function'){
+      gtag('event','video_play',{video_id:id, page_location:'home'});
+    }
+  });
+});
+</script>
+</section>
+<!-- ════════ 강의 미리보기 섹션 끝 ════════ -->
 <section id="services">
   <div class="section-label">SERVICES</div>
   <h2 class="section-title">모든 것은 '전달'에서 시작합니다</h2>
