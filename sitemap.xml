@@ -48,6 +48,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/lecture-clips.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/lecture-clips-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/lecture-clips-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/lecture-clips.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/lecture-clips-en.html"/>
   </url>
 
   <url>
@@ -213,17 +222,35 @@
   </url>
 <url>
     <loc>https://pcossam.com/ai-literacy-test.html</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/ai-literacy-test.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/ai-literacy-test-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/ai-literacy-test-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/ai-literacy-test.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/ai-literacy-test-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/lecture-custom-design.html</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/lecture-custom-design.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/lecture-custom-design-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/lecture-custom-design-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/lecture-custom-design.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/lecture-custom-design-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/diagnosis</loc>
