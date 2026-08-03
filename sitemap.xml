@@ -21,10 +21,19 @@
   </url>
   <url>
     <loc>https://pcossam.com/services/vibe-coding-training.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/vibe-coding-training.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/vibe-coding-training-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/vibe-coding-training-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/vibe-coding-training.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/vibe-coding-training-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/prompt-templates.html</loc>
@@ -145,10 +154,19 @@
 
   <url>
     <loc>https://pcossam.com/services/aeo-geo-consulting.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/aeo-geo-consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/aeo-geo-consulting-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/aeo-geo-consulting-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/aeo-geo-consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/aeo-geo-consulting-en.html"/>
   </url>
 
   <url>
