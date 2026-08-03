@@ -1739,27 +1739,27 @@ section { position: relative; }
 <!-- HERO -->
 <section id="hero">
   <div class="hero-left">
-    <div class="hero-badge">Generative AI Training · Presentation · Reports · Vibe Coding</div>
+    <div class="hero-badge">AI Presentation Consulting · Speech Coaching · Corporate AI Training</div>
     <h1 class="hero-title">
-      <span class="hero-title-top">Real Deliverables</span>
-      <em>Built with AI</em>
-      <span class="hero-title-bottom">Training & Consulting</span>
+      <span class="hero-title-top">Anyone Can Use AI</span>
+      <em>Turning that into persuasion</em>
+      <span class="hero-title-bottom">is the real skill</span>
     </h1>
     <p class="hero-subtitle">
-      With ChatGPT and Claude,<br>
-      from slides and reports to websites and AI-search marketing,<br>
-      we finish everything as ready-to-use deliverables.
+      PCOSSAM is a presentation expert who deeply understands AI.<br>
+      By adding presentation methodology and delivery skill on top of AI,<br>
+      we turn your ideas into presentations that persuade your audience.
     </p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Request a Corporate Training Quote</a>
-      <a href="#services" class="btn-outline">View AI Courses</a>
+      <a href="#contact" class="btn-primary">Request Presentation Consulting / Training</a>
+      <a href="#services" class="btn-outline">View All Services</a>
     </div>
 
 
 
-    <a href="#services" class="hero-new-service">
-      <span class="tag">NEW</span>
-      <span class="desc"><strong>AI Marketing Website Building Course</strong> — build an AEO/GEO-structured website yourself with ChatGPT and Claude.</span>
+    <a href="/pitchdeck-consulting-en.html" class="hero-new-service">
+      <span class="tag">HUB</span>
+      <span class="desc"><strong>AI Presentation & Report Consulting</strong> — PCOSSAM's methodology turns your idea into a persuasive presentation.</span>
       <span class="arrow">→</span>
     </a>
 
@@ -1808,41 +1808,163 @@ section { position: relative; }
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="about-img-wrap">
-    <img src="assets/inline/pcossam-inline-03.jpg" alt="Pico Saem (Mingu Kim) teaching" />
-    <div class="about-quote-block">
-      <blockquote>
-        "Good AI education starts with the deliverable.<br>
-        Change the workflow, not just the tool."
-      </blockquote>
+<section class="pc-clips" id="lecture-clips-preview">
+<style>
+.pc-clips{padding:72px 0;background:#F6F8FA}
+.pc-clips .pc-wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.pc-clips .pc-head{text-align:center;margin-bottom:38px}
+.pc-clips .pc-eyebrow{
+  display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.12em;
+  color:#C8973A;border:1px solid rgba(200,151,58,.4);
+  padding:5px 13px;border-radius:99px;margin-bottom:14px;
+}
+.pc-clips h2{
+  font-size:1.85rem;font-weight:900;letter-spacing:-.025em;color:#1A3A5C;
+  line-height:1.4;margin:0 0 10px;
+}
+.pc-clips .pc-sub{color:#5A6875;font-size:1rem;margin:0}
+.pc-clips .pc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.pc-clips .pc-card{
+  background:#fff;border-radius:14px;overflow:hidden;
+  box-shadow:0 6px 24px rgba(26,58,92,.10);
+  display:flex;flex-direction:column;
+}
+.pc-clips .pc-player{
+  position:relative;width:100%;aspect-ratio:9/16;background:#000;
+  border:none;padding:0;cursor:pointer;display:block;
+}
+.pc-clips .pc-player img{width:100%;height:100%;object-fit:cover;display:block}
+.pc-clips .pc-player iframe{width:100%;height:100%;border:0;display:block}
+.pc-clips .pc-play{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:rgba(18,42,68,.26);transition:background .25s;
+}
+.pc-clips .pc-player:hover .pc-play{background:rgba(18,42,68,.08)}
+.pc-clips .pc-play span{
+  width:58px;height:58px;border-radius:50%;background:#C8973A;
+  box-shadow:0 6px 18px rgba(0,0,0,.32);
+  display:flex;align-items:center;justify-content:center;
+}
+.pc-clips .pc-play span::after{
+  content:"";width:0;height:0;margin-left:5px;
+  border-left:18px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent;
+}
+.pc-clips .pc-dur{
+  position:absolute;right:9px;bottom:9px;background:rgba(0,0,0,.72);
+  color:#fff;font-size:.72rem;font-weight:700;padding:3px 7px;border-radius:4px;
+}
+.pc-clips .pc-txt{padding:20px 22px 24px;display:flex;flex-direction:column;flex:1}
+.pc-clips .pc-tag{
+  font-size:.72rem;font-weight:700;letter-spacing:.08em;color:#C8973A;margin-bottom:8px;
+}
+.pc-clips .pc-card h3{
+  font-size:1.05rem;font-weight:700;color:#1B2733;line-height:1.5;
+  margin:0 0 8px;letter-spacing:-.01em;
+}
+.pc-clips .pc-card p{font-size:.9rem;color:#5A6875;line-height:1.65;margin:0 0 16px;flex:1}
+.pc-clips .pc-more{
+  font-size:.88rem;font-weight:700;color:#1A3A5C;align-self:flex-start;
+  border-bottom:1.5px solid #C8973A;padding-bottom:2px;text-decoration:none;
+}
+.pc-clips .pc-foot{text-align:center;margin-top:36px}
+.pc-clips .pc-btn{
+  display:inline-block;background:#1A3A5C;color:#fff;font-weight:700;font-size:.98rem;
+  padding:14px 30px;border-radius:8px;text-decoration:none;transition:background .2s;
+}
+.pc-clips .pc-btn:hover{background:#122A44}
+@media (max-width:900px){
+  .pc-clips{padding:52px 0}
+  .pc-clips h2{font-size:1.4rem}
+  .pc-clips .pc-grid{
+    grid-template-columns:none;
+    grid-auto-flow:column;grid-auto-columns:76%;
+    overflow-x:auto;scroll-snap-type:x mandatory;
+    gap:16px;padding-bottom:12px;
+    -webkit-overflow-scrolling:touch;
+  }
+  .pc-clips .pc-card{scroll-snap-align:center}
+}
+</style>
+
+  <div class="pc-wrap">
+    <div class="pc-head">
+      <span class="pc-eyebrow">LECTURE PREVIEW</span>
+      <h2>Watch just 1 minute of the lecture<br>and you can decide whether to book it</h2>
+      <p class="pc-sub">Real clips filmed live at a corporate special lecture on &lsquo;AI-Friendly Work Innovation.&rsquo;</p>
+    </div>
+
+    <div class="pc-grid">
+
+      <!-- Card 1 -->
+      <article class="pc-card">
+        <button class="pc-player" data-yt="CzO1H4u_uHw" aria-label="Play: Why you need to write reports AI can read">
+          <img src="/assets/clips/clip-6.jpg" alt="PCOSSAM lecture - how to write reports AI can read" width="540" height="960" loading="lazy">
+          <span class="pc-play"><span></span></span>
+          <span class="pc-dur">0:41</span>
+        </button>
+        <div class="pc-txt">
+          <div class="pc-tag">Report Writing</div>
+          <h3>Why You Need to Write Reports AI Can Read</h3>
+          <p>The next reader of the report you're writing now isn't your team lead — it's an AI, six months from now.</p>
+          <a class="pc-more" href="/lecture-clips.html#clip-6">See full clip &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="pc-card">
+        <button class="pc-player" data-yt="uqShfS8ZU0U" aria-label="Play: Why it helps to build a GPT clone in advance">
+          <img src="/assets/clips/clip-4.jpg" alt="PCOSSAM lecture - building an expert clone with a ChatGPT project" width="540" height="960" loading="lazy">
+          <span class="pc-play"><span></span></span>
+          <span class="pc-dur">1:01</span>
+        </button>
+        <div class="pc-txt">
+          <div class="pc-tag">AI Strategy</div>
+          <h3>Why It Helps to Build a GPT Clone in Advance</h3>
+          <p>&ldquo;How would Elon Musk see this?&rdquo; — how to build a standing advisory board on call.</p>
+          <a class="pc-more" href="/lecture-clips.html#clip-4">See full clip &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="pc-card">
+        <button class="pc-player" data-yt="3ezC_YVL6Cw" aria-label="Play: Why does China use data by the second">
+          <img src="/assets/clips/clip-2.jpg" alt="PCOSSAM lecture - how Chinese C-beauty brands use second-by-second data" width="540" height="960" loading="lazy">
+          <span class="pc-play"><span></span></span>
+          <span class="pc-dur">0:42</span>
+        </button>
+        <div class="pc-txt">
+          <div class="pc-tag">AI Transformation</div>
+          <h3>Why Does China Use Data by the Second?</h3>
+          <p>While others run quarterly consumer surveys, they collect reactions second by second.</p>
+          <a class="pc-more" href="/lecture-clips.html#clip-2">See full clip &rarr;</a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="pc-foot">
+      <a class="pc-btn" href="/lecture-clips.html">See All 8 Lecture Clips</a>
     </div>
   </div>
-  <div class="about-content">
-    <div class="section-label">ABOUT</div>
-    <h2 class="section-title">Who Is<br>Pico Saem?</h2>
-    <p class="about-intro">
-      An education and consulting expert who turns generative AI into practical deliverables.<br><br>
-      Not just someone who builds slides or introduces AI tools.<br>
-      I connect ideas all the way through <strong>slides → reports → websites → AI-search marketing structure</strong>
-      and turn them into ready-to-use deliverables.<br><br>
-      ChatGPT and Claude are the core tools that make<br>
-      that process faster and more persuasive.<br><br>
-      This website, too, was planned and built directly through vibe coding with Claude,<br>
-      and it keeps being updated with a structure suited to the AI-search era.
-    </p>
-    <a href="https://blog.naver.com/specskillscontents" target="_blank" style="display:inline-flex; align-items:center; gap:8px; margin-top:20px; padding:12px 20px; background:var(--accent-light); border:1.5px solid var(--accent); border-radius:8px; text-decoration:none; color:var(--accent); font-size:14px; font-weight:600; transition:all 0.2s;" onmouseover="this.style.background='var(--accent)';this.style.color='white';" onmouseout="this.style.background='var(--accent-light)';this.style.color='var(--accent)';">
-      Blog
-    </a>
-    <a href="https://www.inflearn.com/search?s=%ED%94%BC%EC%BD%94%EC%8C%A4" target="_blank" style="display:inline-flex; align-items:center; gap:8px; margin-top:10px; padding:12px 20px; background:var(--accent-light); border:1.5px solid var(--accent); border-radius:8px; text-decoration:none; color:var(--accent); font-size:14px; font-weight:600; transition:all 0.2s;" onmouseover="this.style.background='var(--accent)';this.style.color='white';" onmouseout="this.style.background='var(--accent-light)';this.style.color='var(--accent)';">
-      Paid VOD
-    </a>
-    <a href="https://www.youtube.com/@pcossam" target="_blank" style="display:inline-flex; align-items:center; gap:8px; margin-top:10px; padding:12px 20px; background:var(--accent-light); border:1.5px solid var(--accent); border-radius:8px; text-decoration:none; color:var(--accent); font-size:14px; font-weight:600; transition:all 0.2s;" onmouseover="this.style.background='var(--accent)';this.style.color='white';" onmouseout="this.style.background='var(--accent-light)';this.style.color='var(--accent)';">
-      YouTube
-    </a>
-  </div>
+
+<script>
+/* Load YouTube only on click (protects first-paint speed) */
+document.querySelectorAll('.pc-clips .pc-player').forEach(function(el){
+  el.addEventListener('click', function(){
+    var id = el.dataset.yt;
+    if(!id){ return; }
+    el.innerHTML = '<iframe src="https://www.youtube.com/embed/' + id +
+      '?autoplay=1&rel=0&modestbranding=1" title="PCOSSAM lecture clip" ' +
+      'allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" ' +
+      'allowfullscreen></iframe>';
+    if(typeof gtag === 'function'){
+      gtag('event','video_play',{video_id:id, page_location:'home_en'});
+    }
+  });
+});
+</script>
 </section>
+
 
 <!-- SERVICES & PRICING (통합) -->
 <section id="services">
@@ -2304,6 +2426,42 @@ section { position: relative; }
   color: var(--gray-400);
 }
 </style>
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-img-wrap">
+    <img src="assets/inline/pcossam-inline-03.jpg" alt="Pico Saem (Mingu Kim) teaching" />
+    <div class="about-quote-block">
+      <blockquote>
+        "Good AI education starts with the deliverable.<br>
+        Change the workflow, not just the tool."
+      </blockquote>
+    </div>
+  </div>
+  <div class="about-content">
+    <div class="section-label">ABOUT</div>
+    <h2 class="section-title">Who Is<br>Pico Saem?</h2>
+    <p class="about-intro">
+      An education and consulting expert who turns generative AI into practical deliverables.<br><br>
+      Not just someone who builds slides or introduces AI tools.<br>
+      I connect ideas all the way through <strong>slides → reports → websites → AI-search marketing structure</strong>
+      and turn them into ready-to-use deliverables.<br><br>
+      ChatGPT and Claude are the core tools that make<br>
+      that process faster and more persuasive.<br><br>
+      This website, too, was planned and built directly through vibe coding with Claude,<br>
+      and it keeps being updated with a structure suited to the AI-search era.
+    </p>
+    <a href="https://blog.naver.com/specskillscontents" target="_blank" style="display:inline-flex; align-items:center; gap:8px; margin-top:20px; padding:12px 20px; background:var(--accent-light); border:1.5px solid var(--accent); border-radius:8px; text-decoration:none; color:var(--accent); font-size:14px; font-weight:600; transition:all 0.2s;" onmouseover="this.style.background='var(--accent)';this.style.color='white';" onmouseout="this.style.background='var(--accent-light)';this.style.color='var(--accent)';">
+      Blog
+    </a>
+    <a href="https://www.inflearn.com/search?s=%ED%94%BC%EC%BD%94%EC%8C%A4" target="_blank" style="display:inline-flex; align-items:center; gap:8px; margin-top:10px; padding:12px 20px; background:var(--accent-light); border:1.5px solid var(--accent); border-radius:8px; text-decoration:none; color:var(--accent); font-size:14px; font-weight:600; transition:all 0.2s;" onmouseover="this.style.background='var(--accent)';this.style.color='white';" onmouseout="this.style.background='var(--accent-light)';this.style.color='var(--accent)';">
+      Paid VOD
+    </a>
+    <a href="https://www.youtube.com/@pcossam" target="_blank" style="display:inline-flex; align-items:center; gap:8px; margin-top:10px; padding:12px 20px; background:var(--accent-light); border:1.5px solid var(--accent); border-radius:8px; text-decoration:none; color:var(--accent); font-size:14px; font-weight:600; transition:all 0.2s;" onmouseover="this.style.background='var(--accent)';this.style.color='white';" onmouseout="this.style.background='var(--accent-light)';this.style.color='var(--accent)';">
+      YouTube
+    </a>
+  </div>
+</section>
+
 <section id="stats">
   <div class="stat-block">
     <div class="stat-big">200<span class="stat-unit">+</span></div>
@@ -2324,6 +2482,72 @@ section { position: relative; }
 </section>
 
 <!-- PORTFOLIO - 기획 사례 -->
+<!-- CASE STUDY -->
+<section id="case-study">
+  <div class="section-label">CASE STUDY</div>
+  <h2 class="section-title">Corporate Training Results</h2>
+  <p class="section-sub">Real results confirmed in actual corporate training programs. At the client's request, institution names are shown by industry only.</p>
+
+  <div style="max-width:820px;margin:40px auto 0;background:var(--white);border:1px solid var(--gray-200);border-radius:16px;padding:40px;box-shadow:0 4px 24px rgba(26,58,92,0.06);">
+    <div style="display:inline-block;background:var(--gold-light);color:var(--gold);font-size:13px;font-weight:600;padding:6px 14px;border-radius:20px;margin-bottom:20px;">Domestic financial institution · H1 2026</div>
+    <h3 style="font-size:22px;color:var(--accent);margin:0 0 6px;font-weight:700;">RWM Specialist Training Program <span style="font-size:15px;color:var(--gray-400);font-weight:500;">(Cohort 1)</span></h3>
+    <p style="font-size:15px;color:var(--gray-600);margin:0 0 28px;">Module taught · <strong style="color:var(--gray-800);">Proposal-writing techniques that stick with clients</strong></p>
+
+    <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:center;">
+      <div style="flex:0 0 auto;text-align:center;min-width:150px;">
+        <div style="font-size:56px;font-weight:800;color:var(--gold);line-height:1;">96.7<span style="font-size:22px;color:var(--gray-400);font-weight:600;"> / 100</span></div>
+        <div style="font-size:14px;color:var(--gray-600);margin-top:8px;">Module evaluation score</div>
+      </div>
+      <div style="flex:1 1 260px;min-width:240px;">
+        <div style="margin-bottom:14px;">
+          <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--gray-800);margin-bottom:5px;"><span style="font-weight:600;">PCOSSAM's module</span><span style="font-weight:700;color:var(--gold);">96.7</span></div>
+          <div style="height:10px;background:var(--gray-100);border-radius:6px;overflow:hidden;"><div style="width:96.7%;height:100%;background:var(--gold);border-radius:6px;"></div></div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--gray-600);margin-bottom:5px;"><span>Program-wide average</span><span style="font-weight:600;">93.9</span></div>
+          <div style="height:10px;background:var(--gray-100);border-radius:6px;overflow:hidden;"><div style="width:93.9%;height:100%;background:var(--accent-mid);border-radius:6px;"></div></div>
+        </div>
+        <p style="font-size:13px;color:var(--gray-600);margin:14px 0 0;">+<strong style="color:var(--gold);">2.8 points</strong> above the program-wide average</p>
+      </div>
+    </div>
+
+    <div style="border-top:1px solid var(--gray-200);margin-top:28px;padding-top:20px;display:flex;flex-wrap:wrap;gap:24px;font-size:14px;color:var(--gray-600);">
+      <div><span style="color:var(--gray-400);">Participants</span><br><strong style="color:var(--gray-800);font-size:16px;">38 specialists</strong></div>
+      <div><span style="color:var(--gray-400);">Survey responses</span><br><strong style="color:var(--gray-800);font-size:16px;">22</strong></div>
+      <div><span style="color:var(--gray-400);">When</span><br><strong style="color:var(--gray-800);font-size:16px;">H1 2026</strong></div>
+    </div>
+  </div>
+
+  <div style="max-width:820px;margin:24px auto 0;background:var(--white);border:1px solid var(--gray-200);border-radius:16px;padding:40px;box-shadow:0 4px 24px rgba(26,58,92,0.06);">
+    <div style="display:inline-block;background:var(--gold-light);color:var(--gold);font-size:13px;font-weight:600;padding:6px 14px;border-radius:20px;margin-bottom:20px;">Domestic bank · Jun–Jul 2026</div>
+    <h3 style="font-size:22px;color:var(--accent);margin:0 0 6px;font-weight:700;">AI Financial Marketing in Practice <span style="font-size:15px;color:var(--gray-400);font-weight:500;">(for branch sales teams)</span></h3>
+    <p style="font-size:15px;color:var(--gray-600);margin:0 0 28px;">Topic · <strong style="color:var(--gray-800);">Financial marketing in the AI era — hands-on ChatGPT practice</strong></p>
+
+    <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:center;">
+      <div style="flex:0 0 auto;text-align:center;min-width:150px;">
+        <div style="font-size:56px;font-weight:800;color:var(--gold);line-height:1;">4.8<span style="font-size:22px;color:var(--gray-400);font-weight:600;"> / 5</span></div>
+        <div style="font-size:14px;color:var(--gray-600);margin-top:8px;">Trainee satisfaction</div>
+      </div>
+      <div style="flex:1 1 260px;min-width:240px;">
+        <div style="font-size:13px;color:var(--gray-400);margin-bottom:8px;">Real deliverable produced after training</div>
+        <p style="font-size:15px;color:var(--gray-800);line-height:1.7;margin:0;">Participants used ChatGPT to build their own <strong style="color:var(--accent);">infographics introducing insurance, card issuance, and ETF products</strong>.</p>
+      </div>
+    </div>
+
+    <div style="border-top:1px solid var(--gray-200);margin-top:28px;padding-top:20px;display:flex;flex-wrap:wrap;gap:24px;font-size:14px;color:var(--gray-600);">
+      <div><span style="color:var(--gray-400);">Participants</span><br><strong style="color:var(--gray-800);font-size:16px;">~300 branch sales staff</strong></div>
+      <div><span style="color:var(--gray-400);">Format</span><br><strong style="color:var(--gray-800);font-size:16px;">2 hours × 6 sessions</strong></div>
+      <div><span style="color:var(--gray-400);">When</span><br><strong style="color:var(--gray-800);font-size:16px;">Jun–Jul 2026</strong></div>
+    </div>
+
+    <div style="margin-top:24px;padding:20px 22px;background:var(--gray-100);border-radius:12px;border-left:3px solid var(--gold);">
+      <p style="font-size:15px;color:var(--gray-800);font-style:italic;margin:0 0 6px;line-height:1.6;">&ldquo;I only wish the session had been longer.&rdquo;</p>
+      <p style="font-size:13px;color:var(--gray-600);margin:0;">— Program coordinator feedback. Response on the ground was strong enough that people wanted a longer course.</p>
+    </div>
+  </div>
+</section>
+
+
 <section id="portfolio">
   <div class="section-label">PORTFOLIO</div>
   <h2 class="section-title">Planning Case Studies</h2>
