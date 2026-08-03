@@ -180,45 +180,99 @@
 
   <url>
     <loc>https://pcossam.com/portfolio/carping-house.html</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/portfolio/carping-house.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/portfolio/carping-house-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/portfolio/carping-house-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/portfolio/carping-house.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/portfolio/carping-house-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/portfolio/ev-hotel.html</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/portfolio/ev-hotel.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/portfolio/ev-hotel-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/portfolio/ev-hotel-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/portfolio/ev-hotel.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/portfolio/ev-hotel-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/portfolio/kfood-standard.html</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/portfolio/kfood-standard.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/portfolio/kfood-standard-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/portfolio/kfood-standard-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/portfolio/kfood-standard.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/portfolio/kfood-standard-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/portfolio/startup-edu-platform.html</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/portfolio/startup-edu-platform.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/portfolio/startup-edu-platform-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/portfolio/startup-edu-platform-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/portfolio/startup-edu-platform.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/portfolio/startup-edu-platform-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/portfolio/battery-station.html</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/portfolio/battery-station.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/portfolio/battery-station-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/portfolio/battery-station-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/portfolio/battery-station.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/portfolio/battery-station-en.html"/>
   </url>
   <url>
     <loc>https://pcossam.com/portfolio/public-card-alert.html</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/portfolio/public-card-alert.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/portfolio/public-card-alert-en.html"/>
+  </url>
+  <url>
+    <loc>https://pcossam.com/portfolio/public-card-alert-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/portfolio/public-card-alert.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/portfolio/public-card-alert-en.html"/>
   </url>
 <url>
     <loc>https://pcossam.com/ai-literacy-test.html</loc>
