@@ -610,4 +610,16 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/blog/wooden-doll.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/wooden-doll-en.html"/>
   </url>
+  <url>
+    <loc>https://pcossam.com/services/rehearsal-analysis.html</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pcossam.com/works/vibe-coding.html</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
