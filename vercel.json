@@ -1,25 +1,24 @@
 {
-  "cleanUrls": false,
-  "trailingSlash": false,
-  "rewrites": [
+  "redirects": [
     {
-      "source": "/ai-literacy-test",
-      "destination": "/ai-literacy-test.html"
+      "source": "/services/corporate-training.html",
+      "destination": "/services/generative-ai-training.html",
+      "statusCode": 301
     },
     {
-      "source": "/diagnosis",
-      "destination": "/diagnosis.html"
-    }
-  ],
-  "headers": [
+      "source": "/ai-automation.html",
+      "destination": "/services/vibe-coding-training.html",
+      "statusCode": 301
+    },
     {
-      "source": "/(.*).vcf",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/vcard; charset=utf-8"
-        }
-      ]
+      "source": "/services/partnership.html",
+      "destination": "/services/ai-transformation-partnership.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/services/strategy-pitchdeck.html",
+      "destination": "/services/pitchdeck-consulting.html",
+      "statusCode": 301
     }
   ]
 }
