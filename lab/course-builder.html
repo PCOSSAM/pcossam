@@ -1,6 +1,61 @@
-<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="ko"><head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SDVHD2TD0K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SDVHD2TD0K');
+</script>
+
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>피코쌤 강의 구성기</title><style>body{margin:0;padding:18px;background:#eceef1}</style></head>
+<title>피코쌤 강의 구성기 | 바이브 코딩으로 만든 커리큘럼 자동 설계 도구</title>
+<meta name="description" content="피코쌤이 기업교육 커리큘럼을 만들 때 실제로 쓰는 도구입니다. 60개 강의 콘텐츠 블록을 체크하면 선택 코드가 만들어지고, 클로드가 커리큘럼 PDF로 완성합니다. 바이브 코딩과 AI 업무 자동화 사례.">
+<meta name="keywords" content="바이브 코딩, 업무 자동화, AI 자동화 사례, 커리큘럼 설계, 기업교육 커리큘럼, 클로드 스킬, 피코쌤, 생성형 AI 교육">
+<link rel="canonical" href="https://pcossam.com/lab/course-builder.html">
+<meta name="robots" content="index,follow">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="피코쌤 PCOSSAM">
+<meta property="og:title" content="피코쌤 강의 구성기 | 바이브 코딩으로 만든 커리큘럼 자동 설계 도구">
+<meta property="og:description" content="60개 강의 블록을 체크하면 커리큘럼 초안이 완성됩니다. 피코쌤이 실제 업무에 쓰는 자동화 도구를 그대로 공개합니다.">
+<meta property="og:url" content="https://pcossam.com/lab/course-builder.html">
+<meta property="og:image" content="https://pcossam.com/assets/inline/pcossam-inline-04.jpg">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="450">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="피코쌤 강의 구성기 | 바이브 코딩 자동화 사례">
+<meta name="twitter:description" content="60개 강의 블록을 체크하면 커리큘럼 초안이 완성됩니다. 피코쌤이 실제 업무에 쓰는 자동화 도구.">
+<meta name="twitter:image" content="https://pcossam.com/assets/inline/pcossam-inline-04.jpg">
+
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "피코쌤 강의 구성기",
+  "url": "https://pcossam.com/lab/course-builder.html",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "ko",
+  "description": "기업교육 커리큘럼을 설계하는 도구. 60개 강의 콘텐츠 블록 중 필요한 것을 선택하면 생성형 AI가 커리큘럼 문서로 완성한다. 바이브 코딩으로 제작한 업무 자동화 사례.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+  "author": {
+    "@type": "Person",
+    "name": "김민구",
+    "alternateName": "피코쌤",
+    "jobTitle": "AI 프레젠테이션 컨설턴트 · 발표 코치",
+    "url": "https://pcossam.com/"
+  },
+  "isPartOf": { "@type": "WebSite", "name": "피코쌤 PCOSSAM", "url": "https://pcossam.com/" }
+}
+</script><style>body{margin:0;padding:18px;background:#eceef1}</style></head>
 <body>
 <style>
   .pc-wrap{--navy:#1A3A5C;--gold:#C8973A;--ink:#222;--mut:#6b7280;--line:#e5e7eb;--bg:#f7f8fa;
@@ -53,6 +108,55 @@
   textarea.pc-out{width:100%;height:120px;margin-top:8px;font-size:11px;font-family:monospace;border:1px solid var(--line);border-radius:8px;padding:8px;display:none}
 </style>
 
+<style>
+  .pcx{max-width:920px;margin:0 auto 14px;font-family:'Malgun Gothic','Noto Sans KR',system-ui,sans-serif}
+  .pcx-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+    background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:10px 16px}
+  .pcx-bar a.home{font-size:14px;font-weight:800;color:#1A3A5C;text-decoration:none;letter-spacing:-.2px}
+  .pcx-bar a.home span{color:#C8973A}
+  .pcx-nav{display:flex;gap:8px;flex-wrap:wrap}
+  .pcx-nav a{font-size:12px;font-weight:700;color:#374151;text-decoration:none;
+    border:1px solid #e5e7eb;border-radius:20px;padding:6px 12px;transition:.15s}
+  .pcx-nav a:hover{border-color:#C8973A;color:#1A3A5C}
+  .pcx-nav a.gold{background:#1A3A5C;color:#fff;border-color:#1A3A5C}
+  .pcx-intro{margin-top:12px;background:#fff;border:1px solid #e5e7eb;border-left:4px solid #C8973A;
+    border-radius:12px;padding:14px 18px;font-size:13px;line-height:1.75;color:#374151}
+  .pcx-intro b{color:#1A3A5C}
+  /* 하단 CTA */
+  .pcx-cta{max-width:920px;margin:18px auto 40px;display:grid;grid-template-columns:1fr 1fr;gap:14px;
+    font-family:'Malgun Gothic','Noto Sans KR',system-ui,sans-serif}
+  .pcx-cta a{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px;
+    text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:6px;transition:.2s}
+  .pcx-cta a:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.08);border-color:#C8973A}
+  .pcx-cta .cat{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#C8973A}
+  .pcx-cta .ttl{font-size:16px;font-weight:800;color:#1A3A5C;letter-spacing:-.3px}
+  .pcx-cta .desc{font-size:13px;line-height:1.65;color:#6b7280}
+  .pcx-cta .go{font-size:12px;font-weight:700;color:#1A3A5C;margin-top:2px}
+  .pcx-foot{max-width:920px;margin:0 auto 40px;text-align:center;font-size:12px;color:#9ca3af;
+    font-family:'Malgun Gothic','Noto Sans KR',system-ui,sans-serif}
+  .pcx-foot a{color:#6b7280;text-decoration:none}
+  @media(max-width:640px){ .pcx-cta{grid-template-columns:1fr} }
+</style>
+
+<div class="pcx">
+  <div class="pcx-bar">
+    <a class="home" href="/" data-pcx="nav_home">피코쌤 <span>PCOSSAM.COM</span></a>
+    <nav class="pcx-nav">
+      <a href="/services/vibe-coding-training.html" data-pcx="nav_vibe">바이브 코딩 과정</a>
+      <a href="/works/vibe-coding.html" data-pcx="nav_works">제작 사례</a>
+      <a class="gold" href="/lecture-custom-design.html" data-pcx="nav_inquiry">강의 문의</a>
+    </nav>
+  </div>
+  <div class="pcx-intro">
+    <b>이 도구는 피코쌤이 실제 업무에 쓰는 자동화 도구입니다.</b><br>
+    기업에서 강의 의뢰가 오면 대상·시간·주제에 맞춰 커리큘럼을 새로 짜야 합니다.
+    그 반복 작업을 없애려고 강의 콘텐츠 60개를 블록으로 쪼개고, 바이브 코딩으로 이 선택 도구를 만들었습니다.
+    체크 → 선택 코드 복사 → AI가 커리큘럼 문서로 완성, 이렇게 3단계로 끝납니다.<br>
+    <span style="color:#9ca3af">※ 마지막 문서 생성 단계는 피코쌤 계정에 설정된 전용 지침이 있어야 작동합니다.
+    여기서는 <b>어떤 구조로 자동화했는지</b>를 직접 눌러보며 확인하시면 됩니다.</span>
+  </div>
+</div>
+
 <div class="pc-wrap">
   <div class="pc-head">
     <h1>피코쌤 강의 구성기 <span style="font-weight:400;font-size:12px;opacity:.7">· 콘텐츠 60블록</span></h1>
@@ -82,9 +186,30 @@
     <span class="warn" id="pc-warn"></span>
     <button class="pc-go" id="pc-go" disabled>선택 완료 → 코드 복사</button>
   </div>
-  <div class="pc-note" id="pc-note">이 파일은 저장해두고 언제든 열어 쓰세요. 콘텐츠를 고르고 시간을 선택한 뒤 [선택 완료] 버튼을 누르면 '선택 코드'가 복사됩니다. 그 코드를 클로드 대화창에 붙여넣으면 커리큘럼 PDF가 만들어집니다.</div>
+  <div class="pc-note" id="pc-note">콘텐츠를 고르고 시간을 선택한 뒤 [선택 완료] 버튼을 누르면 '선택 코드'가 복사됩니다. 피코쌤은 이 코드를 클로드 대화창에 붙여넣어 커리큘럼 PDF를 만듭니다. 어떤 데이터가 만들어지는지 직접 눌러 확인해 보세요.</div>
   <textarea class="pc-out" id="pc-out" readonly></textarea>
 </div>
+<div class="pcx-cta">
+  <a href="/services/vibe-coding-training.html" data-pcx="cta_vibe">
+    <span class="cat">교육 과정</span>
+    <span class="ttl">이런 도구, 직접 만드는 법</span>
+    <span class="desc">코딩을 몰라도 자기 업무에 맞는 도구를 직접 만듭니다. 이 구성기도 같은 방식으로 제작했습니다.</span>
+    <span class="go">바이브 코딩 실무 과정 보기 →</span>
+  </a>
+  <a href="/lecture-custom-design.html" data-pcx="cta_inquiry">
+    <span class="cat">강의 문의</span>
+    <span class="ttl">우리 회사 교육으로 설계하기</span>
+    <span class="desc">대상·시간·주제·예산을 골라주시면 피코쌤이 검토해 맞춤 커리큘럼을 보내드립니다.</span>
+    <span class="go">무료 · 2~3분 소요 · 요청하기 →</span>
+  </a>
+</div>
+
+<div class="pcx-foot">
+  피코쌤 김민구 · AI 프레젠테이션 컨설턴트 &amp; 발표 코치 ·
+  <a href="mailto:pcossam@pcossam.com">pcossam@pcossam.com</a> ·
+  <a href="/">pcossam.com</a>
+</div>
+
 <div id="pc-toast"></div>
 
 <script>
@@ -190,6 +315,33 @@ ${lines}
   };
 
   render();
+})();
+</script>
+<script>
+/* GA4 이벤트 추적 (구글 애널리틱스로 사용자 행동을 기록하는 코드) */
+(function(){
+  function ev(name, params){ if(typeof gtag==='function'){ gtag('event', name, params||{}); } }
+
+  /* 링크 클릭 추적 */
+  document.querySelectorAll('[data-pcx]').forEach(function(el){
+    el.addEventListener('click', function(){
+      ev('builder_link_click', { link_id: el.getAttribute('data-pcx'), page_tool: 'course_builder' });
+    });
+  });
+
+  /* 선택 코드 복사 = 실제로 도구를 써본 사람 (핵심 참여 지표) */
+  var go = document.getElementById('pc-go');
+  if(go){
+    go.addEventListener('click', function(){
+      ev('builder_copy_code', {
+        page_tool: 'course_builder',
+        blocks_selected: parseInt((document.getElementById('pc-n')||{}).textContent||'0', 10) || 0
+      });
+    });
+  }
+
+  /* 30초 이상 머물면 = 그냥 튕긴 사람과 구분 */
+  setTimeout(function(){ ev('builder_engaged_30s', { page_tool: 'course_builder' }); }, 30000);
 })();
 </script>
 </body></html>
