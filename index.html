@@ -206,10 +206,18 @@
   .svc-tools-row {
     grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
     margin-top: 4px;
   }
+  .svc-tool-card.is-new {
+    background: var(--navy, #1A3A5C);
+    border-color: var(--navy, #1A3A5C);
+  }
+  .svc-tool-card.is-new .cat { color: var(--gold); }
+  .svc-tool-card.is-new .ttl { color: #fff; }
+  .svc-tool-card.is-new .desc { color: rgba(255,255,255,0.82); }
+  .svc-tool-card.is-new .meta { color: var(--gold); }
   .svc-tool-card {
     background: var(--gold-light);
     border: 1px solid var(--gold);
@@ -1363,6 +1371,32 @@ section { position: relative; }
   </div>
 </section>
 
+<!-- ===== 캠페인 띠 배너 : 영상 공개 기간(2~4주) 한정. 종료 시 이 블록 삭제 ===== -->
+<style>
+  .pcx-strip{background:#1A3A5C;padding:0}
+  .pcx-strip a{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;
+    max-width:1120px;margin:0 auto;padding:14px 24px;text-decoration:none;color:#fff;
+    font-family:'Noto Sans KR',sans-serif;transition:opacity .2s}
+  .pcx-strip a:hover{opacity:.86}
+  .pcx-strip .tag{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+    color:#1A3A5C;background:#C8973A;border-radius:20px;padding:4px 10px;white-space:nowrap}
+  .pcx-strip .txt{font-size:14px;font-weight:600;letter-spacing:-.2px}
+  .pcx-strip .txt b{font-weight:800}
+  .pcx-strip .go{font-size:13px;font-weight:800;color:#C8973A;white-space:nowrap}
+  @media(max-width:640px){
+    .pcx-strip a{gap:8px;padding:12px 18px}
+    .pcx-strip .txt{font-size:13px;text-align:center}
+  }
+</style>
+<div class="pcx-strip">
+  <a href="/lab/course-builder.html" data-pcx="home_strip_builder">
+    <span class="tag">NEW</span>
+    <span class="txt">영상에서 보신 <b>‘피코쌤 강의 구성기’</b> — 커리큘럼을 자동으로 짜주는 도구를 공개합니다</span>
+    <span class="go">직접 눌러보기 →</span>
+  </a>
+</div>
+<!-- ===== 캠페인 띠 배너 끝 ===== -->
+
 <!-- SERVICES & PRICING (통합) -->
   <!--
 ════════════════════════════════════════════════════════════════════
@@ -1553,6 +1587,12 @@ document.querySelectorAll('.pc-clips .pc-player').forEach(function(el){
     </div>
 
     <div class="svc-tools-row">
+      <a class="svc-tool-card is-new" href="/lab/course-builder.html" data-pcx="home_tools_builder">
+        <span class="cat">VIBE CODING 사례</span>
+        <span class="ttl">피코쌤 강의 구성기</span>
+        <span class="desc">강의 콘텐츠 60개를 블록으로 쪼개고, 체크만 하면 커리큘럼 초안이 만들어지도록 직접 만든 도구입니다. 실제 업무에 쓰는 것을 그대로 공개합니다.</span>
+        <span class="meta">공개 · 지금 구경하기 →</span>
+      </a>
       <a class="svc-tool-card" href="/lecture-custom-design.html">
         <span class="cat">맞춤 설계 도구</span>
         <span class="ttl">교육 설계</span>
@@ -3123,6 +3163,16 @@ function scrollToSection(id) {
     if (window.innerWidth > 900) closeMenu();
   });
 })();
+</script>
+<script>
+/* 강의 구성기 배너 클릭 추적 (GA4 이벤트) */
+document.querySelectorAll('[data-pcx]').forEach(function(el){
+  el.addEventListener('click', function(){
+    if(typeof gtag==='function'){
+      gtag('event','builder_banner_click',{ link_id: el.getAttribute('data-pcx') });
+    }
+  });
+});
 </script>
 </body>
 </html>

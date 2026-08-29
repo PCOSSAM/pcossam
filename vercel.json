@@ -19,6 +19,11 @@
       "source": "/services/strategy-pitchdeck.html",
       "destination": "/services/pitchdeck-consulting.html",
       "statusCode": 301
+    },
+    {
+      "source": "/builder",
+      "destination": "/lab/course-builder.html?utm_source=instagram&utm_medium=social&utm_campaign=reels_builder",
+      "statusCode": 302
     }
   ]
 }

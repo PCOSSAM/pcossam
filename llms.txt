@@ -104,6 +104,11 @@ ChatGPT·Claude 활용, 생성형 AI 실무 활용, AI 기반 보고서·제안�
 - [기업 맞춤형 AI 전환 파트너십](https://pcossam.com/services/ai-transformation-partnership.html): 발표·보고서·마케팅·웹사이트까지 조직의 AI 활용 흐름을 월 단위로 설계·실행하는 파트너십.
 - [AEO·GEO 구조 진단·개선 컨설팅](https://pcossam.com/services/aeo-geo-consulting.html): 웹사이트와 서비스 설명을 AI 검색·생성형 답변에 잘 읽히도록 FAQ·구조화 데이터·콘텐츠 흐름을 진단·개선.
 
+도구 · 무료 자료
+- [피코쌤 강의 구성기](https://pcossam.com/lab/course-builder.html): 강의 콘텐츠 60개를 블록으로 나누고 대상·시간·주제를 고르면 커리큘럼 초안이 만들어지는 도구. 피코쌤이 실제 업무에 쓰는 자동화 사례로, 바이브 코딩으로 직접 제작했다.
+- [교육 맞춤 설계 요청](https://pcossam.com/lecture-custom-design.html): 대상·시간·주제·예산을 입력하면 피코쌤이 검토해 맞춤 커리큘럼과 진행 안내를 회신하는 무료 요청 양식.
+- [ChatGPT 맞춤 지침 템플릿](https://pcossam.com/prompt-templates.html): 교육 현장에서 검증한 ChatGPT 맞춤 지침을 입문자·실무자·전략가 단계로 정리한 무료 자료.
+
 기획 포트폴리오
 - [카핑하우스 (Carping House)](https://pcossam.com/portfolio/carping-house.html): 지방 빈집 문제를 캠핑×관광 콘텐츠로 풀어낸 신사업 기획안.
 - [전기차 전용 호텔 (EV-Only Hotel)](https://pcossam.com/portfolio/ev-hotel.html): 전기차 충전과 숙박을 결합한 모빌리티 호텔 신사업 기획안.
