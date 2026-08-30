@@ -53,7 +53,13 @@
   "description": "ChatGPT와 Claude로 AI 마케팅 웹사이트를 기획하고, AEO·GEO 구조에 맞게 바이브 코딩으로 직접 제작하는 교육과 컨설팅을 제공합니다.",
   "email": "pcossam@pcossam.com",
   "telephone": "010-4234-4381",
-  "url": "https://blog.naver.com/specskillscontents/224301041949",
+  "url": "https://pcossam.com/",
+  "sameAs": [
+    "https://www.youtube.com/@pcossam",
+    "https://blog.naver.com/specskillscontents",
+    "https://www.instagram.com/pcossam/",
+    "https://www.inflearn.com/search?s=%ED%94%BC%EC%BD%94%EC%8C%A4"
+  ],
   "areaServed": ["대한민국", "Global Online"],
   "knowsAbout": ["AI 프레젠테이션", "ChatGPT 활용", "Claude 활용", "AI 보고서 작성", "AI 마케팅 웹사이트 제작", "바이브 코딩", "AEO", "GEO", "AI 마케팅", "피치덱", "발표 코칭", "제안서 작성", "생성형 AI 교육"],
   "offers": [
@@ -976,6 +982,16 @@
   .footer-brand span { color: var(--gold); }
   .footer-copy { font-size: 13px; color: rgba(255,255,255,0.3); }
   .footer-bizinfo { display: block; margin-top: 6px; font-size: 11px; color: rgba(255,255,255,0.22); }
+  .footer-social { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+  .footer-social a {
+    display: inline-flex; align-items: center;
+    padding: 6px 13px; border-radius: 100px;
+    border: 1px solid rgba(255,255,255,0.14);
+    color: rgba(255,255,255,0.5); text-decoration: none;
+    font-size: 12px; font-weight: 500; letter-spacing: 0.02em;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .footer-social a:hover { color: var(--gold); border-color: var(--gold); }
 
 
   /* ── RESPONSIVE : 태블릿 ── */
@@ -1080,6 +1096,7 @@
 
     /* 푸터 */
     footer { flex-direction: column; gap: 10px; text-align: center; padding: 32px 5%; }
+    .footer-social { justify-content: center; }
   }
 
   /* ── 푸터 키워드 ── */
@@ -1764,6 +1781,9 @@ document.querySelectorAll('.pc-clips .pc-player').forEach(function(el){
     </a>
     <a href="https://www.youtube.com/@pcossam" target="_blank" style="display:inline-flex; align-items:center; gap:8px; margin-top:10px; padding:12px 20px; background:var(--accent-light); border:1.5px solid var(--accent); border-radius:8px; text-decoration:none; color:var(--accent); font-size:14px; font-weight:600; transition:all 0.2s;" onmouseover="this.style.background='var(--accent)';this.style.color='white';" onmouseout="this.style.background='var(--accent-light)';this.style.color='var(--accent)';">
       유튜브
+    </a>
+    <a href="https://www.instagram.com/pcossam/" target="_blank" style="display:inline-flex; align-items:center; gap:8px; margin-top:10px; padding:12px 20px; background:var(--accent-light); border:1.5px solid var(--accent); border-radius:8px; text-decoration:none; color:var(--accent); font-size:14px; font-weight:600; transition:all 0.2s;" onmouseover="this.style.background='var(--accent)';this.style.color='white';" onmouseout="this.style.background='var(--accent-light)';this.style.color='var(--accent)';">
+      인스타그램
     </a>
   </div>
 </section>
@@ -2488,7 +2508,14 @@ document.querySelectorAll('.pc-clips .pc-player').forEach(function(el){
   <div class="footer-keywords">
     ChatGPT 강사 · Claude 강사 · 생성형 AI 강사 · AI 강연 · AI 특강 · 기업 AI 교육 · AI 보고서 작성 · AI 프레젠테이션 · AI 마케팅 웹사이트 제작 교육 · 바이브 코딩 교육 · AEO · GEO · AI 마케팅 · 구조화 데이터 컨설팅 · 프레젠테이션 강사 · 발표 코칭 · IR 발표 컨설팅 · 투자유치 피치덱 · 피치덱 컨설팅 · 제안서 컨설팅 · ChatGPT 활용 강의 · 생성형 AI 기업교육
   </div>
-  <div class="footer-copy">© 2026 PCOSSAM. AI Presentation Consultant & Coach.<span class="footer-bizinfo">PTC(Presentation Consulting) · 대표 김민구(피코쌤) · 사업자등록번호 120-09-56951 · 경기도 고양시</span></div>
+  <div class="footer-copy">
+    <div class="footer-social">
+      <a href="https://www.youtube.com/@pcossam" target="_blank" rel="noopener" aria-label="피코쌤 유튜브 채널">유튜브</a>
+      <a href="https://www.instagram.com/pcossam/" target="_blank" rel="noopener" aria-label="피코쌤 인스타그램">인스타그램</a>
+      <a href="https://blog.naver.com/specskillscontents" target="_blank" rel="noopener" aria-label="피코쌤 네이버 블로그">블로그</a>
+      <a href="https://www.inflearn.com/search?s=%ED%94%BC%EC%BD%94%EC%8C%A4" target="_blank" rel="noopener" aria-label="피코쌤 인프런 강좌">인프런</a>
+    </div>
+    © 2026 PCOSSAM. AI Presentation Consultant & Coach.<span class="footer-bizinfo">PTC(Presentation Consulting) · 대표 김민구(피코쌤) · 사업자등록번호 120-09-56951 · 경기도 고양시</span></div>
 </footer>
 
 <button class="back-to-top" type="button" aria-label="맨 위로 이동" title="맨 위로 이동">TOP</button>
