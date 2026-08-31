@@ -1,0 +1,1937 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="DOGSONALITY" />
+<meta property="og:title" content="나는 어떤 강아지일까? | 피코쌤 바이브 코딩 테스트" />
+<meta property="og:description" content="10개의 집사 공감 질문으로 알아보는 강아지 성향 테스트. 피코쌤의 재미있는 바이브 코딩 수업 예제입니다." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://pcossam.com/dogsonality.html" />
+<link rel="canonical" href="https://pcossam.com/dogsonality.html" />
+<meta name="theme-color" content="#f5ead6" />
+<title>나는 어떤 강아지일까? | 피코쌤 바이브 코딩</title>
+<style>
+:root{
+  --ink:#1f1b18;
+  --muted:#6d6259;
+  --paper:#f5ead6;
+  --paper-2:#fff9ed;
+  --red:#e8654f;
+  --blue:#6ca9bc;
+  --yellow:#e7b84b;
+  --green:#779f73;
+  --pink:#d992a5;
+  --purple:#8c7da8;
+  --shadow: 0 12px 30px rgba(58,42,27,.16);
+  --shadow-small: 0 6px 14px rgba(58,42,27,.14);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  min-height:100vh;
+  font-family: Pretendard, "Apple SD Gothic Neo","Noto Sans KR",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 15% 18%, rgba(255,255,255,.55) 0 1px, transparent 1.4px) 0 0/11px 11px,
+    linear-gradient(125deg,#f1e2c7,#fff7e8 42%,#eee0c8);
+  overflow-x:hidden;
+}
+body:before{
+  content:"";
+  position:fixed; inset:0; pointer-events:none; opacity:.16; mix-blend-mode:multiply;
+  background:
+    repeating-linear-gradient(0deg,rgba(70,50,34,.11) 0,rgba(70,50,34,.11) 1px,transparent 1px,transparent 4px);
+}
+button{font:inherit}
+button:focus-visible{outline:4px solid rgba(108,169,188,.35); outline-offset:3px}
+.app{min-height:100vh;padding-bottom:64px}
+.screen{display:none;min-height:calc(100vh - 50px)}
+.screen.active{display:block}
+.container{width:min(1060px,calc(100% - 34px));margin:0 auto}
+
+/* torn paper blocks */
+.paper{
+  position:relative;
+  background:var(--paper-2);
+  box-shadow:var(--shadow);
+}
+.paper:after{
+  content:""; position:absolute; left:0; right:0; bottom:-11px; height:22px;
+  background:
+    linear-gradient(135deg,transparent 9px,var(--paper-2) 0) 0 0/22px 22px,
+    linear-gradient(225deg,transparent 9px,var(--paper-2) 0) 11px 0/22px 22px;
+  z-index:-1;
+}
+
+/* landing */
+.hero{padding:32px 0 74px;position:relative;overflow:hidden}
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1.02fr .98fr;
+  gap:26px;
+  align-items:center;
+  min-height:690px;
+}
+.hero-copy{padding:38px 26px 44px 20px;position:relative;z-index:4}
+.kicker{
+  display:inline-block;background:var(--blue);color:#fff;padding:8px 13px;
+  font-size:13px;font-weight:900;letter-spacing:.11em;
+  transform:rotate(-2deg);
+  box-shadow:3px 4px 0 #264f5a;
+}
+h1{
+  margin:24px 0 13px;
+  font-size:clamp(48px,7vw,88px);
+  line-height:.92;letter-spacing:-.07em;font-weight:1000;
+}
+h1 .scribble{position:relative;display:inline-block;z-index:1}
+h1 .scribble:after{
+  content:""; position:absolute; height:.24em; left:-2%; right:-5%; bottom:.04em;
+  background:var(--yellow);z-index:-1;transform:rotate(-2deg);opacity:.86;
+  clip-path:polygon(0 26%,8% 4%,17% 23%,28% 0,43% 19%,56% 3%,70% 27%,82% 10%,100% 30%,96% 90%,82% 75%,68% 98%,50% 81%,34% 100%,17% 77%,0 92%);
+}
+.subtitle{max-width:540px;font-size:18px;line-height:1.65;color:#51473f;font-weight:650}
+.axis-preview{
+  display:flex;flex-wrap:wrap;gap:8px;margin:23px 0 27px
+}
+.axis-preview span{
+  background:#fff;border:1.5px solid #d6c8b5;border-radius:999px;padding:7px 10px;
+  font-size:12px;font-weight:850;box-shadow:2px 3px 0 rgba(86,65,47,.09)
+}
+.primary{
+  border:0;background:var(--red);color:#fff;font-weight:950;font-size:18px;
+  padding:16px 24px;cursor:pointer;
+  box-shadow:6px 7px 0 #9f3e30;
+  transform:rotate(-1deg);
+  transition:.18s ease;
+}
+.primary:hover{transform:translateY(-2px) rotate(.6deg);box-shadow:8px 10px 0 #9f3e30}
+.note{margin-top:17px;font-size:12px;color:var(--muted);line-height:1.55}
+
+/* collage */
+.collage{
+  position:relative;height:620px;
+  filter:drop-shadow(0 14px 18px rgba(65,45,27,.08));
+}
+.dog-card{
+  position:absolute;
+  width:154px;height:174px;
+  padding:8px 8px 28px;
+  background:#fffdf5;
+  box-shadow:var(--shadow-small);
+  transform:rotate(var(--r));
+  clip-path:polygon(2% 2%,95% 0,100% 7%,97% 31%,100% 55%,96% 77%,99% 98%,72% 96%,52% 100%,27% 96%,2% 100%,4% 77%,0 57%,4% 35%,0 12%);
+  transition:.2s;
+}
+.dog-card:hover{z-index:30;transform:rotate(0) scale(1.08)}
+.dog-card img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  filter:saturate(.9) contrast(1.04);
+  clip-path:polygon(2% 5%,94% 0,100% 10%,96% 35%,100% 57%,95% 100%,73% 96%,49% 100%,26% 96%,0 100%,4% 72%,0 47%,4% 23%,0 8%);
+}
+.dog-card b{
+  position:absolute;left:12px;right:8px;bottom:7px;
+  font-size:11px;text-align:center;letter-spacing:-.03em;
+}
+.d1{left:1%;top:7%;--r:-7deg}.d2{left:29%;top:0;--r:5deg}.d3{right:3%;top:9%;--r:9deg}
+.d4{left:7%;top:34%;--r:5deg}.d5{left:37%;top:27%;--r:-5deg}.d6{right:0;top:39%;--r:4deg}
+.d7{left:0;top:65%;--r:-6deg}.d8{left:30%;top:60%;--r:7deg}.d9{right:7%;top:67%;--r:-7deg}
+.d10{left:59%;top:5%;--r:-3deg;width:118px;height:132px}.d11{left:21%;top:21%;--r:-10deg;width:105px;height:121px}
+.d12{left:60%;top:50%;--r:8deg;width:112px;height:126px}.d13{left:55%;top:76%;--r:-4deg;width:113px;height:124px}
+.d14{left:10%;top:2%;--r:7deg;width:100px;height:116px}
+.paper-shape{position:absolute;z-index:-2;filter:drop-shadow(3px 6px 4px rgba(50,40,30,.1))}
+.shape-a{width:250px;height:220px;background:var(--yellow);left:20%;top:14%;transform:rotate(14deg);clip-path:polygon(0 11%,19% 3%,32% 13%,51% 0,65% 12%,83% 5%,100% 23%,94% 45%,100% 65%,83% 81%,62% 76%,49% 100%,31% 83%,12% 91%,0 68%,8% 46%)}
+.shape-b{width:230px;height:250px;background:var(--blue);right:5%;top:28%;transform:rotate(-8deg);clip-path:polygon(9% 0,31% 8%,50% 2%,66% 11%,90% 5%,100% 29%,91% 49%,100% 75%,80% 100%,58% 91%,39% 100%,19% 91%,0 73%,8% 48%,0 22%)}
+.shape-c{width:300px;height:180px;background:var(--pink);left:5%;bottom:1%;transform:rotate(5deg);clip-path:polygon(0 21%,14% 4%,34% 10%,52% 0,69% 13%,88% 6%,100% 27%,94% 52%,100% 76%,79% 96%,60% 88%,43% 100%,23% 89%,4% 97%,9% 69%,0 49%)}
+
+/* quiz */
+.quiz-head{position:sticky;top:0;z-index:40;background:rgba(245,234,214,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(71,55,42,.1)}
+.quiz-head .container{display:flex;align-items:center;gap:14px;padding:15px 0}
+.logo-mini{font-weight:1000;letter-spacing:-.04em;white-space:nowrap}
+.progress-wrap{height:10px;background:#dfd0bc;flex:1;overflow:hidden;clip-path:polygon(0 15%,8% 0,16% 13%,26% 2%,38% 14%,50% 0,64% 15%,75% 2%,85% 12%,100% 2%,99% 89%,87% 100%,75% 88%,62% 100%,48% 87%,35% 100%,21% 87%,7% 100%,0 88%)}
+.progress{height:100%;width:0;background:var(--red);transition:.35s}
+.count{font-size:13px;font-weight:900;color:var(--muted);min-width:54px;text-align:right}
+.question-stage{padding:56px 0 92px}
+.q-card{
+  width:min(760px,100%);margin:auto;padding:42px 40px 48px;
+  background:#fff9ed;box-shadow:var(--shadow);position:relative;
+  clip-path:polygon(1% 1%,13% 0,24% 1.2%,36% 0,50% 1%,62% 0,75% 1%,88% 0,99% 1%,100% 17%,99% 33%,100% 51%,99% 69%,100% 85%,99% 99%,87% 100%,75% 99%,62% 100%,49% 99%,35% 100%,22% 99%,10% 100%,1% 99%,0 84%,1% 69%,0 54%,1% 37%,0 19%);
+}
+.q-label{font-size:12px;font-weight:950;letter-spacing:.12em;color:var(--red);text-transform:uppercase}
+.q-card h2{font-size:clamp(27px,4vw,40px);line-height:1.25;letter-spacing:-.055em;margin:12px 0 28px}
+.answers{display:grid;gap:12px}
+.answer{
+  width:100%;text-align:left;border:1.5px solid #d9c9b3;background:#fff;padding:17px 18px;
+  color:var(--ink);font-weight:760;font-size:16px;line-height:1.45;cursor:pointer;
+  box-shadow:3px 4px 0 rgba(83,61,42,.08);
+  transition:.16s;
+}
+.answer:nth-child(1){transform:rotate(-.3deg)} .answer:nth-child(2){transform:rotate(.25deg)}
+.answer:nth-child(3){transform:rotate(-.18deg)} .answer:nth-child(4){transform:rotate(.22deg)}
+.answer:hover{border-color:var(--red);transform:translateX(4px) rotate(0);background:#fffdf8}
+.answer.selected{background:#ffe4dc;border-color:var(--red)}
+.quiz-back{display:block;margin:22px auto 0;border:0;background:transparent;color:#75695f;font-weight:850;cursor:pointer;padding:8px}
+
+/* result */
+.result-stage{padding:48px 0 100px}
+.result-wrap{width:min(920px,100%);margin:auto}
+.result-top{
+  display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:center;
+  padding:30px;background:#fff8e9;box-shadow:var(--shadow);
+  clip-path:polygon(1% 0,14% 1%,27% 0,40% 1%,54% 0,68% 1%,84% 0,99% 1%,100% 17%,99% 34%,100% 51%,99% 69%,100% 86%,99% 100%,83% 99%,69% 100%,53% 99%,37% 100%,21% 99%,1% 100%,0 84%,1% 68%,0 52%,1% 35%,0 17%);
+}
+.result-photo-frame{position:relative;padding:14px 14px 44px;background:#fff;box-shadow:var(--shadow-small);transform:rotate(-3deg)}
+.result-photo-frame:before{content:"";position:absolute;width:95px;height:27px;background:rgba(231,184,75,.75);top:-10px;left:50%;transform:translateX(-50%) rotate(2deg);z-index:2}
+.result-photo{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;clip-path:polygon(1% 4%,17% 0,33% 3%,51% 0,69% 3%,86% 0,100% 5%,97% 25%,100% 44%,97% 64%,100% 82%,95% 100%,75% 97%,56% 100%,39% 97%,20% 100%,0 95%,3% 75%,0 57%,3% 39%,0 18%)}
+.photo-caption{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-weight:1000;font-size:18px}
+.result-kicker{font-size:13px;font-weight:950;color:var(--red);letter-spacing:.1em}
+.result-copy h2{font-size:clamp(37px,6vw,65px);line-height:1;margin:9px 0 14px;letter-spacing:-.07em}
+.result-motto{font-size:20px;font-weight:900;line-height:1.45;margin:0 0 15px}
+.result-desc{color:#554a41;line-height:1.75;font-weight:600}
+.match-chip{display:inline-block;margin-top:13px;background:var(--ink);color:#fff;padding:7px 10px;font-weight:900;font-size:12px;transform:rotate(-1deg)}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin-top:20px}
+.result-box{padding:23px;background:#fff;box-shadow:var(--shadow-small)}
+.result-box h3{font-size:15px;margin:0 0 13px;letter-spacing:-.02em}
+.result-box ul{margin:0;padding-left:20px;color:#574d44;line-height:1.7;font-weight:650}
+.axes-box{grid-column:1/-1}
+.axis-row{display:grid;grid-template-columns:76px 1fr 42px;gap:10px;align-items:center;margin:11px 0;font-size:13px;font-weight:850}
+.axis-bar{height:11px;background:#eee1ce;overflow:hidden}
+.axis-bar i{display:block;height:100%;background:var(--blue);width:0;transition:1s ease}
+.top3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.top-card{background:#fff9ed;border:1px solid #dbcab2;padding:13px;text-align:center;box-shadow:2px 3px 0 rgba(82,61,43,.08)}
+.top-card img{width:72px;height:72px;object-fit:cover;border-radius:50%;border:5px solid #fff;box-shadow:0 4px 10px rgba(0,0,0,.12)}
+.top-card b{display:block;margin-top:6px}
+.top-card span{font-size:12px;color:var(--muted);font-weight:800}
+.result-actions{display:flex;justify-content:center;gap:11px;flex-wrap:wrap;margin-top:26px}
+.secondary{border:2px solid var(--ink);background:#fff9ed;padding:13px 17px;font-weight:950;cursor:pointer;box-shadow:4px 5px 0 var(--ink)}
+.share{background:var(--green);border-color:#38543a;color:#fff;box-shadow:4px 5px 0 #38543a}
+
+.brand-badge{
+  position:fixed;z-index:80;left:50%;bottom:12px;transform:translateX(-50%) rotate(-1deg);
+  background:#1f1b18;color:#fff;padding:7px 13px;font-size:11px;font-weight:950;letter-spacing:.08em;
+  box-shadow:3px 4px 0 rgba(0,0,0,.17);white-space:nowrap
+}
+.toast{position:fixed;left:50%;bottom:58px;transform:translateX(-50%) translateY(20px);opacity:0;pointer-events:none;background:#1f1b18;color:#fff;padding:10px 14px;font-size:13px;font-weight:800;transition:.2s;z-index:99}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media(max-width:820px){
+  .hero{padding-top:14px}
+  .hero-grid{grid-template-columns:1fr;min-height:auto}
+  .hero-copy{padding:24px 3px 0}
+  .collage{height:570px;margin-top:-5px}
+  .result-top{grid-template-columns:1fr;padding:23px}
+  .result-photo-frame{width:min(340px,86%);margin:auto}
+}
+@media(max-width:600px){
+  .container{width:min(100% - 24px,1060px)}
+  h1{font-size:54px}
+  .subtitle{font-size:15px}
+  .collage{height:470px;transform:scale(.92);transform-origin:top center;margin-bottom:-35px}
+  .dog-card{width:123px;height:140px}
+  .d10,.d11,.d12,.d13,.d14{width:88px;height:103px}
+  .q-card{padding:34px 20px 38px}
+  .answer{font-size:15px;padding:15px}
+  .question-stage{padding-top:34px}
+  .result-grid{grid-template-columns:1fr}
+  .axes-box{grid-column:auto}
+  .top3{grid-template-columns:1fr 1fr 1fr}
+  .top-card{padding:9px 4px}
+  .top-card img{width:57px;height:57px}
+  .top-card b{font-size:12px}
+  .axis-row{grid-template-columns:66px 1fr 38px}
+}
+
+.fireworks-canvas{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:999;
+  display:none;
+}
+.fireworks-canvas.on{display:block}
+@media (prefers-reduced-motion: reduce){
+  .fireworks-canvas{display:none !important}
+}
+
+
+/* ===== Mobile-first Kakao / smartphone optimization ===== */
+html{
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
+body{
+  overscroll-behavior-y:contain;
+  -webkit-tap-highlight-color:transparent;
+}
+button{
+  touch-action:manipulation;
+  -webkit-touch-callout:none;
+}
+.app{
+  padding-bottom:calc(82px + env(safe-area-inset-bottom));
+}
+.brand-badge{
+  bottom:calc(10px + env(safe-area-inset-bottom));
+}
+
+/* Mobile share helper */
+.mobile-share-hint{
+  display:none;
+  width:min(520px,calc(100% - 24px));
+  margin:14px auto 0;
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.5;
+  font-weight:700;
+}
+
+/* keep interactive controls easy to tap */
+.answer,
+.primary,
+.secondary,
+.quiz-back{
+  min-height:48px;
+}
+
+@media(max-width: 700px){
+  body{
+    background:
+      radial-gradient(circle at 15% 18%, rgba(255,255,255,.55) 0 1px, transparent 1.4px) 0 0/11px 11px,
+      linear-gradient(145deg,#f4e7d3,#fff8ec 45%,#eee1cc);
+  }
+
+  .container{
+    width:calc(100% - 20px);
+  }
+
+  .hero{
+    padding:10px 0 42px;
+  }
+  .hero-grid{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    min-height:auto;
+  }
+  .hero-copy{
+    order:1;
+    padding:18px 4px 0;
+    text-align:center;
+  }
+  .kicker{
+    font-size:11px;
+    padding:7px 10px;
+  }
+  h1{
+    font-size:clamp(46px,15vw,66px);
+    line-height:.92;
+    margin:20px 0 14px;
+  }
+  .subtitle{
+    margin:0 auto;
+    max-width:94%;
+    font-size:15px;
+    line-height:1.6;
+  }
+  .axis-preview{
+    justify-content:center;
+    gap:6px;
+    margin:18px auto 20px;
+  }
+  .axis-preview span{
+    padding:6px 9px;
+    font-size:11px;
+  }
+  .primary{
+    width:min(100%,420px);
+    min-height:58px;
+    font-size:18px;
+    border-radius:0;
+  }
+  .note{
+    max-width:92%;
+    margin:15px auto 0;
+    font-size:11px;
+  }
+
+  /* Mobile collage becomes a compact banner */
+  .collage{
+    order:2;
+    width:100%;
+    height:290px;
+    margin:4px auto 0;
+    transform:none;
+    overflow:hidden;
+  }
+  .dog-card{
+    width:88px;
+    height:102px;
+    padding:5px 5px 20px;
+  }
+  .dog-card b{
+    left:5px;right:5px;bottom:4px;
+    font-size:8px;
+  }
+  .d1{left:1%;top:9%}.d2{left:19%;top:1%}.d3{left:40%;top:6%}
+  .d4{left:61%;top:0}.d5{right:1%;left:auto;top:9%}
+  .d6{left:5%;top:49%}.d7{left:27%;top:43%}.d8{left:50%;top:47%}
+  .d9{right:3%;left:auto;top:46%}
+  .d10{left:13%;top:31%;width:68px;height:80px}
+  .d11{left:38%;top:30%;width:66px;height:78px}
+  .d12{left:60%;top:30%;width:66px;height:78px}
+  .d13{left:77%;top:29%;width:66px;height:78px}
+  .d14{left:0%;top:29%;width:64px;height:76px}
+  .shape-a{width:170px;height:120px;left:25%;top:23%}
+  .shape-b{width:150px;height:140px;right:0;top:29%}
+  .shape-c{width:190px;height:110px;left:4%;bottom:1%}
+
+  .quiz-head{
+    top:0;
+    padding-top:env(safe-area-inset-top);
+  }
+  .quiz-head .container{
+    gap:10px;
+    padding:11px 0 10px;
+  }
+  .logo-mini{
+    font-size:12px;
+  }
+  .count{
+    min-width:48px;
+    font-size:12px;
+  }
+  .progress-wrap{
+    height:8px;
+  }
+  .question-stage{
+    padding:24px 0 54px;
+  }
+  .q-card{
+    width:100%;
+    min-height:calc(100svh - 180px);
+    padding:28px 17px 28px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+  }
+  .q-label{
+    font-size:11px;
+  }
+  .q-card h2{
+    font-size:clamp(24px,7vw,32px);
+    line-height:1.3;
+    margin:10px 0 22px;
+  }
+  .answers{
+    gap:11px;
+    margin-top:auto;
+  }
+  .answer{
+    min-height:60px;
+    padding:15px 15px;
+    font-size:15px;
+    line-height:1.45;
+    border-width:1.5px;
+  }
+  .answer:active{
+    transform:scale(.985);
+    background:#ffe4dc;
+  }
+  .quiz-back{
+    margin:16px auto 0;
+    min-width:120px;
+  }
+
+  .result-stage{
+    padding:24px 0 72px;
+  }
+  .result-wrap{
+    width:100%;
+  }
+  .result-top{
+    grid-template-columns:1fr;
+    gap:20px;
+    padding:20px 16px 24px;
+  }
+  .result-photo-frame{
+    width:min(82vw,310px);
+    margin:0 auto;
+  }
+  .result-copy{
+    text-align:center;
+  }
+  .result-copy h2{
+    font-size:clamp(38px,12vw,58px);
+  }
+  .result-motto{
+    font-size:18px;
+  }
+  .result-desc{
+    font-size:14px;
+    line-height:1.7;
+  }
+  .match-chip{
+    margin-top:10px;
+  }
+  .result-grid{
+    grid-template-columns:1fr;
+    gap:12px;
+    margin-top:14px;
+  }
+  .result-box{
+    padding:19px 16px;
+  }
+  .axes-box{
+    grid-column:auto;
+  }
+  .top3{
+    gap:8px;
+  }
+  .top-card{
+    min-width:0;
+    padding:8px 3px 10px;
+  }
+  .top-card img{
+    width:54px;height:54px;
+  }
+  .top-card b{
+    font-size:11px;
+    word-break:keep-all;
+  }
+  .top-card span{
+    font-size:10px;
+  }
+  .result-actions{
+    display:grid;
+    grid-template-columns:1fr 1.25fr;
+    gap:9px;
+    margin-top:16px;
+    position:sticky;
+    bottom:calc(48px + env(safe-area-inset-bottom));
+    z-index:30;
+    padding:8px;
+    background:rgba(245,234,214,.92);
+    backdrop-filter:blur(10px);
+  }
+  .secondary{
+    width:100%;
+    min-height:52px;
+    padding:12px 10px;
+    font-size:14px;
+  }
+  .mobile-share-hint{
+    display:block;
+  }
+  .brand-badge{
+    font-size:10px;
+    padding:6px 10px;
+  }
+}
+
+@media(max-width: 380px){
+  .container{width:calc(100% - 14px)}
+  h1{font-size:44px}
+  .collage{height:255px}
+  .dog-card{width:76px;height:89px}
+  .q-card{padding-left:14px;padding-right:14px}
+  .answer{font-size:14px}
+  .result-actions{grid-template-columns:1fr}
+}
+
+
+.restart{
+  background:#fff9ed;
+  color:var(--ink);
+}
+.instagram{
+  background:linear-gradient(135deg,#7b4cc2,#c04fa0 48%,#e8774a);
+  color:#fff;
+  border-color:#6c3caf;
+  box-shadow:4px 5px 0 #6c3caf;
+}
+.instagram:active{
+  transform:translateY(2px);
+  box-shadow:2px 3px 0 #6c3caf;
+}
+@media(max-width:700px){
+  .result-actions{
+    grid-template-columns:1fr 1fr;
+  }
+  .result-actions .instagram{
+    grid-column:1/-1;
+  }
+}
+@media(max-width:380px){
+  .result-actions{
+    grid-template-columns:1fr;
+  }
+  .result-actions .instagram{
+    grid-column:auto;
+  }
+}
+
+
+.capture{
+  background:#1f1b18;
+  color:#fff;
+  border-color:#1f1b18;
+  box-shadow:4px 5px 0 #6d6259;
+}
+.capture:active{
+  transform:translateY(2px);
+  box-shadow:2px 3px 0 #6d6259;
+}
+.capture-modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:1200;
+  align-items:flex-end;
+  justify-content:center;
+}
+.capture-modal.on{display:flex}
+.capture-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(31,27,24,.72);
+  backdrop-filter:blur(5px);
+}
+.capture-sheet{
+  position:relative;
+  z-index:2;
+  width:min(540px,100%);
+  max-height:92%;
+  overflow:auto;
+  background:#fff9ed;
+  padding:18px 16px calc(22px + env(safe-area-inset-bottom));
+  border-radius:22px 22px 0 0;
+  box-shadow:0 -16px 50px rgba(0,0,0,.24);
+}
+.capture-head{
+  display:flex;
+  gap:12px;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:13px;
+}
+.capture-head strong{
+  font-size:20px;
+  letter-spacing:-.04em;
+}
+.capture-head p{
+  margin:4px 0 0;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.45;
+  font-weight:700;
+}
+.capture-close{
+  width:42px;
+  height:42px;
+  flex:0 0 42px;
+  border:0;
+  border-radius:50%;
+  background:#1f1b18;
+  color:#fff;
+  font-size:25px;
+  line-height:1;
+  cursor:pointer;
+}
+.capture-preview{
+  display:block;
+  width:min(100%,420px);
+  margin:0 auto;
+  aspect-ratio:4/5;
+  object-fit:contain;
+  background:#eee1ce;
+  box-shadow:0 10px 24px rgba(45,35,26,.16);
+  -webkit-user-select:none;
+  user-select:none;
+}
+.capture-actions{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:9px;
+  margin-top:14px;
+}
+.capture-download{
+  background:var(--green);
+  border-color:#38543a;
+  color:#fff;
+  box-shadow:4px 5px 0 #38543a;
+}
+@media(max-width:700px){
+  .result-actions{
+    grid-template-columns:1fr 1.2fr;
+  }
+}
+@media(max-width:380px){
+  .result-actions{
+    grid-template-columns:1fr;
+  }
+  .capture-actions{
+    grid-template-columns:1fr;
+  }
+}
+
+
+.answer{
+  position:relative;
+  padding-left:58px;
+}
+.answer::before{
+  content:attr(data-letter);
+  position:absolute;
+  left:14px;
+  top:50%;
+  transform:translateY(-50%) rotate(-3deg);
+  width:30px;
+  height:30px;
+  display:grid;
+  place-items:center;
+  background:var(--yellow);
+  color:var(--ink);
+  font-size:13px;
+  font-weight:1000;
+  box-shadow:2px 3px 0 rgba(70,50,34,.18);
+}
+.q-label.fun-label{
+  color:#8b4e2f;
+}
+@media(max-width:700px){
+  .answer{
+    padding-left:54px;
+  }
+  .answer::before{
+    left:12px;
+    width:29px;
+    height:29px;
+  }
+}
+
+
+/* ===== 2026 Mobile-first social-link edition ===== */
+.vibe-badge{
+  display:inline-block;
+  margin-top:14px;
+  padding:8px 11px;
+  background:#1f1b18;
+  color:#fff;
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:-.02em;
+  transform:rotate(.5deg);
+  box-shadow:3px 4px 0 rgba(31,27,24,.18);
+}
+.vibe-cta{
+  margin-top:18px;
+  padding:25px 22px 22px;
+  background:#fff9ed;
+  box-shadow:var(--shadow-small);
+  position:relative;
+  overflow:hidden;
+  border:1px solid #dfceb7;
+}
+.vibe-cta:before{
+  content:"";
+  position:absolute;
+  width:135px;height:135px;
+  right:-46px;top:-48px;
+  background:var(--yellow);
+  border-radius:50%;
+  opacity:.48;
+}
+.vibe-cta-sticker{
+  display:inline-block;
+  padding:6px 10px;
+  background:var(--blue);
+  color:#fff;
+  font-size:11px;
+  font-weight:1000;
+  letter-spacing:.08em;
+  transform:rotate(-1deg);
+}
+.vibe-cta h3{
+  margin:15px 0 8px;
+  font-size:24px;
+  line-height:1.25;
+  letter-spacing:-.045em;
+}
+.vibe-cta p{
+  margin:0;
+  color:#554a41;
+  font-size:14px;
+  line-height:1.7;
+  font-weight:650;
+}
+.vibe-steps{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:14px;
+}
+.vibe-steps span{
+  background:#fff;
+  border:1px solid #d9c9b3;
+  padding:7px 9px;
+  font-size:11px;
+  font-weight:850;
+}
+.vibe-sign{
+  margin-top:14px;
+  color:#6d6259;
+  font-size:11px;
+  font-weight:800;
+}
+.vibe-sign b{color:#1f1b18}
+.vibe-cta-btn{
+  display:inline-block;text-decoration:none;margin-top:16px;
+  border:0;background:var(--red);color:#fff;font-weight:950;font-size:14.5px;
+  padding:12px 18px;cursor:pointer;
+  box-shadow:4px 5px 0 #9f3e30;
+  transform:rotate(-1deg);
+  transition:.18s ease;
+}
+.vibe-cta-btn:hover{transform:translateY(-2px) rotate(.6deg);box-shadow:6px 7px 0 #9f3e30}
+
+@media(max-width:700px){
+  body{
+    min-width:320px;
+  }
+  .app{
+    padding-bottom:calc(94px + env(safe-area-inset-bottom));
+  }
+
+  /* Social link landing: compact first screen */
+  .hero{
+    padding:6px 0 26px;
+  }
+  .hero-grid{
+    display:flex;
+    flex-direction:column;
+    min-height:auto;
+    gap:0;
+  }
+  .hero-copy{
+    order:1;
+    padding:16px 4px 10px;
+    text-align:center;
+  }
+  .kicker{
+    font-size:10px;
+    padding:7px 9px;
+  }
+  .vibe-badge{
+    display:block;
+    width:max-content;
+    max-width:94%;
+    margin:12px auto 0;
+    font-size:10px;
+  }
+  h1{
+    font-size:clamp(44px,14.5vw,62px);
+    margin:18px 0 12px;
+    line-height:.92;
+  }
+  .subtitle{
+    font-size:14px;
+    line-height:1.55;
+    max-width:94%;
+  }
+  .axis-preview{
+    display:none;
+  }
+  .primary{
+    width:100%;
+    min-height:60px;
+    margin-top:18px;
+    font-size:17px;
+    position:relative;
+    z-index:3;
+  }
+  .note{
+    max-width:94%;
+    margin:13px auto 0;
+    font-size:10px;
+  }
+
+  /* collage is decoration, not the main task */
+  .collage{
+    order:2;
+    height:210px;
+    width:100%;
+    margin:-2px auto 0;
+    overflow:hidden;
+  }
+  .dog-card{
+    width:68px;
+    height:80px;
+    padding:4px 4px 17px;
+  }
+  .dog-card b{font-size:7px}
+  .d1{left:2%;top:10%}.d2{left:18%;top:1%}.d3{left:36%;top:8%}
+  .d4{left:55%;top:0}.d5{right:1%;left:auto;top:10%}
+  .d6{left:8%;top:50%}.d7{left:27%;top:43%}.d8{left:47%;top:49%}
+  .d9{right:4%;left:auto;top:46%}
+  .d10{left:14%;top:32%;width:52px;height:63px}
+  .d11{left:35%;top:31%;width:50px;height:61px}
+  .d12{left:55%;top:31%;width:50px;height:61px}
+  .d13{left:72%;top:30%;width:50px;height:61px}
+  .d14{left:0%;top:32%;width:49px;height:60px}
+  .shape-a{width:130px;height:92px;left:26%;top:25%}
+  .shape-b{width:112px;height:105px;right:0;top:30%}
+  .shape-c{width:140px;height:82px;left:5%;bottom:0}
+
+  /* One question per phone screen */
+  .quiz-head{
+    padding-top:env(safe-area-inset-top);
+  }
+  .quiz-head .container{
+    padding:10px 0 9px;
+  }
+  .question-stage{
+    padding:16px 0 32px;
+  }
+  .q-card{
+    min-height:calc(100svh - 150px);
+    padding:24px 14px 22px;
+    justify-content:flex-start;
+  }
+  .q-card h2{
+    font-size:clamp(23px,6.8vw,30px);
+    line-height:1.28;
+    margin:9px 0 18px;
+  }
+  .q-label{
+    font-size:10px;
+  }
+  .answers{
+    gap:10px;
+    margin-top:auto;
+  }
+  .answer{
+    min-height:64px;
+    padding:13px 12px 13px 50px;
+    font-size:14px;
+    line-height:1.4;
+    border-radius:10px;
+  }
+  .answer::before{
+    left:11px;
+    width:28px;height:28px;
+    border-radius:8px;
+  }
+  .answer:active{
+    transform:scale(.985);
+  }
+  .quiz-back{
+    margin-top:11px;
+  }
+
+  /* Result optimized for screenshot + reading */
+  .result-stage{
+    padding:16px 0 78px;
+  }
+  .result-top{
+    gap:14px;
+    padding:17px 13px 20px;
+  }
+  .result-photo-frame{
+    width:min(72vw,270px);
+  }
+  .result-copy h2{
+    margin-top:8px;
+    font-size:clamp(36px,11vw,52px);
+  }
+  .result-motto{font-size:16px}
+  .result-desc{font-size:13px}
+  .result-grid{
+    gap:10px;
+    margin-top:11px;
+  }
+  .result-box{
+    padding:16px 14px;
+  }
+  .result-box h3{font-size:14px}
+  .result-box ul{font-size:13px}
+  .axis-row{
+    grid-template-columns:58px 1fr 32px;
+    gap:8px;
+    font-size:11px;
+  }
+  .top-card img{width:50px;height:50px}
+
+  .vibe-cta{
+    margin-top:12px;
+    padding:20px 16px 18px;
+    text-align:center;
+  }
+  .vibe-cta h3{
+    font-size:21px;
+  }
+  .vibe-cta p{
+    font-size:13px;
+  }
+  .vibe-steps{
+    justify-content:center;
+  }
+  .vibe-steps span{
+    font-size:10px;
+  }
+
+  /* actions always reachable with thumb */
+  .result-actions{
+    position:sticky;
+    bottom:calc(43px + env(safe-area-inset-bottom));
+    grid-template-columns:1fr 1.15fr;
+    gap:8px;
+    padding:8px;
+    margin-top:12px;
+    background:rgba(245,234,214,.94);
+    backdrop-filter:blur(10px);
+    z-index:35;
+  }
+  .secondary{
+    min-height:54px;
+    font-size:13px;
+    border-radius:9px;
+  }
+  .mobile-share-hint{
+    font-size:10px;
+    width:calc(100% - 24px);
+    margin-top:9px;
+  }
+  .brand-badge{
+    bottom:calc(8px + env(safe-area-inset-bottom));
+  }
+}
+
+@media(max-width:360px){
+  .container{width:calc(100% - 12px)}
+  h1{font-size:42px}
+  .subtitle{font-size:13px}
+  .collage{height:185px}
+  .q-card{padding-left:11px;padding-right:11px}
+  .answer{font-size:13px}
+  .result-actions{grid-template-columns:1fr}
+}
+
+@media (hover:none) and (pointer:coarse){
+  .dog-card:hover{
+    transform:rotate(var(--r));
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="app">
+
+  <section id="landing" class="screen active">
+    <div class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="kicker">10문항 · 1분 테스트 · 14 DOG TYPES</span>
+          <div class="vibe-badge">AI로 이런 테스트를 직접 만든다고? · 피코쌤 VIBE CODING</div>
+          <h1>나는<br><span class="scribble">어떤 강아지</span>일까?</h1>
+          <p class="subtitle">
+            똥 치우기, 간식 협상, 목욕 전쟁, 침대 쟁탈전까지.
+            반려견 집사라면 한 번쯤 겪어본 10가지 상황으로
+            나와 가장 닮은 강아지 성향을 찾아보세요.
+          </p>
+          <div class="axis-preview">
+            <span>사회성</span><span>애착성</span><span>활동성</span>
+            <span>독립성</span><span>계획성</span><span>민감성</span>
+          </div>
+          <button class="primary" id="startBtn">1분 만에 테스트 시작 →</button>
+          <p class="note">※ 재미를 위한 인간 성향 비유 테스트입니다. 실제 견종의 개별 성격을 판정하는 도구가 아닙니다.</p>
+        </div>
+
+        <div class="collage" aria-label="14개 견종 사진 콜라주">
+          <div class="paper-shape shape-a"></div><div class="paper-shape shape-b"></div><div class="paper-shape shape-c"></div>
+          <figure class="dog-card d1"><img loading="lazy" decoding="async" src="https://loremflickr.com/420/420/pug,dog?lock=101" alt="퍼그" onerror="this.style.background='#ddd'"><b>퍼그</b></figure>
+          <figure class="dog-card d2"><img loading="lazy" decoding="async" src="https://loremflickr.com/420/420/maltese,dog?lock=102" alt="말티즈"><b>말티즈</b></figure>
+          <figure class="dog-card d3"><img loading="lazy" decoding="async" src="https://loremflickr.com/420/420/bichon,frise,dog?lock=103" alt="비숑 프리제"><b>비숑</b></figure>
+          <figure class="dog-card d4"><img loading="lazy" decoding="async" src="https://loremflickr.com/420/420/golden,retriever,dog?lock=104" alt="골든 리트리버"><b>골든 리트리버</b></figure>
+          <figure class="dog-card d5"><img loading="lazy" decoding="async" src="https://loremflickr.com/420/420/jindo,dog?lock=105" alt="진돗개"><b>진돗개</b></figure>
+          <figure class="dog-card d6"><img loading="lazy" decoding="async" src="https://loremflickr.com/420/420/yorkshire,terrier,dog?lock=106" alt="요크셔테리어"><b>요크셔테리어</b></figure>
+          <figure class="dog-card d7"><img loading="lazy" decoding="async" src="https://loremflickr.com/420/420/poodle,dog?lock=107" alt="푸들"><b>푸들</b></figure>
+          <figure class="dog-card d8"><img loading="lazy" decoding="async" src="https://loremflickr.com/420/420/siberian,husky,dog?lock=108" alt="시베리안 허스키"><b>허스키</b></figure>
+          <figure class="dog-card d9"><img loading="lazy" decoding="async" src="https://loremflickr.com/420/420/chihuahua,dog?lock=109" alt="치와와"><b>치와와</b></figure>
+          <figure class="dog-card d10"><img loading="lazy" decoding="async" src="https://loremflickr.com/420/420/english,bulldog,dog?lock=110" alt="불독"><b>불독</b></figure>
+          <figure class="dog-card d11"><img loading="lazy" decoding="async" src="https://loremflickr.com/420/420/shih,tzu,dog?lock=111" alt="시추"><b>시추</b></figure>
+          <figure class="dog-card d12"><img loading="lazy" decoding="async" src="https://loremflickr.com/420/420/border,collie,dog?lock=112" alt="보더콜리"><b>보더콜리</b></figure>
+          <figure class="dog-card d13"><img loading="lazy" decoding="async" src="https://loremflickr.com/420/420/german,shepherd,dog?lock=113" alt="저먼 셰퍼드"><b>저먼 셰퍼드</b></figure>
+          <figure class="dog-card d14"><img loading="lazy" decoding="async" src="https://loremflickr.com/420/420/welsh,corgi,dog?lock=114" alt="웰시코기"><b>웰시코기</b></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="quiz" class="screen">
+    <div class="quiz-head">
+      <div class="container">
+        <div class="logo-mini">DOGSONALITY</div>
+        <div class="progress-wrap"><div id="progress" class="progress"></div></div>
+        <div id="count" class="count">1 / 30</div>
+      </div>
+    </div>
+    <div class="container question-stage">
+      <article class="q-card">
+        <div id="qLabel" class="q-label">QUESTION 01</div>
+        <h2 id="qText"></h2>
+        <div id="answers" class="answers"></div>
+      </article>
+      <button id="backBtn" class="quiz-back">← 이전 질문</button>
+    </div>
+  </section>
+
+  <section id="result" class="screen">
+    <div class="container result-stage">
+      <div class="result-wrap">
+        <div class="result-top">
+          <div class="result-photo-frame">
+            <img decoding="async" id="resultPhoto" class="result-photo" alt="">
+            <div id="photoCaption" class="photo-caption"></div>
+          </div>
+          <div class="result-copy">
+            <div class="result-kicker">YOUR DOGSONALITY IS</div>
+            <h2 id="resultName"></h2>
+            <p id="resultMotto" class="result-motto"></p>
+            <p id="resultDesc" class="result-desc"></p>
+            <span id="matchChip" class="match-chip"></span>
+          </div>
+        </div>
+
+        <div class="result-grid">
+          <div class="result-box">
+            <h3>잘하는 것</h3>
+            <ul id="strengthList"></ul>
+          </div>
+          <div class="result-box">
+            <h3>주의할 점</h3>
+            <ul id="riskList"></ul>
+          </div>
+          <div class="result-box">
+            <h3>일할 때의 모습</h3>
+            <div id="workStyle" class="result-desc"></div>
+          </div>
+          <div class="result-box">
+            <h3>사람을 대할 때의 모습</h3>
+            <div id="relationStyle" class="result-desc"></div>
+          </div>
+          <div class="result-box axes-box">
+            <h3>나의 6가지 성향</h3>
+            <div id="axisChart"></div>
+            <h3 style="margin-top:24px">가까운 유형 TOP 3</h3>
+            <div id="top3" class="top3"></div>
+          </div>
+        </div>
+
+
+        <section class="vibe-cta">
+          <div class="vibe-cta-sticker">VIBE CODING CLASS</div>
+          <h3>이런 테스트, 직접 만들 수 있습니다.</h3>
+          <p>
+            피코쌤은 생성형 AI와 바이브 코딩으로
+            <strong>아이디어 → 화면 → 기능 → 배포</strong>까지
+            재미있는 실습 소재로 가르칩니다.
+          </p>
+          <div class="vibe-steps">
+            <span>① 아이디어 기획</span>
+            <span>② AI와 코딩</span>
+            <span>③ 모바일 테스트</span>
+            <span>④ 링크로 배포</span>
+          </div>
+          <div class="vibe-sign">made & taught by <b>PCOSSAM</b></div>
+          <a class="vibe-cta-btn" href="/services/vibe-coding-training.html" target="_blank" rel="noopener">바이브 코딩 실무 과정 보기 →</a>
+        </section>
+
+        <div class="result-actions">
+          <button id="restartBtn" class="secondary restart">↻ 다시 테스트</button>
+          <button id="captureBtn" class="secondary capture">결과 이미지 만들기</button>
+        </div>
+        <p class="mobile-share-hint">결과 이미지를 만든 뒤 스마트폰에서 이미지를 길게 눌러 저장하세요. 저장한 이미지는 인스타그램·카카오톡·페이스북 등 원하는 SNS에 첨부할 수 있습니다.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+<div id="captureModal" class="capture-modal" aria-hidden="true">
+  <div class="capture-backdrop"></div>
+  <div class="capture-sheet" role="dialog" aria-modal="true" aria-labelledby="captureTitle">
+    <div class="capture-head">
+      <div>
+        <strong id="captureTitle">결과 이미지 완성</strong>
+        <p>이미지를 길게 눌러 사진에 저장하세요.</p>
+      </div>
+      <button id="captureClose" class="capture-close" type="button" aria-label="닫기">×</button>
+    </div>
+    <img id="capturePreview" class="capture-preview" alt="DOGSONALITY 결과 이미지">
+    <div class="capture-actions">
+      <button id="downloadCapture" class="secondary capture-download" type="button">PNG 저장</button>
+      <button id="captureDone" class="secondary" type="button">닫기</button>
+    </div>
+  </div>
+</div>
+
+<div class="brand-badge">made by PCOSSAM</div>
+<div id="toast" class="toast">결과가 복사되었습니다.</div>
+<canvas id="fireworksCanvas" class="fireworks-canvas" aria-hidden="true"></canvas>
+
+<script>
+const dims = {
+  S:"사회성", A:"애착성", E:"활동성", I:"독립성", C:"계획성", V:"민감성"
+};
+
+const questions = [
+  {
+    q:"산책 중 우리 강아지가 길 한복판에 ‘작품’을 완성했다. 나는?",
+    a:[
+      ["봉지를 장갑처럼 뒤집어 한 번에 집는다. 촉감은 마음에서 삭제한다.",{C:35,V:30,I:40},{pug:4,golden:2,shihtzu:1}],
+      ["휴대용 집게나 도구를 꺼낸다. 인류는 도구를 쓰라고 진화했다.",{C:92,V:45,I:55},{poodle:4,border:2,shepherd:1}],
+      ["봉지 두 겹 + 휴지까지 준비한다. 내 손과 그것 사이엔 국경이 필요하다.",{C:78,V:100,I:40},{chihuahua:4,maltese:2,poodle:1}],
+      ["3초 만에 처리하고 주변까지 체크한다. 흔적은 남기지 않는다.",{C:72,V:55,I:88},{jindo:4,bulldog:2,yorkie:1}]
+    ]
+  },
+  {
+    q:"산책 중 강아지가 전봇대 하나를 5분째 냄새 맡고 있다.",
+    a:[
+      ["기다려 준다. 지금 동네 단톡방 읽는 중일 수도 있다.",{A:90,E:25,S:60},{shihtzu:4,golden:2,maltese:1}],
+      ["이름을 부르고 칭찬하며 슬슬 이동시킨다. 협상은 부드럽게.",{A:82,E:65,S:88},{golden:4,bichon:2,corgi:1}],
+      ["시계를 본다. 고객님, 다음 산책 일정이 있습니다.",{A:45,E:75,S:45},{border:4,shepherd:2,poodle:1}],
+      ["나도 같이 멈춰서 구경한다. 오늘 산책의 CEO는 너다.",{A:50,E:100,S:85},{husky:4,pug:2,yorkie:1}]
+    ]
+  },
+  {
+    q:"택배 기사님이 초인종을 눌렀고 강아지가 현관을 향해 짖기 시작했다.",
+    a:[
+      ["나도 현관을 본다. ‘누구세요?!’ 경계 레벨이 같이 올라간다.",{V:100,C:35,I:80},{yorkie:4,chihuahua:2,jindo:1}],
+      ["‘앉아, 기다려.’ 차분하게 통제한다. 경비 업무는 내가 총괄한다.",{V:75,C:92,I:55},{shepherd:4,jindo:2,border:1}],
+      ["간식이나 장난감으로 관심을 돌린다. 문제는 시스템으로 해결한다.",{V:45,C:78,I:40},{poodle:4,corgi:2,golden:1}],
+      ["‘택배 왔네~’ 하고 다시 하던 일을 한다. 세상은 택배로 망하지 않는다.",{V:18,C:25,I:45},{bulldog:4,pug:2,shihtzu:1}]
+    ]
+  },
+  {
+    q:"나는 오른쪽으로 가고 싶은데 강아지는 왼쪽으로 버티고 있다.",
+    a:[
+      ["간식 한 알을 제시한다. 외교는 결국 협상이다.",{A:98,I:25,C:50},{maltese:4,golden:2,shihtzu:1}],
+      ["그래, 네가 가고 싶은 데 가자. 지도는 오늘 네가 들고 있다.",{A:60,I:100,C:25},{husky:4,shihtzu:2,pug:1}],
+      ["멈춤 → 앉아 → 다시 출발. 산책에도 프로토콜이 있다.",{A:45,I:45,C:100},{shepherd:4,border:2,poodle:1}],
+      ["서로 5초간 눈싸움을 한다. 오늘 여기서 서열을 정한다.",{A:55,I:92,C:55},{yorkie:4,jindo:2,chihuahua:1}]
+    ]
+  },
+  {
+    q:"내가 뭔가를 먹는데 강아지가 세상에서 제일 불쌍한 눈으로 쳐다본다.",
+    a:[
+      ["결국 한 조각 준다. 그리고 늘 말한다. ‘이번이 진짜 마지막이야.’",{A:100,C:20,I:30},{pug:4,maltese:2,shihtzu:1}],
+      ["정량만 정확히 준다. 사랑과 칼로리는 별개의 문제다.",{A:55,C:100,I:40},{border:4,poodle:2,shepherd:1}],
+      ["앉아→손→코→빙글 풀코스 후 지급. 먹으려면 면접은 봐야지.",{A:72,C:70,I:65},{corgi:4,bichon:2,yorkie:1}],
+      ["안 된다면 안 된다. 원칙은 그 초롱초롱한 눈망울보다 강하다.",{A:40,C:78,I:88},{bulldog:4,jindo:2,shepherd:1}]
+    ]
+  },
+  {
+    q:"목욕시키는 날. 욕실 문이 닫히는 순간 나의 모드는?",
+    a:[
+      ["수건·샴푸·드라이기 순서대로 세팅 완료. 작전명 ‘목욕’ 시작.",{C:100,E:82,V:65},{shepherd:4,border:2,poodle:1}],
+      ["간식과 칭찬을 섞어 물놀이처럼 만든다. 평화적으로 끝내자.",{C:55,E:82,V:40},{bichon:4,golden:2,corgi:1}],
+      ["최대한 빠르게 끝낸다. 고민하는 순간 나까지 젖는다.",{C:25,E:35,V:20},{pug:4,bulldog:2,shihtzu:1}],
+      ["귀에 물 들어갈까, 눈에 샴푸 들어갈까 초집중. 물 한 방울도 민원 대상이다.",{C:68,E:40,V:100},{chihuahua:4,maltese:2,jindo:1}]
+    ]
+  },
+  {
+    q:"강아지 카페에 갔다. 목줄을 풀고 10분 뒤 내 모습은?",
+    a:[
+      ["우리 강아지보다 남의 강아지 이름을 더 많이 외웠다. 전 견종 네트워킹 완료.",{S:100,E:82,I:40},{bichon:4,corgi:2,golden:1}],
+      ["구석에서 전체 상황을 스캔한다. 수상한 접근은 내가 먼저 발견한다.",{S:20,E:45,I:78},{jindo:4,chihuahua:2,yorkie:1}],
+      ["우리 강아지 근처에서 계속 지켜본다. 내 새끼만 잘 놀면 된다.",{S:48,E:32,I:35},{maltese:4,shihtzu:2,golden:1}],
+      ["강아지보다 내가 더 신났다. 누가 놀러 온 건지 슬슬 헷갈린다.",{S:88,E:100,I:95},{husky:4,yorkie:2,pug:1}]
+    ]
+  },
+  {
+    q:"강아지가 평소와 달라 보여 동물병원에 간다.",
+    a:[
+      ["증상 시간표·사진·영상·질문 리스트까지 준비한다. 진료자료 1부 제출.",{C:100,V:82,A:60},{poodle:4,border:2,chihuahua:1}],
+      ["차분히 안아주고 수의사 설명을 잘 듣는다. 오늘은 보호자 모드.",{C:82,V:52,A:92},{golden:4,shepherd:2,jindo:1}],
+      ["가기 전부터 검색을 너무 많이 했다. 병원 가는 건 개인데 내가 더 아프다.",{C:52,V:100,A:100},{chihuahua:4,maltese:2,shihtzu:1}],
+      ["수의사 선생님이 ‘괜찮아요’ 하는 순간 나도 바로 건강해진다.",{C:28,V:15,A:62},{bulldog:4,pug:2,shihtzu:1}]
+    ]
+  },
+  {
+    q:"강아지 인생샷을 찍으려고 휴대폰을 들었다.",
+    a:[
+      ["100장 찍고 한 장 고른다. ‘눈 감았어. 다시!’",{C:45,S:82,E:55},{maltese:4,bichon:2,shihtzu:1}],
+      ["배경·빛·각도부터 잡는다. 오늘은 반려견이 아니라 모델이다.",{C:100,S:55,E:60},{border:4,poodle:2,shepherd:1}],
+      ["뛰는 순간 연사한다. 좀 흔들려도 살아 있는 느낌이 중요하다.",{C:30,S:88,E:100},{corgi:4,husky:2,yorkie:1}],
+      ["사진 몇 장 찍고 그냥 같이 논다. 내 눈이 클라우드다.",{C:15,S:35,E:20},{shihtzu:4,bulldog:2,pug:1}]
+    ]
+  },
+  {
+    q:"잠자리에 갔는데 강아지가 내 베개 한가운데를 차지하고 있다.",
+    a:[
+      ["끝에 20cm만 남아도 같이 잔다. 이 침대는 이미 공동명의다.",{A:100,I:20,E:20},{golden:4,shihtzu:2,maltese:1}],
+      ["조심히 자기 자리로 옮긴다. 사랑과 수면권에는 경계가 필요하다.",{A:55,I:78,E:55},{jindo:4,shepherd:2,poodle:1}],
+      ["내가 소파로 간다. 그래… 네가 침대 써라.",{A:72,I:55,E:12},{shihtzu:4,pug:2,bulldog:1}],
+      ["이불 쟁탈전을 한 판 하고 결국 같이 뒹군다. 취침 전 2차전이다.",{A:75,I:88,E:100},{yorkie:4,corgi:2,husky:1}]
+    ]
+  }
+];
+
+const dogs = [
+ {id:"pug",name:"퍼그",title:"유쾌한 낙천가",motto:"“일단 웃고 보자. 완벽하지 않아도 재미있으면 된다.”",
+  p:{S:75,A:75,E:35,I:40,C:30,V:35},
+  desc:"사람을 편하게 만드는 힘이 있는 유형입니다. 계획보다 분위기와 경험을 중시하고, 너무 심각한 상황에서도 웃을 포인트를 찾는 편입니다.",
+  strengths:["분위기를 부드럽게 만드는 유머 감각","사람에게 편안함을 주는 친근함","작은 즐거움을 잘 발견하는 능력"],
+  risks:["미루기와 귀찮음이 반복될 수 있음","장기 계획이나 세밀한 관리가 약해질 수 있음"],
+  work:"딱딱한 규칙보다 사람들과 편하게 소통할 수 있는 환경에서 강합니다. 긴 프로젝트는 중간 마감점을 잘게 나누면 효율이 올라갑니다.",
+  relation:"먼저 벽을 만들기보다 편한 분위기를 만드는 편입니다. 갈등을 농담으로만 넘기지 않고 필요한 대화는 직접 하는 것이 중요합니다."},
+ {id:"maltese",name:"말티즈",title:"섬세한 애정파",motto:"“좋아하는 사람에게는 진심 100%.”",
+  p:{S:65,A:95,E:55,I:35,C:45,V:78},
+  desc:"관계를 가볍게 여기지 않는 유형입니다. 가까운 사람을 세심하게 챙기고 감정의 변화도 빠르게 알아차립니다.",
+  strengths:["가까운 사람을 세심하게 챙김","감정 변화와 분위기를 잘 읽음","관계를 오래 유지하려는 성실함"],
+  risks:["관심 부족을 크게 느낄 수 있음","상대 반응에 지나치게 영향을 받을 수 있음"],
+  work:"신뢰 관계가 형성된 팀에서 강합니다. 피드백을 명확하게 받으면 안정적으로 성과를 내지만, 애매한 반응은 스트레스가 될 수 있습니다.",
+  relation:"표현과 교감을 중요하게 생각합니다. 상대의 연락 빈도와 애정 표현을 관계의 전부로 해석하지 않는 균형이 필요합니다."},
+ {id:"bichon",name:"비숑",title:"긍정 에너지형",motto:"“사람이 있는 곳이 곧 놀이터.”",
+  p:{S:95,A:78,E:78,I:35,C:42,V:45},
+  desc:"새로운 사람과 환경에 밝은 에너지를 가져가는 유형입니다. 관계를 빠르게 만들고 주변 분위기에 활력을 더합니다.",
+  strengths:["빠른 친화력과 사교성","팀에 활기를 주는 긍정 에너지","새로운 환경에 대한 높은 개방성"],
+  risks:["재미있는 일에 주의가 분산될 수 있음","혼자 깊게 집중하는 시간이 부족해질 수 있음"],
+  work:"협업·아이디어 회의·네트워킹이 많은 환경에서 강합니다. 집중 작업 시간은 의도적으로 차단해 두는 것이 좋습니다.",
+  relation:"사람을 쉽게 좋아하고 잘 어울립니다. 넓은 관계 속에서도 정말 중요한 관계에 시간을 따로 투자하면 강점이 커집니다."},
+ {id:"golden",name:"골든 리트리버",title:"신뢰받는 조력자",motto:"“함께 잘되는 것이 가장 중요하다.”",
+  p:{S:92,A:88,E:70,I:18,C:62,V:30},
+  desc:"사람들과 협력하면서 신뢰를 쌓는 데 강한 유형입니다. 자신의 성과뿐 아니라 팀 전체의 분위기와 결과를 함께 봅니다.",
+  strengths:["높은 협업 능력과 배려","안정적인 신뢰 형성","갈등을 줄이고 팀을 연결하는 능력"],
+  risks:["거절을 어려워해 일이 몰릴 수 있음","자기 의견보다 타인을 우선할 수 있음"],
+  work:"팀 프로젝트와 고객 대응에서 강합니다. 책임을 너무 많이 떠안지 않도록 역할과 경계를 명확히 하는 것이 필요합니다.",
+  relation:"상대에게 안정감을 주는 타입입니다. 모두를 만족시키려 하기보다 자신의 요구도 명확히 표현해야 관계가 오래갑니다."},
+ {id:"jindo",name:"진돗개",title:"신념 있는 수호자",motto:"“아무에게나 마음을 열지는 않는다.”",
+  p:{S:28,A:62,E:55,I:88,C:72,V:82},
+  desc:"사람을 천천히 판단하지만 한번 신뢰하면 쉽게 흔들리지 않는 유형입니다. 자신의 기준과 원칙을 중요하게 생각합니다.",
+  strengths:["강한 책임감과 신뢰","쉽게 흔들리지 않는 원칙","독립적인 판단과 집중력"],
+  risks:["낯선 사람에게 벽이 높아 보일 수 있음","자기 기준이 강해 타협이 어려울 수 있음"],
+  work:"자율성과 책임이 동시에 주어질 때 강합니다. 의미 없는 회의나 잦은 간섭보다는 명확한 목표가 있는 환경을 선호합니다.",
+  relation:"관계의 숫자보다 깊이를 중요하게 봅니다. 상대가 신뢰를 얻기까지 시간이 필요하지만, 가까워지면 오래 가는 편입니다."},
+ {id:"yorkie",name:"요크셔테리어",title:"당찬 승부사",motto:"“작다고 얕보지 마. 할 말은 한다.”",
+  p:{S:60,A:65,E:82,I:78,C:56,V:72},
+  desc:"체급보다 존재감이 큰 유형입니다. 도전을 두려워하지 않고 자기 의견을 분명하게 드러냅니다.",
+  strengths:["빠른 행동력과 자신감","경쟁 상황에서 강한 집중","자기 의견을 분명히 말하는 힘"],
+  risks:["작은 충돌도 승부로 받아들일 수 있음","상대에게 강하게 보일 가능성이 있음"],
+  work:"속도가 빠르고 결과가 분명한 환경에서 강합니다. 경쟁보다 협력이 더 중요한 순간을 구분하면 리더십이 좋아집니다.",
+  relation:"좋고 싫음이 비교적 분명합니다. 솔직함은 장점이지만, 같은 메시지도 표현 방식을 부드럽게 조정하면 관계 비용이 줄어듭니다."},
+ {id:"poodle",name:"푸들",title:"스마트 전략가",motto:"“방법은 반드시 있다. 더 좋은 방법도 있다.”",
+  p:{S:72,A:67,E:70,I:48,C:96,V:64},
+  desc:"새로운 정보를 빠르게 구조화하고 해결책을 찾는 유형입니다. 배우는 속도가 빠르고 복잡한 문제를 게임처럼 풀어가는 경향이 있습니다.",
+  strengths:["높은 학습력과 문제 해결 능력","정보를 구조화하는 능력","환경 변화에 대한 빠른 적응"],
+  risks:["단순 반복 업무에서 쉽게 지루해질 수 있음","생각이 많아 실행 시점이 늦어질 수 있음"],
+  work:"문제 해결·기획·분석 업무에서 강합니다. 완벽한 답을 찾기 전에 작은 실험을 시작하는 습관이 실행력을 높여줍니다.",
+  relation:"상대의 문제를 해결해 주려는 경향이 있습니다. 때로는 해결책보다 공감이 먼저 필요한 순간도 있다는 점을 기억하면 좋습니다."},
+ {id:"husky",name:"시베리안 허스키",title:"자유로운 탐험가",motto:"“재미없는 길은 가지 않는다.”",
+  p:{S:85,A:52,E:98,I:94,C:28,V:38},
+  desc:"새로운 경험과 자유가 중요한 유형입니다. 정해진 길을 따라가기보다 직접 해보고 움직이면서 배우는 편입니다.",
+  strengths:["높은 모험심과 행동력","낯선 환경에 대한 두려움이 적음","틀 밖에서 생각하는 자유로움"],
+  risks:["반복·통제 환경에서 동기가 급격히 떨어질 수 있음","충동적인 결정이 리스크가 될 수 있음"],
+  work:"자율성이 높고 변화가 빠른 프로젝트에서 강합니다. 자유를 유지하려면 최소한의 일정·예산·마감 규칙은 스스로 만드는 것이 필요합니다.",
+  relation:"사람을 좋아하지만 지나친 구속은 답답해합니다. 서로 독립성을 존중하는 관계에서 가장 편안합니다."},
+ {id:"chihuahua",name:"치와와",title:"예민한 카리스마",motto:"“작은 변화도 나는 다 안다.”",
+  p:{S:35,A:88,E:60,I:77,C:45,V:98},
+  desc:"주변의 작은 변화와 사람의 반응을 빠르게 감지하는 유형입니다. 가까운 사람에게는 강한 애착을 보이지만 낯선 상황에는 신중합니다.",
+  strengths:["상황 변화에 대한 높은 감지력","가까운 관계에 대한 강한 집중","위험 신호를 빠르게 알아차림"],
+  risks:["걱정과 과해석으로 에너지를 소모할 수 있음","방어적인 반응이 먼저 나올 수 있음"],
+  work:"변화를 세밀하게 확인해야 하는 업무에서 강점이 있습니다. 모든 신호를 위험으로 해석하지 않도록 우선순위를 두는 것이 중요합니다.",
+  relation:"깊은 애착을 형성하는 타입입니다. 상대의 작은 행동을 확대 해석하기보다 직접 확인하는 대화가 관계 안정에 도움이 됩니다."},
+ {id:"bulldog",name:"불독",title:"묵직한 안정형",motto:"“급할 게 뭐 있어. 중요한 건 끝까지 가는 것.”",
+  p:{S:55,A:62,E:22,I:67,C:55,V:28},
+  desc:"쉽게 들뜨거나 흔들리지 않고 자기 페이스를 유지하는 유형입니다. 빠른 시작보다 꾸준히 버티는 힘이 강합니다.",
+  strengths:["위기에서도 비교적 침착함","꾸준함과 인내심","외부 분위기에 덜 휘둘리는 안정성"],
+  risks:["변화를 늦게 받아들일 수 있음","빠른 실행이 필요한 상황에서는 답답해 보일 수 있음"],
+  work:"장기적으로 꾸준히 관리해야 하는 업무에서 강합니다. 변화가 필요한 이유를 납득하면 안정적으로 전환할 수 있습니다.",
+  relation:"감정 기복이 크지 않아 편안함을 줍니다. 표현이 적을 경우 상대가 무관심으로 오해하지 않도록 말로 확인해 주는 것이 좋습니다."},
+ {id:"shihtzu",name:"시추",title:"여유로운 관계형",motto:"“좋은 사람들과 편하게 사는 게 최고.”",
+  p:{S:80,A:87,E:28,I:38,C:32,V:35},
+  desc:"성과 경쟁보다 편안한 관계와 일상의 만족을 중요하게 보는 유형입니다. 사람들과 부드럽게 어울리고 과도한 긴장을 피합니다.",
+  strengths:["부드러운 친화력","사람을 편안하게 만드는 분위기","일상의 만족을 찾는 능력"],
+  risks:["경쟁적 환경에서 추진력이 낮아질 수 있음","불편한 문제를 미루는 경향이 생길 수 있음"],
+  work:"관계가 안정적이고 과도한 경쟁이 적은 팀에서 강합니다. 중요한 목표는 마감과 기준을 외부화하면 실행력이 좋아집니다.",
+  relation:"함께 있을 때 편안함을 주는 유형입니다. 갈등을 피하기만 하지 않고 필요한 선을 명확히 말하면 관계가 더 건강해집니다."},
+ {id:"border",name:"보더콜리",title:"성과형 완벽주의자",motto:"“맡았으면 제대로. 목표가 있으면 끝까지.”",
+  p:{S:58,A:58,E:96,I:48,C:100,V:76},
+  desc:"어려운 목표가 생길수록 집중력이 올라가는 유형입니다. 학습과 성취에서 큰 만족을 느끼며 계속 더 나은 방법을 찾습니다.",
+  strengths:["매우 높은 집중력과 학습 속도","목표를 끝까지 추적하는 성취욕","복잡한 업무를 빠르게 구조화함"],
+  risks:["완벽주의와 과몰입 위험","쉬는 시간에도 일을 생각할 수 있음"],
+  work:"명확한 난제와 성장 기회가 있을 때 최고의 집중력을 냅니다. 성과 기준뿐 아니라 '충분히 좋은 종료 기준'도 함께 설정해야 번아웃을 줄일 수 있습니다.",
+  relation:"관계에서도 문제를 해결하려는 경향이 있습니다. 사람은 프로젝트가 아니므로 정답보다 감정의 속도를 존중할 필요가 있습니다."},
+ {id:"shepherd",name:"저먼 셰퍼드",title:"책임형 리더",motto:"“내가 맡았으면 끝까지 책임진다.”",
+  p:{S:55,A:76,E:84,I:38,C:91,V:74},
+  desc:"역할과 책임이 주어지면 강해지는 유형입니다. 조직의 목표를 이해하고 사람과 시스템을 지키는 데 의미를 느낍니다.",
+  strengths:["높은 책임감과 실행 통제력","규칙과 목표를 연결하는 능력","위기 상황에서 중심을 잡는 리더십"],
+  risks:["책임을 과하게 떠안을 수 있음","규율이 느슨한 환경에서 스트레스가 커질 수 있음"],
+  work:"목표·권한·책임이 명확한 환경에서 강합니다. 모든 문제를 본인이 해결하려 하기보다 위임 구조를 만드는 것이 중요합니다.",
+  relation:"가까운 사람을 보호하고 책임지려는 경향이 있습니다. 보호가 통제로 느껴지지 않도록 상대의 선택권을 남겨두는 것이 좋습니다."},
+ {id:"corgi",name:"웰시코기",title:"유쾌한 주도형",motto:"“같이 하자. 그리고 이쪽으로 가보자.”",
+  p:{S:88,A:72,E:82,I:62,C:70,V:52},
+  desc:"사람들과 잘 어울리면서도 상황을 그냥 흘려보내지 않고 방향을 제시하는 유형입니다. 사교성과 주도성이 동시에 높습니다.",
+  strengths:["사람을 모으는 친화력","분위기와 실행을 함께 만드는 능력","적절한 자기주장과 빠른 판단"],
+  risks:["자신도 모르게 다른 사람을 지휘할 수 있음","활동이 많아 집중 우선순위가 흐려질 수 있음"],
+  work:"프로젝트 리딩·행사·조정 업무에서 강합니다. 방향을 제시하기 전에 팀원의 의견을 한 번 더 듣는 습관이 리더십을 강화합니다.",
+  relation:"함께 뭔가 하는 관계를 좋아합니다. 상대를 챙기는 것과 상대의 방식을 존중하는 것 사이의 균형이 중요합니다."}
+];
+
+const photoUrls = {
+  pug:"https://loremflickr.com/760/760/pug,dog?lock=201",
+  maltese:"https://loremflickr.com/760/760/maltese,dog?lock=202",
+  bichon:"https://loremflickr.com/760/760/bichon,frise,dog?lock=203",
+  golden:"https://loremflickr.com/760/760/golden,retriever,dog?lock=204",
+  jindo:"https://loremflickr.com/760/760/jindo,dog?lock=205",
+  yorkie:"https://loremflickr.com/760/760/yorkshire,terrier,dog?lock=206",
+  poodle:"https://loremflickr.com/760/760/poodle,dog?lock=207",
+  husky:"https://loremflickr.com/760/760/siberian,husky,dog?lock=208",
+  chihuahua:"https://loremflickr.com/760/760/chihuahua,dog?lock=209",
+  bulldog:"https://loremflickr.com/760/760/english,bulldog,dog?lock=210",
+  shihtzu:"https://loremflickr.com/760/760/shih,tzu,dog?lock=211",
+  border:"https://loremflickr.com/760/760/border,collie,dog?lock=212",
+  shepherd:"https://loremflickr.com/760/760/german,shepherd,dog?lock=213",
+  corgi:"https://loremflickr.com/760/760/welsh,corgi,dog?lock=214"
+};
+
+
+let audioCtx=null;
+
+function getAudioContext(){
+  if(!audioCtx){
+    const AC=window.AudioContext||window.webkitAudioContext;
+    if(!AC) return null;
+    audioCtx=new AC();
+  }
+  if(audioCtx.state==="suspended") audioCtx.resume();
+  return audioCtx;
+}
+
+function tone(freq,start,duration,type="sine",gain=0.12,slideTo=null){
+  const ctx=getAudioContext();
+  if(!ctx) return;
+  const osc=ctx.createOscillator();
+  const g=ctx.createGain();
+  osc.type=type;
+  osc.frequency.setValueAtTime(freq,ctx.currentTime+start);
+  if(slideTo){
+    osc.frequency.exponentialRampToValueAtTime(slideTo,ctx.currentTime+start+duration);
+  }
+  g.gain.setValueAtTime(0.0001,ctx.currentTime+start);
+  g.gain.exponentialRampToValueAtTime(gain,ctx.currentTime+start+0.012);
+  g.gain.exponentialRampToValueAtTime(0.0001,ctx.currentTime+start+duration);
+  osc.connect(g); g.connect(ctx.destination);
+  osc.start(ctx.currentTime+start);
+  osc.stop(ctx.currentTime+start+duration+0.03);
+}
+
+function playSelectSound(){
+  const ctx=getAudioContext();
+  if(!ctx) return;
+  tone(620,0,.055,"square",.045,820);
+  tone(920,.045,.07,"sine",.04,1180);
+}
+
+function playFinishSound(){
+  const ctx=getAudioContext();
+  if(!ctx) return;
+  // 밝은 상승 아르페지오
+  [523.25,659.25,783.99,1046.5].forEach((f,i)=>{
+    tone(f,i*.10,.24,"triangle",.075,f*1.04);
+  });
+  // 마지막 반짝임
+  [1318.5,1568,2093].forEach((f,i)=>{
+    tone(f,.43+i*.055,.28,"sine",.045,f*1.08);
+  });
+  // 짧은 팡 소리
+  tone(120,.43,.18,"sawtooth",.035,55);
+  tone(180,.50,.16,"square",.022,70);
+}
+
+function launchCelebration(){
+  if(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    playFinishSound();
+    return;
+  }
+  playFinishSound();
+
+  const canvas=document.getElementById("fireworksCanvas");
+  if(!canvas) return;
+  const ctx=canvas.getContext("2d");
+  canvas.classList.add("on");
+
+  let dpr=Math.min(window.devicePixelRatio||1,2);
+  function resize(){
+    canvas.width=Math.floor(innerWidth*dpr);
+    canvas.height=Math.floor(innerHeight*dpr);
+    canvas.style.width=innerWidth+"px";
+    canvas.style.height=innerHeight+"px";
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  resize();
+
+  const palette=["#e8654f","#6ca9bc","#e7b84b","#779f73","#d992a5","#8c7da8","#ffffff"];
+  const particles=[];
+  const rockets=[];
+  const start=performance.now();
+  const duration=3600;
+
+  function burst(x,y,count=72){
+    for(let i=0;i<count;i++){
+      const a=Math.random()*Math.PI*2;
+      const speed=2.2+Math.random()*5.8;
+      particles.push({
+        x,y,
+        vx:Math.cos(a)*speed,
+        vy:Math.sin(a)*speed,
+        life:1,
+        decay:.010+Math.random()*.014,
+        size:2+Math.random()*4,
+        color:palette[(Math.random()*palette.length)|0],
+        gravity:.065+Math.random()*.05,
+        trail:Math.random()>.45
+      });
+    }
+  }
+
+  function confetti(count=120){
+    for(let i=0;i<count;i++){
+      particles.push({
+        x:Math.random()*innerWidth,
+        y:-20-Math.random()*180,
+        vx:-1.5+Math.random()*3,
+        vy:2+Math.random()*3,
+        life:1,
+        decay:.004+Math.random()*.006,
+        size:4+Math.random()*5,
+        color:palette[(Math.random()*palette.length)|0],
+        gravity:.025,
+        trail:false,
+        spin:Math.random()*Math.PI,
+        spinSpeed:-.25+Math.random()*.5,
+        confetti:true
+      });
+    }
+  }
+
+  confetti(150);
+  const launchTimes=[0,240,480,720,980,1260,1540,1860,2200];
+  const points=[
+    [.18,.32],[.50,.20],[.82,.30],[.32,.44],[.68,.42],
+    [.12,.56],[.88,.56],[.45,.34],[.58,.52]
+  ];
+
+  function frame(now){
+    const elapsed=now-start;
+    ctx.clearRect(0,0,innerWidth,innerHeight);
+
+    launchTimes.forEach((t,i)=>{
+      if(!rockets[i] && elapsed>=t){
+        rockets[i]=true;
+        const [px,py]=points[i%points.length];
+        burst(innerWidth*px,innerHeight*py,64+(i%3)*16);
+        if(i===2 || i===6) confetti(45);
+      }
+    });
+
+    for(let i=particles.length-1;i>=0;i--){
+      const p=particles[i];
+      p.life-=p.decay;
+      if(p.life<=0){particles.splice(i,1);continue}
+      p.vy+=p.gravity;
+      p.x+=p.vx;
+      p.y+=p.vy;
+
+      ctx.globalAlpha=Math.max(0,p.life);
+      ctx.fillStyle=p.color;
+
+      if(p.confetti){
+        p.spin+=p.spinSpeed||0;
+        ctx.save();
+        ctx.translate(p.x,p.y);
+        ctx.rotate(p.spin);
+        ctx.fillRect(-p.size*.7,-p.size*.35,p.size*1.4,p.size*.7);
+        ctx.restore();
+      }else{
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.size*Math.max(.35,p.life),0,Math.PI*2);
+        ctx.fill();
+        if(p.trail){
+          ctx.globalAlpha=Math.max(0,p.life*.23);
+          ctx.beginPath();
+          ctx.arc(p.x-p.vx*2.2,p.y-p.vy*2.2,p.size*.55,0,Math.PI*2);
+          ctx.fill();
+        }
+      }
+    }
+
+    ctx.globalAlpha=1;
+    if(elapsed<duration || particles.length){
+      requestAnimationFrame(frame);
+    }else{
+      canvas.classList.remove("on");
+      ctx.clearRect(0,0,innerWidth,innerHeight);
+    }
+  }
+  requestAnimationFrame(frame);
+}
+
+let current=0;
+let answersState=new Array(questions.length).fill(null);
+let lastResult=null;
+
+const $=s=>document.querySelector(s);
+function show(id){
+  document.querySelectorAll(".screen").forEach(x=>x.classList.remove("active"));
+  $("#"+id).classList.add("active");
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+function renderQuestion(){
+  const item=questions[current];
+  $("#qLabel").classList.add("fun-label");
+  $("#qLabel").textContent=`QUESTION ${String(current+1).padStart(2,"0")} · 집사 공감 TEST`;
+  $("#qText").textContent=item.q;
+  $("#count").textContent=`${current+1} / ${questions.length}`;
+  $("#progress").style.width=`${((current)/questions.length)*100}%`;
+  $("#backBtn").style.visibility=current===0?"hidden":"visible";
+  const wrap=$("#answers"); wrap.innerHTML="";
+  item.a.forEach((opt,idx)=>{
+    const b=document.createElement("button");
+    b.className="answer"+(answersState[current]?.idx===idx?" selected":"");
+    b.textContent=opt[0];
+    b.dataset.letter=["A","B","C","D"][idx];
+    b.onclick=()=>{
+      playSelectSound();
+      answersState[current]={values:opt[1],affinity:opt[2],idx};
+      b.classList.add("selected");
+      setTimeout(()=>{
+        if(current<questions.length-1){current++;renderQuestion()}
+        else{calculateResult()}
+      },150);
+    };
+    wrap.appendChild(b);
+  });
+}
+function calculateResult(){
+  const scores={S:0,A:0,E:0,I:0,C:0,V:0};
+  const counts={S:0,A:0,E:0,I:0,C:0,V:0};
+  const affinity={};
+  const affinityMax={};
+
+  dogs.forEach(d=>{
+    affinity[d.id]=0;
+    affinityMax[d.id]=0;
+  });
+
+  // 견종별 가능한 최대 직접 친화도 계산
+  questions.forEach(q=>{
+    dogs.forEach(d=>{
+      let best=0;
+      q.a.forEach(opt=>{
+        best=Math.max(best,(opt[2] && opt[2][d.id]) || 0);
+      });
+      affinityMax[d.id]+=best;
+    });
+  });
+
+  answersState.forEach(a=>{
+    if(!a) return;
+
+    Object.entries(a.values).forEach(([k,v])=>{
+      scores[k]+=v;
+      counts[k]++;
+    });
+
+    Object.entries(a.affinity || {}).forEach(([dogId,point])=>{
+      affinity[dogId]=(affinity[dogId]||0)+point;
+    });
+  });
+
+  Object.keys(scores).forEach(k=>{
+    scores[k]=counts[k] ? Math.round(scores[k]/counts[k]) : 50;
+  });
+
+  const ranked=dogs.map(d=>{
+    let sum=0;
+    Object.keys(scores).forEach(k=>{
+      sum+=Math.pow(scores[k]-d.p[k],2);
+    });
+
+    const dist=Math.sqrt(sum/Object.keys(scores).length);
+    const traitFit=Math.max(0,100-dist);
+    const directFit=affinityMax[d.id]
+      ? (affinity[d.id]/affinityMax[d.id])*100
+      : 0;
+
+    // 기존처럼 6축 평균값 하나에 결과가 몰리지 않도록
+    // 직접 선택 친화도를 주 점수로 사용하고 6축은 보정값으로 사용
+    const finalScore=(directFit*0.75)+(traitFit*0.25);
+    const match=Math.max(1,Math.min(99,Math.round(58+(finalScore*0.4))));
+
+    return {
+      ...d,
+      dist,
+      traitFit,
+      directFit,
+      finalScore,
+      match
+    };
+  }).sort((a,b)=>{
+    if(b.finalScore!==a.finalScore) return b.finalScore-a.finalScore;
+    if(b.directFit!==a.directFit) return b.directFit-a.directFit;
+    return b.traitFit-a.traitFit;
+  });
+
+  lastResult={scores,ranked};
+  renderResult(scores,ranked);
+}
+function renderResult(scores,ranked){
+  const d=ranked[0];
+  $("#resultPhoto").src=photoUrls[d.id];
+  $("#resultPhoto").alt=d.name;
+  $("#photoCaption").textContent=d.name;
+  $("#resultName").innerHTML=`${d.name}<br><span style="font-size:.45em;letter-spacing:-.04em">${d.title}</span>`;
+  $("#resultMotto").textContent=d.motto;
+  $("#resultDesc").textContent=d.desc;
+  $("#matchChip").textContent=`집사 성향 적합도 · ${d.match}%`;
+  $("#strengthList").innerHTML=d.strengths.map(x=>`<li>${x}</li>`).join("");
+  $("#riskList").innerHTML=d.risks.map(x=>`<li>${x}</li>`).join("");
+  $("#workStyle").textContent=d.work;
+  $("#relationStyle").textContent=d.relation;
+
+  $("#axisChart").innerHTML=Object.entries(dims).map(([k,label])=>`
+    <div class="axis-row">
+      <span>${label}</span>
+      <div class="axis-bar"><i data-w="${scores[k]}%"></i></div>
+      <strong>${scores[k]}</strong>
+    </div>`).join("");
+  $("#top3").innerHTML=ranked.slice(0,3).map(x=>`
+    <div class="top-card">
+      <img src="${photoUrls[x.id]}" alt="${x.name}">
+      <b>${x.name}</b><span>${x.match}%</span>
+    </div>`).join("");
+
+  show("result");
+  requestAnimationFrame(()=>setTimeout(()=>{
+    document.querySelectorAll(".axis-bar i").forEach(i=>i.style.width=i.dataset.w);
+  },120));
+  setTimeout(launchCelebration,180);
+}
+function toast(msg){
+  const t=$("#toast");t.textContent=msg;t.classList.add("on");
+  setTimeout(()=>t.classList.remove("on"),1800);
+}
+
+$("#startBtn").onclick=()=>{getAudioContext();current=0;answersState.fill(null);show("quiz");renderQuestion()};
+$("#startBtn").addEventListener("touchstart",()=>getAudioContext(),{passive:true});
+$("#backBtn").onclick=()=>{if(current>0){current--;renderQuestion()}};
+$("#restartBtn").onclick=()=>{current=0;answersState.fill(null);show("landing")};
+
+function loadImageForCanvas(src){
+  return new Promise((resolve,reject)=>{
+    const img=new Image();
+    img.crossOrigin="anonymous";
+    img.onload=()=>resolve(img);
+    img.onerror=()=>reject(new Error("image load failed"));
+    img.src=src;
+  });
+}
+
+async function buildResultCard(){
+  if(!lastResult) throw new Error("no result");
+  const d=lastResult.ranked[0];
+  const scores=lastResult.scores;
+
+  const canvas=document.createElement("canvas");
+  canvas.width=1080;
+  canvas.height=1350;
+  const ctx=canvas.getContext("2d");
+
+  const bg=ctx.createLinearGradient(0,0,1080,1350);
+  bg.addColorStop(0,"#F4E5CC");
+  bg.addColorStop(.52,"#FFF8EA");
+  bg.addColorStop(1,"#EEDFC4");
+  ctx.fillStyle=bg;
+  ctx.fillRect(0,0,1080,1350);
+
+  ctx.globalAlpha=.05;
+  for(let y=0;y<1350;y+=7){
+    ctx.fillStyle=(y/7)%2===0?"#5c4636":"#ffffff";
+    ctx.fillRect(0,y,1080,1);
+  }
+  ctx.globalAlpha=1;
+
+  ctx.save();
+  ctx.translate(92,88);
+  ctx.rotate(-0.035);
+  ctx.fillStyle="#6ca9bc";
+  ctx.fillRect(0,0,360,62);
+  ctx.fillStyle="#fff";
+  ctx.font='900 28px Arial, "Apple SD Gothic Neo", sans-serif';
+  ctx.fillText("MY DOGSONALITY",22,41);
+  ctx.restore();
+
+  ctx.fillStyle="#1f1b18";
+  ctx.font='900 72px Arial, "Apple SD Gothic Neo", sans-serif';
+  ctx.fillText("나는 어떤 강아지일까?",86,238);
+
+  ctx.save();
+  ctx.translate(540,535);
+  ctx.rotate(-0.045);
+  ctx.shadowColor="rgba(60,40,20,.18)";
+  ctx.shadowBlur=25;
+  ctx.shadowOffsetY=15;
+  ctx.fillStyle="#fffdf7";
+  ctx.fillRect(-330,-260,660,660);
+  ctx.restore();
+
+  try{
+    const img=await loadImageForCanvas(photoUrls[d.id]);
+    const size=Math.min(img.naturalWidth,img.naturalHeight);
+    const sx=(img.naturalWidth-size)/2;
+    const sy=(img.naturalHeight-size)/2;
+    ctx.save();
+    ctx.translate(540,515);
+    ctx.rotate(-0.045);
+    ctx.drawImage(img,sx,sy,size,size,-300,-230,600,600);
+    ctx.restore();
+  }catch(e){
+    ctx.save();
+    ctx.translate(540,515);
+    ctx.rotate(-0.045);
+    ctx.fillStyle="#eadcc7";
+    ctx.fillRect(-300,-230,600,600);
+    ctx.fillStyle="#7c6b5f";
+    ctx.font='900 54px Arial, sans-serif';
+    ctx.textAlign="center";
+    ctx.fillText("DOGSONALITY",-0,70);
+    ctx.restore();
+  }
+
+  ctx.textAlign="center";
+  ctx.fillStyle="#1f1b18";
+  ctx.font='1000 82px Arial, "Apple SD Gothic Neo", sans-serif';
+  ctx.fillText(d.name,540,980);
+
+  ctx.font='900 40px Arial, "Apple SD Gothic Neo", sans-serif';
+  ctx.fillStyle="#e8654f";
+  ctx.fillText(d.title,540,1035);
+
+  ctx.fillStyle="#4f463f";
+  ctx.font='700 28px Arial, "Apple SD Gothic Neo", sans-serif';
+  const motto=d.motto.replace(/[“”"]/g,"");
+  const maxWidth=850;
+  const words=motto.split(" ");
+  let line="";
+  let y=1095;
+  for(const word of words){
+    const test=line+word+" ";
+    if(ctx.measureText(test).width>maxWidth && line){
+      ctx.fillText(line.trim(),540,y);
+      line=word+" ";
+      y+=40;
+    }else{
+      line=test;
+    }
+  }
+  if(line) ctx.fillText(line.trim(),540,y);
+
+  const axisKeys=["S","A","E","I","C","V"];
+  const labels=["사회성","애착성","활동성","독립성","계획성","민감성"];
+  const startX=115, baseY=1195, barW=125, gap=42;
+  axisKeys.forEach((k,i)=>{
+    const x=startX+i*(barW+gap);
+    ctx.fillStyle="#d8cbb8";
+    ctx.fillRect(x,baseY,barW,12);
+    ctx.fillStyle="#6ca9bc";
+    ctx.fillRect(x,baseY,barW*(scores[k]/100),12);
+    ctx.fillStyle="#51483f";
+    ctx.font='800 20px Arial, "Apple SD Gothic Neo", sans-serif';
+    ctx.textAlign="center";
+    ctx.fillText(labels[i],x+barW/2,baseY+42);
+  });
+
+  ctx.textAlign="center";
+  ctx.fillStyle="#1f1b18";
+  ctx.font='900 22px Arial, sans-serif';
+  ctx.fillText("made by PCOSSAM · VIBE CODING CLASS",540,1310);
+
+  return await new Promise((resolve,reject)=>{
+    canvas.toBlob(blob=>{
+      if(blob) resolve(blob);
+      else reject(new Error("blob failed"));
+    },"image/png",0.95);
+  });
+}
+
+
+
+
+let lastCaptureUrl=null;
+
+function closeCaptureModal(){
+  const modal=document.getElementById("captureModal");
+  if(modal){
+    modal.classList.remove("on");
+    modal.setAttribute("aria-hidden","true");
+  }
+}
+
+async function makeResultCapture(){
+  if(!lastResult) return;
+  const btn=document.getElementById("captureBtn");
+  const original=btn.textContent;
+  btn.disabled=true;
+  btn.textContent="이미지 만드는 중…";
+  try{
+    const blob=await buildResultCard();
+    if(lastCaptureUrl) URL.revokeObjectURL(lastCaptureUrl);
+    lastCaptureUrl=URL.createObjectURL(blob);
+    const preview=document.getElementById("capturePreview");
+    preview.src=lastCaptureUrl;
+
+    const modal=document.getElementById("captureModal");
+    modal.classList.add("on");
+    modal.setAttribute("aria-hidden","false");
+  }catch(e){
+    toast("결과 이미지를 만들 수 없습니다.");
+  }finally{
+    btn.disabled=false;
+    btn.textContent=original;
+  }
+}
+
+document.getElementById("captureBtn").onclick=makeResultCapture;
+document.getElementById("captureClose").onclick=closeCaptureModal;
+document.getElementById("captureDone").onclick=closeCaptureModal;
+document.querySelector(".capture-backdrop").onclick=closeCaptureModal;
+
+document.getElementById("downloadCapture").onclick=()=>{
+  if(!lastCaptureUrl || !lastResult) return;
+  const d=lastResult.ranked[0];
+  const a=document.createElement("a");
+  a.href=lastCaptureUrl;
+  a.download=`DOGSONALITY_${d.name}_PCOSSAM.png`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+};
+
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape") closeCaptureModal();
+});
+
+</script>
+</body>
+</html>
