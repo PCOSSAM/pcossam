@@ -458,9 +458,9 @@
 
   /* ── HERO ── */
   #hero {
-    min-height: 100vh;
+    min-height: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     padding-top: 64px;
     background: var(--black);
     position: relative;
@@ -468,7 +468,8 @@
   }
   .hero-left {
     display: flex; flex-direction: column; justify-content: center;
-    padding: 80px 6% 80px 8%;
+    max-width: 1180px; width: 100%; margin: 0 auto;
+    padding: 72px 6% 64px;
     position: relative; z-index: 2;
   }
   .hero-badge {
@@ -717,7 +718,7 @@
   #stats {
     background: var(--accent);
     padding: 80px 8%;
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 40px 48px;
   }
   .stat-block { text-align: center; }
   .stat-big { font-size: 48px; font-weight: 900; color: var(--white); letter-spacing: -2px; line-height: 1; }
@@ -1332,6 +1333,28 @@ section { position: relative; }
 
 <!-- HERO -->
 <section id="hero">
+<style>
+  .pc-crs-wrap{margin-top:44px;padding-top:36px;border-top:1px solid rgba(255,255,255,0.1)}
+  .pc-crs-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+  .pc-crs-head .eyebrow{font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--gold);text-transform:uppercase}
+  .pc-crs-head h2{margin:0;font-size:20px;font-weight:800;color:#fff}
+  .pc-crs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .pc-crs-card{border:1px solid rgba(255,255,255,0.14);border-radius:14px;overflow:hidden;background:rgba(255,255,255,0.03);display:flex;flex-direction:column}
+  .pc-crs-link{display:block;text-decoration:none;color:inherit}
+  .pc-crs-thumb{width:100%;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center}
+  .pc-crs-thumb .ico{font-size:38px;line-height:1}
+  .pc-crs-thumb.g1{background:linear-gradient(135deg,#1A3A5C,#2c5480)}
+  .pc-crs-thumb.g2{background:linear-gradient(135deg,#1A3A5C,#3a5f7d)}
+  .pc-crs-thumb.g3{background:linear-gradient(135deg,#1A3A5C,#0f2439)}
+  .pc-crs-body{padding:16px 16px 18px}
+  .pc-crs-badge{display:block;font-size:11.5px;font-weight:700;color:var(--gold);margin-bottom:8px}
+  .pc-crs-body h3{margin:0 0 8px;font-size:16px;font-weight:800;color:#fff;line-height:1.35}
+  .pc-crs-body p{margin:0;font-size:13px;color:rgba(250,250,248,0.65);line-height:1.6}
+  .pc-crs-next{display:block;padding:10px 16px 14px;font-size:12.5px;font-weight:700;color:var(--gold);text-decoration:none;border-top:1px dashed rgba(200,151,58,0.3);margin-top:auto}
+  .pc-crs-next:hover{text-decoration:underline}
+  .pc-crs-note{margin:16px 2px 0;font-size:12.5px;color:rgba(250,250,248,0.45)}
+  @media(max-width:900px){ .pc-crs-grid{grid-template-columns:1fr} }
+</style>
   <div class="hero-left">
     <div class="hero-badge">AI 프레젠테이션 컨설팅 · 발표 코칭 · 기업 AI 교육</div>
     <h1 class="hero-title">
@@ -1350,84 +1373,47 @@ section { position: relative; }
       <a href="/dogsonality.html" class="btn-fun">🐶 성향 테스트 해보기</a>
     </div>
 
-
-
-    <a href="/services/pitchdeck-consulting.html" class="hero-new-service">
-      <span class="tag">HUB</span>
-      <span class="desc"><strong>AI 프레젠테이션·보고서 컨설팅</strong> — 피코쌤 방법론으로 아이디어를 설득력 있는 발표로 설계합니다.</span>
-      <span class="arrow">→</span>
-    </a>
-
-    <div class="hero-video-card">
-      <div class="hero-video-thumb" onclick="this.innerHTML='<iframe src=&quot;https://www.youtube.com/embed/71YQmidVYHE?autoplay=1&quot; title=&quot;피코쌤 강의 영상 샘플&quot; style=&quot;width:100%;height:100%;border:0;&quot; allow=&quot;accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen></iframe>';">
-        <img src="https://img.youtube.com/vi/71YQmidVYHE/hqdefault.jpg" alt="피코쌤 강의 영상 샘플 썸네일" loading="lazy">
-        <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    <div class="pc-crs-wrap">
+      <div class="pc-crs-head"><span class="eyebrow">Now Booking</span><h2>지금 바로 문의 가능한 과정</h2></div>
+      <div class="pc-crs-grid">
+        <div class="pc-crs-card">
+          <a class="pc-crs-link" href="/services/generative-ai-training.html">
+            <div class="pc-crs-thumb g1"><span class="ico">💼</span></div>
+            <div class="pc-crs-body">
+              <span class="pc-crs-badge">기업·기관 실무 담당 직원 · 4시간</span>
+              <h3>AI시대 요구되는 실무 역량</h3>
+              <p>이론·사례 2시간 + 챗GPT·제미나이·클로드 실습 2시간</p>
+            </div>
+          </a>
+          <a class="pc-crs-next" href="/services/generative-ai-training.html#advanced">+ 수료자를 위한 심화과정(6시간)도 있어요 →</a>
+        </div>
+        <div class="pc-crs-card">
+          <a class="pc-crs-link" href="/services/ai-career-portfolio.html">
+            <div class="pc-crs-thumb g2"><span class="ico">🎓</span></div>
+            <div class="pc-crs-body">
+              <span class="pc-crs-badge">대학생·취업준비생 · 4시간</span>
+              <h3>AI시대, 나만의 커리어 포트폴리오 만들기</h3>
+              <p>AI 스킬 정리부터 1인 1홈페이지, AI 모의면접까지</p>
+            </div>
+          </a>
+        </div>
+        <div class="pc-crs-card">
+          <a class="pc-crs-link" href="/services/ai-leadership.html">
+            <div class="pc-crs-thumb g3"><span class="ico">🧭</span></div>
+            <div class="pc-crs-body">
+              <span class="pc-crs-badge">CEO·예비CEO·경영진 · 4시간</span>
+              <h3>AI시대 요구되는 리더십과 조직문화</h3>
+              <p>AI 활용을 넘어 리더가 다시 설계해야 할 사고방식과 조직문화</p>
+            </div>
+          </a>
+        </div>
       </div>
-      <div class="hero-video-caption">[피코쌤 특강 · 맛보기 샘플] 직접 콘텐츠를 개발하고 PPT로 만들어 발표까지 — 컨설팅·코칭도 이 방식으로 진행됩니다. 같은 방식의 전체 특강을 아래에서 무료로 만나보세요.</div>
-      <a href="https://khp-connect.elice.io/courses/785271/info" target="_blank" rel="noopener" class="hero-vod-cta">▶ 무료 특강 VOD 보러가기 (2시간 43분)</a>
-    </div>
-
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-num">200<span style="font-size:20px;color:var(--gold)">+</span></div>
-        <div class="stat-label">연 강의 횟수</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">5,000<span style="font-size:20px;color:var(--gold)">+</span></div>
-        <div class="stat-label">연 수강생 수</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">30<span style="font-size:20px;color:var(--gold)">+</span></div>
-        <div class="stat-label">협력 기관 수</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">120<span style="font-size:20px;color:var(--gold)">+</span></div>
-        <div class="stat-label">누적 PT컨설팅 용역</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">1,800<span style="font-size:16px;color:var(--gold)">억+</span></div>
-        <div class="stat-label">누적 프로젝트 수주액</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">150<span style="font-size:20px;color:var(--gold)">+</span></div>
-        <div class="stat-label">누적 PT코칭 수행</div>
-      </div>
-    </div>
-    <div class="hero-subcaption-mobile">지금 보시는 웹사이트는 100% 클로드 바이브 코딩으로 제작되었고,<br>이미지는 챗GPT로 생성했습니다.</div>
-  </div>
-  <div class="hero-right">
-    <img src="assets/inline/pcossam-inline-02.jpg" alt="AI 프레젠테이션 컨설턴트 김민구">
-    <div class="hero-handwrite-wrap">
-      <div class="hero-subcaption">지금 보시는 웹사이트는 100% 클로드 바이브 코딩으로 제작되었고,<br>이미지는 챗GPT로 생성했습니다.</div>
+      <p class="pc-crs-note">가격은 대상·시간에 따라 달라져 문의로 안내드립니다 · 1:1 맞춤 컨설팅이 필요하다면 <a href="/services/pitchdeck-consulting.html" style="color:var(--gold);">AI 프레젠테이션·보고서 컨설팅</a>도 함께 보세요 · 이 3개 과정 소개 페이지도 100% 클로드 바이브 코딩으로 제작되었습니다.</p>
     </div>
   </div>
 </section>
 
-<!-- ===== 캠페인 띠 배너 : 영상 공개 기간(2~4주) 한정. 종료 시 이 블록 삭제 ===== -->
-<style>
-  .pcx-strip{background:#1A3A5C;padding:0}
-  .pcx-strip a{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;
-    max-width:1120px;margin:0 auto;padding:14px 24px;text-decoration:none;color:#fff;
-    font-family:'Noto Sans KR',sans-serif;transition:opacity .2s}
-  .pcx-strip a:hover{opacity:.86}
-  .pcx-strip .tag{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
-    color:#1A3A5C;background:#C8973A;border-radius:20px;padding:4px 10px;white-space:nowrap}
-  .pcx-strip .txt{font-size:14px;font-weight:600;letter-spacing:-.2px}
-  .pcx-strip .txt b{font-weight:800}
-  .pcx-strip .go{font-size:13px;font-weight:800;color:#C8973A;white-space:nowrap}
-  @media(max-width:640px){
-    .pcx-strip a{gap:8px;padding:12px 18px}
-    .pcx-strip .txt{font-size:13px;text-align:center}
-  }
-</style>
-<div class="pcx-strip">
-  <a href="/lab/course-builder.html" data-pcx="home_strip_builder">
-    <span class="tag">NEW</span>
-    <span class="txt">영상에서 보신 <b>‘피코쌤 강의 구성기’</b> — 커리큘럼을 자동으로 짜주는 도구를 공개합니다</span>
-    <span class="go">직접 눌러보기 →</span>
-  </a>
-</div>
-<!-- ===== 캠페인 띠 배너 끝 ===== -->
+<!-- 캠페인 띠 배너는 제거하고, '피코쌤 강의 구성기' NEW 카드를 아래 무료 제공 섹션으로 옮겼습니다 -->
 
 <!-- SERVICES & PRICING (통합) -->
   <!--
@@ -1509,6 +1495,26 @@ section { position: relative; }
   padding:14px 30px;border-radius:8px;text-decoration:none;transition:background .2s;
 }
 .pc-clips .pc-btn:hover{background:#122A44}
+.pc-clips .pc-featured{
+  max-width:640px;margin:0 auto 46px;background:#0f1f30;border-radius:16px;overflow:hidden;
+  box-shadow:0 10px 32px rgba(26,58,92,.18);
+}
+.pc-clips .pc-feat-thumb{position:relative;width:100%;aspect-ratio:16/9;cursor:pointer;background:#000}
+.pc-clips .pc-feat-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.pc-clips .pc-feat-thumb .play-btn{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:64px;height:64px;border-radius:50%;background:#C8973A;
+  display:flex;align-items:center;justify-content:center;transition:transform .2s;
+}
+.pc-clips .pc-feat-thumb:hover .play-btn{transform:translate(-50%,-50%) scale(1.08)}
+.pc-clips .pc-feat-thumb .play-btn svg{width:24px;height:24px;fill:#0f1f30}
+.pc-clips .pc-feat-caption{padding:16px 20px;font-size:13px;color:rgba(255,255,255,.75);line-height:1.6}
+.pc-clips .pc-feat-cta{
+  display:inline-flex;align-items:center;gap:8px;margin:0 20px 18px;
+  background:rgba(200,151,58,.15);border:1px solid rgba(200,151,58,.5);color:#C8973A;
+  font-size:13.5px;font-weight:700;padding:9px 16px;border-radius:8px;text-decoration:none;transition:all .2s;
+}
+.pc-clips .pc-feat-cta:hover{background:rgba(200,151,58,.28)}
 @media (max-width:900px){
   .pc-clips{padding:52px 0}
   .pc-clips h2{font-size:1.4rem}
@@ -1528,6 +1534,15 @@ section { position: relative; }
       <span class="pc-eyebrow">LECTURE PREVIEW</span>
       <h2>강의를 1분만 보시면<br>섭외 여부를 판단하실 수 있습니다</h2>
       <p class="pc-sub">기업 특강 &lsquo;AI 친화적 업무 혁신&rsquo; 현장에서 촬영한 실제 강의 클립입니다.</p>
+    </div>
+
+    <div class="pc-featured">
+      <div class="pc-feat-thumb" onclick="this.innerHTML='<iframe src=&quot;https://www.youtube.com/embed/71YQmidVYHE?autoplay=1&quot; title=&quot;피코쌤 강의 영상 샘플&quot; style=&quot;width:100%;height:100%;border:0;&quot; allow=&quot;accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen></iframe>';">
+        <img src="https://img.youtube.com/vi/71YQmidVYHE/hqdefault.jpg" alt="피코쌤 강의 영상 샘플 썸네일" loading="lazy">
+        <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="pc-feat-caption">[피코쌤 특강 · 맛보기 샘플] 직접 콘텐츠를 개발하고 PPT로 만들어 발표까지 — 컨설팅·코칭도 이 방식으로 진행됩니다. 같은 방식의 전체 특강을 무료로 만나보세요.</div>
+      <a href="https://khp-connect.elice.io/courses/785271/info" target="_blank" rel="noopener" class="pc-feat-cta">▶ 무료 특강 VOD 보러가기 (2시간 43분)</a>
     </div>
 
     <div class="pc-grid">
@@ -1602,20 +1617,27 @@ document.querySelectorAll('.pc-clips .pc-player').forEach(function(el){
 </script>
 </section>
 <!-- ════════ 강의 미리보기 섹션 끝 ════════ -->
-<section id="services">
-  <div class="section-label">SERVICES</div>
-  <h2 class="section-title">모든 것은 '전달'에서 시작합니다</h2>
-  <p class="section-sub">중심은 프레젠테이션입니다. 발표를 축으로 보고서·웹사이트·AI 마케팅까지 하나의 흐름으로 연결됩니다. 생성형 AI는 목적이 아니라, 그 흐름을 더 빠르고 설득력 있게 만드는 도구입니다.</p>
 
-  <div style="text-align:center; margin-top:24px;">
-    <span style="display:inline-flex; align-items:center; gap:8px; padding:8px 20px; background:var(--gold-light); border:1px solid var(--gold); border-radius:100px; font-size:13px; font-weight:700; color:var(--accent); letter-spacing:0.02em;">✦ ChatGPT · Claude 기반 실무형 교육</span>
-  </div>
-
-  <div class="blog-grid" style="margin-top:36px;">
-
-    <div class="svc-tools-divider">
-      <span class="lbl">TOOLS</span>
-      <span class="sub">맞춤 설계 도구 · 무료 자료</span>
+<!-- ════════ 무료 제공 섹션 시작 ════════ -->
+<section id="free-resources">
+<style>
+  #free-resources{padding:64px 0;background:#fff;border-top:1px solid var(--gray-200,#e5e7eb)}
+  #free-resources .fr-wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  #free-resources .fr-head{text-align:center;margin-bottom:34px}
+  #free-resources .fr-eyebrow{
+    display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.12em;
+    color:#C8973A;border:1px solid rgba(200,151,58,.4);
+    padding:5px 13px;border-radius:99px;margin-bottom:14px;
+  }
+  #free-resources h2{font-size:1.85rem;font-weight:900;letter-spacing:-.025em;color:#1A3A5C;margin:0 0 10px}
+  #free-resources .fr-sub{color:#5A6875;font-size:1rem;margin:0}
+  #free-resources .fr-more{margin-top:28px;padding:18px 22px;border:1px dashed var(--gray-200,#d8dee5);border-radius:12px;font-size:13px;color:#8b96a3;text-align:center}
+</style>
+  <div class="fr-wrap">
+    <div class="fr-head">
+      <span class="fr-eyebrow">FREE</span>
+      <h2>무료로 먼저 받아보세요</h2>
+      <p class="fr-sub">피코쌤이 실제 업무·강의에 쓰는 도구와 자료를 그대로 공개합니다.</p>
     </div>
 
     <div class="svc-tools-row">
@@ -1696,8 +1718,22 @@ document.querySelectorAll('.pc-clips .pc-player').forEach(function(el){
       </a>
     </div>
 
+    <!-- 여기에 교육 실습용 무료 자료 카드를 추가할 예정입니다 (svc-tool-card 형식으로 이어서 추가) -->
+    <div class="fr-more">실습 때 제공하는 자료도 이곳에 곧 추가될 예정입니다.</div>
+  </div>
+</section>
+<!-- ════════ 무료 제공 섹션 끝 ════════ -->
 
+<section id="services">
+  <div class="section-label">SERVICES</div>
+  <h2 class="section-title">모든 것은 '전달'에서 시작합니다</h2>
+  <p class="section-sub">중심은 프레젠테이션입니다. 발표를 축으로 보고서·웹사이트·AI 마케팅까지 하나의 흐름으로 연결됩니다. 생성형 AI는 목적이 아니라, 그 흐름을 더 빠르고 설득력 있게 만드는 도구입니다.</p>
 
+  <div style="text-align:center; margin-top:24px;">
+    <span style="display:inline-flex; align-items:center; gap:8px; padding:8px 20px; background:var(--gold-light); border:1px solid var(--gold); border-radius:100px; font-size:13px; font-weight:700; color:var(--accent); letter-spacing:0.02em;">✦ ChatGPT · Claude 기반 실무형 교육</span>
+  </div>
+
+  <div class="blog-grid" style="margin-top:36px;">
 
 <a class="blog-card" href="/services/pitchdeck-consulting.html">
       <div class="blog-card-thumb" style="padding:0;overflow:hidden;"><img src="assets/inline/pcossam-inline-06.jpg" alt="프레젠테이션 전략 · 피치덱 컨설팅" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"></div>
@@ -1725,15 +1761,35 @@ document.querySelectorAll('.pc-clips .pc-player').forEach(function(el){
     </div>
 
     <div class="blog-card" style="cursor:default;">
-      <div class="blog-card-thumb" style="padding:0;overflow:hidden;"><img src="assets/inline/pcossam-inline-05.jpg" alt="기업 AI 프레젠테이션 교육 현장" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"></div>
+      <div class="blog-card-thumb" style="padding:0;overflow:hidden;"><img src="assets/inline/pcossam-inline-05.jpg" alt="기업 AI 실무 역량 교육 현장" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"></div>
       <div class="blog-card-body">
-        <div class="blog-card-category">기업 교육</div>
-        <div class="blog-card-title"><a href="/services/generative-ai-training.html" style="color:inherit;text-decoration:none;">생성형 AI 실무교육</a></div>
-        <div class="blog-card-desc">ChatGPT와 Claude를 업무 흐름에 맞게 씁니다. 보고서 작성, 자료조사, 발표자료 기획, 회의자료 정리를 실습합니다.</div>
-        <div class="blog-card-meta">120만원부터 / 1회 · <a href="/services/generative-ai-training.html" style="color:inherit;">자세히 보기 →</a></div>
+        <div class="blog-card-category">기업 교육 · 가장 많이 찾는 과정</div>
+        <div class="blog-card-title"><a href="/services/generative-ai-training.html" style="color:inherit;text-decoration:none;">AI시대 요구되는 실무 역량</a></div>
+        <div class="blog-card-desc">이론·사례 2시간 + 챗GPT·제미나이·클로드 실습 2시간. 수료자를 위한 6시간 심화과정으로 이어집니다.</div>
+        <div class="blog-card-meta">4시간 · 기업·기관 실무 담당 직원 · <a href="/services/generative-ai-training.html" style="color:inherit;">자세히 보기 →</a></div>
         <div class="blog-card-meta"><a href="https://blog.naver.com/specskillscontents/224345217076" target="_blank" rel="noopener noreferrer" style="color:var(--gold);font-weight:600;text-decoration:none;">A은행 실전 교육 후기 ↗</a></div>
       </div>
     </div>
+
+    <a class="blog-card" href="/services/ai-career-portfolio.html">
+      <div class="blog-card-thumb" style="padding:0;overflow:hidden;background:linear-gradient(135deg,#1A3A5C,#2c5480);display:flex;align-items:center;justify-content:center;font-size:40px;">🎓</div>
+      <div class="blog-card-body">
+        <div class="blog-card-category">기업 교육 · 신규</div>
+        <div class="blog-card-title">AI시대, 나만의 커리어 포트폴리오 만들기</div>
+        <div class="blog-card-desc">AI 스킬 정리부터 1인 1홈페이지 포트폴리오 사이트 제작, AI 모의면접까지. 대학생·취업준비생 대상입니다.</div>
+        <div class="blog-card-meta">4시간 · 대학생·취업준비생 · 자세히 보기 →</div>
+      </div>
+    </a>
+
+    <a class="blog-card" href="/services/ai-leadership.html">
+      <div class="blog-card-thumb" style="padding:0;overflow:hidden;background:linear-gradient(135deg,#1A3A5C,#0f2439);display:flex;align-items:center;justify-content:center;font-size:40px;">🧭</div>
+      <div class="blog-card-body">
+        <div class="blog-card-category">기업 교육 · 신규</div>
+        <div class="blog-card-title">AI시대 요구되는 리더십과 조직문화</div>
+        <div class="blog-card-desc">AI 활용을 넘어, 리더가 다시 설계해야 할 사고방식과 조직문화. CEO·예비CEO·경영진 대상입니다.</div>
+        <div class="blog-card-meta">4시간 · CEO·예비CEO·경영진 · 자세히 보기 →</div>
+      </div>
+    </a>
 
 <div class="blog-card" style="cursor:default;">
       <div class="blog-card-thumb" style="padding:0;overflow:hidden;">
@@ -1870,6 +1926,18 @@ document.querySelectorAll('.pc-clips .pc-player').forEach(function(el){
   <div class="stat-block">
     <div class="stat-big">80<span class="stat-unit">%+</span></div>
     <div class="stat-desc">만족·매우만족 응답률</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-big">120<span class="stat-unit">+</span></div>
+    <div class="stat-desc">누적 PT컨설팅 용역</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-big">1,800<span class="stat-unit">억+</span></div>
+    <div class="stat-desc">누적 프로젝트 수주액</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-big">150<span class="stat-unit">+</span></div>
+    <div class="stat-desc">누적 PT코칭 수행</div>
   </div>
 </section>
 
