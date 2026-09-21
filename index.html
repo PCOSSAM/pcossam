@@ -1404,6 +1404,51 @@ section { position: relative; }
   </div>
 </section>
 
+<!-- ════════════════════════════════════════════════════════════════
+  피코쌤의 오늘의 시선 (매일/수시 업데이트되는 생각 섹션)
+  ▶ 아래 "여기부터 매일 수정" ~ "여기까지" 사이 텍스트만 바꾸면 됩니다.
+  ▶ 날짜(PC-LENS-DATE), 훅 문구(PC-LENS-HOOK), 서브타이틀(PC-LENS-SUB),
+    본문(PC-LENS-BODY) 4곳만 교체하세요. 나머지 마크업은 그대로 두세요.
+════════════════════════════════════════════════════════════════ -->
+<section class="pc-lens" id="pc-lens">
+<style>
+.pc-lens{padding:64px 0;background:#FAFAF8;border-top:1px solid rgba(26,58,92,.08);border-bottom:1px solid rgba(26,58,92,.08)}
+.pc-lens .pc-lens-wrap{max-width:820px;margin:0 auto;padding:0 24px}
+.pc-lens-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.pc-lens-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.75rem;font-weight:800;letter-spacing:.12em;color:#C8973A;text-transform:uppercase}
+.pc-lens-eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:#C8973A;display:inline-block}
+.pc-lens-date{font-size:.8rem;color:#8b8b85;font-weight:600}
+.pc-lens-hook{font-family:'Noto Serif KR',serif;font-size:clamp(22px,3.4vw,30px);font-weight:700;line-height:1.5;color:#1A3A5C;margin:0 0 12px}
+.pc-lens-sub{font-size:.95rem;font-weight:600;color:#C8973A;margin:0 0 16px}
+.pc-lens-body{font-size:1rem;line-height:1.8;color:#3a3a38;margin:0 0 26px}
+.pc-lens-foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;padding-top:20px;border-top:1px dashed rgba(26,58,92,.18)}
+.pc-lens-by{font-size:.82rem;color:#8b8b85}
+.pc-lens-by strong{color:#1A3A5C}
+.pc-lens-more{font-size:.85rem;font-weight:700;color:#1A3A5C;text-decoration:none;white-space:nowrap}
+.pc-lens-more:hover{text-decoration:underline}
+@media(max-width:600px){.pc-lens{padding:48px 0}}
+</style>
+  <div class="pc-lens-wrap">
+    <div class="pc-lens-head">
+      <span class="pc-lens-eyebrow">피코쌤의 오늘의 시선</span>
+      <!-- 여기부터 매일 수정 -->
+      <span class="pc-lens-date">2026.09.21</span>
+    </div>
+    <p class="pc-lens-hook">이제 회사는 "얼마나 썼는가"가 아니라 "얼마나 적게, 정확히 썼는가"를 봅니다.</p>
+    <p class="pc-lens-sub">AI 시대, 평가 기준이 조용히 바뀌고 있습니다</p>
+    <p class="pc-lens-body">
+      한 증권사 조사에서 AI 활용 고득점자의 평균 토큰 사용량은 200개, 저득점자는 9,000개에 가까웠습니다.
+      고득점자는 질문을 정확히 던진 뒤 AI와 함께 답을 좁혀갔고, 저득점자는 "이거 풀어줘"처럼 막연한 요청을 던졌습니다.
+      발표도 다르지 않습니다 — 많이 말하는 사람이 아니라, 정확히 요약해서 전달하는 사람이 설득에 이깁니다.
+    </p>
+    <!-- 여기까지 -->
+    <div class="pc-lens-foot">
+      <span class="pc-lens-by">매일 현장에서 얻은 인사이트를 <strong>피코쌤</strong>이 직접 정리합니다</span>
+      <a class="pc-lens-more" href="/blog/thoughts.html">지난 생각 더 보기 →</a>
+    </div>
+  </div>
+</section>
+
 <!-- 캠페인 띠 배너는 제거하고, '피코쌤 강의 구성기' NEW 카드를 아래 무료 제공 섹션으로 옮겼습니다 -->
 
 <!-- SERVICES & PRICING (통합) -->
