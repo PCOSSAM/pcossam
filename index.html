@@ -1348,6 +1348,49 @@ section { position: relative; }
   .pc-crs-next{display:block;padding:10px 16px 14px;font-size:12.5px;font-weight:700;color:var(--gold);text-decoration:none;border-top:1px dashed rgba(200,151,58,0.3);margin-top:auto}
   .pc-crs-next:hover{text-decoration:underline}
   .pc-crs-note{margin:16px 2px 0;font-size:12.5px;color:rgba(250,250,248,0.45)}
+
+  .pc-tabs{display:flex;gap:8px;margin-bottom:18px}
+  .pc-tab{background:transparent;border:1px solid rgba(255,255,255,.16);color:rgba(250,250,248,.7);
+    border-radius:20px;padding:8px 16px;font-size:12.5px;font-weight:700;cursor:pointer;transition:.15s}
+  .pc-tab:hover{border-color:var(--gold)}
+  .pc-tab.on{background:var(--gold);border-color:var(--gold);color:var(--black)}
+  .pc-tabpanel[hidden]{display:none}
+
+  .pck-wrap{border:1px solid rgba(255,255,255,.14);border-radius:14px;background:rgba(255,255,255,.03);padding:22px}
+  .pck-lead{font-size:12.5px;color:rgba(250,250,248,.6);margin-bottom:16px;line-height:1.65}
+  .pck-tray{display:flex;align-items:center;gap:6px;font-size:11px;color:rgba(250,250,248,.55);margin-bottom:16px}
+  .pck-tray b{color:var(--gold)}
+  .pck-step{margin-bottom:16px}
+  .pck-step .lbl{font-size:12px;font-weight:800;color:var(--gold);margin-bottom:8px;display:flex;align-items:center;gap:7px}
+  .pck-step .lbl .num{background:var(--gold);color:var(--black);width:17px;height:17px;border-radius:50%;display:inline-grid;place-items:center;font-size:10px}
+  .pck-chips{display:flex;flex-wrap:wrap;gap:7px}
+  .pck-chip{border:1px solid rgba(255,255,255,.18);background:transparent;color:#fff;border-radius:18px;padding:7px 13px;font-size:12px;font-weight:600;cursor:pointer;transition:.15s}
+  .pck-chip:hover{border-color:var(--gold)}
+  .pck-chip.on{background:var(--gold);border-color:var(--gold);color:var(--black)}
+  .pck-combo{margin-top:6px}
+  .pck-empty{font-size:12px;color:rgba(250,250,248,.4);text-align:center;padding:18px 0;border:1px dashed rgba(255,255,255,.15);border-radius:10px}
+  .pck-combo-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+  .pck-combo-title span{font-size:12.5px;font-weight:800;color:#fff}
+  .pck-reroll{background:none;border:none;color:var(--gold);font-size:11px;font-weight:700;cursor:pointer}
+  .pck-cards{display:grid;gap:8px}
+  .pck-card{display:flex;gap:9px;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:9px 11px;background:rgba(255,255,255,.02);opacity:0;transform:translateY(6px);animation:pckPop .35s forwards}
+  .pck-card:nth-child(1){animation-delay:.02s}.pck-card:nth-child(2){animation-delay:.12s}.pck-card:nth-child(3){animation-delay:.22s}
+  @keyframes pckPop{to{opacity:1;transform:translateY(0)}}
+  .pck-badge{flex:0 0 auto;font-size:9.5px;font-weight:800;padding:3px 7px;border-radius:8px;margin-top:1px}
+  .pck-b-사례{background:rgba(42,90,138,.35);color:#8fc4ff}
+  .pck-b-실습{background:rgba(31,138,69,.25);color:#7be0a0}
+  .pck-b-이론{background:rgba(255,255,255,.08);color:rgba(250,250,248,.75)}
+  .pck-b-코칭{background:rgba(200,151,58,.22);color:var(--gold)}
+  .pck-name{font-size:12.5px;font-weight:700;color:#fff}
+  .pck-desc{font-size:11px;color:rgba(250,250,248,.5);margin-top:2px}
+  .pck-receipt{margin-top:14px;padding-top:12px;border-top:1px dashed rgba(255,255,255,.15);font-size:11px;color:rgba(250,250,248,.55)}
+  .pck-receipt b{color:#fff}
+  .pck-cta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+  .pck-cta a{text-align:center;border-radius:9px;padding:10px;font-size:12px;font-weight:800;text-decoration:none;transition:.15s}
+  .pck-cta .ghost{border:1px solid rgba(255,255,255,.18);color:#fff}
+  .pck-cta .ghost:hover{border-color:var(--gold)}
+  .pck-cta .gold{background:var(--gold);color:var(--black)}
+  @media(max-width:480px){ .pck-cta{grid-template-columns:1fr} }
   @media(max-width:900px){ .pc-crs-grid{grid-template-columns:1fr} }
 </style>
   <div class="hero-left">
@@ -1369,40 +1412,157 @@ section { position: relative; }
 
     <div class="pc-crs-wrap">
       <div class="pc-crs-head"><span class="eyebrow">Now Booking</span><h2>지금 바로 문의 가능한 과정</h2></div>
-      <div class="pc-crs-grid">
-        <div class="pc-crs-card">
-          <a class="pc-crs-link" href="/services/generative-ai-training.html">
-            <img class="pc-crs-thumb" src="/assets/courses/generative-ai-training.jpg" alt="AI시대 요구되는 실무 역량 · 기업·기관 실무 담당 직원 대상 4시간 과정 · 이론·사례 2시간 + 챗GPT·제미나이·클로드 실습 2시간" loading="lazy">
-            <div class="pc-crs-body">
-              <h3 class="sr-only">AI시대 요구되는 실무 역량</h3>
-              <span class="pc-crs-cta">과정 자세히 보기 →</span>
-            </div>
-          </a>
-          <a class="pc-crs-next" href="/services/generative-ai-training.html#advanced">+ 수료자를 위한 심화과정(6시간)도 있어요 →</a>
+
+      <div class="pc-tabs" role="tablist">
+        <button class="pc-tab on" data-tab="best" role="tab" aria-selected="true">베스트 3종</button>
+        <button class="pc-tab" data-tab="kiosk" role="tab" aria-selected="false">🍔 나만의 조합 만들기</button>
+      </div>
+
+      <div class="pc-tabpanel" id="tab-best">
+        <div class="pc-crs-grid">
+          <div class="pc-crs-card">
+            <a class="pc-crs-link" href="/services/generative-ai-training.html">
+              <img class="pc-crs-thumb" src="/assets/courses/generative-ai-training.jpg" alt="AI시대 요구되는 실무 역량 · 기업·기관 실무 담당 직원 대상 4시간 과정 · 이론·사례 2시간 + 챗GPT·제미나이·클로드 실습 2시간" loading="lazy">
+              <div class="pc-crs-body">
+                <h3 class="sr-only">AI시대 요구되는 실무 역량</h3>
+                <span class="pc-crs-cta">과정 자세히 보기 →</span>
+              </div>
+            </a>
+            <a class="pc-crs-next" href="/services/generative-ai-training.html#advanced">+ 수료자를 위한 심화과정(6시간)도 있어요 →</a>
+          </div>
+          <div class="pc-crs-card">
+            <a class="pc-crs-link" href="/services/ai-career-portfolio.html">
+              <img class="pc-crs-thumb" src="/assets/courses/ai-career-portfolio.jpg" alt="AI시대, 나만의 커리어 포트폴리오 만들기 · 대학생·취업준비생 대상 4시간 과정 · AI 스킬 정리부터 1인 1홈페이지, AI 모의면접까지" loading="lazy">
+              <div class="pc-crs-body">
+                <h3 class="sr-only">AI시대, 나만의 커리어 포트폴리오 만들기</h3>
+                <span class="pc-crs-cta">과정 자세히 보기 →</span>
+              </div>
+            </a>
+          </div>
+          <div class="pc-crs-card">
+            <a class="pc-crs-link" href="/services/ai-leadership.html">
+              <img class="pc-crs-thumb" src="/assets/courses/ai-leadership.jpg" alt="AI시대 요구되는 리더십과 조직문화 · CEO·예비CEO·경영진 대상 4시간 과정 · AI 활용을 넘어 리더가 다시 설계해야 할 사고방식과 조직문화" loading="lazy">
+              <div class="pc-crs-body">
+                <h3 class="sr-only">AI시대 요구되는 리더십과 조직문화</h3>
+                <span class="pc-crs-cta">과정 자세히 보기 →</span>
+              </div>
+            </a>
+          </div>
         </div>
-        <div class="pc-crs-card">
-          <a class="pc-crs-link" href="/services/ai-career-portfolio.html">
-            <img class="pc-crs-thumb" src="/assets/courses/ai-career-portfolio.jpg" alt="AI시대, 나만의 커리어 포트폴리오 만들기 · 대학생·취업준비생 대상 4시간 과정 · AI 스킬 정리부터 1인 1홈페이지, AI 모의면접까지" loading="lazy">
-            <div class="pc-crs-body">
-              <h3 class="sr-only">AI시대, 나만의 커리어 포트폴리오 만들기</h3>
-              <span class="pc-crs-cta">과정 자세히 보기 →</span>
-            </div>
-          </a>
-        </div>
-        <div class="pc-crs-card">
-          <a class="pc-crs-link" href="/services/ai-leadership.html">
-            <img class="pc-crs-thumb" src="/assets/courses/ai-leadership.jpg" alt="AI시대 요구되는 리더십과 조직문화 · CEO·예비CEO·경영진 대상 4시간 과정 · AI 활용을 넘어 리더가 다시 설계해야 할 사고방식과 조직문화" loading="lazy">
-            <div class="pc-crs-body">
-              <h3 class="sr-only">AI시대 요구되는 리더십과 조직문화</h3>
-              <span class="pc-crs-cta">과정 자세히 보기 →</span>
-            </div>
-          </a>
+        <p class="pc-crs-note">가격은 대상·시간에 따라 달라져 문의로 안내드립니다 · 1:1 맞춤 컨설팅이 필요하다면 <a href="/services/pitchdeck-consulting.html" style="color:var(--gold);">AI 프레젠테이션·보고서 컨설팅</a>도 함께 보세요 · 이 3개 과정 소개 페이지도 100% 클로드 바이브 코딩으로 제작되었습니다.</p>
+      </div>
+
+      <div class="pc-tabpanel" id="tab-kiosk" hidden>
+        <div class="pck-wrap">
+          <p class="pck-lead">대상과 시간만 고르면, 60개 콘텐츠 중 어울리는 조합을 바로 추천해드려요. 실제 강의 의뢰가 왔을 때 피코쌤이 쓰는 방식 그대로입니다.</p>
+          <div class="pck-tray">🧾 담긴 콘텐츠 <b id="pckN">0</b>개</div>
+          <div class="pck-step">
+            <div class="lbl"><span class="num">1</span>누구를 위한 강의인가요?</div>
+            <div class="pck-chips" id="pckTargets"></div>
+          </div>
+          <div class="pck-step">
+            <div class="lbl"><span class="num">2</span>몇 시간짜리 과정인가요?</div>
+            <div class="pck-chips" id="pckHours"></div>
+          </div>
+          <div class="pck-combo" id="pckCombo">
+            <div class="pck-empty">대상과 시간을 고르면 추천 조합이 여기 나타나요</div>
+          </div>
+          <div class="pck-receipt" id="pckReceipt" style="display:none"></div>
+          <div class="pck-cta">
+            <a class="ghost" href="/lab/course-builder.html" data-pcx="hero_kiosk_full">전체 60개 메뉴 보기</a>
+            <a class="gold" href="/lecture-custom-design.html" data-pcx="hero_kiosk_inquiry">이 구성으로 문의하기</a>
+          </div>
         </div>
       </div>
-      <p class="pc-crs-note">가격은 대상·시간에 따라 달라져 문의로 안내드립니다 · 1:1 맞춤 컨설팅이 필요하다면 <a href="/services/pitchdeck-consulting.html" style="color:var(--gold);">AI 프레젠테이션·보고서 컨설팅</a>도 함께 보세요 · 이 3개 과정 소개 페이지도 100% 클로드 바이브 코딩으로 제작되었습니다.</p>
     </div>
   </div>
 </section>
+
+<script>
+(function(){
+  // ── 히어로 탭 전환 ──
+  document.querySelectorAll('.pc-tab').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('.pc-tab').forEach(b=>{b.classList.remove('on');b.setAttribute('aria-selected','false')});
+      btn.classList.add('on'); btn.setAttribute('aria-selected','true');
+      document.querySelectorAll('.pc-tabpanel').forEach(p=>p.hidden=true);
+      document.getElementById('tab-'+btn.dataset.tab).hidden=false;
+      if(typeof gtag==='function') gtag('event','hero_tab_switch',{tab:btn.dataset.tab});
+    });
+  });
+
+  // ── 미니 키오스크 (나만의 조합 만들기) ──
+  const BLOCKS = [{"id":"A-01","c":"A","n":"올다무 데이터 마케팅(올리브영·다이소·무신사)","t":"사례","d":"데이터를 수익으로 바꾼 국내 리테일 사례","g":"전체"},{"id":"A-02","c":"A","n":"아마존식 예측배송 '주문하실 택배 왔습니다'","t":"사례","d":"데이터 기반 예측 물류 서비스","g":"전체"},{"id":"A-03","c":"A","n":"일론 머스크식 AI 접근·미래 가치 기준","t":"사례","d":"미래 가치를 판단하는 기준","g":"경영진·전체"},{"id":"A-04","c":"A","n":"미국식 vs 중국식 로봇 산업(수익 구조 차이)","t":"사례","d":"두 산업 모델의 수익화 방식 비교","g":"전체"},{"id":"A-07","c":"A","n":"스테이블코인과 외국인 노동자","t":"사례","d":"왜 원화 대신 코인을 요구하나","g":"전체·금융"},{"id":"A-09","c":"A","n":"챗GPT 3개월 만에 1억 사용자","t":"사례","d":"확산 속도가 주는 의미","g":"전체"},{"id":"A-10","c":"A","n":"삼성전자 미국법인장 임원 설득","t":"사례","d":"설득에 성공한 스토리","g":"발표·전체"},{"id":"A-11","c":"A","n":"브라질 룰라 '투자 vs 비용' 화법","t":"사례","d":"프레이밍(관점 설정) 화법","g":"발표·전체"},{"id":"A-12","c":"A","n":"AI 비즈니스 마인드 3가지","t":"이론","d":"경영진이 알아야 할 핵심 관점","g":"경영진·전체"},{"id":"B-01","c":"B","n":"AI 에이전틱 커머스","t":"이론","d":"AI가 탐색·비교·결제까지 수행","g":"전체"},{"id":"B-02","c":"B","n":"AEO/GEO 제로클릭(답변·생성엔진 최적화)","t":"이론","d":"프롬프트로 주문하는 시대","g":"전체"},{"id":"C-02","c":"C","n":"보고서·제안서·PT 공통 프롬프트+맞춤지침","t":"실습","d":"3종 문서 공통 작성법","g":"전체"},{"id":"C-08","c":"C","n":"비유법·비교법 프롬프트(이해와 설득)","t":"실습","d":"이해=비유, 설득=비교","g":"전체·영업"},{"id":"D-01","c":"D","n":"준비는 AI, 전달은 아날로그","t":"이론","d":"발표의 핵심 철학","g":"전체"},{"id":"D-02","c":"D","n":"PPT 모핑 효과","t":"실습","d":"모핑 하나로 준비 완성","g":"전체"},{"id":"D-04","c":"D","n":"실전 PPT 제작+발표력 코칭","t":"코칭","d":"슬라이드와 전달력","g":"전체"},{"id":"D-05","c":"D","n":"리허설·의상·카메라 각도 코칭","t":"코칭","d":"현장 리허설 코칭","g":"전체"},{"id":"F-01","c":"F","n":"바이브 코딩 개념·환경 세팅","t":"실습","d":"대화로 코딩하는 준비","g":"전체·금융"},{"id":"F-02","c":"F","n":"클로드로 웹사이트 뼈대 만들기","t":"실습","d":"소개 웹페이지 생성","g":"전체·금융"},{"id":"F-05","c":"F","n":"디지털 명함 만들어 문자로 보내기","t":"실습","d":"QR·링크형 명함을 문자 전송까지","g":"전체·영업"},{"id":"F-08","c":"F","n":"바이브 코딩으로 발표 슬라이드 만들기","t":"실습","d":"대화로 프레젠테이션 슬라이드 제작","g":"전체·발표"},{"id":"G-01","c":"G","n":"맞춤 지침(Custom Instructions)","t":"실습","d":"나만의 톤·전문분야 등록","g":"전체·강사"},{"id":"H-01","c":"H","n":"고령 고객 맞춤 인포그래픽(지점영업)","t":"실습","d":"눈높이 상품 설명 자료","g":"영업"},{"id":"H-03","c":"H","n":"카드·보험·연금 영업자료 스토리텔링 4단계","t":"실습","d":"영업 스토리 자동 생성","g":"영업"},{"id":"H-08","c":"H","n":"경쟁 PT 발표 코칭","t":"코칭","d":"하루 3~4건 심사 대응","g":"영업·금융"},{"id":"I-01","c":"I","n":"코인/스테이블코인/토큰증권 구조 구분","t":"이론","d":"개념을 구조적으로 구분","g":"금융"},{"id":"I-06","c":"I","n":"뉴스·공시 AI 분석 루틴","t":"실습","d":"지속 활용 분석 루틴","g":"금융"},{"id":"J-01","c":"J","n":"강의안 설계 자동 구조화(목표-내용-활동-평가)","t":"실습","d":"강의안 뼈대 자동 생성","g":"강사"},{"id":"J-02","c":"J","n":"대상별 맞춤 강의안(직장인·학생·창업자)","t":"실습","d":"청중 특성 맞춤 강의안","g":"강사"}];
+
+  const TARGETS = ["전체","경영진","영업","금융","발표","강사"];
+  const HOURS = ["2h","4h","8h","16h"];
+  let curTarget=null, curHours=null, lastPicked=[];
+
+  const $k=s=>document.querySelector(s);
+  const targetsEl=$k("#pckTargets"), hoursEl=$k("#pckHours"), comboEl=$k("#pckCombo"),
+        receiptEl=$k("#pckReceipt"), trayN=$k("#pckN");
+
+  if(targetsEl){
+    TARGETS.forEach(t=>{
+      const c=document.createElement("div");c.className="pck-chip";c.textContent=t;
+      c.onclick=()=>{curTarget=t;[...targetsEl.children].forEach(x=>x.classList.remove("on"));c.classList.add("on");update();};
+      targetsEl.appendChild(c);
+    });
+    HOURS.forEach(h=>{
+      const c=document.createElement("div");c.className="pck-chip";c.textContent=h;
+      c.onclick=()=>{curHours=h;[...hoursEl.children].forEach(x=>x.classList.remove("on"));c.classList.add("on");update();};
+      hoursEl.appendChild(c);
+    });
+  }
+
+  function score(b,target){
+    if(target!=="전체" && b.g.includes(target)) return 2;
+    if(b.g.includes("전체")) return 1;
+    return 0;
+  }
+  function pickCombo(target, exclude){
+    const pool = BLOCKS.filter(b=> target==="전체" ? true : (b.g.includes(target)||b.g.includes("전체")))
+      .filter(b=> !exclude.includes(b.id));
+    const sorted = [...pool].sort((a,b)=> score(b,target)-score(a,target));
+    const picked=[]; const usedTypes=new Set();
+    for(const b of sorted){ if(picked.length>=3) break; if(!usedTypes.has(b.t)){picked.push(b);usedTypes.add(b.t);} }
+    for(const b of sorted){ if(picked.length>=3) break; if(!picked.find(p=>p.id===b.id)) picked.push(b); }
+    return picked;
+  }
+  function renderCombo(items){
+    comboEl.innerHTML = `
+      <div class="pck-combo-title"><span>🍽️ 오늘의 추천 조합</span>
+        <button class="pck-reroll" id="pckReroll">🔀 다른 조합 보기</button></div>
+      <div class="pck-cards">${items.map(b=>`
+        <div class="pck-card">
+          <span class="pck-badge pck-b-${b.t}">${b.t}</span>
+          <div><div class="pck-name">${b.n}</div><div class="pck-desc">${b.d}</div></div>
+        </div>`).join("")}</div>`;
+    $k("#pckReroll").onclick=()=>{
+      lastPicked = pickCombo(curTarget, items.map(b=>b.id));
+      if(lastPicked.length<3) lastPicked = pickCombo(curTarget, []);
+      renderCombo(lastPicked); updateReceipt();
+    };
+  }
+  function updateReceipt(){
+    trayN.textContent = lastPicked.length;
+    receiptEl.style.display="block";
+    receiptEl.innerHTML = `<b>${curTarget} · ${curHours}</b> 과정 기준 추천 &nbsp;|&nbsp; 총 <b>${lastPicked.length}개</b> 콘텐츠 담김`;
+  }
+  function update(){
+    if(curTarget && curHours){
+      lastPicked = pickCombo(curTarget, []);
+      renderCombo(lastPicked);
+      updateReceipt();
+      if(typeof gtag==='function') gtag('event','hero_kiosk_combo',{target:curTarget,hours:curHours});
+    } else {
+      comboEl.innerHTML = `<div class="pck-empty">대상과 시간을 고르면 추천 조합이 여기 나타나요</div>`;
+      receiptEl.style.display="none";
+      trayN.textContent="0";
+    }
+  }
+})();
+</script>
 
 <!-- ════════════════════════════════════════════════════════════════
   피코쌤의 오늘의 시선 (매일/수시 업데이트되는 생각 섹션)
