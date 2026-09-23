@@ -1629,9 +1629,9 @@ section { position: relative; }
 
 <section class="pc-clips" id="lecture-clips-preview">
 <style>
-.pc-clips{padding:72px 0;background:#F6F8FA}
+.pc-clips{padding:56px 0 40px;background:#F6F8FA}
 .pc-clips .pc-wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.pc-clips .pc-head{text-align:center;margin-bottom:38px}
+.pc-clips .pc-head{text-align:center;margin-bottom:28px}
 .pc-clips .pc-eyebrow{
   display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.12em;
   color:#C8973A;border:1px solid rgba(200,151,58,.4);
@@ -1642,7 +1642,7 @@ section { position: relative; }
   line-height:1.4;margin:0 0 10px;
 }
 .pc-clips .pc-sub{color:#5A6875;font-size:1rem;margin:0}
-.pc-clips .pc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.pc-clips .pc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:560px;margin:0 auto}
 .pc-clips .pc-card{
   background:#fff;border-radius:14px;overflow:hidden;
   box-shadow:0 6px 24px rgba(26,58,92,.10);
@@ -1672,17 +1672,17 @@ section { position: relative; }
   position:absolute;right:9px;bottom:9px;background:rgba(0,0,0,.72);
   color:#fff;font-size:.72rem;font-weight:700;padding:3px 7px;border-radius:4px;
 }
-.pc-clips .pc-txt{padding:20px 22px 24px;display:flex;flex-direction:column;flex:1}
+.pc-clips .pc-txt{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1}
 .pc-clips .pc-tag{
-  font-size:.72rem;font-weight:700;letter-spacing:.08em;color:#C8973A;margin-bottom:8px;
+  font-size:.68rem;font-weight:700;letter-spacing:.08em;color:#C8973A;margin-bottom:5px;
 }
 .pc-clips .pc-card h3{
-  font-size:1.05rem;font-weight:700;color:#1B2733;line-height:1.5;
-  margin:0 0 8px;letter-spacing:-.01em;
+  font-size:.92rem;font-weight:700;color:#1B2733;line-height:1.4;
+  margin:0 0 5px;letter-spacing:-.01em;
 }
-.pc-clips .pc-card p{font-size:.9rem;color:#5A6875;line-height:1.65;margin:0 0 16px;flex:1}
+.pc-clips .pc-card p{font-size:.8rem;color:#5A6875;line-height:1.5;margin:0 0 10px;flex:1}
 .pc-clips .pc-more{
-  font-size:.88rem;font-weight:700;color:#1A3A5C;align-self:flex-start;
+  font-size:.8rem;font-weight:700;color:#1A3A5C;align-self:flex-start;
   border-bottom:1.5px solid #C8973A;padding-bottom:2px;text-decoration:none;
 }
 .pc-clips .pc-foot{text-align:center;margin-top:36px}
@@ -1692,7 +1692,7 @@ section { position: relative; }
 }
 .pc-clips .pc-btn:hover{background:#122A44}
 .pc-clips .pc-featured{
-  max-width:640px;margin:0 auto 46px;background:#0f1f30;border-radius:16px;overflow:hidden;
+  max-width:320px;margin:0 auto 46px;background:#0f1f30;border-radius:16px;overflow:hidden;
   box-shadow:0 10px 32px rgba(26,58,92,.18);
 }
 .pc-clips .pc-feat-thumb{position:relative;width:100%;aspect-ratio:16/9;cursor:pointer;background:#000}
@@ -1813,6 +1813,108 @@ document.querySelectorAll('.pc-clips .pc-player').forEach(function(el){
 </script>
 </section>
 <!-- ════════ 강의 미리보기 섹션 끝 ════════ -->
+
+<!-- ════════ 인프런 유료 VOD 강좌 섹션 시작 ════════ -->
+<section class="pc-inflearn" id="inflearn-vod">
+<style>
+.pc-inflearn{padding:8px 0 56px;background:#F6F8FA}
+.pc-inflearn .pc-wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.pc-inflearn .pc-head{text-align:center;margin-bottom:24px}
+.pc-inflearn .pc-eyebrow{
+  display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.12em;
+  color:#C8973A;border:1px solid rgba(200,151,58,.4);
+  padding:4px 12px;border-radius:99px;margin-bottom:12px;
+}
+.pc-inflearn h2{font-size:1.35rem;font-weight:900;letter-spacing:-.02em;color:#1A3A5C;margin:0 0 8px;line-height:1.4}
+.pc-inflearn .pc-sub{color:#5A6875;font-size:.92rem;margin:0}
+.pc-inflearn .pc-irow{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.pc-inflearn .pc-icard{
+  background:#fff;border-radius:12px;overflow:hidden;text-decoration:none;
+  box-shadow:0 4px 16px rgba(26,58,92,.08);display:flex;flex-direction:column;
+  transition:transform .15s,box-shadow .15s;
+}
+.pc-inflearn .pc-icard:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(26,58,92,.14)}
+.pc-inflearn .pc-ithumb{width:100%;aspect-ratio:4/3;background:#eef1f4;overflow:hidden}
+.pc-inflearn .pc-ithumb img{width:100%;height:100%;object-fit:cover;display:block}
+.pc-inflearn .pc-itxt{padding:12px 12px 14px;display:flex;flex-direction:column;flex:1}
+.pc-inflearn .pc-icard h3{
+  font-size:.82rem;font-weight:700;color:#1B2733;line-height:1.4;
+  margin:0 0 8px;letter-spacing:-.01em;flex:1;
+}
+.pc-inflearn .pc-iprice{font-size:.86rem;font-weight:800;color:#1A3A5C}
+.pc-inflearn .pc-iprice-old{font-size:.72rem;font-weight:500;color:#a3adb8;text-decoration:line-through;margin-left:5px}
+.pc-inflearn .pc-foot{text-align:center;margin-top:24px}
+.pc-inflearn .pc-btn{
+  display:inline-block;background:transparent;color:#1A3A5C;font-weight:700;font-size:.86rem;
+  padding:10px 20px;border:1.5px solid #1A3A5C;border-radius:8px;text-decoration:none;transition:all .2s;
+}
+.pc-inflearn .pc-btn:hover{background:#1A3A5C;color:#fff}
+@media (max-width:900px){
+  .pc-inflearn .pc-irow{
+    grid-template-columns:none;
+    grid-auto-flow:column;grid-auto-columns:44%;
+    overflow-x:auto;scroll-snap-type:x mandatory;
+    gap:12px;padding-bottom:10px;
+    -webkit-overflow-scrolling:touch;
+  }
+  .pc-inflearn .pc-icard{scroll-snap-align:center}
+}
+</style>
+  <div class="pc-wrap">
+    <div class="pc-head">
+      <span class="pc-eyebrow">INFLEARN VOD</span>
+      <h2>클립만으로 부족하다면,<br>인프런 유료 강좌로 더 깊이 배우세요</h2>
+      <p class="pc-sub">피코쌤이 인프런에서 직접 운영 중인 VOD 강좌입니다. 원하는 주제만 골라 내 속도로 학습할 수 있습니다.</p>
+    </div>
+
+    <div class="pc-irow">
+      <a class="pc-icard" href="https://www.inflearn.com/course/%EB%B3%B4%EA%B3%A0%EC%84%9C-%EC%A0%9C%EC%95%88%EC%84%9C-%ED%94%84%EB%A6%AC%EC%A0%A0%ED%85%8C%EC%9D%B4%EC%85%98?cid=333557" target="_blank" rel="noopener" data-pcx="home_inflearn_bojef">
+        <div class="pc-ithumb"><img src="https://cdn.inflearn.com/public/courses/333557/cover/d1afcecc-3675-403d-b223-6d4b2c6208d1/333557.PNG?w=480" alt="보고서, 제안서, 프리젠테이션 강좌 썸네일" loading="lazy"></div>
+        <div class="pc-itxt">
+          <h3>보고서, 제안서, 프리젠테이션</h3>
+          <div class="pc-iprice">32,900원 <span class="pc-iprice-old">42,900원</span></div>
+        </div>
+      </a>
+
+      <a class="pc-icard" href="https://www.inflearn.com/course/%EC%9A%94%EC%A6%98%EC%A7%80%EC%8B%9D-ax%ED%8A%B8%EB%A0%8C%EB%93%9C?cid=337408" target="_blank" rel="noopener" data-pcx="home_inflearn_axtrend">
+        <div class="pc-ithumb"><img src="https://cdn.inflearn.com/public/files/courses/337408/cover/01jv9hsadqe8r6p7d7abvpa6nv?w=480" alt="요즘지식 AX트렌드 강좌 썸네일" loading="lazy"></div>
+        <div class="pc-itxt">
+          <h3>요즘지식 – AX트렌드 딱 1시간</h3>
+          <div class="pc-iprice">64,700원 <span class="pc-iprice-old">84,700원</span></div>
+        </div>
+      </a>
+
+      <a class="pc-icard" href="https://www.inflearn.com/course/%EC%9A%94%EC%A6%98-%ED%95%84%EC%9A%94%ED%95%9C-%EC%9A%94%EC%A6%98%EC%A7%80%EC%8B%9D?cid=325140" target="_blank" rel="noopener" data-pcx="home_inflearn_dttrend">
+        <div class="pc-ithumb"><img src="https://cdn.inflearn.com/public/files/courses/325140/cover/01jv9hvsb1p5ksmx8w8v1smwrd?w=480" alt="요즘 필요한 요즘지식 강좌 썸네일" loading="lazy"></div>
+        <div class="pc-itxt">
+          <h3>요즘 필요한 요즘지식</h3>
+          <div class="pc-iprice">49,400원 <span class="pc-iprice-old">59,400원</span></div>
+        </div>
+      </a>
+
+      <a class="pc-icard" href="https://www.inflearn.com/course/ppt-%EC%BD%94%EB%94%A9%EC%8B%9D-%EC%82%AC%EA%B3%A0?cid=328839" target="_blank" rel="noopener" data-pcx="home_inflearn_pptcoding">
+        <div class="pc-ithumb"><img src="https://cdn.inflearn.com/public/courses/328839/cover/4c20aa7f-b9a9-4eb7-bc17-83bb69677322/328839-eng.png?w=480" alt="PPT 코딩식 사고 강좌 썸네일" loading="lazy"></div>
+        <div class="pc-itxt">
+          <h3>PPT 코딩식 사고</h3>
+          <div class="pc-iprice">16,500원</div>
+        </div>
+      </a>
+
+      <a class="pc-icard" href="https://www.inflearn.com/course/%EC%B4%88%EB%93%B1%EC%9E%90%EB%85%80-%EC%8A%A4%EB%A7%88%ED%8A%B8-%EA%B5%90%EC%9C%A1?cid=330107" target="_blank" rel="noopener" data-pcx="home_inflearn_kidsmart">
+        <div class="pc-ithumb"><img src="https://cdn.inflearn.com/public/courses/330107/cover/6ba67e2b-5948-41d1-9a73-fe74c9534f32/330107-eng.png?w=480" alt="초등자녀 스마트 교육 강좌 썸네일" loading="lazy"></div>
+        <div class="pc-itxt">
+          <h3>초등자녀 스마트 교육</h3>
+          <div class="pc-iprice">7,700원</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="pc-foot">
+      <a class="pc-btn" href="https://www.inflearn.com/search?s=%ED%94%BC%EC%BD%94%EC%8C%A4" target="_blank" rel="noopener">인프런에서 전체 강좌 보기</a>
+    </div>
+  </div>
+</section>
+<!-- ════════ 인프런 유료 VOD 강좌 섹션 끝 ════════ -->
 
 <!-- ════════ 무료 제공 섹션 시작 ════════ -->
 <section id="free-resources">
