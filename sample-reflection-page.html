@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>오늘의 생각 | PCOSSAM</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F7F6F2;
+    --ink:#1B1B18;
+    --ink-soft:#5B5A52;
+    --line:#DCD9CE;
+    --accent:#1F5B53;
+    --accent-soft:#E4EEE9;
+    --gold:#B08927;
+    --error:#B3402F;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Noto Sans KR', system-ui, sans-serif;
+    line-height:1.7;
+  }
+  .wrap{
+    max-width:640px;
+    margin:0 auto;
+    padding:56px 20px 80px;
+  }
+  .eyebrow{
+    font-size:14px;
+    color:var(--ink-soft);
+    margin:0 0 6px;
+  }
+  h1{
+    font-family:'Noto Serif KR', serif;
+    font-weight:700;
+    font-size:26px;
+    margin:0 0 40px;
+    letter-spacing:-0.01em;
+  }
+  .question-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-left:4px solid var(--accent);
+    border-radius:2px;
+    padding:28px 24px;
+    margin-bottom:20px;
+  }
+  .question-label{
+    font-size:13px;
+    color:var(--accent);
+    font-weight:700;
+    margin:0 0 10px;
+  }
+  .question-text{
+    font-family:'Noto Serif KR', serif;
+    font-size:19px;
+    font-weight:500;
+    margin:0;
+  }
+  form{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:2px;
+    padding:24px;
+    margin-bottom:48px;
+  }
+  textarea{
+    width:100%;
+    min-height:110px;
+    border:1px solid var(--line);
+    border-radius:2px;
+    padding:14px;
+    font-family:inherit;
+    font-size:15px;
+    color:var(--ink);
+    resize:vertical;
+    outline:none;
+    transition:border-color .15s;
+  }
+  textarea:focus{border-color:var(--accent);}
+  .meta-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:12px;
+  }
+  .char-count{
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+  button{
+    background:var(--accent);
+    color:#fff;
+    border:none;
+    padding:11px 22px;
+    font-size:15px;
+    font-weight:500;
+    border-radius:2px;
+    cursor:pointer;
+    font-family:inherit;
+  }
+  button:disabled{
+    background:var(--line);
+    color:var(--ink-soft);
+    cursor:not-allowed;
+  }
+  .msg{
+    font-size:14px;
+    margin-top:12px;
+    padding:10px 12px;
+    border-radius:2px;
+    display:none;
+  }
+  .msg.show{display:block;}
+  .msg.ok{background:var(--accent-soft); color:var(--accent);}
+  .msg.err{background:#F5E5E1; color:var(--error);}
+  .honeypot{position:absolute; left:-9999px; opacity:0;}
+  .list-header{
+    font-size:15px;
+    font-weight:700;
+    margin:0 0 16px;
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+  }
+  .list-header span{font-weight:400; color:var(--ink-soft); font-size:13px;}
+  .entry{
+    padding:16px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .entry:last-child{border-bottom:none;}
+  .entry-text{margin:0 0 6px; font-size:15px;}
+  .entry-time{font-size:12px; color:var(--ink-soft);}
+  .empty{
+    color:var(--ink-soft);
+    font-size:14px;
+    padding:24px 0;
+    text-align:center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="eyebrow">AI 실무 활용 특강 · 오늘의 생각</p>
+  <h1>강의 중 떠오른 생각을 남겨보세요</h1>
+
+  <div class="question-card">
+    <p class="question-label">질문</p>
+    <p class="question-text">오늘 배운 AI 활용 방법 중, 당장 내 업무에 적용해볼 수 있는 것은 무엇인가요?</p>
+  </div>
+
+  <form id="reflection-form">
+    <!-- 봇 함정(honeypot): 사람 눈엔 안 보이지만 봇은 이 칸도 채우는 경우가 많아서, 채워져 있으면 스팸으로 간주 -->
+    <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off">
+    <textarea id="content" maxlength="500" placeholder="이름을 남기지 않아도 됩니다. 편하게 생각을 적어주세요."></textarea>
+    <div class="meta-row">
+      <span class="char-count"><span id="count">0</span> / 500</span>
+      <button id="submit-btn" type="submit">남기기</button>
+    </div>
+    <div class="msg" id="form-msg"></div>
+  </form>
+
+  <p class="list-header">함께 남긴 생각 <span id="entry-count"></span></p>
+  <div id="entries">
+    <p class="empty">불러오는 중...</p>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  // ── 1. 여기에 Supabase 프로젝트 URL과 anon key를 붙여넣으세요 ──
+  const SUPABASE_URL = "https://ivxxcgaiukhmjbjlpefk.supabase.co";
+  const SUPABASE_ANON_KEY = "sb_publishable_DumRHQqI5Jz3VsOpLfFthg_Hta9X0ly";
+  // ──────────────────────────────────────────────
+
+  const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+  // 이 질문/과정을 구분하는 값 — 실제 운영 시 교재 페이지마다 다르게 지정
+  const COURSE_ID = "sample-course";
+  const QUESTION_ID = "q1";
+  const TYPE = "thought"; // 'thought'(강의 중 생각) / 'review'(강의 후 후기)에 맞춰 페이지별로 다르게 지정
+
+  // 간단한 금지어 목록 — 운영하면서 계속 추가/조정하세요
+  const BLOCKLIST = ["시발", "씨발", "개새끼", "viagra", "http://", "https://", "www."];
+
+  const form = document.getElementById("reflection-form");
+  const textarea = document.getElementById("content");
+  const countEl = document.getElementById("count");
+  const msgEl = document.getElementById("form-msg");
+  const submitBtn = document.getElementById("submit-btn");
+  const entriesEl = document.getElementById("entries");
+  const entryCountEl = document.getElementById("entry-count");
+
+  textarea.addEventListener("input", () => {
+    countEl.textContent = textarea.value.length;
+  });
+
+  function showMsg(text, type) {
+    msgEl.textContent = text;
+    msgEl.className = "msg show " + type;
+  }
+
+  function containsBlocked(text) {
+    const lower = text.toLowerCase();
+    return BLOCKLIST.some(word => lower.includes(word.toLowerCase()));
+  }
+
+  // 연속 제출 방지: 같은 브라우저에서 10초 안에 다시 제출 못 하게 막음
+  function canSubmitNow() {
+    const last = localStorage.getItem("last_submit_at");
+    if (!last) return true;
+    return Date.now() - Number(last) > 10000;
+  }
+
+  async function loadEntries() {
+    const { data, error } = await supabase
+      .from("responses")
+      .select("content, created_at")
+      .eq("course_id", COURSE_ID)
+      .eq("question_id", QUESTION_ID)
+      .order("created_at", { ascending: false })
+      .limit(50);
+
+    if (error) {
+      entriesEl.innerHTML = '<p class="empty">목록을 불러오지 못했습니다. SUPABASE_URL / KEY 설정을 확인해주세요.</p>';
+      return;
+    }
+
+    entryCountEl.textContent = data.length ? `${data.length}개` : "";
+
+    if (!data.length) {
+      entriesEl.innerHTML = '<p class="empty">아직 남겨진 생각이 없어요. 첫 번째로 남겨보세요.</p>';
+      return;
+    }
+
+    entriesEl.innerHTML = data.map(row => {
+      const time = new Date(row.created_at).toLocaleString("ko-KR", {
+        month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit"
+      });
+      return `<div class="entry">
+        <p class="entry-text">${escapeHtml(row.content)}</p>
+        <p class="entry-time">${time}</p>
+      </div>`;
+    }).join("");
+  }
+
+  function escapeHtml(str) {
+    const div = document.createElement("div");
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    msgEl.className = "msg";
+
+    // 봇 함정에 값이 채워져 있으면 조용히 무시
+    if (form.website.value) return;
+
+    const text = textarea.value.trim();
+
+    if (text.length < 2) {
+      showMsg("내용을 입력해주세요.", "err");
+      return;
+    }
+    if (containsBlocked(text)) {
+      showMsg("부적절한 표현이나 링크는 남길 수 없어요.", "err");
+      return;
+    }
+    if (!canSubmitNow()) {
+      showMsg("잠시 후 다시 시도해주세요.", "err");
+      return;
+    }
+
+    submitBtn.disabled = true;
+    const { error } = await supabase.from("responses").insert({
+      course_id: COURSE_ID,
+      question_id: QUESTION_ID,
+      type: TYPE,
+      content: text
+    });
+    submitBtn.disabled = false;
+
+    if (error) {
+      showMsg("전송에 실패했습니다. 잠시 후 다시 시도해주세요.", "err");
+      return;
+    }
+
+    localStorage.setItem("last_submit_at", String(Date.now()));
+    textarea.value = "";
+    countEl.textContent = "0";
+    showMsg("생각이 남겨졌어요. 감사합니다.", "ok");
+    loadEntries();
+  });
+
+  loadEntries();
+</script>
+</body>
+</html>
