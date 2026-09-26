@@ -1627,6 +1627,185 @@ section { position: relative; }
 ════════════════════════════════════════════════════════════════════
 -->
 
+<!-- AI 숏폼 제작 과정 미리보기 -->
+<section class="ais" id="ai-shortform-preview">
+<style>
+#ai-shortform-preview{padding:64px 0 56px;background:#fff}
+#ai-shortform-preview .ais-wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+#ai-shortform-preview .ais-head{text-align:center;margin-bottom:30px}
+#ai-shortform-preview .ais-eyebrow{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.06em;color:#C8973A;border:1px solid rgba(200,151,58,.4);padding:5px 13px;border-radius:99px;margin-bottom:14px}
+#ai-shortform-preview h2{font-size:1.85rem;font-weight:900;letter-spacing:-.025em;color:#1A3A5C;line-height:1.4;margin:0 0 10px}
+#ai-shortform-preview .ais-sub{color:#5A6875;font-size:1rem;margin:0}
+#ai-shortform-preview .ais-cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+#ai-shortform-preview .ais-card{display:grid;grid-template-columns:200px 1fr;gap:20px;align-items:start;border:1px solid #E4E8ED;border-radius:14px;padding:18px;background:#fff;text-align:left}
+#ai-shortform-preview .player{position:relative;width:100%;aspect-ratio:9/16;background:#000;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(26,58,92,.18);cursor:pointer;border:none;padding:0;display:block}
+#ai-shortform-preview .player img{width:100%;height:100%;object-fit:cover;display:block}
+#ai-shortform-preview .player iframe{width:100%;height:100%;border:0;display:block}
+#ai-shortform-preview .player .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(18,42,68,.22)}
+#ai-shortform-preview .player .play i{width:54px;height:54px;border-radius:50%;background:#C8973A;box-shadow:0 6px 20px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center}
+#ai-shortform-preview .player .play i::after{content:"";width:0;height:0;margin-left:5px;border-left:17px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent}
+#ai-shortform-preview .player .dur{position:absolute;right:9px;bottom:9px;background:rgba(0,0,0,.72);color:#fff;font-size:.72rem;font-weight:700;padding:3px 7px;border-radius:4px}
+#ai-shortform-preview .player .ai-tag{position:absolute;left:9px;top:9px;background:#C8973A;color:#fff;font-size:.7rem;font-weight:700;padding:3px 8px;border-radius:4px}
+#ai-shortform-preview .side{min-width:0}
+#ai-shortform-preview .side h3{font-size:1.05rem;font-weight:900;line-height:1.45;color:#1A3A5C;margin:0 0 4px}
+#ai-shortform-preview .side .lead{color:#5A6875;font-size:.86rem;margin:0 0 12px}
+#ai-shortform-preview .fold{border-top:1px solid #E4E8ED}
+#ai-shortform-preview .fold:last-of-type{border-bottom:1px solid #E4E8ED}
+#ai-shortform-preview .fold summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;padding:11px 2px;font-weight:700;font-size:.92rem;color:#1B2733}
+#ai-shortform-preview .fold summary::-webkit-details-marker{display:none}
+#ai-shortform-preview .fold summary::after{content:"+";color:#C8973A;font-weight:900;font-size:1.2rem;line-height:1}
+#ai-shortform-preview .fold[open] summary::after{content:"\2212"}
+#ai-shortform-preview .fold[open]{padding-bottom:12px}
+#ai-shortform-preview .spec{margin:0}
+#ai-shortform-preview .spec div{display:grid;grid-template-columns:92px 1fr;gap:8px;padding:6px 0;border-bottom:1px dashed #E4E8ED;font-size:.83rem}
+#ai-shortform-preview .spec div:last-child{border-bottom:none}
+#ai-shortform-preview .spec dt{color:#5A6875}
+#ai-shortform-preview .spec dd{margin:0;font-weight:700;color:#1B2733}
+#ai-shortform-preview .spec dd small{display:block;font-weight:400;color:#5A6875;font-size:.78rem}
+#ai-shortform-preview .pblock{margin-bottom:14px}
+#ai-shortform-preview .ptool{font-size:.8rem;font-weight:700;color:#C8973A;margin:0 0 5px}
+#ai-shortform-preview .pnote{font-size:.83rem;color:#5A6875;margin:0 0 8px;line-height:1.65}
+#ai-shortform-preview .prules{list-style:none;margin:0 0 8px;padding:0}
+#ai-shortform-preview .prules li{font-size:.81rem;color:#1B2733;line-height:1.6;padding:5px 0;border-bottom:1px dashed #E4E8ED}
+#ai-shortform-preview .prules b{display:block;color:#1A3A5C}
+#ai-shortform-preview .ptip{font-size:.8rem;color:#1B2733;background:#FBF6EC;border-radius:6px;padding:9px 11px;margin:0 0 8px;line-height:1.6}
+#ai-shortform-preview .prompt{position:relative;background:#122A44;border-radius:8px}
+#ai-shortform-preview .prompt pre{margin:0;color:#EAF0F6;font-family:'Noto Sans KR',sans-serif;font-size:.8rem;line-height:1.65;white-space:pre-wrap;word-break:keep-all;padding:38px 14px 14px;max-height:260px;overflow:auto}
+#ai-shortform-preview .copy{position:absolute;top:8px;right:8px;background:#C8973A;color:#fff;border:none;border-radius:5px;font-weight:700;font-size:.74rem;padding:5px 10px;cursor:pointer}
+#ai-shortform-preview .fold-note{font-size:.78rem;color:#5A6875;margin:0 0 6px}
+#ai-shortform-preview table.mini{width:100%;border-collapse:collapse;font-size:.83rem}
+#ai-shortform-preview .mini th,#ai-shortform-preview .mini td{padding:6px 5px;border-bottom:1px solid #E4E8ED;text-align:left}
+#ai-shortform-preview .mini thead th{color:#5A6875;font-weight:500;font-size:.75rem}
+#ai-shortform-preview .mini tbody tr:first-child{background:#FBF6EC}
+#ai-shortform-preview .mini tbody th{font-weight:700;color:#1A3A5C}
+#ai-shortform-preview .mini td{font-weight:700}
+#ai-shortform-preview .watch{display:inline-block;margin-top:12px;font-size:.84rem;font-weight:700;color:#1A3A5C;border-bottom:1.5px solid #C8973A;text-decoration:none}
+#ai-shortform-preview .ais-foot{text-align:center;margin-top:32px}
+#ai-shortform-preview .ais-btn{display:inline-block;background:#1A3A5C;color:#fff;font-weight:700;font-size:.98rem;padding:14px 30px;border-radius:8px;text-decoration:none}
+#ai-shortform-preview .ais-btn:hover{background:#122A44}
+#ai-shortform-preview .ais-note{font-size:.85rem;color:#5A6875;margin:12px 0 0}
+@media (max-width:1000px){#ai-shortform-preview .ais-cards{grid-template-columns:1fr;max-width:640px;margin:0 auto}}
+@media (max-width:560px){
+  #ai-shortform-preview{padding:52px 0 44px}
+  #ai-shortform-preview h2{font-size:1.4rem}
+  #ai-shortform-preview .ais-card{grid-template-columns:1fr}
+  #ai-shortform-preview .player{max-width:240px;margin:0 auto}
+}
+</style>
+  <div class="ais-wrap">
+    <div class="ais-head">
+      <span class="ais-eyebrow">AI 숏폼 제작 과정</span>
+      <h2>피코쌤에게 배우면,<br>처음이어도 이 정도 AI 영상을 만듭니다</h2>
+      <p class="ais-sub">강의에서 가르치는 방법 그대로 만든 숏폼입니다. 영상을 누르면 재생되고, 옆 항목을 누르면 제작 과정이 펼쳐집니다.</p>
+    </div>
+    <div class="ais-cards">
+    <article class="ais-card">
+      <button class="player" type="button" data-yt="HvLVeyPpWxs" aria-label="닭다리에 만보기만 달았을 뿐인데 영상 재생">
+        <img src="https://i.ytimg.com/vi/HvLVeyPpWxs/hqdefault.jpg" alt="닭다리에 만보기만 달았을 뿐인데 영상 썸네일" loading="lazy">
+        <span class="ai-tag">AI 생성 영상</span>
+        <span class="play"><i></i></span>
+        <span class="dur">0:60</span>
+      </button>
+      <div class="side">
+        <h3>닭다리에 만보기만 달았을 뿐인데</h3>
+        <p class="lead">엉뚱한 상상 하나를 60초 이야기로 만들었습니다.</p>
+        <details class="fold" data-fold="prompt-chicken-info">
+          <summary>제작 정보</summary>
+          <dl class="spec"><div><dt>영상 길이</dt><dd>60초</dd></div><div><dt>제작 시간</dt><dd>약 90분</dd></div><div><dt>스토리 구성</dt><dd>챗GPT</dd></div><div><dt>장면 프롬프트</dt><dd>클로드</dd></div><div><dt>AI 영상 모델</dt><dd>구글 옴니<small>브루 안에서 모델 선택</small></dd></div><div><dt>생성한 클립</dt><dd>16개</dd></div><div><dt>자막·더빙·편집</dt><dd>브루</dd></div><div><dt>사용 크레딧</dt><dd>브루 크레딧 약 3,000<small>약 22,500원 · 챗GPT 구독료 별도</small></dd></div></dl>
+        </details>
+        <details class="fold" data-fold="prompt-chicken-prompt">
+          <summary>사용한 프롬프트</summary>
+          <div class="pblock">
+            <p class="ptool">클로드 · 장면별 영상 프롬프트</p>
+            <p class="pnote">이야기를 훅, 설정, 사건, 갈등, 보상, 반전, 인사이트, 마무리 순서의 장면으로 나누고, 장면마다 구글 옴니에 넣을 영어 프롬프트를 만들었습니다.</p>
+            <ul class="prules">
+              <li><b>인물 고정</b> 중국 농촌 마을이 배경입니다. 주민 A(50대 여성, 녹색 조끼, 챙 넓은 모자), 주민 B(60대 남성, 회색 캡모자), 다리에 만보기를 찬 갈색 닭을 모든 장면에 똑같이 적습니다.</li>
+              <li><b>장면 잇기</b> 앞 클립의 마지막 화면을 캡처해 다음 클립의 첫 화면 참고 이미지로 씁니다.</li>
+              <li><b>공통 조건</b> 세로 9:16, 실사 다큐멘터리 톤, 자막·화면 글자·대사 없음. 자막과 더빙은 브루에서 따로 입힙니다.</li>
+            </ul>
+            <p class="ptip">인물 설명을 한 장면에서만 바꾸면 그 장면에서만 사람이 달라 보입니다. 설정을 바꿀 땐 그 인물이 나오는 모든 장면을 함께 고쳐야 합니다.</p>
+            <div class="prompt">
+              <button class="copy" type="button" data-copy="prompt-chicken">복사</button>
+              <pre id="home-prompt-chicken">[클립 1 · 훅 예시]
+Extreme close-up of a small black pedometer device strapped to a brown chicken's leg, rural Chinese farmyard, morning light, shallow depth of field. Camera slowly pulls back to reveal the chicken pecking around a dusty yard. Documentary realism, handheld camera feel, warm natural lighting. Vertical 9:16. No text, no subtitles, no dialogue, ambient farm sound only.</pre>
+            </div>
+          </div>
+          <div class="pblock">
+            <p class="ptool">챗GPT · 스토리 구성</p>
+            <p class="pnote">정리 중입니다. 곧 공개합니다.</p>
+          </div>
+        </details>
+        <details class="fold" data-fold="prompt-chicken-cost">
+          <summary>다른 곳에서 만들었다면</summary>
+          <p class="fold-note">클립 16개, 구글 옴니 720p, 4초 클립 기준. 구글 플로우·힉스필드는 영상 생성 비용만입니다.</p>
+          <table class="mini">
+            <thead><tr><th></th><th>크레딧</th><th>비용</th></tr></thead>
+            <tbody><tr><th>브루 (실제)</th><td>약 3,000</td><td>약 22,500원</td></tr><tr><th>구글 플로우</th><td>112</td><td>약 3,200원</td></tr><tr><th>힉스필드</th><td>약 192</td><td>약 14,400원</td></tr></tbody>
+          </table>
+        </details>
+        <a class="watch" href="https://youtube.com/shorts/HvLVeyPpWxs" target="_blank" rel="noopener">유튜브에서 보기</a>
+      </div>
+    </article>
+    <article class="ais-card">
+      <button class="player" type="button" data-yt="K2-yBfG0qqs" aria-label="외국인이 한국 PC방가면 충격받는이유 영상 재생">
+        <img src="https://i.ytimg.com/vi/K2-yBfG0qqs/hqdefault.jpg" alt="외국인이 한국 PC방가면 충격받는이유 영상 썸네일" loading="lazy">
+        <span class="ai-tag">AI 생성 영상</span>
+        <span class="play"><i></i></span>
+        <span class="dur">0:54</span>
+      </button>
+      <div class="side">
+        <h3>외국인이 한국 PC방가면 충격받는이유</h3>
+        <p class="lead">한국 PC방 문화를 외국인의 시선으로 풀었습니다.</p>
+        <details class="fold" data-fold="prompt-pcbang-info">
+          <summary>제작 정보</summary>
+          <dl class="spec"><div><dt>영상 길이</dt><dd>54초</dd></div><div><dt>제작 시간</dt><dd>약 60분</dd></div><div><dt>스토리 구성</dt><dd>챗GPT</dd></div><div><dt>AI 영상 모델</dt><dd>구글 옴니<small>브루 안에서 모델 선택</small></dd></div><div><dt>생성한 클립</dt><dd>13개</dd></div><div><dt>자막·더빙·편집·배경음</dt><dd>브루</dd></div><div><dt>사용 크레딧</dt><dd>브루 크레딧 약 2,000<small>약 15,000원 · 챗GPT 구독료 별도</small></dd></div></dl>
+        </details>
+        <details class="fold" data-fold="prompt-pcbang-prompt">
+          <summary>사용한 프롬프트</summary>
+          <p class="pnote">정리 중입니다. 곧 공개합니다.</p>
+        </details>
+        <details class="fold" data-fold="prompt-pcbang-cost">
+          <summary>다른 곳에서 만들었다면</summary>
+          <p class="fold-note">클립 13개, 구글 옴니 720p, 4초 클립 기준. 구글 플로우·힉스필드는 영상 생성 비용만입니다.</p>
+          <table class="mini">
+            <thead><tr><th></th><th>크레딧</th><th>비용</th></tr></thead>
+            <tbody><tr><th>브루 (실제)</th><td>약 2,000</td><td>약 15,000원</td></tr><tr><th>구글 플로우</th><td>91</td><td>약 2,600원</td></tr><tr><th>힉스필드</th><td>약 156</td><td>약 11,700원</td></tr></tbody>
+          </table>
+        </details>
+        <a class="watch" href="https://youtube.com/shorts/K2-yBfG0qqs" target="_blank" rel="noopener">유튜브에서 보기</a>
+      </div>
+    </article>
+    </div>
+    <div class="ais-foot">
+      <a class="ais-btn" href="/services/ai-shortform-training.html">AI 숏폼 콘텐츠 제작 과정 보기</a>
+      <p class="ais-note">4시간 · 8시간 · 16시간 과정 · 챗GPT, 클로드, 제미나이, 브루 사용</p>
+    </div>
+  </div>
+<script>
+(function(){
+  var root=document.getElementById('ai-shortform-preview');
+  root.querySelectorAll('.player').forEach(function(el){
+    el.addEventListener('click',function(){
+      var id=el.dataset.yt; if(!id||el.querySelector('iframe')) return;
+      el.innerHTML='<iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1&playsinline=1" title="피코쌤 AI 숏폼 샘플" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+      if(typeof gtag==='function'){gtag('event','video_play',{video_id:id,page_location:'home_ai_shortform'});}
+    });
+  });
+  root.querySelectorAll('.copy').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var t=document.getElementById('home-'+btn.dataset.copy).innerText;
+      navigator.clipboard.writeText(t).then(function(){btn.textContent='복사됨';setTimeout(function(){btn.textContent='복사';},1600);});
+    });
+  });
+  root.querySelectorAll('.fold').forEach(function(d){
+    d.addEventListener('toggle',function(){
+      if(d.open&&typeof gtag==='function'){gtag('event','select_content',{content_type:'home_sample_fold',item_id:d.dataset.fold});}
+    });
+  });
+})();
+</script>
+</section>
+
 <section class="pc-clips" id="lecture-clips-preview">
 <style>
 .pc-clips{padding:56px 0 40px;background:#F6F8FA}
@@ -1711,11 +1890,6 @@ section { position: relative; }
   font-size:13.5px;font-weight:700;padding:9px 16px;border-radius:8px;text-decoration:none;transition:all .2s;
 }
 .pc-clips .pc-feat-cta:hover{background:rgba(200,151,58,.28)}
-.pc-clips .pc-blk{text-align:center;font-size:.85rem;font-weight:700;color:#C8973A;margin:0 0 14px}
-.pc-clips .pc-short{margin-bottom:44px}
-.pc-clips .pc-grid-2{grid-template-columns:repeat(2,1fr);max-width:376px}
-.pc-clips .pc-short-link{text-align:center;margin:18px 0 0;font-size:.9rem}
-.pc-clips .pc-short-link a{color:#1A3A5C;font-weight:700;text-decoration:none;border-bottom:1.5px solid #C8973A}
 .pc-clips .pc-grid + .pc-featured{margin:46px auto 0}
 @media (max-width:900px){
   .pc-clips{padding:52px 0}
@@ -1738,39 +1912,6 @@ section { position: relative; }
       <p class="pc-sub">기업 특강 &lsquo;AI 친화적 업무 혁신&rsquo; 현장에서 촬영한 실제 강의 클립입니다.</p>
     </div>
 
-    <div class="pc-short">
-      <p class="pc-blk">AI 숏폼 제작 과정 · 피코쌤이 AI로 직접 만든 영상</p>
-      <div class="pc-grid pc-grid-2">
-        <article class="pc-card">
-          <button class="pc-player" data-yt="HvLVeyPpWxs" aria-label="닭다리에 만보기만 달았을 뿐인데 영상 재생">
-            <img src="https://i.ytimg.com/vi/HvLVeyPpWxs/hqdefault.jpg" alt="AI로 만든 숏폼 - 닭다리에 만보기만 달았을 뿐인데" loading="lazy">
-            <span class="pc-play"><span></span></span>
-            <span class="pc-dur">0:60</span>
-          </button>
-          <div class="pc-txt">
-            <div class="pc-tag">AI 생성 영상</div>
-            <h3>닭다리에 만보기만 달았을 뿐인데</h3>
-            <p>챗GPT·클로드로 기획하고 브루와 구글 옴니로 90분 만에 만들었습니다.</p>
-            <a class="pc-more" href="/services/ai-shortform-training.html#samples">제작 과정 보기 &rarr;</a>
-          </div>
-        </article>
-        <article class="pc-card">
-          <button class="pc-player" data-yt="K2-yBfG0qqs" aria-label="외국인이 한국 PC방가면 충격받는이유 영상 재생">
-            <img src="https://i.ytimg.com/vi/K2-yBfG0qqs/hqdefault.jpg" alt="AI로 만든 숏폼 - 외국인이 한국 PC방가면 충격받는이유" loading="lazy">
-            <span class="pc-play"><span></span></span>
-            <span class="pc-dur">0:54</span>
-          </button>
-          <div class="pc-txt">
-            <div class="pc-tag">AI 생성 영상</div>
-            <h3>외국인이 한국 PC방가면 충격받는이유</h3>
-            <p>같은 방법으로 60분 만에 만든 두 번째 샘플입니다.</p>
-            <a class="pc-more" href="/services/ai-shortform-training.html#samples">제작 과정 보기 &rarr;</a>
-          </div>
-        </article>
-      </div>
-      <p class="pc-short-link"><a href="/services/ai-shortform-training.html">AI 숏폼 콘텐츠 제작 과정 자세히 보기 &rarr;</a></p>
-    </div>
-    <p class="pc-blk">기업 특강 현장 클립</p>
     <div class="pc-grid">
 
       <!-- 카드 1 : 6강 -->
