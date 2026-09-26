@@ -99,6 +99,7 @@ ChatGPT·Claude 활용, 생성형 AI 실무 활용, AI 기반 보고서·제안�
 - [AI 보고서·제안서 작성 교육](https://pcossam.com/services/ai-report-proposal.html): 자료조사, 목차 설계, 핵심 요약, 보고서 초안, 제안서 문장까지 실무 문서 작성 흐름을 익히는 기업 교육.
 - [AI 마케팅 웹사이트 제작 교육](https://pcossam.com/services/ai-marketing-website.html): 고객·서비스·FAQ를 정리하고 AEO·GEO 구조에 맞는 마케팅 웹사이트를 바이브 코딩으로 제작하는 실습형 교육.
 - [바이브 코딩 실무 과정](https://pcossam.com/services/vibe-coding-training.html): Claude와 Codex로 웹사이트·디지털 명함·이메일 서명·업무 자동화까지 직접 만드는 16시간(2일) 실습형 신규 과정.
+- [AI 숏폼 콘텐츠 제작 과정](https://pcossam.com/services/ai-shortform-training.html): 챗GPT·클로드·제미나이로 기획하고 브루(Vrew)와 구글 옴니로 AI 숏폼 영상을 만드는 4·8·16시간 실습 과정. 샘플 영상 2편의 프롬프트·크레딧·제작 시간과 구글 플로우·힉스필드 비용 비교를 공개.
 - [AI 프레젠테이션·피치덱 컨설팅](https://pcossam.com/services/pitchdeck-consulting.html): 투자유치·사업제안·입찰 발표를 위한 메시지 구조, 스토리라인, 슬라이드 흐름을 진단하고 개선하는 컨설팅.
 - [발표·피치덱 코칭](https://pcossam.com/services/presentation-coaching.html): 발표자의 전달력, 메시지 구조, 리허설, 질의응답 대응을 개선하는 1:1 코칭.
 - [기업 맞춤형 AI 전환 파트너십](https://pcossam.com/services/ai-transformation-partnership.html): 발표·보고서·마케팅·웹사이트까지 조직의 AI 활용 흐름을 월 단위로 설계·실행하는 파트너십.
