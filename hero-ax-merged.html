@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AX 통합 히어로</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0B0B0B; --card:#151515; --line:#2A2A2A;
+    --gold:#C9973A; --gold-hi:#E0B25A; --gold-dim:rgba(201,151,58,.14);
+    --text:#F5F5F5; --muted:#A8A8A8; --dim:#777;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 16px}
+
+  /* ===== 히어로 ===== */
+  .hero{padding:48px 0 64px;position:relative;overflow:hidden}
+  .hero:before{content:"";position:absolute;left:-120px;top:80px;width:520px;height:320px;
+    background:radial-gradient(closest-side,rgba(201,151,58,.18),transparent);pointer-events:none}
+  .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:start;position:relative}
+
+  .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(201,151,58,.45);
+    background:rgba(201,151,58,.08);color:var(--gold-hi);border-radius:999px;padding:8px 16px;font-size:14px;font-weight:500}
+  .badge:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
+
+  h1{margin-top:26px;font-size:clamp(36px,5.6vw,60px);font-weight:900;line-height:1.18;letter-spacing:-.025em}
+  h1 em{font-style:normal;color:var(--gold)}
+
+  .bridge{margin-top:22px;font-size:18px;color:var(--muted)}
+  .bridge b{color:var(--text)}
+  .slogan{margin-top:14px;display:inline-block;font-size:20px;font-weight:700;color:var(--gold-hi);
+    border-left:3px solid var(--gold);padding-left:12px}
+
+  .cta{display:flex;gap:10px;margin-top:32px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:15px 24px;border-radius:12px;font-weight:700;text-decoration:none;font-size:16px}
+  .btn-gold{background:var(--gold);color:#111}
+  .btn-line{border:1px solid #555;color:var(--text)}
+  .btn-note{display:block;font-size:12px;font-weight:400;opacity:.7;margin-top:2px}
+
+  .brand{margin-top:28px;padding-top:18px;border-top:1px solid var(--line)}
+  .brand strong{display:block;font-size:15px}
+  .brand small{color:var(--dim);font-size:13px}
+
+  /* 우측 카드 */
+  .visual{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;margin-top:8px}
+  .visual h3{font-size:13px;color:var(--muted);font-weight:500;margin-bottom:10px}
+  .bar{display:flex;gap:6px;height:48px}
+  .bar div{display:flex;align-items:center;justify-content:center;border-radius:9px;font-size:13px;font-weight:700;text-align:center;padding:0 6px}
+  .b1{flex:1;background:#2E2E2E;color:#ddd}
+  .b2{flex:2;background:var(--gold);color:#111}
+
+  .steps{margin-top:24px;display:flex;flex-direction:column;gap:8px}
+  .step{display:flex;align-items:center;gap:12px;background:#1C1C1C;border-radius:10px;padding:12px 14px}
+  .step .n{width:26px;height:26px;border-radius:50%;background:var(--gold-dim);color:var(--gold-hi);
+    display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex:none}
+  .step b{font-size:15px}
+  .step small{display:block;color:var(--dim);font-size:12px}
+  .step.last{border:1px solid rgba(201,151,58,.5)}
+  .step.last b{color:var(--gold-hi)}
+
+  /* ===== 상품 영역 ===== */
+  .products{padding:56px 0 72px;border-top:1px solid var(--line)}
+  .tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:28px}
+  .tab{border:1px solid #3A3A3A;background:transparent;color:var(--muted);font:500 14px 'Noto Sans KR';
+    padding:9px 16px;border-radius:999px;cursor:pointer}
+  .tab.active{background:var(--gold);border-color:var(--gold);color:#111;font-weight:700}
+  .panel{display:none}.panel.active{display:block}
+
+  .packages{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .pkg{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;position:relative}
+  .pkg.reco{border:2px solid var(--gold)}
+  .pkg .tag{position:absolute;top:-12px;left:20px;background:var(--gold);color:#111;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px}
+  .pkg h4{font-size:19px}
+  .pkg .spec{font-size:13px;color:var(--muted);margin:4px 0 14px}
+  .pkg ul{list-style:none;font-size:14px;color:#DADADA}
+  .pkg li{padding:4px 0 4px 18px;position:relative}
+  .pkg li:before{content:"✔";position:absolute;left:0;top:6px;color:var(--gold);font-size:12px}
+  .pkg .price{margin-top:16px;padding-top:12px;border-top:1px solid var(--line);font-weight:700}
+  .credit{margin-top:12px;background:var(--gold-dim);border-radius:9px;padding:10px 12px;font-size:13px;color:#E8D6B0}
+  .credit b{color:var(--gold-hi)}
+  .fine{margin-top:16px;font-size:12px;color:var(--dim)}
+  .placeholder{border:1px dashed #444;border-radius:14px;padding:60px 20px;text-align:center;color:var(--dim)}
+
+  @media (max-width:860px){
+    .grid{grid-template-columns:1fr;gap:32px}
+    .packages{grid-template-columns:1fr;gap:20px}
+    .bridge{font-size:16px}
+    .slogan{font-size:18px}
+    .btn{flex:1 1 100%;text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== 히어로 ===================== -->
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <span class="badge">AI 프레젠테이션 컨설팅 · 기업 AX 전환 · 발표 코칭</span>
+
+      <h1>AI로 아낀 시간을,<br><em>매출</em>로 바꾸는 법</h1>
+
+      <p class="bridge">AI는 비용 절감이 아니라 매출 성장 도구입니다.<br>
+        그리고 아낀 시간을 매출로 바꾸는 마지막 단계는 <b>결국 설득</b>입니다.</p>
+      <p class="slogan">AI시대, 결국 다시 프레젠테이션.</p>
+
+      <div class="cta">
+        <a class="btn btn-gold" href="#products">AX 전환 패키지 보기<span class="btn-note">기업·기관 담당자</span></a>
+        <a class="btn btn-line" href="#contact">발표 컨설팅·교육 문의<span class="btn-note">발표 코칭 · 강의 의뢰</span></a>
+      </div>
+
+      <div class="brand">
+        <strong>AI를 깊이 이해하는 프레젠테이션 전문가, 피코쌤</strong>
+        <small>연 200회 기업 강의 · AI 관련 저서 3권</small>
+      </div>
+    </div>
+
+    <div class="visual">
+      <h3>업무 3시간 → AI 전환 후</h3>
+      <div class="bar">
+        <div class="b1">AI 1시간</div>
+        <div class="b2">남은 2시간 → 어디에 쓸 것인가?</div>
+      </div>
+
+      <div class="steps">
+        <div class="step"><span class="n">1</span><div><b>전환 70</b><small>반복 업무를 AI로 덜어내기</small></div></div>
+        <div class="step"><span class="n">2</span><div><b>창출 30</b><small>아낀 시간으로 새 수익 설계</small></div></div>
+        <div class="step last"><span class="n">3</span><div><b>설득</b><small>새 아이디어를 통과시키는 발표 — 피코쌤의 본업</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 상품 영역 ===================== -->
+<section class="products" id="products">
+  <div class="wrap">
+    <div class="tabs">
+      <button class="tab active" data-tab="ax">AX 전환 패키지</button>
+      <button class="tab" data-tab="set">세트메뉴</button>
+      <button class="tab" data-tab="custom">나만의 조합 만들기</button>
+    </div>
+
+    <div class="panel active" id="ax">
+      <div class="packages">
+        <div class="pkg">
+          <h4>특강형</h4>
+          <p class="spec">전 직원 · 1회 3시간 · 오프라인</p>
+          <ul>
+            <li>왜 지금 AX인가 — 업계 변화·사례</li>
+            <li>직무별 Before·After 실시간 시연</li>
+            <li>안전하게 쓰는 원칙</li>
+          </ul>
+          <p class="price">맞춤 견적</p>
+        </div>
+
+        <div class="pkg reco">
+          <span class="tag">추천</span>
+          <h4>컨설팅형</h4>
+          <p class="spec">특강 + 부서별 3시간 × 2회</p>
+          <ul>
+            <li>특강형 전체 포함</li>
+            <li>1회차: 업무 진단 · 전환 설계</li>
+            <li>2회차: 매출 창출 · 스킬 정착</li>
+            <li>회차별 정리자료 제공</li>
+          </ul>
+          <p class="price">프로젝트형 · 맞춤 견적</p>
+          <div class="credit">🎁 <b>AI 크레딧 1인 3만원 지원</b><br>최대 20명 · 컨설팅형 이상 계약 시</div>
+        </div>
+
+        <div class="pkg">
+          <h4>풀패키지</h4>
+          <p class="spec">컨설팅 + 챔피언 육성 + 발표회</p>
+          <ul>
+            <li>컨설팅형 전체 포함</li>
+            <li>부서별 AI 챔피언 집중 육성</li>
+            <li>스킬 자산화 · 공유 발표회 운영</li>
+            <li>챔피언 발표 코칭 포함</li>
+          </ul>
+          <p class="price">프로젝트형 · 맞춤 견적</p>
+          <div class="credit">🎁 <b>AI 크레딧 1인 3만원 지원</b><br>최대 20명</div>
+        </div>
+      </div>
+      <p class="fine">※ AI 크레딧은 실습용 AI 도구 이용료 지원이며, 지원 인원은 계약당 최대 20명입니다. 세부 조건은 협의로 확정합니다.</p>
+    </div>
+
+    <div class="panel" id="set"><div class="placeholder">기존 세트메뉴가 들어갈 자리</div></div>
+    <div class="panel" id="custom"><div class="placeholder">기존 '나만의 조합 만들기' 위젯이 들어갈 자리</div></div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.tab').forEach(function(t){
+    t.addEventListener('click', function(){
+      document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('active')});
+      document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active')});
+      t.classList.add('active');
+      document.getElementById(t.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
