@@ -307,11 +307,11 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/lecture-custom-design-en.html"/>
   </url>
   <url>
-    <loc>https://pcossam.com/diagnosis</loc>
+    <loc>https://pcossam.com/diagnosis.html</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/diagnosis"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/diagnosis.html"/>
   </url>
 
   <!-- BLOG -->
