@@ -112,6 +112,7 @@ AX 전환(AI 기반 업무 전환)은 반복 업무를 AI로 덜어내고, 아�
 - [AI 숏폼 콘텐츠 제작 과정](https://pcossam.com/services/ai-shortform-training.html): 챗GPT·클로드·제미나이로 기획하고 브루(Vrew)와 구글 옴니로 AI 숏폼 영상을 만드는 4·8·16시간 실습 과정. 샘플 영상 2편의 프롬프트·크레딧·제작 시간과 구글 플로우·힉스필드 비용 비교를 공개.
 - [AI 프레젠테이션·피치덱 컨설팅](https://pcossam.com/services/pitchdeck-consulting.html): 투자유치·사업제안·입찰 발표를 위한 메시지 구조, 스토리라인, 슬라이드 흐름을 진단하고 개선하는 컨설팅.
 - [발표·피치덱 코칭 · 리허설 영상 분석](https://pcossam.com/services/presentation-coaching.html): 발표자의 전달력, 메시지 구조, 리허설, 질의응답 대응을 개선하는 1:1 코칭. 리허설 영상(유튜브 비공개 링크)을 보내면 비대면 분석 리포트를 주는 리허설 영상 분석(30만·60만·90만원~) 포함.
+- [AI 문제해결 역량 프로그램](https://pcossam.com/services/ai-problem-solving-program.html): 교육생이 조직 현안이나 사회 문제를 과제로 삼아 생성형 AI로 문제를 정의하고, 근거를 검증하고, 해결 방안을 설계해 성과 발표까지 완성하는 교육. 피코쌤 AI 문제해결 5단계, 4시간 체험형(150만원~)·8시간 실습형(250만원~)·16시간 프로젝트형(500만원~), 성과 발표 평가 기준 예시(자격·인증 아님) 공개.
 - [기업 AX 전환 교육·컨설팅](https://pcossam.com/services/ai-transformation-partnership.html): '전환 70 · 창출 30' 방법론으로 전 직원 특강, 부서별 3시간×2회 컨설팅, AI 챔피언 육성, 스킬 공유 발표회, 월 단위 지속 운영까지 설계하는 AX 전환(AI 전환) 프로그램. 특강형·컨설팅형·풀패키지 비교와 FAQ 수록.
 
 도구 · 무료 자료
