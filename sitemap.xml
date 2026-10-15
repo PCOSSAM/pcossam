@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://pcossam.com/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/"/>
@@ -78,7 +78,7 @@
 
   <url>
     <loc>https://pcossam.com/services/ai-marketing-website.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/ai-marketing-website.html"/>
@@ -112,7 +112,7 @@
 
   <url>
     <loc>https://pcossam.com/services/presentation-coaching.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/presentation-coaching.html"/>
@@ -129,7 +129,7 @@
 
   <url>
     <loc>https://pcossam.com/services/pitchdeck-consulting.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/pitchdeck-consulting.html"/>
@@ -160,22 +160,11 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/ai-transformation-partnership.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/ai-transformation-partnership-en.html"/>
   </url>
-
-  <url>
-    <loc>https://pcossam.com/services/aeo-geo-consulting.html</loc>
-    <lastmod>2026-08-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/aeo-geo-consulting.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/aeo-geo-consulting-en.html"/>
-  </url>
   <url>
     <loc>https://pcossam.com/aeo-geo-consulting-en.html</loc>
     <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://pcossam.com/services/aeo-geo-consulting.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/aeo-geo-consulting-en.html"/>
   </url>
 
   <url>
@@ -611,12 +600,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://pcossam.com/blog/wooden-doll-en.html"/>
   </url>
   <url>
-    <loc>https://pcossam.com/services/rehearsal-analysis.html</loc>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://pcossam.com/works/vibe-coding.html</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>monthly</changefreq>
@@ -639,5 +622,29 @@
     <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pcossam.com/services/ai-leadership.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pcossam.com/services/ai-career-portfolio.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pcossam.com/services/finance-vibe-coding.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pcossam.com/blog/thoughts.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

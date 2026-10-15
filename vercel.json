@@ -21,9 +21,25 @@
       "statusCode": 301
     },
     {
+      "source": "/services/aeo-geo-consulting.html",
+      "destination": "/services/ai-marketing-website.html#aeo-geo",
+      "statusCode": 301
+    },
+    {
+      "source": "/services/rehearsal-analysis.html",
+      "destination": "/services/presentation-coaching.html#rehearsal",
+      "statusCode": 301
+    },
+    {
       "source": "/builder",
       "destination": "/lab/course-builder.html?utm_source=instagram&utm_medium=social&utm_campaign=reels_builder",
       "statusCode": 302
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/blog/thoughts.html",
+      "destination": "/thoughts.html"
     }
   ]
 }
