@@ -59,7 +59,14 @@
     }
    },
    "mainEntityOfPage": "https://pcossam.com/portfolio/public-card-alert.html",
-   "keywords": "예산 투명성, 사회 문제 해결 방안, AI 기획, 생성형 AI 활용, 프레젠테이션"
+   "keywords": "예산 투명성, 사회 문제 해결 방안, AI 기획, 생성형 AI 활용, 프레젠테이션",
+   "citation": [
+    {
+     "@type": "CreativeWork",
+     "name": "재정경제부 공공기관운영위원회 · 2026.1.29 지정 (쿠키뉴스 2026.1.29 보도)",
+     "url": "https://www.kukinews.com/article/view/kuk202601290315"
+    }
+   ]
   },
   {
    "@type": "HowTo",
@@ -478,6 +485,16 @@ footer a{color:var(--gold);text-decoration:none}
 .cta-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px}
 .cta-links a{font-size:13px;color:inherit;opacity:.85}
 @media(max-width:640px){.ai-slides{grid-template-columns:1fr}.pf-tldr dl{grid-template-columns:1fr;gap:2px}.pf-tldr dd{margin-bottom:8px}.ai-guide h2{font-size:22px}.pf-author{flex-direction:column}.ai-prompt{padding-top:40px}}
+
+.pf-stats{margin:18px 0 6px}
+.pf-stats-head{font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--gold);margin-bottom:10px}
+.pf-stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.pf-stat{background:#fff;border:1px solid var(--gray-200);border-radius:12px;padding:16px 18px}
+.pf-stat b{display:block;font-size:24px;font-weight:900;color:var(--accent);letter-spacing:-.02em;line-height:1.3}
+.pf-stat span{display:block;font-size:14px;color:var(--gray-800);margin:4px 0 8px;line-height:1.55}
+.pf-stat small{display:block;font-size:12px;color:var(--gray-400);line-height:1.5}
+.pf-stat small a{color:var(--gray-600)}
+.pf-stats-note{font-size:12px;color:var(--gray-400);margin-top:8px}
 </style>
 </head>
 <body>
@@ -506,10 +523,18 @@ footer a{color:var(--gold);text-decoration:none}
   <section class="pf-tldr" aria-label="한눈에 보기">
     <div class="pf-tldr-head">한눈에 보기</div>
     <dl>
-      <dt>문제</dt><dd>공공 예산 집행 내역은 사후 감사보고서로만 확인할 수 있어, 국민은 실시간 사용 내역에 접근하기 어렵고 부정·사적 사용은 적발 전까지 드러나지 않습니다.</dd>
+      <dt>문제</dt><dd>정부가 지정·관리하는 공공기관만 342곳(2026년 1월 지정)이고, 지방자치단체는 243곳입니다. 공공 예산 집행 내역은 사후 감사보고서로만 확인할 수 있어, 국민은 실시간 사용 내역에 접근하기 어렵고 부정·사적 사용은 적발 전까지 드러나지 않습니다.</dd>
       <dt>해법</dt><dd>공공기관 법인카드마다 국민이 알림을 신청하면, 결제 즉시 사용 내역을 문자로 받고 답장으로 의견을 낼 수 있는 실시간 공개 시스템을 만듭니다.</dd>
       <dt>효과</dt><dd>예산 투명성 강화, 부정 사용 사전 예방, 감사 비용 절감, 축적 데이터 기반 정책 개선, 디지털 정부 수출 모델.</dd>
     </dl>
+  </section>
+  <section class="pf-stats" aria-label="숫자로 보는 문제">
+    <div class="pf-stats-head">숫자로 보는 문제</div>
+    <div class="pf-stats-grid">
+      <div class="pf-stat"><b>342곳</b><span>정부가 지정·관리하는 공공기관 수</span><small>재정경제부 공공기관운영위원회 · 2026.1.29 지정<br>출처: <a href="https://www.kukinews.com/article/view/kuk202601290315" target="_blank" rel="noopener">쿠키뉴스 2026.1.29 보도</a></small></div>
+      <div class="pf-stat"><b>243곳</b><span>지방자치단체 (광역 17 · 기초 226)</span><small>행정구역 기준</small></div>
+    </div>
+    <p class="pf-stats-note">수치는 공식 발표를 인용한 보도에서 확인했으며, 기준 시점이 지나면 최신 발표로 갱신이 필요합니다. (2026.10 확인)</p>
   </section>
 
   <img src="images/case06-thumb.jpg" alt="공공기관 법인카드 실시간 사용내역 알림 대표 이미지" class="hero-img" style="max-height:480px;object-fit:cover;" onclick="lbOpen(this)">
@@ -600,8 +625,8 @@ footer a{color:var(--gold);text-decoration:none}
   </p>
   <div class="portfolio-scale-grid">
     <div class="portfolio-scale-item">
-      <div class="portfolio-scale-num">327개</div>
-      <div class="portfolio-scale-label">공공기관<br>(공기업·준정부기관·기타공공기관)</div>
+      <div class="portfolio-scale-num">342개</div>
+      <div class="portfolio-scale-label">공공기관<br>(공기업·준정부기관·기타공공기관, 2026년 1월 지정)</div>
     </div>
     <div class="portfolio-scale-item">
       <div class="portfolio-scale-num">243개</div>

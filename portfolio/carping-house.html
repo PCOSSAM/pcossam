@@ -59,7 +59,24 @@
     }
    },
    "mainEntityOfPage": "https://pcossam.com/portfolio/carping-house.html",
-   "keywords": "지방 소멸·빈집, 사회 문제 해결 방안, AI 기획, 생성형 AI 활용, 프레젠테이션"
+   "keywords": "지방 소멸·빈집, 사회 문제 해결 방안, AI 기획, 생성형 AI 활용, 프레젠테이션",
+   "citation": [
+    {
+     "@type": "CreativeWork",
+     "name": "국가데이터처 2025 인구주택총조사 · 2025.11.1 기준 (뉴시스 2026.7.28 보도)",
+     "url": "https://www.newsis.com/view/NISX20260728_0003726109"
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "한국고용정보원 분석 · 2024.3 기준 (노컷뉴스 2025.6.27 보도)",
+     "url": "https://www.nocutnews.co.kr/news/6360983"
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "한국관광협회중앙회 · 2023년 말 기준 (파이낸셜뉴스 2024.4.11 보도)",
+     "url": "https://www.fnnews.com/news/202404110601482585"
+    }
+   ]
   },
   {
    "@type": "HowTo",
@@ -478,6 +495,16 @@ footer a{color:var(--gold);text-decoration:none}
 .cta-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px}
 .cta-links a{font-size:13px;color:inherit;opacity:.85}
 @media(max-width:640px){.ai-slides{grid-template-columns:1fr}.pf-tldr dl{grid-template-columns:1fr;gap:2px}.pf-tldr dd{margin-bottom:8px}.ai-guide h2{font-size:22px}.pf-author{flex-direction:column}.ai-prompt{padding-top:40px}}
+
+.pf-stats{margin:18px 0 6px}
+.pf-stats-head{font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--gold);margin-bottom:10px}
+.pf-stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.pf-stat{background:#fff;border:1px solid var(--gray-200);border-radius:12px;padding:16px 18px}
+.pf-stat b{display:block;font-size:24px;font-weight:900;color:var(--accent);letter-spacing:-.02em;line-height:1.3}
+.pf-stat span{display:block;font-size:14px;color:var(--gray-800);margin:4px 0 8px;line-height:1.55}
+.pf-stat small{display:block;font-size:12px;color:var(--gray-400);line-height:1.5}
+.pf-stat small a{color:var(--gray-600)}
+.pf-stats-note{font-size:12px;color:var(--gray-400);margin-top:8px}
 </style>
 </head>
 <body>
@@ -506,10 +533,19 @@ footer a{color:var(--gold);text-decoration:none}
   <section class="pf-tldr" aria-label="한눈에 보기">
     <div class="pf-tldr-head">한눈에 보기</div>
     <dl>
-      <dt>문제</dt><dd>지방 소멸 위기 지역에 방치된 빈집·폐가가 늘고, 캠핑 수요는 장비 부담과 예약난으로 막혀 있습니다.</dd>
+      <dt>문제</dt><dd>2025년 11월 기준 전국 미거주 주택은 172만 2천 호(전체의 8.5%)이고, 228개 시군구 중 130곳이 소멸위험지역입니다. 지방 소멸 위기 지역에 방치된 빈집·폐가가 늘고, 캠핑 수요는 장비 부담과 예약난으로 막혀 있습니다.</dd>
       <dt>해법</dt><dd>빈집을 최소 예산으로 고쳐 통창·자쿠지·바베큐를 갖춘 &#x27;캠핑×하우스&#x27; 숙소로 바꾸고, 예약·주문·결제를 앱 하나로 운영합니다.</dd>
       <dt>효과</dt><dd>빈집 문제 완화, 캠핑 관광객 유치, 지역화폐 결제를 통한 주변 상권 활성화, 이용 데이터 기반 수요 예측.</dd>
     </dl>
+  </section>
+  <section class="pf-stats" aria-label="숫자로 보는 문제">
+    <div class="pf-stats-head">숫자로 보는 문제</div>
+    <div class="pf-stats-grid">
+      <div class="pf-stat"><b>172만 2천 호</b><span>전국 미거주 주택(빈집 등) · 전체 주택의 8.5%</span><small>국가데이터처 2025 인구주택총조사 · 2025.11.1 기준<br>출처: <a href="https://www.newsis.com/view/NISX20260728_0003726109" target="_blank" rel="noopener">뉴시스 2026.7.28 보도</a></small></div>
+      <div class="pf-stat"><b>130곳 / 228곳</b><span>소멸위험지역 시군구</span><small>한국고용정보원 분석 · 2024.3 기준<br>출처: <a href="https://www.nocutnews.co.kr/news/6360983" target="_blank" rel="noopener">노컷뉴스 2025.6.27 보도</a></small></div>
+      <div class="pf-stat"><b>3,747개</b><span>전국 야영장(캠핑장) 수</span><small>한국관광협회중앙회 · 2023년 말 기준<br>출처: <a href="https://www.fnnews.com/news/202404110601482585" target="_blank" rel="noopener">파이낸셜뉴스 2024.4.11 보도</a></small></div>
+    </div>
+    <p class="pf-stats-note">수치는 공식 발표를 인용한 보도에서 확인했으며, 기준 시점이 지나면 최신 발표로 갱신이 필요합니다. (2026.10 확인)</p>
   </section>
 
   

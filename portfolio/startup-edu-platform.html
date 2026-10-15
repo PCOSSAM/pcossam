@@ -59,7 +59,24 @@
     }
    },
    "mainEntityOfPage": "https://pcossam.com/portfolio/startup-edu-platform.html",
-   "keywords": "소상공인 폐업, 사회 문제 해결 방안, AI 기획, 생성형 AI 활용, 프레젠테이션"
+   "keywords": "소상공인 폐업, 사회 문제 해결 방안, AI 기획, 생성형 AI 활용, 프레젠테이션",
+   "citation": [
+    {
+     "@type": "CreativeWork",
+     "name": "국세청 국세통계 · 2024년 (파이낸셜뉴스 2026.7.6 보도)",
+     "url": "https://www.fnnews.com/news/202607060551374331"
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "국세청 국세통계 · 2025년 (파이낸셜뉴스 2026.7.6 보도)",
+     "url": "https://www.fnnews.com/news/202607060551374331"
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "국세청 국세통계 · 2025년 (파이낸셜뉴스 2026.7.6 보도)",
+     "url": "https://www.fnnews.com/news/202607060551374331"
+    }
+   ]
   },
   {
    "@type": "HowTo",
@@ -478,6 +495,16 @@ footer a{color:var(--gold);text-decoration:none}
 .cta-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px}
 .cta-links a{font-size:13px;color:inherit;opacity:.85}
 @media(max-width:640px){.ai-slides{grid-template-columns:1fr}.pf-tldr dl{grid-template-columns:1fr;gap:2px}.pf-tldr dd{margin-bottom:8px}.ai-guide h2{font-size:22px}.pf-author{flex-direction:column}.ai-prompt{padding-top:40px}}
+
+.pf-stats{margin:18px 0 6px}
+.pf-stats-head{font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--gold);margin-bottom:10px}
+.pf-stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.pf-stat{background:#fff;border:1px solid var(--gray-200);border-radius:12px;padding:16px 18px}
+.pf-stat b{display:block;font-size:24px;font-weight:900;color:var(--accent);letter-spacing:-.02em;line-height:1.3}
+.pf-stat span{display:block;font-size:14px;color:var(--gray-800);margin:4px 0 8px;line-height:1.55}
+.pf-stat small{display:block;font-size:12px;color:var(--gray-400);line-height:1.5}
+.pf-stat small a{color:var(--gray-600)}
+.pf-stats-note{font-size:12px;color:var(--gray-400);margin-top:8px}
 </style>
 </head>
 <body>
@@ -506,10 +533,19 @@ footer a{color:var(--gold);text-decoration:none}
   <section class="pf-tldr" aria-label="한눈에 보기">
     <div class="pf-tldr-head">한눈에 보기</div>
     <dl>
-      <dt>문제</dt><dd>소상공인 창업 교육은 이론 중심이라 현장에 적용하기 어렵고, 교육이 실제 매출로 연결되지 않아 시행착오와 폐업이 반복됩니다.</dd>
+      <dt>문제</dt><dd>2024년 폐업 신고 사업자는 100만 8,282명으로 역대 최대였고, 2025년에도 97만 명을 넘었으며 그중 절반(50.4%)이 사업 부진 때문이었습니다. 소상공인 창업 교육은 이론 중심이라 현장에 적용하기 어렵고, 교육이 실제 매출로 연결되지 않아 시행착오와 폐업이 반복됩니다.</dd>
       <dt>해법</dt><dd>검증된 레시피를 골라 자기 매장에서 실제로 팔아보고, 매출·재구매율·고객 반응 데이터로 평가하며 배우는 4단계 실전형 교육 플랫폼을 만듭니다.</dd>
       <dt>효과</dt><dd>실전 경험 기반 창업 성공률 향상, 시행착오 감소, 우수 레시피 판매를 통한 추가 수익과 소상공인 협업 생태계.</dd>
     </dl>
+  </section>
+  <section class="pf-stats" aria-label="숫자로 보는 문제">
+    <div class="pf-stats-head">숫자로 보는 문제</div>
+    <div class="pf-stats-grid">
+      <div class="pf-stat"><b>100만 8,282명</b><span>폐업 신고 사업자 수 (역대 최대)</span><small>국세청 국세통계 · 2024년<br>출처: <a href="https://www.fnnews.com/news/202607060551374331" target="_blank" rel="noopener">파이낸셜뉴스 2026.7.6 보도</a></small></div>
+      <div class="pf-stat"><b>97만 5,681명</b><span>폐업 신고 사업자 수</span><small>국세청 국세통계 · 2025년<br>출처: <a href="https://www.fnnews.com/news/202607060551374331" target="_blank" rel="noopener">파이낸셜뉴스 2026.7.6 보도</a></small></div>
+      <div class="pf-stat"><b>50.4%</b><span>폐업 사유 중 &#x27;사업 부진&#x27; 비중</span><small>국세청 국세통계 · 2025년<br>출처: <a href="https://www.fnnews.com/news/202607060551374331" target="_blank" rel="noopener">파이낸셜뉴스 2026.7.6 보도</a></small></div>
+    </div>
+    <p class="pf-stats-note">수치는 공식 발표를 인용한 보도에서 확인했으며, 기준 시점이 지나면 최신 발표로 갱신이 필요합니다. (2026.10 확인)</p>
   </section>
 
   

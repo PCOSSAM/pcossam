@@ -59,7 +59,19 @@
     }
    },
    "mainEntityOfPage": "https://pcossam.com/portfolio/battery-station.html",
-   "keywords": "에너지 접근성·자원 순환, 사회 문제 해결 방안, AI 기획, 생성형 AI 활용, 프레젠테이션"
+   "keywords": "에너지 접근성·자원 순환, 사회 문제 해결 방안, AI 기획, 생성형 AI 활용, 프레젠테이션",
+   "citation": [
+    {
+     "@type": "CreativeWork",
+     "name": "환경부 추정(택배 사용량 역산) · 2020년 보도 (에너지경제신문 2020.7.13 보도)",
+     "url": "https://m.ekn.kr/view.php?key=510873"
+    },
+    {
+     "@type": "CreativeWork",
+     "name": "한국관광협회중앙회 · 2023년 말 기준 (파이낸셜뉴스 2024.4.11 보도)",
+     "url": "https://www.fnnews.com/news/202404110601482585"
+    }
+   ]
   },
   {
    "@type": "HowTo",
@@ -478,6 +490,16 @@ footer a{color:var(--gold);text-decoration:none}
 .cta-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px}
 .cta-links a{font-size:13px;color:inherit;opacity:.85}
 @media(max-width:640px){.ai-slides{grid-template-columns:1fr}.pf-tldr dl{grid-template-columns:1fr;gap:2px}.pf-tldr dd{margin-bottom:8px}.ai-guide h2{font-size:22px}.pf-author{flex-direction:column}.ai-prompt{padding-top:40px}}
+
+.pf-stats{margin:18px 0 6px}
+.pf-stats-head{font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--gold);margin-bottom:10px}
+.pf-stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.pf-stat{background:#fff;border:1px solid var(--gray-200);border-radius:12px;padding:16px 18px}
+.pf-stat b{display:block;font-size:24px;font-weight:900;color:var(--accent);letter-spacing:-.02em;line-height:1.3}
+.pf-stat span{display:block;font-size:14px;color:var(--gray-800);margin:4px 0 8px;line-height:1.55}
+.pf-stat small{display:block;font-size:12px;color:var(--gray-400);line-height:1.5}
+.pf-stat small a{color:var(--gray-600)}
+.pf-stats-note{font-size:12px;color:var(--gray-400);margin-top:8px}
 </style>
 </head>
 <body>
@@ -506,10 +528,18 @@ footer a{color:var(--gold);text-decoration:none}
   <section class="pf-tldr" aria-label="한눈에 보기">
     <div class="pf-tldr-head">한눈에 보기</div>
     <dl>
-      <dt>문제</dt><dd>휴대용 파워뱅크는 용량이 클수록 무겁고 비싸며 충전이 오래 걸립니다. 캠핑장 냉장은 얼음·아이스박스에 의존하고, 신선식품 배송은 일회용 보냉재를 남깁니다.</dd>
+      <dt>문제</dt><dd>국내에서 연간 2억 개 이상 쓰이는 것으로 추정되는 아이스팩처럼, 생활 속 냉장·전력은 일회용과 무거운 장비에 기대고 있습니다. 휴대용 파워뱅크는 용량이 클수록 무겁고 비싸며 충전이 오래 걸립니다. 캠핑장 냉장은 얼음·아이스박스에 의존하고, 신선식품 배송은 일회용 보냉재를 남깁니다.</dd>
       <dt>해법</dt><dd>캠핑장과 아파트 단지에 표준 배터리 교환 스테이션을 두고, 같은 배터리로 움직이는 휴대용 냉장고와 전동 웨건을 빌려 쓰며 방전되면 즉시 교환합니다.</dd>
       <dt>효과</dt><dd>충전 대기 없는 생활 전력, 무거운 짐 운반 부담 감소, 일회용 보냉재 절감, 배터리 표준화 기반 에너지 서비스 플랫폼.</dd>
     </dl>
+  </section>
+  <section class="pf-stats" aria-label="숫자로 보는 문제">
+    <div class="pf-stats-head">숫자로 보는 문제</div>
+    <div class="pf-stats-grid">
+      <div class="pf-stat"><b>2억 개 이상</b><span>국내 연간 아이스팩 소비 추정량</span><small>환경부 추정(택배 사용량 역산) · 2020년 보도<br>출처: <a href="https://m.ekn.kr/view.php?key=510873" target="_blank" rel="noopener">에너지경제신문 2020.7.13 보도</a></small></div>
+      <div class="pf-stat"><b>3,747개</b><span>전국 야영장(캠핑장) 수</span><small>한국관광협회중앙회 · 2023년 말 기준<br>출처: <a href="https://www.fnnews.com/news/202404110601482585" target="_blank" rel="noopener">파이낸셜뉴스 2024.4.11 보도</a></small></div>
+    </div>
+    <p class="pf-stats-note">수치는 공식 발표를 인용한 보도에서 확인했으며, 기준 시점이 지나면 최신 발표로 갱신이 필요합니다. (2026.10 확인)</p>
   </section>
 
   

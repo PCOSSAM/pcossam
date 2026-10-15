@@ -59,7 +59,14 @@
     }
    },
    "mainEntityOfPage": "https://pcossam.com/portfolio/ev-hotel.html",
-   "keywords": "충전 인프라·관광 숙박, 사회 문제 해결 방안, AI 기획, 생성형 AI 활용, 프레젠테이션"
+   "keywords": "충전 인프라·관광 숙박, 사회 문제 해결 방안, AI 기획, 생성형 AI 활용, 프레젠테이션",
+   "citation": [
+    {
+     "@type": "CreativeWork",
+     "name": "국토교통부 · 2026년 6월 말 기준 (SBS Biz 2026.7.31 보도)",
+     "url": "https://biz.sbs.co.kr/amp/article/20000325805"
+    }
+   ]
   },
   {
    "@type": "HowTo",
@@ -478,6 +485,16 @@ footer a{color:var(--gold);text-decoration:none}
 .cta-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px}
 .cta-links a{font-size:13px;color:inherit;opacity:.85}
 @media(max-width:640px){.ai-slides{grid-template-columns:1fr}.pf-tldr dl{grid-template-columns:1fr;gap:2px}.pf-tldr dd{margin-bottom:8px}.ai-guide h2{font-size:22px}.pf-author{flex-direction:column}.ai-prompt{padding-top:40px}}
+
+.pf-stats{margin:18px 0 6px}
+.pf-stats-head{font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--gold);margin-bottom:10px}
+.pf-stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.pf-stat{background:#fff;border:1px solid var(--gray-200);border-radius:12px;padding:16px 18px}
+.pf-stat b{display:block;font-size:24px;font-weight:900;color:var(--accent);letter-spacing:-.02em;line-height:1.3}
+.pf-stat span{display:block;font-size:14px;color:var(--gray-800);margin:4px 0 8px;line-height:1.55}
+.pf-stat small{display:block;font-size:12px;color:var(--gray-400);line-height:1.5}
+.pf-stat small a{color:var(--gray-600)}
+.pf-stats-note{font-size:12px;color:var(--gray-400);margin-top:8px}
 </style>
 </head>
 <body>
@@ -506,10 +523,17 @@ footer a{color:var(--gold);text-decoration:none}
   <section class="pf-tldr" aria-label="한눈에 보기">
     <div class="pf-tldr-head">한눈에 보기</div>
     <dl>
-      <dt>문제</dt><dd>전기차는 늘지만 여행 중 충전과 숙박을 따로 해결해야 하고, 성수기 관광지에서는 숙소가 부족해 화장실·샤워실 없는 차박으로 밀려납니다.</dd>
+      <dt>문제</dt><dd>2026년 6월 말 전기차 누적 등록은 109만 5천여 대(전체 자동차의 4.1%)로 100만 대를 넘었습니다. 전기차는 늘지만 여행 중 충전과 숙박을 따로 해결해야 하고, 성수기 관광지에서는 숙소가 부족해 화장실·샤워실 없는 차박으로 밀려납니다.</dd>
       <dt>해법</dt><dd>차를 객실 공간으로 그대로 들이고 주차와 동시에 충전하며, 공용 화장실·샤워실을 갖춘 비대면 &#x27;전기차 전용 호텔&#x27;을 만듭니다.</dd>
       <dt>효과</dt><dd>관광지 숙박 부족 완화, 객실료+충전 요금의 안정 수익, 비수기 주차장 전환, 친환경 숙박 문화 확산.</dd>
     </dl>
+  </section>
+  <section class="pf-stats" aria-label="숫자로 보는 문제">
+    <div class="pf-stats-head">숫자로 보는 문제</div>
+    <div class="pf-stats-grid">
+      <div class="pf-stat"><b>109만 5천여 대</b><span>전기차 누적 등록 대수 · 전체 자동차의 4.1%</span><small>국토교통부 · 2026년 6월 말 기준<br>출처: <a href="https://biz.sbs.co.kr/amp/article/20000325805" target="_blank" rel="noopener">SBS Biz 2026.7.31 보도</a></small></div>
+    </div>
+    <p class="pf-stats-note">수치는 공식 발표를 인용한 보도에서 확인했으며, 기준 시점이 지나면 최신 발표로 갱신이 필요합니다. (2026.10 확인)</p>
   </section>
 
   
