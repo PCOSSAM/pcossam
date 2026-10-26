@@ -49,6 +49,56 @@
       "source": "/builder",
       "destination": "/lab/course-builder.html?utm_source=instagram&utm_medium=social&utm_campaign=reels_builder",
       "statusCode": 302
+    },
+    {
+      "source": "/generative-ai-training.html",
+      "destination": "/services/generative-ai-training.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/vibe-coding-training.html",
+      "destination": "/services/vibe-coding-training.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/ai-transformation-partnership.html",
+      "destination": "/services/ai-transformation-partnership.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/lecture-highlights.html",
+      "destination": "/lecture-clips.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/startup-edu-platform-en.html",
+      "destination": "/portfolio/startup-edu-platform-en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/public-card-alert-en.html",
+      "destination": "/portfolio/public-card-alert-en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/kfood-standard-en.html",
+      "destination": "/portfolio/kfood-standard-en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/ev-hotel-en.html",
+      "destination": "/portfolio/ev-hotel-en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/carping-house-en.html",
+      "destination": "/portfolio/carping-house-en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/battery-station-en.html",
+      "destination": "/portfolio/battery-station-en.html",
+      "statusCode": 301
     }
   ],
   "rewrites": [
