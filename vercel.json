@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/_presentation/:path*",
+      "destination": "/presentation/",
+      "permanent": false
+    },
+    {
       "source": "/services/corporate-training.html",
       "destination": "/services/generative-ai-training.html",
       "statusCode": 301

@@ -1,0 +1,35 @@
+# 프레젠테이션 가이드 예약 공개
+# 매주 월·목 오전 9시(한국시간)에 _presentation/build.py 를 실행해
+# 공개일이 된 글을 /presentation/ 에 추가하고 sitemap.xml · llms.txt 를 갱신한다.
+# 바뀐 게 있으면 main 에 커밋 → Vercel 이 자동 배포한다.
+name: 발표 가이드 예약 공개
+
+on:
+  schedule:
+    - cron: "5 0 * * 1,4"   # UTC 00:05 = 한국시간 09:05 (월·목)
+  workflow_dispatch:         # GitHub Actions 화면에서 수동 실행도 가능
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 공개일이 된 글 생성
+        run: python3 _presentation/build.py
+      - name: 바뀐 내용이 있으면 커밋
+        run: |
+          if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard presentation)" ]; then
+            echo "새로 공개할 글 없음"
+            exit 0
+          fi
+          git config user.name "pcossam-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add presentation sitemap.xml llms.txt
+          git commit -m "발표 가이드 예약 공개 ($(TZ=Asia/Seoul date +%Y-%m-%d))"
+          git push
