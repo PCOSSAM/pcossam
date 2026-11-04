@@ -1419,6 +1419,12 @@ section { position: relative; }
   .pcx-brand{margin-top:28px;padding-top:16px;border-top:1px solid rgba(255,255,255,.1)}
   .pcx-brand strong{display:block;font-size:14.5px;color:#fff}
   .pcx-brand small{font-size:12.5px;color:rgba(250,250,248,.5)}
+  .pcx-side{display:flex;flex-direction:column}
+  .pcx-photo{position:relative;margin:0;border-radius:16px;overflow:hidden;aspect-ratio:4/4.3;background:#111}
+  .pcx-photo img{width:100%;height:100%;object-fit:cover;object-position:35% 20%;display:block}
+  .pcx-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,10,10,.85) 100%)}
+  .pcx-photo figcaption{position:absolute;left:16px;bottom:56px;z-index:1;font-size:12.5px;color:rgba(255,255,255,.8);letter-spacing:.02em}
+  .pcx-side .pcx-card{margin:-40px 14px 0;position:relative;z-index:2;background:rgba(22,22,22,.92);backdrop-filter:blur(6px)}
   .pcx-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:24px}
   .pcx-card h3{font-size:12.5px;font-weight:500;color:rgba(250,250,248,.6);margin:0 0 10px}
   .pcx-bar{display:flex;gap:6px;min-height:46px}
@@ -1451,6 +1457,8 @@ section { position: relative; }
   .pcx-pkg .go:hover{border-color:var(--gold)}
   @media(max-width:900px){
     .pcx-top{grid-template-columns:1fr;gap:32px}
+    .pcx-photo{aspect-ratio:1/1;max-width:420px;width:100%;margin:0 auto}
+    .pcx-side .pcx-card{margin:-32px 8px 0}
     .pcx-pkgs{grid-template-columns:1fr;gap:20px}
     .pcx-slogan{font-size:18px}
     .pcx-actions a{flex:1 1 100%}
@@ -1479,6 +1487,11 @@ section { position: relative; }
     </div>
     </div>
 
+    <div class="pcx-side">
+    <figure class="pcx-photo">
+      <img src="assets/inline/pcossam-hero-photo.jpg" alt="AI 프레젠테이션 컨설턴트 피코쌤 김민구" width="596" height="745" fetchpriority="high" decoding="async">
+      <figcaption>피코쌤 김민구 · PTC 프레젠테이션 컨설팅 대표</figcaption>
+    </figure>
     <div class="pcx-card">
       <h3>업무 3시간 → AI 전환 후</h3>
       <div class="pcx-bar"><div class="pcx-b1">AI 1시간</div><div class="pcx-b2">남은 2시간 → 어디에 쓸 것인가?</div></div>
@@ -1488,6 +1501,7 @@ section { position: relative; }
         <div class="pcx-step last"><span class="n">3</span><div><b>설득</b><small>새 아이디어를 통과시키는 발표 — 피코쌤의 본업</small></div></div>
       </div>
       <p class="pcx-proof">OOO · OOO · OOO · OOO · OOO 경쟁 PT 컨설팅 외 실전 프로젝트 50여 건</p>
+    </div>
     </div>
    </div>
 
