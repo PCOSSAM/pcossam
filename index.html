@@ -415,6 +415,10 @@
   .nav-links { display: flex; gap: 32px; list-style: none; }
   .nav-links a { text-decoration: none; color: var(--gray-600); font-size: 14px; font-weight: 500; transition: color 0.2s; }
   .nav-links a:hover { color: var(--accent); }
+  .nav-links a { white-space: nowrap; }
+  @media (max-width: 1279px) { .nav-links { gap: 18px; } .nav-links a { font-size: 13px; } }
+  @media (max-width: 1120px) { .nav-links { gap: 12px; } .nav-links a { font-size: 12.5px; } }
+  @media (min-width: 901px) and (max-width: 1060px) { .nav-links li:nth-child(8), .nav-links li:nth-child(9) { display: none; } }
   .nav-cta {
     background: var(--accent); color: var(--white);
     padding: 8px 20px; border-radius: 6px; font-size: 14px; font-weight: 500;
@@ -1327,14 +1331,15 @@ section { position: relative; }
 <nav>
   <a href="#hero" class="nav-brand" style="font-family:'Noto Sans KR',sans-serif;font-weight:900;font-size:20px;letter-spacing:-0.5px;display:inline-flex;align-items:center;"><img src="assets/inline/pcossam-logo.png" alt="PCOSSAM 로고" style="height:28px;width:auto;object-fit:contain;vertical-align:middle;margin-right:6px;">PCOSSAM</a>
   <ul class="nav-links" id="navLinks">
+    <li><a href="#ai-shortform-preview" style="color:var(--gold);font-weight:700;" data-pcx="nav_ai_video">AI 영상 제작</a></li>
+    <li><a href="/services/generative-ai-training.html" data-pcx="nav_ai_work">AI 실무 특강</a></li>
+    <li><a href="#lecture-clips-preview">강의 영상</a></li>
     <li><a href="#hero-packages">AX 전환</a></li>
     <li><a href="#wins">실적</a></li>
     <li><a href="#services">서비스 & 비용</a></li>
     <li><a href="/presentation/">발표 가이드</a></li>
-    <li><a href="/services/ai-problem-solving-program.html">AI 문제해결</a></li>
     <li><a href="#about">소개</a></li>
     <li><a href="#faq">FAQ</a></li>
-    <li><a href="#contact">문의</a></li>
     <li><a href="/pcossam_en.html" style="font-weight:700;">EN</a></li>
   </ul>
   <div style="display:flex; align-items:center; gap:8px;">
