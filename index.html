@@ -1462,88 +1462,214 @@ section { position: relative; }
     .pcx-slogan{font-size:18px}
     .pcx-actions a{flex:1 1 100%}
   }
+
+  /* ── 2026.11 HOT 2과정 히어로 ── */
+  .hot-wrap{margin-top:44px;padding-top:36px;border-top:1px solid rgba(255,255,255,.1)}
+  .hot-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .hot-card{border:1px solid rgba(255,255,255,.14);border-top:3px solid var(--gold);border-radius:16px;background:rgba(255,255,255,.03);padding:24px;display:flex;flex-direction:column;word-break:keep-all}
+  .hot-top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:12px}
+  .hot-tag{background:var(--gold);color:var(--black);font-size:11.5px;font-weight:800;padding:4px 11px;border-radius:20px}
+  .hot-time{font-size:12.5px;font-weight:700;color:rgba(250,250,248,.6)}
+  .hot-card h3{margin:0;font-size:22px;font-weight:900;color:#fff;letter-spacing:-.02em;line-height:1.35}
+  .hot-card h3 small{display:block;font-size:12.5px;font-weight:500;color:rgba(250,250,248,.5);margin-top:4px;letter-spacing:0}
+  .hot-lead{font-size:14px;color:rgba(250,250,248,.75);margin:8px 0 14px;line-height:1.6}
+  .hot-card ul{list-style:none;margin:0 0 18px;padding:0;font-size:13.5px;color:rgba(250,250,248,.85)}
+  .hot-card li{position:relative;padding:3px 0 3px 18px}
+  .hot-card li:before{content:"✔";position:absolute;left:0;top:5px;font-size:11px;color:var(--gold)}
+  .hot-proof{background:rgba(255,255,255,.04);border-radius:12px;padding:14px;margin-bottom:16px}
+  .hot-proof-h{font-size:12.5px;color:rgba(250,250,248,.6);margin:0 0 10px}
+  .hot-proof-h b{color:var(--gold)}
+  .hot-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  .hot-tile{position:relative;aspect-ratio:9/16;border:0;padding:0;border-radius:9px;overflow:hidden;background:#000;cursor:pointer;display:block;width:100%;font-family:inherit}
+  .hot-tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+  .hot-tile:hover img{transform:scale(1.05)}
+  .hot-tile::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0) 45%,rgba(0,0,0,.8))}
+  .hot-pl{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:34px;height:34px;border-radius:50%;background:rgba(200,151,58,.95);z-index:1;display:flex;align-items:center;justify-content:center}
+  .hot-pl::after{content:"";margin-left:3px;border-left:11px solid #fff;border-top:7px solid transparent;border-bottom:7px solid transparent}
+  .hot-dur{position:absolute;right:5px;top:5px;z-index:1;background:rgba(0,0,0,.7);color:#fff;font-size:10px;font-weight:700;padding:2px 5px;border-radius:4px}
+  .hot-cap{position:absolute;left:7px;right:7px;bottom:7px;z-index:1;font-size:11px;font-weight:700;color:#fff;text-align:left;line-height:1.35}
+  .hot-tile.more{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;background:rgba(200,151,58,.12);border:1px dashed rgba(200,151,58,.55);color:var(--gold);text-decoration:none;font-weight:800;text-align:center;padding:6px}
+  .hot-tile.more::after{display:none}
+  .hot-tile.more b{font-size:20px;line-height:1}
+  .hot-tile.more span{font-size:11px;line-height:1.4}
+  .hot-cta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:auto}
+  .hot-cta a{text-align:center;border-radius:9px;padding:11px 10px;font-size:13px;font-weight:800;text-decoration:none;transition:.15s}
+  .hot-cta .ghost{border:1px solid rgba(255,255,255,.2);color:#fff}
+  .hot-cta .ghost:hover{border-color:var(--gold)}
+  .hot-cta .gold{background:var(--gold);color:var(--black)}
+  .hot-cta .gold:hover{filter:brightness(1.08)}
+  .hot-feat-play{position:absolute;left:16px;bottom:46px;z-index:2;display:flex;align-items:center;gap:10px;background:none;border:0;padding:0;cursor:pointer;color:#fff;font-family:inherit;font-size:13px;font-weight:800}
+  .hot-feat-play i{flex:none;width:50px;height:50px;border-radius:50%;background:var(--gold);box-shadow:0 8px 24px rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;transition:transform .2s}
+  .hot-feat-play i::after{content:"";margin-left:4px;border-left:16px solid var(--black);border-top:10px solid transparent;border-bottom:10px solid transparent}
+  .hot-feat-play:hover i{transform:scale(1.08)}
+  .hot-feat-play span{background:rgba(10,10,10,.65);padding:6px 12px;border-radius:20px}
+  .hot-vod{display:block;margin-top:12px;font-size:12.5px;font-weight:700;color:var(--gold);text-decoration:none;text-align:center}
+  .hot-vod:hover{text-decoration:underline}
+  .hot-modal{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.85);display:flex;align-items:center;justify-content:center;padding:16px}
+  .hot-modal[hidden]{display:none}
+  .hot-modal-box{position:relative}
+  .hot-modal-frame{background:#000;border-radius:12px;overflow:hidden}
+  .hot-modal-frame.v{height:min(82vh,720px);aspect-ratio:9/16;max-width:calc(100vw - 32px)}
+  .hot-modal-frame.h{width:min(calc(100vw - 32px),960px);aspect-ratio:16/9}
+  .hot-modal-frame iframe{width:100%;height:100%;border:0;display:block}
+  .hot-modal-x{position:absolute;top:-44px;right:0;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;font-size:22px;line-height:1;cursor:pointer}
+  @media(max-width:900px){
+    .hot-grid{grid-template-columns:1fr}
+    .hot-card{padding:20px}
+    .hot-card h3{font-size:20px}
+  }
+  @media(max-width:520px){
+    .hot-proof{padding:12px}
+    .hot-strip{gap:6px}
+    .hot-cap{display:none}
+    .hot-tile::after{background:linear-gradient(to bottom,rgba(0,0,0,0) 60%,rgba(0,0,0,.5))}
+    .hot-pl{width:28px;height:28px}
+    .hot-pl::after{border-left-width:9px;border-top-width:6px;border-bottom-width:6px}
+    .hot-tile.more b{font-size:17px}
+    .hot-tile.more span{font-size:10px}
+  }
+  @media(max-width:420px){ .hot-cta{grid-template-columns:1fr} }
 </style>
   <div class="hero-left">
    <div class="pcx-top">
     <div>
-    <div class="hero-badge">AI 프레젠테이션 컨설팅 · 기업 AX 전환 · 발표 코칭</div>
+    <div class="hero-badge">지금 가장 많이 찾는 교육 · AI 영상 제작 · AI 실무 활용</div>
     <h1 class="hero-title">
-      <span class="hero-title-top">AI로 아낀 시간을,</span>
-      <span class="hero-title-bottom"><em class="pcx-em">매출</em>로 바꾸는 법</span>
+      <span class="hero-title-top">듣고 끝나는 AI 교육 말고,</span>
+      <span class="hero-title-bottom"><em class="pcx-em">만들고</em> 끝나는 AI 교육</span>
     </h1>
     <p class="hero-subtitle pcx-bridge">
-      AI는 비용 절감이 아니라 매출 성장 도구입니다.<br>
-      그리고 아낀 시간을 매출로 바꾸는 마지막 단계는 <b>결국 설득</b>입니다.
+      지금 기업·기관에서 가장 많이 찾는 <b>AI 영상 제작 교육</b>과 <b>AI 실무 활용 특강</b>.<br>
+      영상 편집이 처음인 교육생도, AI가 낯선 실무자도 교육장에서 결과물을 직접 완성해 나갑니다.
     </p>
-    <p class="pcx-slogan">AI시대, 결국 다시 프레젠테이션.</p>
     <div class="hero-actions pcx-actions">
-      <a href="#hero-packages" class="btn-primary" data-pcx="hero_ax_packages">AX 전환 패키지 보기<span class="pcx-note">기업·기관 담당자</span></a>
-      <a href="#contact" class="btn-outline" data-pcx="hero_contact">발표 컨설팅·교육 문의<span class="pcx-note">발표 코칭 · 강의 의뢰</span></a>
+      <a href="#hot-courses" class="btn-primary" data-pcx="hero_hot_courses">두 과정 한눈에 보기<span class="pcx-note">커리큘럼 · 결과물 · 실제 영상</span></a>
+      <a href="#contact" class="btn-outline" data-pcx="hero_contact">교육·컨설팅 문의<span class="pcx-note">기업 AX · 발표 코칭도 가능</span></a>
     </div>
     <div class="pcx-brand">
       <strong>AI를 깊이 이해하는 프레젠테이션 전문가, 피코쌤</strong>
       <small>연 200회 기업 강의 · AI 관련 저서 3권</small>
-      <small class="pcx-brand-proof">경쟁 PT 컨설팅 외 실전 프로젝트 50여 건</small>
+      <small class="pcx-brand-proof" style="color:var(--gold);font-weight:700;">AI시대, 결국 다시 프레젠테이션.</small>
     </div>
     </div>
 
     <div class="pcx-side">
     <figure class="pcx-photo">
-      <img src="assets/inline/pcossam-hero-photo.jpg" alt="AI 프레젠테이션 컨설턴트 피코쌤 김민구" width="596" height="745" fetchpriority="high" decoding="async">
+      <img src="assets/inline/pcossam-hero-photo.jpg" alt="AI 영상 제작·AI 실무 교육 강사 피코쌤 김민구" width="596" height="745" fetchpriority="high" decoding="async">
+      <button type="button" class="hot-feat-play" data-hot-yt="71YQmidVYHE" data-hot-ratio="h" aria-label="피코쌤 강의 현장 맛보기 영상 재생"><i></i><span>강의 현장 맛보기 영상</span></button>
       <figcaption>피코쌤 김민구 · PTC 프레젠테이션 컨설팅 대표</figcaption>
     </figure>
+    <a class="hot-vod" href="https://khp-connect.elice.io/courses/785271/info" target="_blank" rel="noopener" data-pcx="hero_free_vod">▶ 같은 방식의 전체 특강을 무료 VOD로 보기 (2시간 43분)</a>
     </div>
    </div>
 
-    <div class="pc-crs-wrap" id="hero-packages">
-      <div class="pc-crs-head"><span class="eyebrow">Now Booking</span><h2>기업 AX 전환 패키지</h2></div>
+    <div class="hot-wrap" id="hot-courses">
+      <div class="pc-crs-head"><span class="eyebrow">Hot Courses</span><h2>요즘 가장 반응이 뜨거운 두 과정</h2></div>
+      <div class="hot-grid">
 
-      <div id="tab-ax">
-        <div class="pcx-pkgs">
-          <div class="pcx-pkg">
-            <h3>특강형</h3>
-            <p class="spec">전 직원 · 1회 3시간 · 오프라인</p>
-            <ul>
-              <li>왜 지금 AX인가 — 업계 변화·사례</li>
-              <li>직무별 Before·After 실시간 시연</li>
-              <li>안전하게 쓰는 원칙</li>
-            </ul>
-            <p class="price">맞춤 견적</p>
-            <a class="go" href="#contact" data-service-target="AX 전환 특강형" data-pcx="hero_ax_lecture">특강형 문의하기</a>
+        <article class="hot-card">
+          <div class="hot-top"><span class="hot-tag">🔥 HOT 1 · AI 영상 제작</span><span class="hot-time">4 · 8 · 16시간</span></div>
+          <h3>AI 숏폼 콘텐츠 제작 과정<small>챗GPT · 제미나이 · 브루(Vrew)로 기획부터 완성까지</small></h3>
+          <p class="hot-lead">영상 편집 경험이 없어도, 주제 선정부터 AI 영상·자막·더빙까지 직접 완성합니다.</p>
+          <ul>
+            <li>챗GPT·제미나이로 주제와 스토리라인부터 설계</li>
+            <li>브루로 AI 영상 생성·자막·더빙을 한 번에</li>
+            <li>결과물: 30~60초 홍보·안내 숏폼 직접 완성</li>
+          </ul>
+          <div class="hot-proof">
+            <p class="hot-proof-h"><b>교육생 작품</b> · 영상 편집이 처음인 교육생이 4시간 교육에서 만든 영상</p>
+            <div class="hot-strip">
+            <button type="button" class="hot-tile" data-hot-yt="4ngEjF2Dfg8" aria-label="교육생 작품: 천연 에센셜 오일 스킨 루틴 영상 재생">
+              <img src="https://i.ytimg.com/vi/4ngEjF2Dfg8/hqdefault.jpg" alt="교육생 작품 - 천연 에센셜 오일 스킨 루틴 브랜드 홍보 AI 영상" width="480" height="360" loading="lazy">
+              <span class="hot-dur">0:23</span><span class="hot-pl"></span>
+              <span class="hot-cap">화장품 브랜드 홍보</span>
+            </button>
+            <button type="button" class="hot-tile" data-hot-yt="BUqHIizPC2o" aria-label="교육생 작품: 신혼집 인테리어 영상 재생">
+              <img src="https://i.ytimg.com/vi/BUqHIizPC2o/hqdefault.jpg" alt="교육생 작품 - 신혼집 인테리어 업체 홍보 AI 영상" width="480" height="360" loading="lazy">
+              <span class="hot-dur">0:23</span><span class="hot-pl"></span>
+              <span class="hot-cap">인테리어 업체 홍보</span>
+            </button>
+            <button type="button" class="hot-tile" data-hot-yt="1oQ9FYa21l8" aria-label="교육생 작품: 강원대학교 4개 캠퍼스 AI 영상 재생">
+              <img src="https://i.ytimg.com/vi/1oQ9FYa21l8/hqdefault.jpg" alt="교육생 작품 - 강원대학교 AI 교육·연구 홍보 AI 영상" width="480" height="360" loading="lazy">
+              <span class="hot-dur">0:27</span><span class="hot-pl"></span>
+              <span class="hot-cap">대학 홍보</span>
+            </button>
+            <a class="hot-tile more" href="/services/ai-video-student-works.html" data-pcx="hero_student_works"><b>+14</b><span>교육생 작품<br>17편 모두 보기</span></a>
+            </div>
           </div>
-          <div class="pcx-pkg reco">
-            <span class="tag">추천</span>
-            <h3>컨설팅형</h3>
-            <p class="spec">특강 + 부서별 3시간 × 2회</p>
-            <ul>
-              <li>특강형 전체 포함</li>
-              <li>1회차: 업무 진단 · 전환 설계</li>
-              <li>2회차: 매출 창출 · 스킬 정착</li>
-              <li>회차별 정리자료 제공</li>
-            </ul>
-            <p class="price">프로젝트형 · 맞춤 견적</p>
-            <div class="pcx-credit">🎁 <b>AI 크레딧 1인 3만원 지원</b><br>최대 20명 · 컨설팅형 이상 계약 시</div>
-            <a class="go" href="#contact" data-service-target="AX 전환 컨설팅형" data-pcx="hero_ax_consulting">컨설팅형 문의하기</a>
+          <div class="hot-cta">
+            <a class="ghost" href="/services/ai-shortform-training.html" data-pcx="hero_shortform_page">커리큘럼 보기</a>
+            <a class="gold" href="#contact" data-service-target="AI 숏폼 콘텐츠 제작 과정" data-pcx="hero_shortform_contact">이 과정 문의하기</a>
           </div>
-          <div class="pcx-pkg">
-            <h3>풀패키지</h3>
-            <p class="spec">컨설팅 + 챔피언 육성 + 발표회</p>
-            <ul>
-              <li>컨설팅형 전체 포함</li>
-              <li>부서별 AI 챔피언 집중 육성</li>
-              <li>스킬 자산화 · 공유 발표회 운영</li>
-              <li>챔피언 발표 코칭 포함</li>
-            </ul>
-            <p class="price">프로젝트형 · 맞춤 견적</p>
-            <div class="pcx-credit">🎁 <b>AI 크레딧 1인 3만원 지원</b><br>최대 20명</div>
-            <a class="go" href="#contact" data-service-target="AX 전환 풀패키지·월 단위 파트너십" data-pcx="hero_ax_full">풀패키지 문의하기</a>
+        </article>
+
+        <article class="hot-card">
+          <div class="hot-top"><span class="hot-tag">🔥 HOT 2 · AI 실무 활용</span><span class="hot-time">4시간 · 심화 6시간</span></div>
+          <h3>AI 실무 활용 특강<small>AI시대 요구되는 실무 역량 · 기업·기관 실무자 대상</small></h3>
+          <p class="hot-lead">무료 버전만으로, 다음 날 바로 업무에 쓰는 결과물을 만들어 갑니다.</p>
+          <ul>
+            <li>챗GPT 업무 프롬프트와 나만의 업무 지침 만들기</li>
+            <li>인포그래픽 보고서 (챗GPT → 제미나이 전환 실습)</li>
+            <li>클로드로 엑셀·PDF 반복 산출물 자동 출력</li>
+          </ul>
+          <div class="hot-proof">
+            <p class="hot-proof-h"><b>실제 강의 장면</b> · 기업 특강 현장에서 촬영한 클립</p>
+            <div class="hot-strip">
+            <button type="button" class="hot-tile" data-hot-yt="126STk-Gy2U" aria-label="강의 클립: 기사 내용을 AI로 정리할 땐 사례 위주로 영상 재생">
+              <img src="/assets/clips/clip-3.jpg" alt="피코쌤 특강 - ChatGPT로 기사 정리하는 프롬프트 시연 장면" width="540" height="960" loading="lazy">
+              <span class="hot-dur">0:42</span><span class="hot-pl"></span>
+              <span class="hot-cap">기사를 AI로 정리하는 법</span>
+            </button>
+            <button type="button" class="hot-tile" data-hot-yt="f9lvihu9rl0" aria-label="강의 클립: 아마존은 왜 미결제 상품을 배송했을까 영상 재생">
+              <img src="/assets/clips/clip-5.jpg" alt="피코쌤 특강 - 아마존 미결제 배송 사례로 설명하는 데이터 설득 강의 장면" width="540" height="960" loading="lazy">
+              <span class="hot-dur">0:55</span><span class="hot-pl"></span>
+              <span class="hot-cap">아마존 사례로 본 데이터</span>
+            </button>
+            <button type="button" class="hot-tile" data-hot-yt="iI5ulBwqtXU" aria-label="강의 클립: AI는 데이터를, 로봇은 행동을 학습한다 영상 재생">
+              <img src="/assets/clips/clip-7.jpg" alt="피코쌤 특강 - AI와 로봇 학습 방식의 차이를 설명하는 강의 장면" width="540" height="960" loading="lazy">
+              <span class="hot-dur">0:56</span><span class="hot-pl"></span>
+              <span class="hot-cap">AI와 로봇의 학습 차이</span>
+            </button>
+            <a class="hot-tile more" href="/lecture-clips.html" data-pcx="hero_lecture_clips"><b>+5</b><span>강의 클립<br>8개 모두 보기</span></a>
+            </div>
           </div>
-        </div>
-        <p class="pc-crs-note">※ AI 크레딧은 실습용 AI 도구 이용료 지원이며, 지원 인원은 계약당 최대 20명입니다. 세부 조건은 협의로 확정합니다. · <a href="/services/ai-transformation-partnership.html" style="color:var(--gold);" data-pcx="hero_ax_detail">AX 전환 커리큘럼·FAQ 자세히 보기 →</a></p>
+          <div class="hot-cta">
+            <a class="ghost" href="/services/generative-ai-training.html" data-pcx="hero_aiwork_page">커리큘럼 보기</a>
+            <a class="gold" href="#contact" data-service-target="AI시대 요구되는 실무 역량" data-pcx="hero_aiwork_contact">이 과정 문의하기</a>
+          </div>
+        </article>
+
       </div>
-
+      <p class="pc-crs-note">※ 대상·시간에 맞춰 재구성할 수 있습니다. 기업 AX 전환 패키지(특강형·컨설팅형·풀패키지)는 <a href="#hero-packages" style="color:var(--gold);" data-pcx="hero_to_ax">아래에서 볼 수 있습니다 →</a></p>
     </div>
   </div>
+
+  <!-- 히어로 영상 팝업 (클릭할 때만 유튜브를 불러옴) -->
+  <div class="hot-modal" id="hotModal" hidden>
+    <div class="hot-modal-box" role="dialog" aria-modal="true" aria-label="영상 재생">
+      <button type="button" class="hot-modal-x" aria-label="닫기">&times;</button>
+      <div class="hot-modal-frame v"></div>
+    </div>
+  </div>
+<script>
+(function(){
+  var modal = document.getElementById('hotModal');
+  if(!modal) return;
+  var frame = modal.querySelector('.hot-modal-frame');
+  function closeModal(){ frame.innerHTML=''; modal.hidden = true; document.body.style.overflow=''; }
+  document.querySelectorAll('#hero [data-hot-yt]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var id = btn.getAttribute('data-hot-yt');
+      frame.className = 'hot-modal-frame ' + (btn.getAttribute('data-hot-ratio') === 'h' ? 'h' : 'v');
+      frame.innerHTML = '<iframe src="https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1" title="피코쌤 영상" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+      modal.hidden = false; document.body.style.overflow='hidden';
+      if(typeof gtag === 'function'){ gtag('event','video_play',{video_id:id, page_location:'home_hero'}); }
+    });
+  });
+  modal.addEventListener('click', function(e){ if(e.target === modal || e.target.classList.contains('hot-modal-x')) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && !modal.hidden) closeModal(); });
+})();
+</script>
 </section>
 
 <!-- ════════ [상단 배치] 강의 영상 → AI 제작 영상 → 무료 자료 ════════ -->
@@ -1700,15 +1826,6 @@ section { position: relative; }
         </div>
       </article>
 
-    </div>
-
-    <div class="pc-featured">
-      <div class="pc-feat-thumb" onclick="this.innerHTML='<iframe src=&quot;https://www.youtube.com/embed/71YQmidVYHE?autoplay=1&quot; title=&quot;피코쌤 강의 영상 샘플&quot; style=&quot;width:100%;height:100%;border:0;&quot; allow=&quot;accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen></iframe>';">
-        <img src="https://img.youtube.com/vi/71YQmidVYHE/hqdefault.jpg" alt="피코쌤 강의 영상 샘플 썸네일" loading="lazy">
-        <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-      </div>
-      <div class="pc-feat-caption">[피코쌤 특강 · 맛보기 샘플] 직접 콘텐츠를 개발하고 PPT로 만들어 발표까지 — 컨설팅·코칭도 이 방식으로 진행됩니다. 같은 방식의 전체 특강을 무료로 만나보세요.</div>
-      <a href="https://khp-connect.elice.io/courses/785271/info" target="_blank" rel="noopener" class="pc-feat-cta">▶ 무료 특강 VOD 보러가기 (2시간 43분)</a>
     </div>
 
     <div class="pc-foot">
@@ -2020,6 +2137,58 @@ Extreme close-up of a small black pedometer device strapped to a brown chicken's
   <div class="axd-cta">
     <a class="gold" href="#hero-packages" data-pcx="axdiff_packages">AX 전환 패키지 보기</a>
     <a class="line" href="/services/ai-transformation-partnership.html" data-pcx="axdiff_detail">커리큘럼·FAQ 자세히 보기 →</a>
+  </div>
+</section>
+
+<!-- ════════ 기업 AX 전환 패키지 (2026.11 히어로에서 이동, 기존 링크 호환을 위해 id 유지) ════════ -->
+<section id="hero-packages" style="background:var(--black);padding:72px 0 64px;">
+  <div style="max-width:1180px;margin:0 auto;padding:0 6%;">
+      <div class="pc-crs-head"><span class="eyebrow">Now Booking</span><h2>기업 AX 전환 패키지</h2></div>
+
+      <div id="tab-ax">
+        <div class="pcx-pkgs">
+          <div class="pcx-pkg">
+            <h3>특강형</h3>
+            <p class="spec">전 직원 · 1회 3시간 · 오프라인</p>
+            <ul>
+              <li>왜 지금 AX인가 — 업계 변화·사례</li>
+              <li>직무별 Before·After 실시간 시연</li>
+              <li>안전하게 쓰는 원칙</li>
+            </ul>
+            <p class="price">맞춤 견적</p>
+            <a class="go" href="#contact" data-service-target="AX 전환 특강형" data-pcx="hero_ax_lecture">특강형 문의하기</a>
+          </div>
+          <div class="pcx-pkg reco">
+            <span class="tag">추천</span>
+            <h3>컨설팅형</h3>
+            <p class="spec">특강 + 부서별 3시간 × 2회</p>
+            <ul>
+              <li>특강형 전체 포함</li>
+              <li>1회차: 업무 진단 · 전환 설계</li>
+              <li>2회차: 매출 창출 · 스킬 정착</li>
+              <li>회차별 정리자료 제공</li>
+            </ul>
+            <p class="price">프로젝트형 · 맞춤 견적</p>
+            <div class="pcx-credit">🎁 <b>AI 크레딧 1인 3만원 지원</b><br>최대 20명 · 컨설팅형 이상 계약 시</div>
+            <a class="go" href="#contact" data-service-target="AX 전환 컨설팅형" data-pcx="hero_ax_consulting">컨설팅형 문의하기</a>
+          </div>
+          <div class="pcx-pkg">
+            <h3>풀패키지</h3>
+            <p class="spec">컨설팅 + 챔피언 육성 + 발표회</p>
+            <ul>
+              <li>컨설팅형 전체 포함</li>
+              <li>부서별 AI 챔피언 집중 육성</li>
+              <li>스킬 자산화 · 공유 발표회 운영</li>
+              <li>챔피언 발표 코칭 포함</li>
+            </ul>
+            <p class="price">프로젝트형 · 맞춤 견적</p>
+            <div class="pcx-credit">🎁 <b>AI 크레딧 1인 3만원 지원</b><br>최대 20명</div>
+            <a class="go" href="#contact" data-service-target="AX 전환 풀패키지·월 단위 파트너십" data-pcx="hero_ax_full">풀패키지 문의하기</a>
+          </div>
+        </div>
+        <p class="pc-crs-note">※ AI 크레딧은 실습용 AI 도구 이용료 지원이며, 지원 인원은 계약당 최대 20명입니다. 세부 조건은 협의로 확정합니다. · <a href="/services/ai-transformation-partnership.html" style="color:var(--gold);" data-pcx="hero_ax_detail">AX 전환 커리큘럼·FAQ 자세히 보기 →</a></p>
+      </div>
+
   </div>
 </section>
 
@@ -3294,6 +3463,7 @@ Extreme close-up of a small black pedometer device strapped to a brown chicken's
             <option>리허설 영상 분석</option>
           </optgroup>
           <optgroup label="정규 교육 과정">
+            <option>AI 숏폼 콘텐츠 제작 과정</option>
             <option>AI시대 요구되는 실무 역량</option>
             <option>AI시대 요구되는 실무 역량 심화과정</option>
             <option>AI시대, 나만의 커리어 포트폴리오 만들기</option>
