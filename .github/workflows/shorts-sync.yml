@@ -1,0 +1,43 @@
+# 캐릭터 쇼츠 → 웹사이트 자동 반영
+# 매일 한국시간 08:40, 12:10 에 _shorts/sync.py 를 실행해
+# 유튜브에 새로 올라온 '이직준비생 한대리' 회차를 /shorts/han-daeri.html 에 추가한다.
+# (버퍼가 인스타그램·유튜브에 같은 영상을 오전 8시쯤 올리므로 유튜브를 원본으로 쓴다.
+#  12:10 실행은 업로드가 늦어졌을 때를 위한 재확인이다.)
+# 바뀐 게 있으면 main 에 커밋 → Vercel 이 자동 배포한다.
+name: 쇼츠 회차 자동 반영
+
+on:
+  schedule:
+    - cron: "40 23 * * *"   # UTC 23:40 = 한국시간 08:40
+    - cron: "10 3 * * *"    # UTC 03:10 = 한국시간 12:10
+  workflow_dispatch:         # GitHub Actions 화면에서 수동 실행도 가능
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-auto-commit
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 새 회차 확인·반영
+        run: python3 _shorts/sync.py
+      - name: 바뀐 내용이 있으면 커밋
+        run: |
+          if git diff --quiet; then
+            echo "새 회차 없음"
+            exit 0
+          fi
+          git config user.name "pcossam-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add shorts _shorts sitemap.xml
+          git commit -m "쇼츠 새 회차 반영 ($(TZ=Asia/Seoul date +%Y-%m-%d))"
+          git pull --rebase origin main
+          git push
