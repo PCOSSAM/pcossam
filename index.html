@@ -3130,34 +3130,31 @@ document.querySelectorAll('.pc-clips .pc-player').forEach(function(el){
 <section class="pc-insta" id="instagram">
 <style>
 .pc-insta{padding:80px 0;background:var(--black);color:var(--white)}
-.pc-insta .pi-wrap{max-width:1120px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:center}
-.pc-insta .pi-text{align-self:center;margin-top:-24px;word-break:keep-all}
+.pc-insta .pi-wrap{max-width:1120px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1.2fr 1fr;gap:24px 48px;align-items:end}
+.pc-insta .pi-side{justify-self:end;text-align:left}
+.pc-insta .pi-reels{max-width:1120px;margin:40px auto 0;padding:0 24px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
+.pc-insta .pi-reel{min-width:0}
+.pc-insta .pi-reel .instagram-media{min-width:0!important;width:100%!important;margin:0!important;border-radius:14px!important}
+.pc-insta .pi-reel blockquote{background:#16202b;border:1px solid rgba(255,255,255,.14);border-radius:14px;min-height:420px;display:flex;align-items:center;justify-content:center;padding:20px}
+.pc-insta .pi-reel blockquote a{color:var(--gold);font-weight:700;text-decoration:none}
+.pc-insta .pi-text{word-break:keep-all}
 .pc-insta .eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--gold);text-transform:uppercase;margin-bottom:12px}
 .pc-insta h2{margin:0 0 16px;font-size:32px;line-height:1.35;font-weight:800;color:var(--white)}
-.pc-insta p{margin:0 0 24px;font-size:16px;line-height:1.7;color:rgba(250,250,248,.7)}
+.pc-insta p{margin:0;font-size:16px;line-height:1.7;color:rgba(250,250,248,.7)}
 .pc-insta .pi-handle{display:flex;align-items:center;gap:12px;margin-bottom:24px}
 .pc-insta .pi-handle img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:50% 15%;border:2px solid var(--gold)}
 .pc-insta .pi-handle b{display:block;font-size:16px}
 .pc-insta .pi-handle small{font-size:13px;color:rgba(250,250,248,.55)}
 .pc-insta .pi-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:10px;background:var(--gold);color:var(--black);font-weight:800;font-size:15px;text-decoration:none;transition:opacity .2s}
 .pc-insta .pi-btn:hover{opacity:.88}
-.pc-insta .pi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.pc-insta .pi-tile{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:linear-gradient(160deg,#1a3a5c 0%,#0a0a0a 75%);display:flex;flex-direction:column;justify-content:flex-end;padding:16px;color:var(--white);text-decoration:none;word-break:keep-all;transition:border-color .2s,transform .2s}
-.pc-insta .pi-tile:hover{border-color:var(--gold);transform:translateY(-3px)}
-.pc-insta .pi-tile .t{font-size:11px;font-weight:800;color:var(--gold);letter-spacing:.06em;margin-bottom:6px}
-.pc-insta .pi-tile b{font-size:16px;line-height:1.4}
-.pc-insta .pi-tile .rl{position:absolute;top:14px;left:14px;font-size:11px;font-weight:700;padding:4px 9px;border-radius:20px;background:rgba(255,255,255,.12)}
 @media(max-width:900px){
   .pc-insta{padding:60px 0}
-  .pc-insta .pi-wrap{grid-template-columns:1fr;gap:32px}
+  .pc-insta .pi-wrap{grid-template-columns:1fr;gap:24px}
+  .pc-insta .pi-side{justify-self:start}
+  .pc-insta .pi-reels{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:8px}
+  .pc-insta .pi-reel{flex:0 0 330px;scroll-snap-align:start}
   .pc-insta .pi-text{margin-top:0}
   .pc-insta h2{font-size:26px}
-}
-@media(max-width:480px){
-  .pc-insta .pi-grid{gap:8px}
-  .pc-insta .pi-tile{padding:10px;border-radius:10px}
-  .pc-insta .pi-tile b{font-size:13px}
-  .pc-insta .pi-tile .rl{top:8px;left:8px;font-size:10px}
 }
 </style>
   <div class="pi-wrap">
@@ -3165,18 +3162,31 @@ document.querySelectorAll('.pc-clips .pc-player').forEach(function(el){
       <span class="eyebrow">Instagram</span>
       <h2>강의장 밖의 피코쌤은<br>인스타그램에 있습니다</h2>
       <p>AI 실무 팁과 발표·PPT 노하우를 1~2일에 한 번, 1분 안쪽의 릴스로 올립니다. 강의에서 다 못 한 이야기도 이곳에서 이어집니다.</p>
+    </div>
+    <div class="pi-side">
       <div class="pi-handle">
         <img src="assets/inline/pcossam-photo.jpg" alt="피코쌤 김민구 프로필 사진" width="52" height="52" loading="lazy">
         <div><b>@pcossam</b><small>AI를 깊이 이해하는 프레젠테이션 전문가, 피코쌤</small></div>
       </div>
       <a class="pi-btn" href="https://www.instagram.com/pcossam/" target="_blank" rel="noopener" data-pcx="insta_follow">인스타그램에서 팔로우하기 →</a>
     </div>
-    <div class="pi-grid">
-      <a class="pi-tile" href="https://www.instagram.com/pcossam/reels/" target="_blank" rel="noopener" data-pcx="insta_tile_ai"><span class="rl">▶ Reels</span><span class="t">AI 실무 팁</span><b>내일 바로 쓰는 AI 활용법</b></a>
-      <a class="pi-tile" href="https://www.instagram.com/pcossam/reels/" target="_blank" rel="noopener" data-pcx="insta_tile_pt"><span class="rl">▶ Reels</span><span class="t">발표 · PPT</span><b>발표가 설득되는 순간</b></a>
-      <a class="pi-tile" href="https://www.instagram.com/pcossam/reels/" target="_blank" rel="noopener" data-pcx="insta_tile_char"><span class="rl">▶ Reels</span><span class="t">직장인 캐릭터</span><b>한대리 · 박인턴 시리즈</b></a>
-    </div>
   </div>
+  <div class="pi-reels">
+      <div class="pi-reel"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Df8Ns7pAuth/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/Df8Ns7pAuth/" target="_blank" rel="noopener" data-pcx="insta_reel_1">인스타그램에서 이 릴스 보기 →</a></blockquote></div>
+      <div class="pi-reel"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Df-ymVpibVe/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/Df-ymVpibVe/" target="_blank" rel="noopener" data-pcx="insta_reel_2">인스타그램에서 이 릴스 보기 →</a></blockquote></div>
+      <div class="pi-reel"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Dd3GoENud4M/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/Dd3GoENud4M/" target="_blank" rel="noopener" data-pcx="insta_reel_3">인스타그램에서 이 릴스 보기 →</a></blockquote></div>
+  </div>
+<script>
+(function(){
+  var sec=document.getElementById('instagram'); if(!sec) return;
+  function load(){ if(window.__igLoaded) return; window.__igLoaded=true;
+    var sc=document.createElement('script'); sc.async=true; sc.src='https://www.instagram.com/embed.js'; document.body.appendChild(sc); }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ if(es[0].isIntersecting){ load(); io.disconnect(); } },{rootMargin:'600px'});
+    io.observe(sec);
+  } else load();
+})();
+</script>
 </section>
 
 <section class="pc-lens" id="pc-lens">
