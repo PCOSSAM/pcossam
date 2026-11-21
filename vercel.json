@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/handaeri",
+      "destination": "/shorts/han-daeri.html?utm_source=instagram&utm_medium=bio",
+      "permanent": false
+    },
+    {
       "source": "/_presentation/:path*",
       "destination": "/presentation/",
       "permanent": false
