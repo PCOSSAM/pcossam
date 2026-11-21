@@ -1,6 +1,36 @@
 {
   "redirects": [
     {
+      "source": "/hero-ax-merged.html",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/vibe-coding-%EC%9D%B4%EA%B4%80%EB%B8%94%EB%A1%9D.html",
+      "destination": "/services/vibe-coding-training.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/vibe-coding-이관블록.html",
+      "destination": "/services/vibe-coding-training.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/pcossam_en_v3.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/lecture-custom-design_1.html",
+      "destination": "/lecture-custom-design.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/ai-literacy-test_2.html",
+      "destination": "/ai-literacy-test.html",
+      "statusCode": 301
+    },
+    {
       "source": "/handaeri",
       "destination": "/shorts/han-daeri.html?utm_source=instagram&utm_medium=bio",
       "permanent": false
