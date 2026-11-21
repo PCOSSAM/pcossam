@@ -81,33 +81,213 @@
       "statusCode": 301
     },
     {
-      "source": "/startup-edu-platform-en.html",
-      "destination": "/portfolio/startup-edu-platform-en.html",
+      "source": "/aeo-geo-consulting-en.html",
+      "destination": "/pcossam_en.html",
       "statusCode": 301
     },
     {
-      "source": "/public-card-alert-en.html",
-      "destination": "/portfolio/public-card-alert-en.html",
+      "source": "/ai-literacy-test-en.html",
+      "destination": "/pcossam_en.html",
       "statusCode": 301
     },
     {
-      "source": "/kfood-standard-en.html",
-      "destination": "/portfolio/kfood-standard-en.html",
+      "source": "/ai-marketing-website-en.html",
+      "destination": "/pcossam_en.html",
       "statusCode": 301
     },
     {
-      "source": "/ev-hotel-en.html",
-      "destination": "/portfolio/ev-hotel-en.html",
+      "source": "/ai-report-proposal-en.html",
+      "destination": "/pcossam_en.html",
       "statusCode": 301
     },
     {
-      "source": "/carping-house-en.html",
-      "destination": "/portfolio/carping-house-en.html",
+      "source": "/ai-transformation-partnership-en.html",
+      "destination": "/pcossam_en.html",
       "statusCode": 301
     },
     {
       "source": "/battery-station-en.html",
-      "destination": "/portfolio/battery-station-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/amazon-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/art-trash-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/book-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/chatgpt-story-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/crocs-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/frozen-water-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/gpt-diary-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/jibbitz-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/meeting-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/name-tag-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/nose-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/phone-dad-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/playground-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/scratch-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/smartphone-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/stroller-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/voice-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/wooden-doll-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/carping-house-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/ev-hotel-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/generative-ai-training-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/kfood-standard-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/lecture-clips-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/lecture-custom-design-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/pcossam_en_v3.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/pitchdeck-consulting-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/portfolio/battery-station-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/portfolio/carping-house-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/portfolio/ev-hotel-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/portfolio/kfood-standard-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/portfolio/public-card-alert-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/portfolio/startup-edu-platform-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/presentation-coaching-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/public-card-alert-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/startup-edu-platform-en.html",
+      "destination": "/pcossam_en.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/vibe-coding-training-en.html",
+      "destination": "/pcossam_en.html",
       "statusCode": 301
     }
   ],

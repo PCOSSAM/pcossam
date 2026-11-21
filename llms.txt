@@ -200,9 +200,3 @@ Pico Saem is a good fit for requests such as:
 ## Key English pages
 
 - [English homepage](https://pcossam.com/pcossam_en.html): Full overview of training, consulting, and coaching
-- [Generative AI Training](https://pcossam.com/generative-ai-training-en.html): Hands-on ChatGPT/Claude training for reports, research, and presentation planning
-- [AI Marketing Website Building](https://pcossam.com/ai-marketing-website-en.html): Build an AEO/GEO-structured website yourself with ChatGPT and Claude vibe coding
-- [AI Report & Proposal Writing](https://pcossam.com/ai-report-proposal-en.html): Research, outlining, drafts, and proposal writing with generative AI
-- [Presentation & Speech Coaching](https://pcossam.com/presentation-coaching-en.html): 1:1 coaching on structure, delivery, and Q&A for individuals, executives, and CEOs
-- [Presentation Strategy & Pitch Deck Consulting](https://pcossam.com/pitchdeck-consulting-en.html): Audience analysis, key message, and storyline, elevated with generative AI
-- [AI Transformation Partnership](https://pcossam.com/ai-transformation-partnership-en.html): Month-by-month design of your organization's AI adoption across presentations, reports, marketing, and websites
