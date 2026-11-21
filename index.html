@@ -1568,6 +1568,55 @@ section { position: relative; }
     </div>
    </div>
 
+    <!-- 바로가기 판: 히어로 메시지 바로 아래, 긴 홈페이지의 주요 섹션으로 이동 -->
+    <div class="pcnav" role="navigation" aria-label="피코쌤 홈페이지 바로가기">
+<style>
+  .pcnav{margin:4px 0 52px}
+  .pcnav .pc-crs-head{margin-bottom:16px}
+  .pcnav-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+  .pcnav-card{grid-column:span 4;position:relative;display:flex;flex-direction:column;gap:6px;min-height:132px;padding:20px 22px;border:1px solid rgba(255,255,255,.14);border-radius:16px;background:rgba(255,255,255,.04);color:var(--white);text-decoration:none;word-break:keep-all;transition:border-color .2s,background .2s,transform .2s}
+  .pcnav-card:hover,.pcnav-card:focus-visible{border-color:var(--gold);background:rgba(200,151,58,.10);transform:translateY(-2px)}
+  .pcnav-card .k{font-size:11.5px;font-weight:800;letter-spacing:.08em;color:var(--gold)}
+  .pcnav-card b{font-size:19px;font-weight:800;line-height:1.35}
+  .pcnav-card span.d{font-size:13.5px;line-height:1.55;color:rgba(250,250,248,.62)}
+  .pcnav-card::after{content:"→";position:absolute;right:20px;top:18px;font-size:18px;color:rgba(250,250,248,.35);transition:color .2s,transform .2s}
+  .pcnav-card:hover::after{color:var(--gold);transform:translateX(3px)}
+  .pcnav-card.sm{grid-column:span 3;min-height:0;padding:15px 18px;flex-direction:row;align-items:center;gap:10px}
+  .pcnav-card.sm b{font-size:15px}
+  .pcnav-card.sm .ic{font-size:17px;line-height:1}
+  .pcnav-card.sm::after{top:50%;transform:translateY(-50%);font-size:15px}
+  .pcnav-card.sm:hover::after{transform:translate(3px,-50%)}
+  @media(max-width:900px){
+    .pcnav-card,.pcnav-card.sm{grid-column:span 6}
+    .pcnav-card{min-height:118px;padding:18px}
+    .pcnav-card b{font-size:17px}
+  }
+  @media(max-width:480px){
+    .pcnav-grid{gap:10px}
+    .pcnav-card{min-height:0;padding:15px 14px}
+    .pcnav-card b{font-size:15.5px}
+    .pcnav-card span.d{font-size:12.5px}
+    .pcnav-card::after{right:12px;top:14px;font-size:15px}
+    .pcnav-card.sm{padding:13px 14px}
+    .pcnav-card.sm b{font-size:14px}
+    .pcnav-card.sm::after{display:none}
+  }
+</style>
+      <div class="pc-crs-head"><span class="eyebrow">Quick Menu</span><h2>무엇을 찾고 계세요?</h2></div>
+      <div class="pcnav-grid">
+        <a class="pcnav-card" href="#ai-shortform-preview" data-pcx="grid_ai_video"><span class="k">AI 영상 제작</span><b>AI 숏폼 제작 과정</b><span class="d">편집이 처음인 교육생이 4시간 만에 만든 영상</span></a>
+        <a class="pcnav-card" href="#hot-courses" data-pcx="grid_ai_work"><span class="k">AI 실무 활용</span><b>AI 실무 활용 특강</b><span class="d">다음 날 바로 업무에 쓰는 결과물 만들기</span></a>
+        <a class="pcnav-card" href="/services/presentation-coaching.html" data-pcx="grid_presentation"><span class="k">프레젠테이션</span><b>발표 코칭 · PT 컨설팅</b><span class="d">경쟁 PT·제안 발표를 설득력 있게</span></a>
+        <a class="pcnav-card" href="#hero-packages" data-pcx="grid_ax"><span class="k">기업 AX 전환</span><b>AX 전환 패키지</b><span class="d">특강형 · 컨설팅형 · 풀패키지</span></a>
+        <a class="pcnav-card" href="#lecture-clips-preview" data-pcx="grid_clips"><span class="k">강의 미리보기</span><b>강의 영상 1분 맛보기</b><span class="d">섭외 전에 실제 강의 장면부터 확인</span></a>
+        <a class="pcnav-card" href="#wins" data-pcx="grid_wins"><span class="k">실적 · 후기</span><b>결과로 증명한 사례</b><span class="d">기업 교육 성과와 수강생 후기</span></a>
+        <a class="pcnav-card sm" href="#free-resources" data-pcx="grid_free"><span class="ic" aria-hidden="true">🎁</span><b>무료 자료</b></a>
+        <a class="pcnav-card sm" href="#instagram" data-pcx="grid_instagram"><span class="ic" aria-hidden="true">📱</span><b>인스타그램</b></a>
+        <a class="pcnav-card sm" href="#blog" data-pcx="grid_blog"><span class="ic" aria-hidden="true">✍️</span><b>피코쌤의 글</b></a>
+        <a class="pcnav-card sm" href="#faq" data-pcx="grid_faq"><span class="ic" aria-hidden="true">💬</span><b>자주 묻는 질문</b></a>
+      </div>
+    </div>
+
     <div class="hot-wrap" id="hot-courses">
       <div class="pc-crs-head"><span class="eyebrow">Hot Courses</span><h2>요즘 가장 반응이 뜨거운 두 과정</h2></div>
       <div class="hot-grid">
@@ -3077,6 +3126,59 @@ document.querySelectorAll('.pc-clips .pc-player').forEach(function(el){
   ▶ 날짜(PC-LENS-DATE), 훅 문구(PC-LENS-HOOK), 서브타이틀(PC-LENS-SUB),
     본문(PC-LENS-BODY) 4곳만 교체하세요. 나머지 마크업은 그대로 두세요.
 ════════════════════════════════════════════════════════════════ -->
+<!-- 인스타그램 -->
+<section class="pc-insta" id="instagram">
+<style>
+.pc-insta{padding:80px 0;background:var(--black);color:var(--white)}
+.pc-insta .pi-wrap{max-width:1120px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:center}
+.pc-insta .pi-text{align-self:center;margin-top:-24px;word-break:keep-all}
+.pc-insta .eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--gold);text-transform:uppercase;margin-bottom:12px}
+.pc-insta h2{margin:0 0 16px;font-size:32px;line-height:1.35;font-weight:800;color:var(--white)}
+.pc-insta p{margin:0 0 24px;font-size:16px;line-height:1.7;color:rgba(250,250,248,.7)}
+.pc-insta .pi-handle{display:flex;align-items:center;gap:12px;margin-bottom:24px}
+.pc-insta .pi-handle img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:50% 15%;border:2px solid var(--gold)}
+.pc-insta .pi-handle b{display:block;font-size:16px}
+.pc-insta .pi-handle small{font-size:13px;color:rgba(250,250,248,.55)}
+.pc-insta .pi-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:10px;background:var(--gold);color:var(--black);font-weight:800;font-size:15px;text-decoration:none;transition:opacity .2s}
+.pc-insta .pi-btn:hover{opacity:.88}
+.pc-insta .pi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.pc-insta .pi-tile{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:linear-gradient(160deg,#1a3a5c 0%,#0a0a0a 75%);display:flex;flex-direction:column;justify-content:flex-end;padding:16px;color:var(--white);text-decoration:none;word-break:keep-all;transition:border-color .2s,transform .2s}
+.pc-insta .pi-tile:hover{border-color:var(--gold);transform:translateY(-3px)}
+.pc-insta .pi-tile .t{font-size:11px;font-weight:800;color:var(--gold);letter-spacing:.06em;margin-bottom:6px}
+.pc-insta .pi-tile b{font-size:16px;line-height:1.4}
+.pc-insta .pi-tile .rl{position:absolute;top:14px;left:14px;font-size:11px;font-weight:700;padding:4px 9px;border-radius:20px;background:rgba(255,255,255,.12)}
+@media(max-width:900px){
+  .pc-insta{padding:60px 0}
+  .pc-insta .pi-wrap{grid-template-columns:1fr;gap:32px}
+  .pc-insta .pi-text{margin-top:0}
+  .pc-insta h2{font-size:26px}
+}
+@media(max-width:480px){
+  .pc-insta .pi-grid{gap:8px}
+  .pc-insta .pi-tile{padding:10px;border-radius:10px}
+  .pc-insta .pi-tile b{font-size:13px}
+  .pc-insta .pi-tile .rl{top:8px;left:8px;font-size:10px}
+}
+</style>
+  <div class="pi-wrap">
+    <div class="pi-text">
+      <span class="eyebrow">Instagram</span>
+      <h2>강의장 밖의 피코쌤은<br>인스타그램에 있습니다</h2>
+      <p>AI 실무 팁과 발표·PPT 노하우를 1~2일에 한 번, 1분 안쪽의 릴스로 올립니다. 강의에서 다 못 한 이야기도 이곳에서 이어집니다.</p>
+      <div class="pi-handle">
+        <img src="assets/inline/pcossam-photo.jpg" alt="피코쌤 김민구 프로필 사진" width="52" height="52" loading="lazy">
+        <div><b>@pcossam</b><small>AI를 깊이 이해하는 프레젠테이션 전문가, 피코쌤</small></div>
+      </div>
+      <a class="pi-btn" href="https://www.instagram.com/pcossam/" target="_blank" rel="noopener" data-pcx="insta_follow">인스타그램에서 팔로우하기 →</a>
+    </div>
+    <div class="pi-grid">
+      <a class="pi-tile" href="https://www.instagram.com/pcossam/reels/" target="_blank" rel="noopener" data-pcx="insta_tile_ai"><span class="rl">▶ Reels</span><span class="t">AI 실무 팁</span><b>내일 바로 쓰는 AI 활용법</b></a>
+      <a class="pi-tile" href="https://www.instagram.com/pcossam/reels/" target="_blank" rel="noopener" data-pcx="insta_tile_pt"><span class="rl">▶ Reels</span><span class="t">발표 · PPT</span><b>발표가 설득되는 순간</b></a>
+      <a class="pi-tile" href="https://www.instagram.com/pcossam/reels/" target="_blank" rel="noopener" data-pcx="insta_tile_char"><span class="rl">▶ Reels</span><span class="t">직장인 캐릭터</span><b>한대리 · 박인턴 시리즈</b></a>
+    </div>
+  </div>
+</section>
+
 <section class="pc-lens" id="pc-lens">
 <style>
 .pc-lens{padding:64px 0;background:#FAFAF8;border-top:1px solid rgba(26,58,92,.08);border-bottom:1px solid rgba(26,58,92,.08)}
