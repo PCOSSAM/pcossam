@@ -24,7 +24,8 @@ OUT = ROOT / "presentation"
 SITE = "https://pcossam.com"
 BASE = f"{SITE}/presentation/"
 BRAND_COPY = "AI를 깊이 이해하는 프레젠테이션 전문가, 피코쌤"
-BRAND_PROOF = "연 200회 기업 강의 · AI 관련 저서 3권"
+BRAND_SUB = "AI가 정답을 고르는 시대, 실력은 말로 증명됩니다"
+BRAND_PROOF = "19년차 · 경쟁 PT 50여 건 · 클로드·챗GPT로 바이브코딩, 자동화, AI 에이전트 실전 운영"
 
 SERVICES = {
     "presentation-coaching": ("발표 코칭", "/services/presentation-coaching.html",
@@ -247,7 +248,7 @@ def author_box():
   <div class="author-badge">PCO</div>
   <div>
     <div class="author-copy">{BRAND_COPY}</div>
-    <div class="author-proof">{BRAND_PROOF}</div>
+    <div class="author-proof">{BRAND_SUB}<br>{BRAND_PROOF}</div>
     <p>피코쌤(김민구)은 2007년부터 경쟁 PT·입찰 발표 컨설팅과 발표 코칭을 해온 AI 프레젠테이션 컨설턴트입니다. 이 가이드는 피코쌤이 현장에서 직접 겪고 검증한 내용을 정리했습니다. <a href="/#about">프로필 보기</a></p>
   </div>
 </section>"""

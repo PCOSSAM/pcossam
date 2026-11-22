@@ -11,8 +11,9 @@
 
 ## 전문가 프로필
 
-- 연간 200회 이상 강의, 연간 5,000명 이상 교육
-- 저서 5권 출간 (그중 AI 관련 저서 3권)
+- 19년차 프레젠테이션 컨설팅(PTC 프레젠테이션 컨설팅 대표, 2007~), 경쟁 PT 50여 건, 연간 5,000명 이상 교육
+- 클로드·챗GPT로 바이브코딩, 업무 자동화, AI 에이전트, 콘텐츠 자동 제작·배포를 직접 운영
+- 저서 5권 출간
 - 한국금융연수원 · 중소벤처기업연수원 전문 강사
 - AI × 프레젠테이션 × 발표 코칭 통합 전문가
 - 전문 분야: 기업 AX 전환 교육·컨설팅, 생성형 AI 실무교육, AI 보고서·제안서 작성, AI 마케팅 웹사이트 제작(바이브 코딩), AEO·GEO 구조화, 프레젠테이션·피치덱 컨설팅, 발표 코칭
@@ -165,7 +166,8 @@ AX 전환(AI 기반 업무 전환)은 반복 업무를 AI로 덜어내고, 아�
 <!-- presentation-guide:end -->
 ## Expert profile
 
-- 200+ lectures per year, 5,000+ trainees per year
+- 19 years of presentation consulting, 50+ competitive pitch projects, 5,000+ trainees per year
+- Hands-on with Claude and ChatGPT: vibe coding, automation, AI agents, automated content production and distribution
 - Author of 5 books
 - Professional instructor at Korea Banking Institute and Korea SMEs and Startups Institute
 - Integrated expert across generative AI, presentation, and speech coaching
