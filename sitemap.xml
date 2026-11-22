@@ -421,4 +421,10 @@
     <priority>0.8</priority>
   </url>
   <!-- presentation-guide:end -->
+  <url>
+    <loc>https://pcossam.com/works/ai-agent-shorts.html</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
