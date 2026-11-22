@@ -20,7 +20,7 @@
 <meta property="og:title" content="AI 에이전트로 캐릭터 쇼츠를 매일 만드는 법 — 한대리 제작 과정 공개">
 <meta property="og:description" content="캐릭터 개발부터 버퍼 자동 업로드까지, 사람이 결정하고 AI 에이전트가 실행하는 5단계.">
 <meta property="og:url" content="https://pcossam.com/works/ai-agent-shorts.html">
-<meta property="og:image" content="https://i.ytimg.com/vi/gblh2RHaAWs/hqdefault.jpg">
+<meta property="og:image" content="https://pcossam.com/works/images/ai-agent-shorts/char-sheet.webp">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -116,6 +116,26 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
 .gallery figcaption{font-size:.84rem;color:var(--muted);padding:10px 14px;border-top:1px solid var(--line)}
 .gallery figcaption b{display:block;color:var(--ink);font-size:.88rem}
 .gallery .slot{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;text-align:center;font-size:.82rem;color:var(--muted);border-bottom:1px dashed var(--line);background:repeating-linear-gradient(45deg,#fff,#fff 10px,var(--paper) 10px,var(--paper) 20px);padding:16px}
+
+/* 캐릭터 시트 */
+.sheet{display:grid;grid-template-columns:340px 1fr;gap:30px;align-items:start;margin:20px 0 6px}
+.sheet figure{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#EDEAE4}
+.sheet figure img{width:100%;height:auto}
+.sheet figcaption{font-size:.82rem;color:var(--muted);padding:10px 14px;background:#fff;border-top:1px solid var(--line)}
+.cast{display:flex;flex-direction:column;gap:12px}
+.cast div{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:#fff}
+.cast b{color:var(--navy);font-size:1.02rem}
+.cast em{font-style:normal;font-size:.8rem;font-weight:700;color:var(--gold);margin-left:8px}
+.cast p{font-size:.9rem;color:var(--muted);margin-top:2px}
+.rulebox{background:var(--bg-soft);border-radius:12px;padding:16px 18px;font-size:.9rem}
+.rulebox b{color:var(--navy)}
+/* 장면 시안 */
+.boards{display:flex;flex-direction:column;gap:14px;margin:18px 0 6px}
+.boards figure{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.boards .scroll{overflow-x:auto}
+.boards img{width:100%;min-width:760px;height:auto}
+.boards figcaption{font-size:.84rem;color:var(--muted);padding:10px 14px;border-top:1px solid var(--line)}
+.boards figcaption b{color:var(--ink)}
 
 /* 실제 회차 */
 .eps{display:grid;grid-template-columns:repeat(2,minmax(0,220px));gap:18px;margin:20px 0 6px}
@@ -214,6 +234,7 @@ footer a:hover{color:var(--gold-soft)}
   .gallery{grid-template-columns:1fr 1fr}
   .timeline{grid-template-columns:1fr 1fr}
 }
+@media (max-width:760px){.sheet{grid-template-columns:1fr}.sheet figure{max-width:380px;margin:0 auto}}
 @media (max-width:560px){
   .flow,.gallery{grid-template-columns:1fr}
   .eps{grid-template-columns:repeat(2,1fr)}
@@ -234,7 +255,7 @@ footer a:hover{color:var(--gold-soft)}
       "inLanguage": "ko",
       "datePublished": "2026-11-22",
       "dateModified": "2026-11-22",
-      "image": "https://i.ytimg.com/vi/gblh2RHaAWs/hqdefault.jpg",
+      "image": ["https://pcossam.com/works/images/ai-agent-shorts/char-sheet.webp", "https://i.ytimg.com/vi/gblh2RHaAWs/hqdefault.jpg"],
       "author": {"@id": "https://pcossam.com/#person"},
       "publisher": {"@id": "https://pcossam.com/#person"},
       "about": ["AI 에이전트", "AI 업무 자동화", "AI 숏폼 제작", "캐릭터 콘텐츠", "기업 AI 교육"],
@@ -247,7 +268,7 @@ footer a:hover{color:var(--gold-soft)}
       "description": "사람이 기획과 판단을 맡고, AI가 생성과 반복 실행을 맡아 캐릭터 쇼츠를 매일 연재하는 방법.",
       "inLanguage": "ko",
       "step": [
-        {"@type": "HowToStep", "position": 1, "name": "캐릭터 개발", "url": "https://pcossam.com/works/ai-agent-shorts.html#step1", "text": "시청 대상과 세계관, 성격을 사람이 정하고, 머리색·모자·옷 색·가방·신발 같은 시각적 특징을 고정한 캐릭터 시트를 AI로 만든다."},
+        {"@type": "HowToStep", "position": 1, "name": "캐릭터 개발", "url": "https://pcossam.com/works/ai-agent-shorts.html#step1", "text": "시청 대상과 세계관, 성격을 사람이 정하고, 얼굴 대신 머리 모양·옷 색·가방·신발로 구분되는 선화 캐릭터 시트를 AI로 만들고, 낮(종이색)·밤(네이비+골드) 색 규칙을 정한다."},
         {"@type": "HowToStep", "position": 2, "name": "이름 짓기", "url": "https://pcossam.com/works/ai-agent-shorts.html#step2", "text": "'처지 + 성 + 직급' 규칙으로 시청 대상이 자기 이야기로 느끼고, 다른 캐릭터로 확장할 수 있는 이름을 정한다."},
         {"@type": "HowToStep", "position": 3, "name": "30초 영상 생성", "url": "https://pcossam.com/works/ai-agent-shorts.html#step3", "text": "첫 3초 훅, 공감, 해설, 반전의 고정 구조로 대본을 쓰고, 선화 애니메이션·더빙·효과음을 붙여 9:16 영상을 만든다."},
         {"@type": "HowToStep", "position": 4, "name": "인스타그램 그리드 맞춤", "url": "https://pcossam.com/works/ai-agent-shorts.html#step4", "text": "9:16 릴스가 프로필 그리드에서 3:4로 잘리는 것을 감안해 제목과 얼굴을 가운데 안전 영역에 배치한다."},
@@ -366,38 +387,34 @@ footer a:hover{color:var(--gold-soft)}
         <p class="who"><i class="role h">사람이 정한 것</i></p>
         <ul>
           <li>세계관: '이직을 준비하는 직장인'. 시청 대상이 자기 이야기라고 느껴야 한다</li>
-          <li>성격: ENTJ. 자신감 있고 계획적이지만 면접에서는 엉뚱하게 빗나간다</li>
-          <li>그림체: 선화(라인 아트) 애니메이션. 매일 만들어도 품질이 흔들리지 않는 단순한 스타일</li>
-          <li>시각적 특징 고정: 머리색, 모자, 옷 색, 가방, 신발</li>
+          <li>등장인물 3명의 역할: 헤매는 주인공, 답을 주는 멘토, 먼저 이직한 동기</li>
+          <li>멘토 피코쌤의 성격은 ENTJ. 실제 피코쌤의 성향을 그대로 반영</li>
+          <li>그림체: 얼굴 없는 선화(라인 아트). 매일 만들어도 품질이 흔들리지 않는 단순한 스타일</li>
+          <li>구분법: 얼굴 대신 머리 모양·옷 색·가방·신발로 누구인지 알아보게</li>
         </ul>
       </div>
       <div class="box a">
         <p class="who"><i class="role a">AI에게 맡긴 것</i></p>
         <ul>
-          <li>성격과 세계관을 바탕으로 캐릭터 시안 여러 장 생성</li>
-          <li>고른 시안을 정면·측면·표정 시트로 정리</li>
+          <li>역할과 세계관을 바탕으로 캐릭터 시안 생성</li>
+          <li>고른 시안을 색상표(컬러 칩)와 소품까지 담은 캐릭터 시트로 정리</li>
           <li>같은 시트 규칙으로 동료 캐릭터(박인턴·탁과장·문부장) 확장</li>
         </ul>
       </div>
     </div>
 
-    <h3>캐릭터 개발 과정에서 실제로 만든 이미지</h3>
-    <div class="gallery" data-gallery="character">
+    <h3>실제 캐릭터 시트</h3>
+    <div class="sheet">
       <figure>
-        <!-- IMG: /works/images/ai-agent-shorts/char-01-draft.jpg -->
-        <div class="slot">이미지 준비 중<br>첫 시안</div>
-        <figcaption><b>① 첫 시안</b>성격과 세계관만 주고 뽑은 초기 이미지</figcaption>
+        <img src="/works/images/ai-agent-shorts/char-sheet.webp" alt="이직준비생 한대리 캐릭터 시트: 낮(회사)과 밤(이직 준비) 장면의 한대리, 피코쌤, 윤주임 선화 캐릭터와 색상표" width="900" height="1600" loading="lazy">
+        <figcaption>캐릭터 시트 v2. 매 회차 장면은 이 시트를 기준으로 만듭니다.</figcaption>
       </figure>
-      <figure>
-        <!-- IMG: /works/images/ai-agent-shorts/char-02-revise.jpg -->
-        <div class="slot">이미지 준비 중<br>수정 시안</div>
-        <figcaption><b>② 수정 시안</b>머리색·옷·소품을 고정하며 다듬은 단계</figcaption>
-      </figure>
-      <figure>
-        <!-- IMG: /works/images/ai-agent-shorts/char-03-sheet.jpg -->
-        <div class="slot">이미지 준비 중<br>최종 캐릭터 시트</div>
-        <figcaption><b>③ 최종 캐릭터 시트</b>매 회차 생성의 기준이 되는 시트</figcaption>
-      </figure>
+      <div class="cast">
+        <div><b>한대리</b><em>주인공 · 7년 차 대리</em><p>브라운 삐친 머리, 하늘색 셔츠와 네이비 넥타이, 블랙 노트북 백팩, 흰 운동화. 대사: "어… 그게…"</p></div>
+        <div><b>피코쌤</b><em>멘토 · ENTJ</em><p>실버그레이 머리와 골드 안경, 카멜 롱코트와 블랙 니트, 블랙 크로스백, 브라운 구두. 대사: "결론부터. 세 개만."</p></div>
+        <div><b>윤주임</b><em>먼저 이직한 동기</em><p>적갈색 단발에 블랙 베레모, 세이지 블레이저와 와이드 팬츠, 머스터드 토트백, 앵클부츠. 대사: "나 이직했어!"</p></div>
+        <div class="rulebox"><b>시트에 함께 정한 규칙</b><br>얼굴은 그리지 않고 머리 모양과 소품으로 구분합니다. 낮(회사) 장면은 종이색 배경, 밤(이직 준비) 장면은 네이비와 골드. 이 낮·밤 규칙이 영상 속 '피코쌤 타임'의 어두운 배경으로 이어집니다.</div>
+      </div>
     </div>
 
     <div class="lesson">
@@ -473,6 +490,15 @@ footer a:hover{color:var(--gold-soft)}
       </div>
     </div>
 
+    <h3>1화 장면 구성 시안: 같은 이야기를 여러 번 짜 본다</h3>
+    <p style="font-size:.95rem;color:var(--muted)">AI가 장면을 빠르게 뽑아 주기 때문에, 사람은 여러 버전을 나란히 놓고 고르는 데 시간을 씁니다. 아래는 1화 「7년을 7초로」의 장면 구성 시안입니다. 대사, 바뀐 것 목록의 개수, 반전 대사의 위치, 마지막 카드 유무가 조금씩 다릅니다. 가로로 넘겨 보세요.</p>
+    <div class="boards">
+      <figure><div class="scroll"><img src="/works/images/ai-agent-shorts/story-a.webp" alt="1화 장면 시안 A: 면접 질문, 한대리의 나열식 답, 탕비실 커피 대사, 피코쌤 타임에서 바뀐 것 3개가 차례로 쌓이는 구성" width="1568" height="465" loading="lazy"></div><figcaption><b>시안 A</b> 피코쌤 타임에서 '바뀐 것'이 하나씩 쌓이도록 장면을 나눈 버전</figcaption></figure>
+      <figure><div class="scroll"><img src="/works/images/ai-agent-shorts/story-b.webp" alt="1화 장면 시안 B: 8장면 구성, 마지막에 경력은 한 일이 아니라 바꾼 것으로 요약 카드와 다음 화 예고" width="1568" height="348" loading="lazy"></div><figcaption><b>시안 B</b> 8장면 구성. 마지막에 원칙 요약과 다음 화 예고 카드를 붙인 버전</figcaption></figure>
+      <figure><div class="scroll"><img src="/works/images/ai-agent-shorts/story-c.webp" alt="1화 장면 시안 C: 5장면 압축 구성, 피코쌤 타임에 바뀐 것 3개와 그게 당신입니다 대사" width="1568" height="558" loading="lazy"></div><figcaption><b>시안 C</b> 5장면으로 압축하고 "그게, 당신입니다"로 해설을 마무리한 버전</figcaption></figure>
+      <figure><div class="scroll"><img src="/works/images/ai-agent-shorts/story-d.webp" alt="1화 장면 시안 D: 피코쌤 타임 이후 한대리가 정산을 5일에서 2일로 줄였다고 답하고, 면접관 질문 뒤 커피 반전으로 끝나는 구성" width="1568" height="465" loading="lazy"></div><figcaption><b>시안 D</b> 해설 뒤 한대리가 다시 답하고, "커피도 잘 채웁니다"로 반전을 주는 버전</figcaption></figure>
+    </div>
+
     <h3>실제 연재 중인 회차</h3>
     <div class="eps">
       <div>
@@ -534,18 +560,7 @@ footer a:hover{color:var(--gold-soft)}
         </ul>
       </div>
     </div>
-    <div class="gallery" data-gallery="grid" style="grid-template-columns:repeat(2,1fr);max-width:640px">
-      <figure>
-        <!-- IMG: /works/images/ai-agent-shorts/grid-before.jpg -->
-        <div class="slot">이미지 준비 중<br>맞추기 전 그리드</div>
-        <figcaption><b>맞추기 전</b>제목이 잘리고 영상마다 위치가 제각각</figcaption>
-      </figure>
-      <figure>
-        <!-- IMG: /works/images/ai-agent-shorts/grid-after.jpg -->
-        <div class="slot">이미지 준비 중<br>맞춘 뒤 그리드</div>
-        <figcaption><b>맞춘 뒤</b>회차와 얼굴이 같은 자리에 정렬</figcaption>
-      </figure>
-    </div>
+
   </div>
 </section>
 
@@ -561,13 +576,6 @@ footer a:hover{color:var(--gold-soft)}
       <li><b>웹사이트가 새 회차를 스스로 확인</b><span class="t">GitHub Actions(정해진 시간에 대신 실행해 주는 무료 자동화)가 매일 유튜브의 새 영상을 확인합니다. 업로드가 늦을 때를 대비해 한 번 더 확인합니다.</span></li>
       <li><b>회차 페이지에 자동 추가 후 배포</b><span class="t">영상 설명란의 질문·답·원칙을 읽어 <a href="/shorts/han-daeri.html" style="border-bottom:1px solid var(--gold)">한대리 면접 답변 노트</a>에 회차를 붙이고, 검색엔진용 정보까지 갱신해 사이트에 반영합니다.</span></li>
     </ol>
-    <div class="gallery" data-gallery="buffer" style="grid-template-columns:1fr;max-width:640px">
-      <figure>
-        <!-- IMG: /works/images/ai-agent-shorts/buffer-queue.jpg -->
-        <div class="slot" style="aspect-ratio:16/9">이미지 준비 중<br>버퍼 예약 화면</div>
-        <figcaption><b>버퍼 예약 화면</b>인스타그램·유튜브에 같은 영상이 같은 시간으로 예약된 모습</figcaption>
-      </figure>
-    </div>
     <div class="lesson">
       <p class="tag">회사에 옮기면</p>
       <p>홍보팀의 '올리는 일'은 가장 먼저 자동화할 수 있는 업무입니다.</p>
@@ -584,9 +592,9 @@ footer a:hover{color:var(--gold-soft)}
       <table>
         <thead><tr><th>단계</th><th><i class="role h">사람</i> 결정·판단</th><th><i class="role a">AI</i> 생성</th><th><i class="role x">자동</i> 실행</th></tr></thead>
         <tbody>
-          <tr><td>① 캐릭터</td><td>세계관, 성격(ENTJ), 그림체, 고정할 특징</td><td>시안, 캐릭터 시트, 동료 캐릭터</td><td>—</td></tr>
+          <tr><td>① 캐릭터</td><td>세계관, 등장인물 역할, 멘토 성격(ENTJ), 그림체, 구분 규칙</td><td>시안, 캐릭터 시트, 동료 캐릭터</td><td>—</td></tr>
           <tr><td>② 이름</td><td>이름 규칙(처지+성+직급), 최종 선택</td><td>후보 생성, 겹침 점검</td><td>—</td></tr>
-          <tr><td>③ 영상</td><td>회차 주제, 웃음·반전, 원칙 한 줄, 검수</td><td>대본 초안, 애니메이션, 더빙·효과음</td><td>—</td></tr>
+          <tr><td>③ 영상</td><td>회차 주제, 웃음·반전, 원칙 한 줄, 시안 선택, 검수</td><td>대본 초안, 장면 시안, 애니메이션, 더빙·효과음</td><td>—</td></tr>
           <tr><td>④ 그리드</td><td>안전 영역 규칙</td><td>표지 배치, 잘림 미리보기</td><td>—</td></tr>
           <tr><td>⑤ 업로드</td><td>업로드 시간, 캡션 형식</td><td>—</td><td>버퍼 동시 업로드, 웹사이트 회차 추가·배포</td></tr>
         </tbody>
