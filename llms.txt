@@ -120,7 +120,7 @@ AX 전환(AI 기반 업무 전환)은 반복 업무를 AI로 덜어내고, 아�
 - [기업 AX 전환 교육·컨설팅](https://pcossam.com/services/ai-transformation-partnership.html): '전환 70 · 창출 30' 방법론으로 전 직원 특강, 부서별 3시간×2회 컨설팅, AI 챔피언 육성, 스킬 공유 발표회, 월 단위 지속 운영까지 설계하는 AX 전환(AI 전환) 프로그램. 특강형·컨설팅형·풀패키지 비교와 FAQ 수록.
 
 도구 · 무료 자료
-- [피코쌤 강의 구성기](https://pcossam.com/lab/course-builder.html): 강의 콘텐츠 60개를 블록으로 나누고 대상·시간·주제를 고르면 커리큘럼 초안이 만들어지는 도구. 피코쌤이 실제 업무에 쓰는 자동화 사례로, 바이브 코딩으로 직접 제작했다.
+- [피코쌤 강의 구성기](https://pcossam.com/lab/course-builder.html): 강의 콘텐츠 74개를 블록으로 나누고 대상·시간·주제를 고르면 커리큘럼 초안이 만들어지는 도구. 피코쌤이 실제 업무에 쓰는 자동화 사례로, 바이브 코딩으로 직접 제작했다.
 - [교육 맞춤 설계 요청](https://pcossam.com/lecture-custom-design.html): 대상·시간·주제·예산을 입력하면 피코쌤이 검토해 맞춤 커리큘럼과 진행 안내를 회신하는 무료 요청 양식.
 - [ChatGPT 맞춤 지침 템플릿](https://pcossam.com/prompt-templates.html): 교육 현장에서 검증한 ChatGPT 맞춤 지침을 입문자·실무자·전략가 단계로 정리한 무료 자료.
 
