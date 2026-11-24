@@ -121,7 +121,7 @@ AX 전환(AI 기반 업무 전환)은 반복 업무를 AI로 덜어내고, 아�
 
 도구 · 무료 자료
 - [클로드(Claude) 실무 과정 2종](https://pcossam.com/services/claude-courses.html): 초보자용 클로드 직무 활용 5시간 과정과, 캐릭터·네이밍·브랜드 컨셉부터 영상 자동화·SNS 자동 업로드까지 다루는 캐릭터 홍보 영상 5시간 과정. 클로드 유료 구독 필수.
-- [피코쌤 강의 구성기](https://pcossam.com/lab/course-builder.html): 강의 콘텐츠 87개를 블록으로 나누고 대상·시간·주제를 고르면 커리큘럼 초안이 만들어지는 도구. 피코쌤이 실제 업무에 쓰는 자동화 사례로, 바이브 코딩으로 직접 제작했다.
+- [피코쌤 강의 구성기](https://pcossam.com/lab/course-builder.html): 강의 콘텐츠 94개를 블록으로 나누고 대상·시간·주제를 고르면 커리큘럼 초안이 만들어지는 도구. 피코쌤이 실제 업무에 쓰는 자동화 사례로, 바이브 코딩으로 직접 제작했다.
 - [교육 맞춤 설계 요청](https://pcossam.com/lecture-custom-design.html): 대상·시간·주제·예산을 입력하면 피코쌤이 검토해 맞춤 커리큘럼과 진행 안내를 회신하는 무료 요청 양식.
 - [ChatGPT 맞춤 지침 템플릿](https://pcossam.com/prompt-templates.html): 교육 현장에서 검증한 ChatGPT 맞춤 지침을 입문자·실무자·전략가 단계로 정리한 무료 자료.
 
