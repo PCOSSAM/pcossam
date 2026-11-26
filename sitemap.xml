@@ -356,7 +356,7 @@
 <!-- presentation-guide:start -->
   <url>
     <loc>https://pcossam.com/presentation/</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -369,6 +369,12 @@
   <url>
     <loc>https://pcossam.com/presentation/analogy-comparison.html</loc>
     <lastmod>2026-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pcossam.com/presentation/keyword-intersection.html</loc>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
